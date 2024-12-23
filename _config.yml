@@ -1,7 +1,7 @@
-name: "Fraser Lab"
+name: "Genmoic Medicine Lab"
 description: "This is the official web page for the James Fraser Lab at UCSF."
 
-url: "http://fraserlab.com"
+url: "https://genomic_medicine.github.io/"
 
 paginate: 5
 plugins: [jekyll-paginate]
