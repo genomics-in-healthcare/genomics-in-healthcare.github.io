@@ -1,7 +1,7 @@
-name: "Genmoic Medicine Lab"
-description: "This is the official web page for the Genomic Medicine Lab at Hong Kong PolyU."
+name: "Genmoics in Healthcare Lab"
+description: "This is the official web page for the Genmoics in Healthcare Lab at Hong Kong PolyU."
 
-url: "https://genomic-medicine.github.io/"
+url: "https://genomics-in-healthcare.github.io/"
 
 paginate: 5
 plugins: [jekyll-paginate]
