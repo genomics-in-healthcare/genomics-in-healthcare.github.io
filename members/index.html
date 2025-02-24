@@ -178,17 +178,19 @@ The Fraser lab welcomes people of any race, ethnicity, religion, national origin
 		{% endif %}
 		{% if position contains "principal investigator" %}
 			{% assign color = "red" %}
-		{% elsif position contains "postdoctoral" %}
+		{% elsif position contains "principal research fellow" %}
 			{% assign color = "darkorange" %}
-		{% elsif position contains "graduate student" %}
+		{% elsif position contains "postdoctoral" %}
 			{% assign color = "gold" %}
-		{% elsif position contains "staff scientist" or position contains "programmer" or position contains "manager" %}
-			{% assign color = "green" %}
-		{% elsif position contains "specialist" or position contains "technician" or position contains "propel"%}
-			{% assign color = "turquoise" %}
-		{% elsif position contains "srtp" or position contains "intern" or position contains "summer" %}
+		{% elsif position contains "phd student" %}
+			{% assign color = "dark blue" %}
+		{% elsif position contains "mphil student"%}
+			{% assign color = "light blue" %}
+		{% elsif position contains "research assistant" %}
             {% unless position contains "affiliate" %}
                 {% assign color = "blue" %}
+	    {% elsif position contains "visiting scholar" %}
+    		{% assign color = "purple" %}
             {% endunless %}
 		{% else %}
 			{% assign color = "purple" %}
