@@ -15,7 +15,8 @@ group: contact
   [Department of Health Technology and Informatics](https://www.polyu.edu.hk/hti/)<br>
   Lee Shau Kee Building, Block Y520, The Hong Kong Polytechnic University<br>
   Yuk Choi R, Hung Hom<br>
-  Phone: +852 3400 8567
+  <strong>Email:</strong> weixiong.zhang [at] polyu.edu.hk<br>
+  <strong>Phone:</strong> +852 3400 8567
 
 </div>
 
