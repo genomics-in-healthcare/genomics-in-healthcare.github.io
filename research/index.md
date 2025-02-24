@@ -20,11 +20,11 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 </div>
 <div class="row">
 
-## Biology, genetics and genomics
+## Biology, Genetics and Genomics
 
 <div class="col-md-7 order-md-2">
 
-We apply our integrated methodologies to unravel the pathogenesis of multifaceted conditions, including psychiatric disorders (such as depression and schizophrenia) and cancer. In just over two years, our team has secured more than HKD 90 million in project support, including two major thematic research initiatives. Our efforts have led to the identification of key genetic variants and neuroimaging biomarkers that redefine traditional disease classifications and open new avenues for precision medicine.
+The work in the Zhang lab in this broad field is mainly computational and falls into the category of Data Sciences (or Big Data). We aim to find and understand biological “stories” through building models and identifying patterns from large quantities of genome-scale biological data. In the process, we integrate the bench work of molecular biology and develop novel methods and efficient software tools along the way. In this broad area, we pursue two overarching themes, **<span style="color:blue; font-weight:bold; font-style:italic;">network systems biology</span>** and **<span style="color:blue; font-weight:bold; font-style:italic;">gene regulation via noncoding RNA genes</span>**. We are interested in basic biological questions (e.g., the biogenesis of small noncoding RNAs, transcriptional and post-transcriptional gene regulation) and their applications to complex diseases (e.g., Alzheimer’s disease (AD) and psoriasis) and plant stress response (e.g., rice blast and rice bacterial blight).
 </div>
 
 <div class="col-md-5 order-md-1 align-self-center">
