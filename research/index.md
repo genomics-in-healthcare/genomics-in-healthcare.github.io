@@ -16,16 +16,15 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 
 <div class="row">
 
-### A Convergence of Computation and Experimentation
-
-<div class="col-md-7 order-md-1">
-
-Our laboratory bridges the gap between “dry” computational analyses and “wet” laboratory experimentation. With access to state-of-the-art supercomputing facilities and advanced biomedical instrumentation, we employ innovative deep learning and large language models to decode complex genetic architectures. Our research targets fundamental challenges in genetics and molecular biology—such as deciphering noncoding gene regulation and performing comprehensive genome-wide association studies—to reveal novel molecular signatures underlying disease.
-
+<div class="row align-items-stretch">
+    <div class="col-md-7 order-md-1">
+        <p>Our laboratory bridges the gap between “dry” computational analyses and “wet” laboratory experimentation. With access to state-of-the-art supercomputing facilities and advanced biomedical instrumentation, we employ innovative deep learning and large language models to decode complex genetic architectures. Our research targets fundamental challenges in genetics and molecular biology—such as deciphering noncoding gene regulation and performing comprehensive genome-wide association studies—to reveal novel molecular signatures underlying disease.</p>
+    </div>
+    <div class="col-md-5 order-md-2 align-self-center">
+        <img class="img-fluid" src="/static/img/research/bio1.png" alt="qFit">
+    </div>
 </div>
-<div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid w-60" src="/static/img/research/bio1.png" alt="qFit">
-<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
+
 
 </div>
 </div>
@@ -40,7 +39,7 @@ We apply our integrated methodologies to unravel the pathogenesis of multifacete
 
 <div class="col-md-5 order-md-1 align-self-center">
 <img class="img-fluid w-65" src="/static/img/research/bio2.png" alt="ptp1b">
-<img class="img-fluid w-90" src="/static/img/research/gpu.png" alt="ptp1b">
+<img class="img-fluid w-90" src="/static/img/research/gpu.png" alt="ptp2b">
 </div>
 </div>
 <div class="row">
