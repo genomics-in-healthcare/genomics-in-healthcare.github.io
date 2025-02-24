@@ -23,7 +23,7 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 
 ### Biology, Genetics and Genomics
 
-<div class="col-md-7 order-md-1">
+<div class="col-md-12">
 
 The work in the Zhang lab in this broad field is mainly computational and falls into the category of Data Sciences (or Big Data). We aim to find and understand biological “stories” through building models and identifying patterns from large quantities of genome-scale biological data. In the process, we integrate the bench work of molecular biology and develop novel methods and efficient software tools along the way. In this broad area, we pursue two overarching themes, **<span style="color:blue; font-weight:bold; font-style:italic;">network systems biology</span>** and **<span style="color:blue; font-weight:bold; font-style:italic;">gene regulation via noncoding RNA genes</span>**. We are interested in basic biological questions (e.g., the biogenesis of small noncoding RNAs, transcriptional and post-transcriptional gene regulation) and their applications to complex diseases (e.g., Alzheimer’s disease (AD) and psoriasis) and plant stress response (e.g., rice blast and rice bacterial blight).
 - Network-based, allele-specific genome-wide association study (GWAS)
@@ -31,18 +31,15 @@ The work in the Zhang lab in this broad field is mainly computational and falls 
 - Biogenesis of small noncoding RNAs
 - Regulatory functions of small noncoding RNAs
 
-</div>
-<div class="col-md-5 order-md-2 align-self-center">
 <img class="img-fluid" src="/static/img/research/research_picture1.png" alt="qFit">
-<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
 
 </div>
-</div>
+
 <div class="row">
 
 ### Network GWAS
 
-<div class="col-md-7 order-md-1 ">
+<div class="col-md-12">
 
 In recent years, in order to support the research activities in computational biology and genomics, we have been focusing on developing effective computational methods for finding and analyzing modular structures in **<span style="color:blue; font-weight:bold; font-style:italic;">large (biological) networks</span>**.
 
@@ -50,28 +47,25 @@ The network GWAS and co-expression network approaches described above rely heavi
 - Network clustering analysis
 - Identification of network modules in complex networks
 - Applications of network module analysis
-</div>
-
-<div class="col-md-3 order-md-2 align-self-center">
 
 <img class="img-fluid" src="/static/img/research/research_picture3.png" alt="antibiotic">
+
 </div>
-</div>
+
 <div class="row">
 
 ### Genomic LLM
 
-<div class="col-md-7 order-md-2">
+<div class="col-md-12">
 
 We are currently developing **<span style="color:blue; font-weight:bold; font-style:italic;">deep learning</span>** algorithms and **<span style="color:blue; font-weight:bold; font-style:italic;">genomic foundational models</span>** for application in biomedical research. Our focus is on addressing critical challenges in genetics and molecular biology, such as noncoding gene regulation and genome-wide association studies. In our clinical research initiatives, we further harness these AI methodologies—particularly large language models—to automatically generate treatment strategies based on refined disease classifications and molecular markers.
 - Genomic Foundation Models
 - Specific models regarding different genomic problems
+
+<img class="img-fluid" src="/static/img/research/dnagrinder.png" alt="hairball">
+
 </div>
 
-<div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/research/dnagrinder.png" alt="hairball">
-</div>
-</div>
 <div class="row">
 
 ### Dedication
