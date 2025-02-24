@@ -45,7 +45,7 @@ We apply our integrated methodologies to unravel the pathogenesis of multifacete
 </div>
 <div class="row">
 
-###Flagship Project: Redefining Psychiatric Disorders
+### Flagship Project: Redefining Psychiatric Disorders
 
 <div class="col-md-7 order-md-1 ">
 
