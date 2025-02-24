@@ -7,7 +7,7 @@ group: research
 <div class="row">
 
 # Our research
-The Hong Kong Polytechnic University Jockey Club Artificial Intelligence and Genomics Medical Laboratory is dedicated to transforming biomedical research through the seamless integration of artificial intelligence, genomics, and experimental biology. Under the leadership of Professor Zhang Weixiong—Chair Professor of Systems Biology and Artificial Intelligence and Vice President of the Graduate School—we combine interdisciplinary expertise in AI, data science, genomics, molecular biology, and neuroscience. Supported by the Hong Kong Government’s Global Talent Recruitment Scheme, our institution, and the Hong Kong Jockey Club, our work is backed by over HKD 80 million in funding.
+The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthcare is dedicated to transforming biomedical research through the seamless integration of artificial intelligence, genomics, and experimental biology. Under the leadership of Professor Zhang Weixiong—Chair Professor of Systems Biology and Artificial Intelligence and Vice President of the Graduate School—we combine interdisciplinary expertise in AI, data science, genomics, molecular biology, and neuroscience. Supported by the Hong Kong Government’s Global Talent Recruitment Scheme, our institution, and the Hong Kong Jockey Club, our work is backed by over HKD 80 million in funding.
 
 <br>
 
@@ -59,7 +59,7 @@ The molecular markers and redefined disease classifications derived from our res
 </div>
 <div class="row">
 
-### 
+### Dedication
 
 <div class="col-md-7 order-md-1">
 
