@@ -24,7 +24,7 @@ Our laboratory bridges the gap between “dry” computational analyses and “w
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid w-75" src="/static/img/research/bio1.png" alt="qFit">
+<img class="img-fluid w-60" src="/static/img/research/bio1.png" alt="qFit">
 <!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
 
 </div>
@@ -39,8 +39,8 @@ We apply our integrated methodologies to unravel the pathogenesis of multifacete
 </div>
 
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid w-75" src="/static/img/research/bio2.png" alt="ptp1b">
-<img class="img-fluid" src="/static/img/research/gpu.png" alt="ptp1b">
+<img class="img-fluid w-65" src="/static/img/research/bio2.png" alt="ptp1b">
+<img class="img-fluid w-90" src="/static/img/research/gpu.png" alt="ptp1b">
 </div>
 </div>
 <div class="row">
@@ -57,14 +57,13 @@ The molecular markers and redefined disease classifications derived from our res
 
 <div class="col-md-3 order-md-2 align-self-center">
 
-<img class="img-fluid w-125" src="/static/img/research/summary.jpg" alt="antibiotic">
+<img class="img-fluid w-150" src="/static/img/research/summary.jpg" alt="antibiotic">
 </div>
 </div>
 <div class="row">
 
 ### Dedication
 <div class="col-md-7 order-md-2">
-
 
 Our laboratory is at the forefront of merging artificial intelligence with biomedical technology to address some of the most pressing challenges in modern medicine. By integrating computational innovation with rigorous experimental validation, we aim not only to advance our understanding of disease mechanisms but also to drive the development of personalized diagnostic and therapeutic strategies. Our early successes in psychiatric disorders and cancer underscore the potential of our interdisciplinary approach to yield transformative insights and clinical breakthroughs.
 </div>
