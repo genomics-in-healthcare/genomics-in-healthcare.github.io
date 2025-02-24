@@ -40,21 +40,6 @@ The work in the Zhang lab in this broad field is mainly computational and falls 
 </div>
 <div class="row">
 
-### Using multi-temperature X-ray data collection methods in mechanistic studies and ligand discovery campaigns
-
-<div class="col-md-7 order-md-2">
-
-We recognized that the standard practice of cryocooling crystals could distort protein conformations.
-In both larger surveys and isolated mechanistic studies, we have demonstrated the value of room temperature data collection for revealing the structural basis of protein conformational dynamics, leading to new insights into enzymes, and increasing connections to dynamics studies from NMR and simulations.
-Additionally, we have identified how temperature can bias small molecule discovery, leading some fragment sites inaccessible at cryogenic temperatures and repositioning critical water molecules.
-</div>
-
-<div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/pub/2018_keedy_hill.jpg" alt="ptp1b">
-</div>
-</div>
-<div class="row">
-
 ### Network GWAS
 
 <div class="col-md-7 order-md-1 ">
