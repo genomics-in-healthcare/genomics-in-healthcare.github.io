@@ -20,7 +20,7 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 </div>
 <div class="row">
 
-### Innovative Approaches to Complex Diseases
+## Biology, genetics and genomics
 
 <div class="col-md-7 order-md-2">
 
