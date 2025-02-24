@@ -16,9 +16,6 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 - **Hong Kong Government’s Global Talent Recruitment Scheme**
 - **Hong Kong Jockey Club**
 
-<br>
-<br>
-
 </div>
 </div>
 <div class="row">
