@@ -66,7 +66,7 @@ Our laboratory is at the forefront of merging artificial intelligence with biome
 </div>
 
 <div class="col-md-5 order-md-2 align-self-center ">
-<img class="img-fluid" src="/static/img/pub/2019_thompson.jpg" alt="tjump">
+<!-- <img class="img-fluid" src="/static/img/pub/2019_thompson.jpg" alt="tjump"> -->
 </div>
 
 </div>
