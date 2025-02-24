@@ -4,6 +4,31 @@ layout: default
 group: research
 ---
 
+<style>
+/* 新增自定义样式 */
+.img-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 图片间距 */
+}
+
+.img-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.content-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+</style>
+
 <div class="row">
 
 # Our research
@@ -14,69 +39,77 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 - **NSFC** - National Natural Science Foundation of China
 - Hong Kong Government’s Global Talent Recruitment Scheme
 - Hong Kong Jockey Club
-<br>
-<br>
+<br><br>
 
 </div>
 
-<div class="row">
-
-### Biology, Genetics and Genomics
-
-<div class="col-md-7 order-md-1">
-
-The work in the Zhang lab in this broad field is mainly computational and falls into the category of Data Sciences (or Big Data). We aim to find and understand biological “stories” through building models and identifying patterns from large quantities of genome-scale biological data. In the process, we integrate the bench work of molecular biology and develop novel methods and efficient software tools along the way. In this broad area, we pursue two overarching themes, **<span style="color:blue; font-weight:bold; font-style:italic;">network systems biology</span>** and **<span style="color:blue; font-weight:bold; font-style:italic;">gene regulation via noncoding RNA genes</span>**. We are interested in basic biological questions (e.g., the biogenesis of small noncoding RNAs, transcriptional and post-transcriptional gene regulation) and their applications to complex diseases (e.g., Alzheimer’s disease (AD) and psoriasis) and plant stress response (e.g., rice blast and rice bacterial blight).
-- Network-based, allele-specific genome-wide association study (GWAS)
-- Network-based transcriptome analysis
-- Biogenesis of small noncoding RNAs
-- Regulatory functions of small noncoding RNAs
-
-</div>
-<div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid" src="/static/img/research/research_picture1.png" alt="qFit">
-<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
-
-</div>
-</div>
-<div class="row">
-
-### Network GWAS
-
-<div class="col-md-7 order-md-1 ">
-
-In recent years, in order to support the research activities in computational biology and genomics, we have been focusing on developing effective computational methods for finding and analyzing modular structures in **<span style="color:blue; font-weight:bold; font-style:italic;">large (biological) networks</span>**.
-
-The network GWAS and co-expression network approaches described above rely heavily on accurately and efficiently finding network modules. Nevertheless, finding structures in large networks is a challenging problem in machine learning and datamining. First, network structural properties can be characterized in several different ways, by node connectivity, by properties on links (such as relationships among connected individuals), or by semantics of nodes and links (such as the social roles that individuals play in a society network). In our research, we considered these different types of information for network module finding and developed effective novel methods for finding modules of nodes (Jin, Chen, He and Zhang, Proc. AAAI-15), modules of links (He, Liu, Jin and Zhang, Proc. AAAI-15), and modules that are defined by network structural information and node semantics (He, et al., Proc AAAI-17). We adopted a few different machine learning techniques in developing our methods, including non-negative matrix factorization (Wang, et al., Proc. AAAI-16), stochastic modeling (He, Liu, Jin and Zhang, Proc. AAAI-15), deep learning (Yang, et al., Proc. IJCAI-16), and Markov Random Fields (He, et al., Proc. AAAI-18).
-- Network clustering analysis
-- Identification of network modules in complex networks
-- Applications of network module analysis
+<!-- Biology Section -->
+<div class="row align-items-stretch g-4 mb-5"> <!-- 等高布局 -->
+  <div class="col-md-7 order-md-1">
+    <div class="content-box bg-light p-4 rounded-3 h-100">
+      <h3>Biology, Genetics and Genomics</h3>
+      <p>The work in the Zhang lab in this broad field...</p>
+      <ul class="mb-0"> <!-- 保持内容撑满高度 -->
+        <li>Network-based, allele-specific GWAS</li>
+        <li>Network-based transcriptome analysis</li>
+        <li>Biogenesis of small noncoding RNAs</li>
+        <li>Regulatory functions of small RNAs</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-5 order-md-2">
+    <div class="img-container">
+      <img class="img-fit" src="/static/img/research/research_picture1.png" alt="Genomics visualization">
+    </div>
+  </div>
 </div>
 
-<div class="col-md-3 order-md-2 align-self-center">
-
-<img class="img-fluid" src="/static/img/research/research_picture3.png" alt="antibiotic">
+<!-- Network GWAS Section -->
+<div class="row align-items-stretch g-4 mb-5">
+  <div class="col-md-7 order-md-1">
+    <div class="content-box bg-light p-4 rounded-3 h-100">
+      <h3>Network GWAS</h3>
+      <p>In recent years, in order to support...</p>
+      <ul class="mb-0">
+        <li>Network clustering analysis</li>
+        <li>Identification of network modules</li>
+        <li>Applications of network analysis</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-3 order-md-2">
+    <div class="img-container">
+      <img class="img-fit" src="/static/img/research/research_picture3.png" alt="Network analysis">
+      <img class="img-fit" src="/static/img/research/dnagrinder.png" alt="DNA model">
+    </div>
+  </div>
 </div>
+
+<!-- Genomic LLM Section -->
+<div class="row align-items-stretch g-4 mb-5">
+  <div class="col-md-7 order-md-2">
+    <div class="content-box bg-light p-4 rounded-3 h-100">
+      <h3>Genomic LLM</h3>
+      <p>We are currently developing...</p>
+      <ul class="mb-0">
+        <li>Genomic Foundation Models</li>
+        <li>Specific genomic problem models</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-5 order-md-1">
+    <div class="img-container">
+      <img class="img-fit" src="/static/img/research/dnagrinder.png" alt="AI model">
+    </div>
+  </div>
 </div>
-<div class="row">
 
-### Genomic LLM
-
-<div class="col-md-7 order-md-2">
-
-We are currently developing **<span style="color:blue; font-weight:bold; font-style:italic;">deep learning</span>** algorithms and **<span style="color:blue; font-weight:bold; font-style:italic;">genomic foundational models</span>** for application in biomedical research. Our focus is on addressing critical challenges in genetics and molecular biology, such as noncoding gene regulation and genome-wide association studies. In our clinical research initiatives, we further harness these AI methodologies—particularly large language models—to automatically generate treatment strategies based on refined disease classifications and molecular markers.
-- Genomic Foundation Models
-- Specific models regarding different genomic problems
-</div>
-
-<div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/research/dnagrinder.png" alt="hairball">
-</div>
-</div>
-<div class="row">
-
-### Dedication
-
-Our laboratory is at the forefront of merging artificial intelligence with biomedical technology to address some of the most pressing challenges in modern medicine. By integrating **<span style="color:blue; font-weight:bold; font-style:italic;">computational innovation</span>** with rigorous **<span style="color:blue; font-weight:bold; font-style:italic;">experimental validation</span>**, we aim not only to advance our understanding of disease mechanisms but also to drive the development of personalized diagnostic and therapeutic strategies. Our early successes in psychiatric disorders and cancer underscore the potential of our interdisciplinary approach to yield transformative insights and clinical breakthroughs.
-
-
+<!-- Dedication Section -->
+<div class="row mt-5">
+  <div class="col-md-8 offset-md-2 text-center">
+    <div class="content-box bg-light p-4 rounded-3">
+      <h3>Dedication</h3>
+      <p class="mb-0">Our laboratory is at the forefront...</p>
+    </div>
+  </div>
 </div>
