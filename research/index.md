@@ -48,7 +48,7 @@ The network GWAS and co-expression network approaches described above rely heavi
 - Identification of network modules in complex networks
 - Applications of network module analysis
 
-<img class="img-fluid" src="/static/img/research/research_picture3.png" alt="antibiotic">
+<img class="img-fluid w-75" src="/static/img/research/research_picture3.png" alt="antibiotic">
 
 </div>
 
@@ -62,7 +62,7 @@ We are currently developing **<span style="color:blue; font-weight:bold; font-st
 - Genomic Foundation Models
 - Specific models regarding different genomic problems
 
-<img class="img-fluid" src="/static/img/research/dnagrinder.png" alt="hairball">
+<img class="img-fluid w-75" src="/static/img/research/dnagrinder.png" alt="hairball">
 
 </div>
 
