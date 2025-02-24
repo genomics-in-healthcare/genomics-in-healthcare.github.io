@@ -48,7 +48,7 @@ The work in the Zhang lab in this broad field is mainly computational and falls 
 - Network clustering analysis
 - Identification of network modules in complex networks
 - Applications of network module analysis
-<br>
+
 The network GWAS and co-expression network approaches described above rely heavily on accurately and efficiently finding network modules. Nevertheless, finding structures in large networks is a challenging problem in machine learning and datamining. First, network structural properties can be characterized in several different ways, by node connectivity, by properties on links (such as relationships among connected individuals), or by semantics of nodes and links (such as the social roles that individuals play in a society network). In our research, we considered these different types of information for network module finding and developed effective novel methods for finding modules of nodes (Jin, Chen, He and Zhang, Proc. AAAI-15), modules of links (He, Liu, Jin and Zhang, Proc. AAAI-15), and modules that are defined by network structural information and node semantics (He, et al., Proc AAAI-17). We adopted a few different machine learning techniques in developing our methods, including non-negative matrix factorization (Wang, et al., Proc. AAAI-16), stochastic modeling (He, Liu, Jin and Zhang, Proc. AAAI-15), deep learning (Yang, et al., Proc. IJCAI-16), and Markov Random Fields (He, et al., Proc. AAAI-18).
 
 </div>
