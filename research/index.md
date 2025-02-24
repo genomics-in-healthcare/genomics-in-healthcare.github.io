@@ -9,7 +9,6 @@ group: research
 # Our research
 
 The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthcare is dedicated to transforming biomedical research through the seamless integration of artificial intelligence, genomics, and experimental biology. We combine interdisciplinary expertise in AI, data science, genomics, molecular biology, and neuroscience. The research projects in the Lab are funded by over HKD 80 million from:
-<br>
 - **RGC** - Research Grants Council, University Grants Committee, Hong Kong
 - **HMRF** - Health and Medical Research Fund, Health Bureau, Hong Kong
 - **NSFC** - National Natural Science Foundation of China
@@ -17,7 +16,7 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 - Hong Kong Jockey Club
 
 </div>
-</div>
+
 <div class="row">
 
 ## Biology, Genetics and Genomics
@@ -25,16 +24,22 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 <div class="col-md-7 order-md-2">
 
 The work in the Zhang lab in this broad field is mainly computational and falls into the category of Data Sciences (or Big Data). We aim to find and understand biological “stories” through building models and identifying patterns from large quantities of genome-scale biological data. In the process, we integrate the bench work of molecular biology and develop novel methods and efficient software tools along the way. In this broad area, we pursue two overarching themes, **<span style="color:blue; font-weight:bold; font-style:italic;">network systems biology</span>** and **<span style="color:blue; font-weight:bold; font-style:italic;">gene regulation via noncoding RNA genes</span>**. We are interested in basic biological questions (e.g., the biogenesis of small noncoding RNAs, transcriptional and post-transcriptional gene regulation) and their applications to complex diseases (e.g., Alzheimer’s disease (AD) and psoriasis) and plant stress response (e.g., rice blast and rice bacterial blight).
+- Network-based, allele-specific genome-wide association study (GWAS)
+- Network-based transcriptome analysis
+- Biogenesis of small noncoding RNAs
+- Regulatory functions of small noncoding RNAs
+
 </div>
 
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid w-65" src="/static/img/research/bio2.png" alt="ptp1b">
-<img class="img-fluid w-90" src="/static/img/research/gpu.png" alt="ptp2b">
+<img class="img-fluid w-65" src="/static/img/research/research_picture1.png" alt="Research in the Zhang lab related to PTP1B">
 </div>
+
 </div>
+
 <div class="row">
 
-### Flagship Project: Redefining Psychiatric Disorders
+## Flagship Project: Redefining Psychiatric Disorders
 
 <div class="col-md-7 order-md-1 ">
 
