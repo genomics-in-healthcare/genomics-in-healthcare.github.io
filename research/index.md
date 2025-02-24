@@ -21,7 +21,7 @@ Our laboratory bridges the gap between “dry” computational analyses and “w
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid" src="/static/img/research/bio1.png" alt="qFit">
+<img class="img-fluid w-50" src="/static/img/research/bio1.png" alt="qFit">
 <!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
 
 </div>
