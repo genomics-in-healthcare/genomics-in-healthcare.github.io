@@ -32,7 +32,7 @@ The work in the Zhang lab in this broad field is mainly computational and falls 
 </div>
 
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid w-65" src="/static/img/research/research_picture1.png" alt="Research in the Zhang lab related to PTP1B">
+<img class="img-fluid" src="/static/img/research/research_picture1.png" alt="bio">
 </div>
 
 </div>
@@ -54,8 +54,8 @@ The network GWAS and co-expression network approaches described above rely heavi
 </div>
 
 <div class="col-md-3 order-md-2 align-self-center">
-<img class="img-fluid w-150" src="/static/img/research/research_picture3.png" alt="antibiotic">
-<img class="img-fluid w-150" src="/static/img/research/dnagrinder.png" alt="dnamodel">
+<img class="img-fluid" src="/static/img/research/research_picture3.png" alt="antibiotic">
+<img class="img-fluid" src="/static/img/research/dnagrinder.png" alt="dnamodel">
 </div>
 
 </div>
