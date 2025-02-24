@@ -48,7 +48,7 @@ The network GWAS and co-expression network approaches described above rely heavi
 - Identification of network modules in complex networks
 - Applications of network module analysis
 
-<img class="img-fluid w-75" src="/static/img/research/research_picture3.png" alt="antibiotic">
+<img class="img-fluid w-50" src="/static/img/research/research_picture3.png" alt="antibiotic">
 
 </div>
 
