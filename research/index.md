@@ -13,8 +13,8 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 - **RGC** - Research Grants Council, University Grants Committee, Hong Kong
 - **HMRF** - Health and Medical Research Fund, Health Bureau, Hong Kong
 - **NSFC** - National Natural Science Foundation of China
-- **Hong Kong Government’s Global Talent Recruitment Scheme**
-- **Hong Kong Jockey Club**
+- Hong Kong Government’s Global Talent Recruitment Scheme
+- Hong Kong Jockey Club
 
 </div>
 </div>
