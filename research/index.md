@@ -71,17 +71,17 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
     <!-- 如果需要，可以在这里添加额外的图片 -->
   </div>
 </div>
-/* 图片容器样式 */
+
 .image-container {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* 图片之间的间隔 */
+  gap: 15px; 
 }
 
-/* 统一图片大小 */
+
 .image-container img {
-  width: 100%; /* 图片宽度占满容器 */
-  height: auto; /* 高度自适应 */
-  border-radius: 8px; /* 圆角 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
