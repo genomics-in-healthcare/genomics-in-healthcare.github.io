@@ -1,4 +1,4 @@
-## Fraser Lab Alumni
+## Lab Alumni
 {% assign sorted = site.members | sort: "enddate" | reverse %}
 {% for member in sorted %}
 
@@ -76,7 +76,7 @@ Subsequently: {{member.subsequent}} <br>
 {% endfor %}
 
 <br>
-## Fraser Lab Visitors
+## Lab Visitors
 {% for visitor in sorted %}
 
 {% assign position = visitor.position | downcase %}
