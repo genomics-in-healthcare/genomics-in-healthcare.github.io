@@ -7,24 +7,16 @@ group: research
 <div class="row">
 
 # Our research
-The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthcare is dedicated to transforming biomedical research through the seamless integration of artificial intelligence, genomics, and experimental biology. Under the leadership of Professor Zhang Weixiong—Chair Professor of Systems Biology and Artificial Intelligence and Vice President of the Graduate School—we combine interdisciplinary expertise in AI, data science, genomics, molecular biology, and neuroscience. Supported by the Hong Kong Government’s Global Talent Recruitment Scheme, our institution, and the Hong Kong Jockey Club, our work is backed by over HKD 80 million in funding.
+
+The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthcare is dedicated to transforming biomedical research through the seamless integration of artificial intelligence, genomics, and experimental biology. We combine interdisciplinary expertise in AI, data science, genomics, molecular biology, and neuroscience. Supported by the Hong Kong Government’s Global Talent Recruitment Scheme, our institution, and the Hong Kong Jockey Club, our work is backed by over HKD 80 million in funding.
+
+The research projects in the Lab are funded by:
+- **RGC** - Research Grants Council, University Grants Committee, Hong Kong
+- **HMRF** - Health and Medical Research Fund, Health Bureau, Hong Kong
+- **NSFC** - National Natural Science Foundation of China
 
 <br>
 <br>
-
-</div>
-
-<div class="row">
-
-<div class="row align-items-stretch">
-    <div class="col-md-7 order-md-1">
-        <p>Our laboratory bridges the gap between “dry” computational analyses and “wet” laboratory experimentation. With access to state-of-the-art supercomputing facilities and advanced biomedical instrumentation, we employ innovative deep learning and large language models to decode complex genetic architectures. Our research targets fundamental challenges in genetics and molecular biology—such as deciphering noncoding gene regulation and performing comprehensive genome-wide association studies—to reveal novel molecular signatures underlying disease.</p>
-    </div>
-    <div class="col-md-5 order-md-2 align-self-center">
-        <img class="img-fluid" src="/static/img/research/bio1.png" alt="qFit">
-    </div>
-</div>
-
 
 </div>
 </div>
