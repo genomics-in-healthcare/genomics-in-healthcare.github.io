@@ -1,5 +1,5 @@
 ---
-title: Research in the Fraser Lab
+title: Research in our Lab
 layout: default
 group: research
 ---
@@ -14,14 +14,16 @@ The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthc
 - **NSFC** - National Natural Science Foundation of China
 - Hong Kong Government’s Global Talent Recruitment Scheme
 - Hong Kong Jockey Club
+<br>
+<br>
 
 </div>
 
 <div class="row">
 
-## Biology, Genetics and Genomics
+### Biology, Genetics and Genomics
 
-<div class="col-md-7 order-md-2">
+<div class="col-md-7 order-md-1">
 
 The work in the Zhang lab in this broad field is mainly computational and falls into the category of Data Sciences (or Big Data). We aim to find and understand biological “stories” through building models and identifying patterns from large quantities of genome-scale biological data. In the process, we integrate the bench work of molecular biology and develop novel methods and efficient software tools along the way. In this broad area, we pursue two overarching themes, **<span style="color:blue; font-weight:bold; font-style:italic;">network systems biology</span>** and **<span style="color:blue; font-weight:bold; font-style:italic;">gene regulation via noncoding RNA genes</span>**. We are interested in basic biological questions (e.g., the biogenesis of small noncoding RNAs, transcriptional and post-transcriptional gene regulation) and their applications to complex diseases (e.g., Alzheimer’s disease (AD) and psoriasis) and plant stress response (e.g., rice blast and rice bacterial blight).
 - Network-based, allele-specific genome-wide association study (GWAS)
@@ -30,42 +32,67 @@ The work in the Zhang lab in this broad field is mainly computational and falls 
 - Regulatory functions of small noncoding RNAs
 
 </div>
+<div class="col-md-5 order-md-2 align-self-center">
+<img class="img-fluid" src="/static/img/research/research_picture1.png" alt="qFit">
+<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
 
-<div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/research/research_picture1.png" alt="bio">
 </div>
-
 </div>
-
 <div class="row">
 
-## LLM and Datamining
+### Using multi-temperature X-ray data collection methods in mechanistic studies and ligand discovery campaigns
+
+<div class="col-md-7 order-md-2">
+
+We recognized that the standard practice of cryocooling crystals could distort protein conformations.
+In both larger surveys and isolated mechanistic studies, we have demonstrated the value of room temperature data collection for revealing the structural basis of protein conformational dynamics, leading to new insights into enzymes, and increasing connections to dynamics studies from NMR and simulations.
+Additionally, we have identified how temperature can bias small molecule discovery, leading some fragment sites inaccessible at cryogenic temperatures and repositioning critical water molecules.
+</div>
+
+<div class="col-md-5 order-md-1 align-self-center">
+<img class="img-fluid" src="/static/img/pub/2018_keedy_hill.jpg" alt="ptp1b">
+</div>
+</div>
+<div class="row">
+
+### Network GWAS
 
 <div class="col-md-7 order-md-1 ">
 
- In recent years, in order to support the research activities in computational biology and genomics, we have been focusing on developing effective computational methods for finding and analyzing modular structures in large (biological) networks.
+In recent years, in order to support the research activities in computational biology and genomics, we have been focusing on developing effective computational methods for finding and analyzing modular structures in large (biological) networks.
 
 The network GWAS and co-expression network approaches described above rely heavily on accurately and efficiently finding network modules. Nevertheless, finding structures in large networks is a challenging problem in machine learning and datamining. First, network structural properties can be characterized in several different ways, by node connectivity, by properties on links (such as relationships among connected individuals), or by semantics of nodes and links (such as the social roles that individuals play in a society network). In our research, we considered these different types of information for network module finding and developed effective novel methods for finding modules of nodes (Jin, Chen, He and Zhang, Proc. AAAI-15), modules of links (He, Liu, Jin and Zhang, Proc. AAAI-15), and modules that are defined by network structural information and node semantics (He, et al., Proc AAAI-17). We adopted a few different machine learning techniques in developing our methods, including non-negative matrix factorization (Wang, et al., Proc. AAAI-16), stochastic modeling (He, Liu, Jin and Zhang, Proc. AAAI-15), deep learning (Yang, et al., Proc. IJCAI-16), and Markov Random Fields (He, et al., Proc. AAAI-18).
-- Genomic Foundation Models
 - Network clustering analysis
 - Identification of network modules in complex networks
 - Applications of network module analysis
-
 </div>
 
 <div class="col-md-3 order-md-2 align-self-center">
+
 <img class="img-fluid" src="/static/img/research/research_picture3.png" alt="antibiotic">
-<img class="img-fluid" src="/static/img/research/dnagrinder.png" alt="dnamodel">
+</div>
+</div>
+<div class="row">
+
+### Genomic LLM
+
+<div class="col-md-7 order-md-2">
+
+
+We are currently developing deep learning algorithms and large foundational language models for application in biomedical research. Our focus is on addressing critical challenges in genetics and molecular biology, such as noncoding gene regulation and genome-wide association studies. In our clinical research initiatives, we further harness these AI methodologies—particularly large language models—to automatically generate treatment strategies based on refined disease classifications and molecular markers.
+- Genomic Foundation Models
+- Specific models regarding different genomic problems
 </div>
 
+<div class="col-md-5 order-md-1 align-self-center">
+<img class="img-fluid" src="/static/img/research/dnagrinder.png" alt="hairball">
 </div>
-
+</div>
 <div class="row">
 
 ### Dedication
-<div class="col-md-7 order-md-2">
 
 Our laboratory is at the forefront of merging artificial intelligence with biomedical technology to address some of the most pressing challenges in modern medicine. By integrating computational innovation with rigorous experimental validation, we aim not only to advance our understanding of disease mechanisms but also to drive the development of personalized diagnostic and therapeutic strategies. Our early successes in psychiatric disorders and cancer underscore the potential of our interdisciplinary approach to yield transformative insights and clinical breakthroughs.
-</div>
+
 
 </div>
