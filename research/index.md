@@ -55,6 +55,7 @@ The network GWAS and co-expression network approaches described above rely heavi
 
 <div class="col-md-3 order-md-2 align-self-center">
 <img class="img-fluid w-150" src="/static/img/research/research_picture3.png" alt="antibiotic">
+<img class="img-fluid w-150" src="/static/img/research/dnagrinder.png" alt="dnamodel">
 </div>
 
 </div>
