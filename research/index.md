@@ -70,6 +70,8 @@ We are currently developing **<span style="color:blue; font-weight:bold; font-st
 
 ### Dedication
 
+<div class="col-md-12">
+  
 Our laboratory is at the forefront of merging artificial intelligence with biomedical technology to address some of the most pressing challenges in modern medicine. By integrating **<span style="color:blue; font-weight:bold; font-style:italic;">computational innovation</span>** with rigorous **<span style="color:blue; font-weight:bold; font-style:italic;">experimental validation</span>**, we aim not only to advance our understanding of disease mechanisms but also to drive the development of personalized diagnostic and therapeutic strategies. Our early successes in psychiatric disorders and cancer underscore the potential of our interdisciplinary approach to yield transformative insights and clinical breakthroughs.
 
 
