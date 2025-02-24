@@ -6,7 +6,6 @@ image: /static/img/members/Zhangweixiong.jpg
 # altimage: /static/img/members/Fraser_pb.jpg
 position: Principal Investigator
 #current:
-pronouns: he/him/his
 email: weixiong.zhang@polyu.edu.hk
 scholar: Minb5QMAAAAJ
 website:
