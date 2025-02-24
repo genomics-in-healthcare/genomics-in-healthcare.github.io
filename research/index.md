@@ -9,6 +9,9 @@ group: research
 # Our research
 The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthcare is dedicated to transforming biomedical research through the seamless integration of artificial intelligence, genomics, and experimental biology. Under the leadership of Professor Zhang Weixiong—Chair Professor of Systems Biology and Artificial Intelligence and Vice President of the Graduate School—we combine interdisciplinary expertise in AI, data science, genomics, molecular biology, and neuroscience. Supported by the Hong Kong Government’s Global Talent Recruitment Scheme, our institution, and the Hong Kong Jockey Club, our work is backed by over HKD 80 million in funding.
 
+<br>
+<br>
+
 </div>
 
 <div class="row">
@@ -21,7 +24,7 @@ Our laboratory bridges the gap between “dry” computational analyses and “w
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid w-50" src="/static/img/research/bio1.png" alt="qFit">
+<img class="img-fluid w-75" src="/static/img/research/bio1.png" alt="qFit">
 <!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
 
 </div>
@@ -36,7 +39,7 @@ We apply our integrated methodologies to unravel the pathogenesis of multifacete
 </div>
 
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/research/bio2.png" alt="ptp1b">
+<img class="img-fluid w-75" src="/static/img/research/bio2.png" alt="ptp1b">
 <img class="img-fluid" src="/static/img/research/gpu.png" alt="ptp1b">
 </div>
 </div>
@@ -54,7 +57,7 @@ The molecular markers and redefined disease classifications derived from our res
 
 <div class="col-md-3 order-md-2 align-self-center">
 
-<img class="img-fluid" src="/static/img/research/summary.jpg" alt="antibiotic">
+<img class="img-fluid w-125" src="/static/img/research/summary.jpg" alt="antibiotic">
 </div>
 </div>
 <div class="row">
