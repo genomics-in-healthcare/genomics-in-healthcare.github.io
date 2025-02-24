@@ -34,7 +34,7 @@ group: research
     </div>
     <div class="col-md-5 order-md-1 align-self-center text-center">
         <img class="img-fluid" src="/static/img/research/bio2.png" alt="ptp1b">
-        <img class="img-fluid" src="/static/img/research/GPU.png" alt="GPU">
+        <img class="img-fluid" src="/static/img/research/gpu.png" alt="GPU">
     </div>
 </div>
 
@@ -46,7 +46,7 @@ group: research
         </p>
     </div>
     <div class="col-md-3 order-md-2 align-self-center text-center">
-        <img class="img-fluid" src="/static/img/research/summary.png" alt="Summary">
+        <img class="img-fluid" src="/static/img/research/summary.jpg" alt="Summary">
     </div>
 </div>
 
