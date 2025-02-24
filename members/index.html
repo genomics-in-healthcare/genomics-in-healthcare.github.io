@@ -178,20 +178,20 @@ group: members
 		{% elsif position contains "principal research fellow" %}
 			{% assign color = "darkorange" %}
 	    	{% elsif position contains "research assistant professor" %}
-			{% assign color = "orange" %}
+			{% assign color = "goldenrod" %}
 	    	{% elsif position contains "research fellow" %}
-			{% assign color = "lightorange" %}
+			{% assign color = "lightcoral" %}
 		{% elsif position contains "postdoctoral" %}
-			{% assign color = "gold" %}
+			{% assign color = "yellowgreen" %}
 		{% elsif position contains "phd student" %}
-			{% assign color = "darkblue" %}
+			{% assign color = "royalblue" %}
 		{% elsif position contains "mphil student"%}
-			{% assign color = "lightblue" %}
+			{% assign color = "deepskyblue" %}
 		{% elsif position contains "research assistant" %}
             {% unless position contains "affiliate" %}
-                {% assign color = "turquoise" %}
+                {% assign color = "mediumseagreen" %}
 	    {% elsif position contains "visiting scholar" %}
-    		{% assign color = "purple" %}
+    		{% assign color = "violet" %}
             {% endunless %}
 		{% else %}
 			{% assign color = "purple" %}
@@ -216,25 +216,25 @@ group: members
 <rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="darkorange" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Principal research fellow</text>
 {% assign yposition = yposition | plus: legendboxspacing %}
-<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="orange" />
+<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="goldenrod" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Research assistant professor</text>
 {% assign yposition = yposition | plus: legendboxspacing %}
-<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="lightorange" />
+<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="lightcoral" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Research fellow</text>
 {% assign yposition = yposition | plus: legendboxspacing %}
-<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="gold" />
+<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="yellowgreen" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Postdoctoral fellow</text>
 {% assign yposition = yposition | plus: legendboxspacing %}
-<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="darkblue" />
+<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="royalblue" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Ph.D. student</text>
 {% assign yposition = yposition | plus: legendboxspacing %}
-<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="lightblue" />
+<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="deepskyblue" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Mphil student</text>
 {% assign yposition = yposition | plus: legendboxspacing %}
-<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="turquoise" />
+<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="mediumseagreen" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Research assistant</text>
 {% assign yposition = yposition | plus: legendboxspacing %}
-<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="purple" />
+<rect x="{{ xposition }}" y="{{ yposition }}" width="{{ legendboxsize }}" height="{{ legendboxsize }}" fill="violet" />
 <text x="{{ fontsize | times: 0.25 | plus: legendboxsize | plus: xposition }}" y="{{ fontsize | times: 0.75 | plus: legendboxsize | times: 0.5 | plus: yposition }}" font-family="sans-serif" font-size="{{ fontsize }}" stroke="black">Visiting scholar</text>
 </svg>
 </div>
