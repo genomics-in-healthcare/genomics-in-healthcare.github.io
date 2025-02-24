@@ -21,7 +21,7 @@ Our laboratory bridges the gap between “dry” computational analyses and “w
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid w-50" src="/static/img/research/bio1.png" alt="qFit">
+<img class="img-fluid w-75" src="/static/img/research/bio1.png" alt="qFit">
 <!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
 
 </div>
@@ -36,7 +36,7 @@ We apply our integrated methodologies to unravel the pathogenesis of multifacete
 </div>
 
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/research/bio2.png" alt="ptp1b">
+<img class="img-fluid w-50" src="/static/img/research/bio2.png" alt="ptp1b">
 <img class="img-fluid" src="/static/img/research/gpu.png" alt="ptp1b">
 </div>
 </div>
@@ -54,7 +54,7 @@ The molecular markers and redefined disease classifications derived from our res
 
 <div class="col-md-3 order-md-2 align-self-center">
 
-<img class="img-fluid" src="/static/img/research/summary.jpg" alt="antibiotic">
+<img class="img-fluid w-150" src="/static/img/research/summary.jpg" alt="antibiotic">
 </div>
 </div>
 <div class="row">
