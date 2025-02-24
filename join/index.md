@@ -3,7 +3,7 @@ title: Join the Fraser Lab
 layout: default
 group: join
 ---
-
+# Join our Lab
 We are looking for young talents with a background in 
 <strong style="color: blue;">Computer Science and Engineering, Biology, Computational Biology, Genomics, Biomedical Engineering, Medicine</strong>
 and related disciplines to join the Hong Kong Jockey Club STEM Laboratory of Genomics in Healthcare.
