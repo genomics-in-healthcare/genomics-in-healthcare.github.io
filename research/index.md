@@ -44,7 +44,7 @@ The work in the Zhang lab in this broad field is mainly computational and falls 
 
 <div class="col-md-7 order-md-1 ">
 
-In recent years, in order to support the research activities in computational biology and genomics, we have been focusing on developing effective computational methods for finding and analyzing modular structures in large (biological) networks.
+In recent years, in order to support the research activities in computational biology and genomics, we have been focusing on developing effective computational methods for finding and analyzing modular structures in **<span style="color:blue; font-weight:bold; font-style:italic;">large (biological) networks</span>**.
 
 The network GWAS and co-expression network approaches described above rely heavily on accurately and efficiently finding network modules. Nevertheless, finding structures in large networks is a challenging problem in machine learning and datamining. First, network structural properties can be characterized in several different ways, by node connectivity, by properties on links (such as relationships among connected individuals), or by semantics of nodes and links (such as the social roles that individuals play in a society network). In our research, we considered these different types of information for network module finding and developed effective novel methods for finding modules of nodes (Jin, Chen, He and Zhang, Proc. AAAI-15), modules of links (He, Liu, Jin and Zhang, Proc. AAAI-15), and modules that are defined by network structural information and node semantics (He, et al., Proc AAAI-17). We adopted a few different machine learning techniques in developing our methods, including non-negative matrix factorization (Wang, et al., Proc. AAAI-16), stochastic modeling (He, Liu, Jin and Zhang, Proc. AAAI-15), deep learning (Yang, et al., Proc. IJCAI-16), and Markov Random Fields (He, et al., Proc. AAAI-18).
 - Network clustering analysis
@@ -63,8 +63,7 @@ The network GWAS and co-expression network approaches described above rely heavi
 
 <div class="col-md-7 order-md-2">
 
-
-We are currently developing deep learning algorithms and large foundational language models for application in biomedical research. Our focus is on addressing critical challenges in genetics and molecular biology, such as noncoding gene regulation and genome-wide association studies. In our clinical research initiatives, we further harness these AI methodologies—particularly large language models—to automatically generate treatment strategies based on refined disease classifications and molecular markers.
+We are currently developing **<span style="color:blue; font-weight:bold; font-style:italic;">deep learning</span>** algorithms and **<span style="color:blue; font-weight:bold; font-style:italic;">genomic foundational models</span>** for application in biomedical research. Our focus is on addressing critical challenges in genetics and molecular biology, such as noncoding gene regulation and genome-wide association studies. In our clinical research initiatives, we further harness these AI methodologies—particularly large language models—to automatically generate treatment strategies based on refined disease classifications and molecular markers.
 - Genomic Foundation Models
 - Specific models regarding different genomic problems
 </div>
@@ -77,7 +76,7 @@ We are currently developing deep learning algorithms and large foundational lang
 
 ### Dedication
 
-Our laboratory is at the forefront of merging artificial intelligence with biomedical technology to address some of the most pressing challenges in modern medicine. By integrating computational innovation with rigorous experimental validation, we aim not only to advance our understanding of disease mechanisms but also to drive the development of personalized diagnostic and therapeutic strategies. Our early successes in psychiatric disorders and cancer underscore the potential of our interdisciplinary approach to yield transformative insights and clinical breakthroughs.
+Our laboratory is at the forefront of merging artificial intelligence with biomedical technology to address some of the most pressing challenges in modern medicine. By integrating **<span style="color:blue; font-weight:bold; font-style:italic;">computational innovation</span>** with rigorous **<span style="color:blue; font-weight:bold; font-style:italic;">experimental validation</span>**, we aim not only to advance our understanding of disease mechanisms but also to drive the development of personalized diagnostic and therapeutic strategies. Our early successes in psychiatric disorders and cancer underscore the potential of our interdisciplinary approach to yield transformative insights and clinical breakthroughs.
 
 
 </div>
