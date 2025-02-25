@@ -3,14 +3,10 @@
 <br>
 <br>
 [medImg] H. Guo, Y. Xiao, S. Dong, J. Yang, P. Zhao, T. Zhao, A. Cai, L. Tang, J. Liu, H. Wang, R. Hua, R. Liu, Y. Wei, D. Sun, Z. Liu, M. Xia, Y. He, Y. Wu, T. Si, F. Womer, F. Xu, Y. Tang, J. Wang, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, X. Zhang & F. Wang , Bridging animal models and humans: neuroimaging as intermediate phenotypes linking genetic or stress factors to anhedonia. BMC medicine, 2025, 23(1):38.
-<br>
-<br>
 # 2024
 <br>
 <br>
 ·  [ml/dm] D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning, IEEE Trans. Neural Networks and Learning Systems, 2024, 35(4):4438-50.
-<br>
-<br>
 # 2023
 <br>
 <br>
