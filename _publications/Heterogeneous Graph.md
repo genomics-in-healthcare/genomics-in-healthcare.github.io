@@ -1,1 +1,6 @@
-[ml/dm] C. Huo, D. He, Y. Li, D. Jin, J. Dang, W. Pedrycz, L. Wu, and W. Zhang, Heterogeneous Graph Neural Networks using Self-supervised Reciprocally Contrastive Learning, ACM Trans. Intell. Syst. Technol, 2025, 16(1):1-21.
+---
+title: Heterogeneous Graph Neural Networks using Self-supervised Reciprocally Contrastive Learning
+authors: C. Huo, D. He, Y. Li, D. Jin, J. Dang, W. Pedrycz, L. Wu, and ***W. Zhang***
+journal: ACM Trans. Intell. Syst
+yera: 2025
+---
