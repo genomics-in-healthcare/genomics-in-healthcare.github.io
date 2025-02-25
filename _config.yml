@@ -7,7 +7,7 @@ paginate: 10
 plugins: [jekyll-paginate]
 paginate_path: "news/page:num"
 
-permalink: pretty
+permalink: /:collection/:path/
 markdown: kramdown
 kramdown:
   parse_block_html: true
