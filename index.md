@@ -4,7 +4,7 @@ layout: home
 group: home
 ---
 
-# Welcome to the Genmoics in Healthcare Lab Lab!
+# Welcome to the Genmoics in Healthcare Lab!
 {: .display-4}
 <br>
 We are part of the [Department of Health Technology and Informatics](https://www.polyu.edu.hk/hti/).
