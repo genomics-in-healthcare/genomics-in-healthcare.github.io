@@ -6,13 +6,5 @@ group: publications
 
 <h1>Publications</h1>
 <div class="container-fluid">
-    {% assign sorted = site.publications | sort: "pub_date" | reverse %}
-    {% for publication in sorted %}
-        <hr>
-        <div class="row" id="{{ publication.pmid }}">
-            <div>
-                <p>{{ publication.raw_text }}</p>
-            </div>
-        </div>
-    {% endfor %}
+  {{ "{% include_relative ../_publications/publications.md %}" | markdownify }}
 </div>
