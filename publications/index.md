@@ -8,3 +8,5 @@ group: publications
 
 - [Journal Publications](/publications/journals/)
 - [Conference Publications](/publications/conferences/)
+- [preprints](/publications/preprints/)
+- [peer-review](/publications/peer-reviews/)
