@@ -1,0 +1,9 @@
+---
+title: Publications from the Genomics in Healthcare Lab
+layout: default
+group: publications
+---
+
+# Publications Categories
+
+- [Journal Publications](/publication/journal/)
