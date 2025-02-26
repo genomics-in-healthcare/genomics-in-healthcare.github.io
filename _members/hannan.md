@@ -1,5 +1,5 @@
 ---
-name: Nan Han
+name: Han Nan
 startdate: [2024-05-01]
 enddate: []
 image: /static/img/members/HanNan.jpg #365 x 365 pixels, 72 dpi
