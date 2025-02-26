@@ -6,7 +6,7 @@ group: publications
 
 # Publications Categories
 
-- [preprints](/publications/preprints/)
+- [Preprints](/publications/preprints/)
 - [Journal Publications](/publications/journals/)
 - [Conference Publications](/publications/conferences/)
-- [research monograph](/publications/research-monograph/)
+- [Research Monograph](/publications/research-monograph/)
