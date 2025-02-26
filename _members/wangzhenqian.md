@@ -1,5 +1,5 @@
 ---
-name: Zhenqian Wang
+name: Wang Zhenqian
 startdate: [2024-09-01]
 enddate: []
 image: /static/img/members/WangZhenqian.jpg #365 x 365 pixels, 72 dpi
