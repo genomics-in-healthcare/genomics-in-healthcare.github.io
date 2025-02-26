@@ -6,4 +6,4 @@ group: publications
 
 # Publications Categories
 
-- [Journal Publications](/publication/journals/)
+- [Journal Publications](/publications/journals/)
