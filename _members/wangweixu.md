@@ -2,7 +2,7 @@
 name: Wang Weixu
 startdate: [2022-09-01]
 enddate: []
-image: /static/img/members/WangWeixu.jpg #365 x 365 pixels, 72 dpi
+image: /static/img/members/WangWeixu.png #365 x 365 pixels, 72 dpi
 position: Ph.D. student
 #subsequent:  update once you become an alumnus
 description: "Weixu earned his Bachelor's and Master's degrees in Computer Science and Technology from Heilongjiang University of Science and Technology and Northeastern University, respectively. 
