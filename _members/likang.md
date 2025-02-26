@@ -1,5 +1,5 @@
 ---
-name: Kang Li
+name: Li Kang
 startdate: [2022-09-01]
 enddate: []
 image: /static/img/members/LiKang.jpg #365 x 365 pixels, 72 dpi
