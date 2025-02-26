@@ -7,3 +7,4 @@ group: publications
 # Publications Categories
 
 - [Journal Publications](/publications/journals/)
+- [Conference Publications](/publications/conferences/)
