@@ -1,5 +1,5 @@
 ---
-name: Nan Han, Ph.D.
+name: Nan Han
 startdate: [2024-059-01]
 enddate: []
 image: /static/img/members/HanNan.jpg #365 x 365 pixels, 72 dpi
