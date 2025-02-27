@@ -6,6 +6,73 @@ group: members
 
 <h1>Members</h1>
 
+{% assign sorted_members = site.members | sort: "name" %}
+
+{% assign principal_investigators = sorted_members | where: "position", "Principal Investigator" %}
+{% assign principal_research_fellows = sorted_members | where: "position", "Principal Research Fellow" %}
+{% assign research_assistant_professors = sorted_members | where: "position", "Research Assistant Professor" %}
+{% assign research_fellows = sorted_members | where: "position", "Research Fellow" %}
+{% assign postdocs = sorted_members | where: "position", "Postdoctoral" %}
+{% assign phd_students = sorted_members | where: "position", "Ph.D. Student" %}
+{% assign mphil_students = sorted_members | where: "position", "MPhil Student" %}
+{% assign research_assistants = sorted_members | where: "position", "Research Assistant" %}
+
+{% if principal_investigators.size > 0 %}
+  # Principal Investigator
+  {% for member in principal_investigators %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
+{% if principal_research_fellows.size > 0 %}
+  # Principal Research Fellow
+  {% for member in principal_research_fellows %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
+{% if research_assistant_professors.size > 0 %}
+  # Research Assistant Professor
+  {% for member in research_assistant_professors %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
+{% if research_fellows.size > 0 %}
+  # Research Fellow
+  {% for member in research_fellows %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
+{% if postdocs.size > 0 %}
+  # Postdoctoral
+  {% for member in postdocs %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
+{% if phd_students.size > 0 %}
+  # Ph.D. Student
+  {% for member in phd_students %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
+{% if mphil_students.size > 0 %}
+  # MPhil Student
+  {% for member in mphil_students %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
+{% if research_assistants.size > 0 %}
+  # Research Assistant
+  {% for member in research_assistants %}
+  - {{ member.name }}
+  {% endfor %}
+{% endif %}
+
 {% for member in site.members %}
 
 {% unless member.enddate == empty or member.startdate.size != member.enddate.size %}
