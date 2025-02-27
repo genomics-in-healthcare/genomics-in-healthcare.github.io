@@ -4,11 +4,13 @@ layout: members
 group: members
 ---
 
+<h1>Members</h1>
+
 {% assign all_members = site.members %}
 
-{% assign unique_positions = all_members | map: "position" | uniq %}
+{% assign positions_order = "Principal investigator, Principal Research Fellow, Research Assistant Professor, Research Fellow, Postdoctoral Scholar, Ph.D. Student, MPhil Student, Research Assistant" | split: ", " %}
 
-{% for position in unique_positions %}
+{% for position in positions_order %}
     {% assign members_in_position = all_members | where: "position", position | sort: "name" %}
     {% if members_in_position.size > 0 %}
         <h2>{{ position }}{% if position != "Principal investigator" %}s{% endif %}</h2>
