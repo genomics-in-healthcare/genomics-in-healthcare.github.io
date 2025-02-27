@@ -71,13 +71,13 @@ group: members
 {% assign yheight = 16 %}
 {% assign yspacing = 18 %}
 {% assign fontsize = 12 %}
-{% assign yearoffset = 2020 %}
+{% assign yearoffset = 2015 %}
 {% assign majortick = 0.05 %}
 {% assign minortick = 0.025 %}
 {% assign legendboxsize = 20 %}
 {% assign legendboxspacing = 24 %}
 {% assign people = site.members | concat: site.alumni | sort: "startdate" %}
-{% assign finalyear = "now" | date: "%Y" | plus: 10 %}
+{% assign finalyear = "now" | date: "%Y" | plus: 5 %}
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg width="100%" height="auto" viewBox="0 0 {{ finalyear | minus: yearoffset | plus: majortick | times: stretch }} {{ people.size | plus: 1 | times: yspacing | plus: 5 }}" xmlns="http://www.w3.org/2000/svg">
 {% assign i = 0 %}
