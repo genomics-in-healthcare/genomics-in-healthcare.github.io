@@ -6,7 +6,7 @@ group: members
 
 {% assign all_members = site.members %}
 
-{% assign positions_order = "Principal Investigator, Principal Research Fellow, Research Assistant Professor, Research Fellow, Postdoctoral Scholar, Ph.D. Student, Mphil Student, Research Assistant" | split: ", " %}
+{% assign positions_order = "Principal Investigator, Principal Research Fellow, Research Assistant Professor, Research Fellow, Postdoctoral Scholar, Ph.D. Student, MPhil Student, Research Assistant" | split: ", " %}
 
 {% for position in positions_order %}
     {% assign members_in_position = all_members | where: "position", position | sort: "name" %}
@@ -23,7 +23,7 @@ group: members
                         {% if member.pronouns %}
                             <em>{{ member.pronouns }}</em> <br>
                         {% endif %}
-                        {{ member.position | markdownify | remove: '<p>' | remove: '</p>' }} <br>
+                        <!-- 已删除或注释掉显示 position 的行 -->
                         <em>{{ member.email }}</em> <br>
                         {% if member.website %}
                             <a style="overflow-wrap: break-word;" href="{{ member.website }}">{{ member.website }}</a> <br>
