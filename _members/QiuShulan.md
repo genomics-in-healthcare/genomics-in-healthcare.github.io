@@ -1,6 +1,6 @@
 ---
 name: Shulan Qiu, Ph.D.
-startdate: [2023-05-01]
+startdate: [2023-05-10]
 enddate: []
 image: /static/img/members/Qiushulan.jpg #365 x 365 pixels, 72 dpi
 position: Principal Research Fellow
