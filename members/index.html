@@ -6,14 +6,19 @@ group: members
 
 <h1>Members</h1>
 
-{% comment %} 先过滤掉不需要的成员 {% endcomment %}
+{% comment %}
+  首先过滤掉不满足条件的成员：
+  - 要求每个成员必须有 position 字段
+  - 根据原有条件过滤掉 enddate 和 Affiliate、Visiting 的成员
+{% endcomment %}
 {% assign valid_members = site.members | where:"position" %}
-{% assign valid_members = valid_members | where_exp:"member", "member.enddate == empty or member.startdate.size != member.enddate.size" %}
+{% assign valid_members = valid_members | where_exp:"member", "member.enddate == '' or member.startdate.size != member.enddate.size" %}
 {% assign valid_members = valid_members | where_exp:"member", "member.position contains 'Affiliate' == false" %}
 {% assign valid_members = valid_members | where_exp:"member", "member.position contains 'Visiting' == false" %}
 
-
-{% comment %} 根据 position 分组，再对各组内的成员按名字排序 {% endcomment %}
+{% comment %}
+  按 position 分组，然后对各组的成员按名字进行排序
+{% endcomment %}
 {% assign members_by_position = valid_members | group_by:"position" | sort:"name" %}
 
 {% for group in members_by_position %}
@@ -21,7 +26,7 @@ group: members
   <h2>{{ group.name }}</h2>
   {% assign sorted_members = group.items | sort:"name" %}
   {% for member in sorted_members %}
-    <!-- The paddingtop and margin-top edits allow anchors to link properly. -->
+    <!-- 使用原有代码输出成员详细信息 -->
     <div id="{{ member.name }}" class="row" style="padding-top: 60px; margin-top: -60px;">
       <div class="col-sm-4">
         <img class="img-fluid" src="{{ member.image }}" {% if member.altimage %} onmouseover="this.src='{{ member.altimage }}';" onmouseout="this.src='{{ member.image }}';" {% endif %} alt="{{ member.name }}" width="365" height="365"><br>
