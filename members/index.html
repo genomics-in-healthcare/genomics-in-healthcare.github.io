@@ -6,7 +6,7 @@ group: members
 
 <h1>Members</h1>
 
-{% assign current_members = site.members | where_exp: "member", "(member.enddate == empty or member.startdate.size != member.enddate.size) and member.position does not contain 'Affiliate' and member.position does not contain 'Visiting'" %}
+{% assign current_members = site.members | where_exp: "member", "(member.enddate.empty? or member.startdate.size != member.enddate.size) and member.position does not contain 'Affiliate' and member.position does not contain 'Visiting'"%}
 
 {% assign unique_positions = current_members | map: "position" | uniq %}
 
