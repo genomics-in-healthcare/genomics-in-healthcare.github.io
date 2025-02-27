@@ -12,7 +12,6 @@ group: members
     {% assign members_in_position = all_members | where: "position", position | sort: "name" %}
     {% if members_in_position.size > 0 %}
         <h2>{{ position }}{% if position != "Principal investigator" %}s{% endif %}</h2>
-        <hr>
         {% for member in members_in_position %}
             {% if member.enddate.size == 0 or member.startdate.size != member.enddate.size %}
                 <hr>
