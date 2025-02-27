@@ -7,8 +7,11 @@ group: members
 <h1>Members</h1>
 
 {% comment %} 先过滤掉不需要的成员 {% endcomment %}
-{% assign valid_members = site.members | where_exp:"member", "member.enddate == empty or member.startdate.size != member.enddate.size" %}
-{% assign valid_members = valid_members | reject: "position", "Affiliate" | reject: "position", "Visiting" %}
+{% assign valid_members = site.members | where:"position" %}
+{% assign valid_members = valid_members | where_exp:"member", "member.enddate == empty or member.startdate.size != member.enddate.size" %}
+{% assign valid_members = valid_members | where_exp:"member", "member.position contains 'Affiliate' == false" %}
+{% assign valid_members = valid_members | where_exp:"member", "member.position contains 'Visiting' == false" %}
+
 
 {% comment %} 根据 position 分组，再对各组内的成员按名字排序 {% endcomment %}
 {% assign members_by_position = valid_members | group_by:"position" | sort:"name" %}
