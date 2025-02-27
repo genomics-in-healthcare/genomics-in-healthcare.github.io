@@ -6,64 +6,65 @@ group: members
 
 <h1>Members</h1>
 
-{% for member in site.members %}
+{% assign positions_order = "Principal investigator, Principal research fellow, Research assistant professor, Research fellow, Post Doctoral Fellow, Ph.D. Student, MPhil Student, Research assistant" | split: ", " %}
 
-{% unless member.enddate == empty or member.startdate.size != member.enddate.size %}
-{% continue %}
-{% endunless %}
+{% assign current_members = site.members | where_exp: "member", "member.enddate.size == 0 and member.startdate.size == member.enddate.size and member.position does not contain 'Affiliate' and member.position does not contain 'Visiting'"%}
 
-{% if member.position contains "Affiliate" or member.position contains "Visiting" %}
-{% continue %}
-{% endif %}
-
-        <hr>
-        <!-- The paddingtop and margin-top edits allow anchors to link properly. -->
-        <div id = "{{member.name}}" class="row" style="padding-top: 60px; margin-top: -60px;">
-            <div class="col-sm-4">
-                <img class="img-fluid" src="{{member.image}}" {% if member.altimage %} onmouseover="this.src='{{member.altimage}}';" onmouseout="this.src='{{member.image}}';" {% endif %} alt="{{member.name}}"; width="365"; height="365"><br>
-                <strong>{{member.name}}</strong> <br>
-                {% if member.pronouns %}
-                  <em>{{member.pronouns}}</em> <br>
-                {% endif %}
-                {{member.position | markdownify | remove: '<p>' | remove: '</p>' }} <br>
-                <em>{{member.email}}</em> <br>
-                {% if member.website %}
-                  <a style="overflow-wrap: break-word;" href= "{{member.website}}">{{member.website}}</a> <br>
-                {% endif %}
-                {% if member.orcid %}
-                  <a href="http://orcid.org"><img class="inline-block mem-icon" src="/static/img/logo/orcid_logo.svg"></a>
-                  <a href="http://orcid.org/{{member.orcid}}"> {{member.orcid}}</a> <br>
-                {% endif %}
-                {% if member.linkedin %}
-                  <a href="http://www.linkedin.com"><img class="inline-block mem-icon" src="/static/img/logo/linkedin_logo.svg"></a>
-                  <a href= "http://www.linkedin.com/in/{{member.linkedin}}"> {{member.linkedin}} </a> <br>
-                {% endif %}
-                {% if member.UCSF %}
-                  <a href="http://www.ucsf.edu"><img class="inline-block mem-icon" src="/static/img/logo/ucsf_logo_black.svg"></a>
-                  <a href= "http://profiles.ucsf.edu/{{member.UCSF}}"> Profile </a> <br>
-                {% endif %}
-                {% if member.scholar %}
-                  <a href="http://scholar.google.com"><img class="inline-block mem-icon" src="/static/img/logo/gscholar_logo.svg"></a>
-                  <a href= "http://scholar.google.com/citations?user={{member.scholar}}"> {% if member.timeline_name %}{{ member.timeline_name }}{% else %}{{ member.name | split: " " | first }}{% endif %}'s Citations </a> <br>
-                {% endif %}
-                {% if member.twitter %}
-                  <a href="http://twitter.com"><img class="inline-block mem-icon" src="/static/img/logo/twitter_logo.svg"></a>
-                  <a href= "http://twitter.com/{{member.twitter}}"> @{{member.twitter}} </a> <br>
-                {% endif %}
-                {% if member.bsky %}
-                  <a href="https://bsky.app/"><img class="inline-bloc mem-icon" src="/static/img/logo/bsky_logo.svg"></a>
-                  <a href= "https://bsky.app/profile/{{member.bsky}}"> {{member.bsky}} </a> <br>
-                {% endif %}
-                {% if member.github %}
-                  <a href="http://github.com"><img class="inline-bloc mem-icon" src="/static/img/logo/github_logo.svg"></a>
-                  <a href= "http://github.com/{{member.github}}"> {{member.github}} </a> <br>
-                {% endif %}
+{% for position in positions_order%}
+    <h2>{{ position }}</h2>
+    {% assign lower_position = position | downcase%}
+    {% assign members_in_position = current_members | where_exp: "member", "member.position | downcase == lower_position" | sort: "name" %}
+    {% if members_in_position.size > 0%}
+        {% for member in members_in_position%}
+            <hr>
+            <div id = "{{member.name}}" class="row" style="padding-top: 60px; margin-top: -60px;">
+                <div class="col-sm-4">
+                    <img class="img-fluid" src="{{member.image}}" {% if member.altimage %} onmouseover="this.src='{{member.altimage}}';" onmouseout="this.src='{{member.image}}';" {% endif %} alt="{{member.name}}"; width="365"; height="365"><br>
+                    <strong>{{member.name}}</strong> <br>
+                    {% if member.pronouns%}
+                      <em>{{member.pronouns}}</em> <br>
+                    {% endif%}
+                    {{member.position | markdownify | remove: '<p>' | remove: '</p>' }} <br>
+                    <em>{{member.email}}</em> <br>
+                    {% if member.website%}
+                      <a style="overflow-wrap: break-word;" href= "{{member.website}}">{{member.website}}</a> <br>
+                    {% endif%}
+                    {% if member.orcid%}
+                      <a href="http://orcid.org"><img class="inline-block mem-icon" src="/static/img/logo/orcid_logo.svg"></a>
+                      <a href="http://orcid.org/{{member.orcid}}"> {{member.orcid}}</a> <br>
+                    {% endif%}
+                    {% if member.linkedIn%}
+                      <a href="http://www.linkedIn.com"><img class="inline-block mem-icon" src="/static/img/logo/linkedIn_logo.svg"></a>
+                      <a href= "http://www.linkedIn.com/in/{{member.linkedIn}}"> {{member.linkedIn}} </a> <br>
+                    {% endif%}
+                    {% if member.UCSF%}
+                      <a href="http://www.ucsf.edu"><img class="inline-block mem-icon" src="/static/img/logo/ucsf_logo_black.svg"></a>
+                      <a href= "http://profiles.ucsf.edu/{{member.UCSF}}"> Profile </a> <br>
+                    {% endif%}
+                    {% if member.scholar%}
+                      <a href="http://scholar.google.com"><img class="inline-block mem-icon" src="/static/img/logo/gscholar_logo.svg"></a>
+                      <a href= "http://scholar.google.com/citations?user={{member.scholar}}"> Scholar Citations </a> <br>
+                    {% endif%}
+                    {% if member.twitTer%}
+                      <a href="http://twitTer.com"><img class="inline-block mem-icon" src="/static/img/logo/twitTer_logo.svg"></a>
+                      <a href= "http://twitTer.com/{{member.twitTer}}"> @{{member.twitTer}} </a> <br>
+                    {% endif%}
+                    {% if member.bsky%}
+                      <a href="https://bsky.app/"><img class="inline-bloc mem-icon" src="/static/img/logo/bsky_logo.svg"></a>
+                      <a href= "https://bsky.app/profilename/{{member.bsky}}"> {{member.bsky}} </a> <br>
+                    {% endif%}
+                    {% if member.github%}
+                      <a href="http://github.com"><img class="inline-bloc mem-icon" src="/static/img/logo/github_logo.svg"></a>
+                      <a href= "http://github.com/{{member.github}}"> {{member.github}} </a> <br>
+                    {% endif%}
+                </div>
+                <div class="col-sm-8">
+                    {{member.description | markdownify}}
+                </div>
             </div>
-            <div class="col-sm-8">
-                {{member.description | markdownify}}
-            </div>
-        </div>
-{% endfor %}
+        {% endfor%}
+    {% endif%}
+{% endfor%}
 <hr>
 <h4>Affiliates</h4>
 {% for member in site.members %}
