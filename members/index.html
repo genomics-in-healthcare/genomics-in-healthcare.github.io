@@ -6,23 +6,25 @@ group: members
 
 <h1>Members</h1>
 
-{%- comment -%}
-  过滤条件：
-  - 筛选出 enddate 为空或 startdate 与 enddate 数组长度不相等的成员
-  - 排除 position 中包含 "Affiliate" 或 "Visiting" 的成员
-{%- endcomment -%}
-{% assign valid_members = site.members | where_exp:"member", "member.enddate == '' or member.startdate.size != member.enddate.size" %}
-{% assign valid_members = valid_members | where_exp:"member", "member.position and (member.position contains 'Affiliate' == false) and (member.position contains 'Visiting' == false)" %}
+{% comment %}
+  过滤出满足条件的成员：
+  1. 必须有 position 字段
+  2. enddate 为 ""（空字符串）或 startdate 与 enddate 数组长度不相等（原逻辑）
+  3. 排除 position 中包含 "Affiliate" 或 "Visiting" 的成员
+{% endcomment %}
+{% assign valid_members = site.members | where:"position" %}
+{% assign valid_members = valid_members | where_exp:"member", "member.enddate == '' or member.startdate.size != member.enddate.size" %}
+{% assign valid_members = valid_members | where_exp:"member", "member.position contains 'Affiliate' == false and member.position contains 'Visiting' == false" %}
 
-{%- comment -%}
-  根据 position 分组，并按 position 名称（即组名）排序
-{%- endcomment -%}
+{% comment %}
+  按 position 分组，再按组名（即 position 值）排序
+{% endcomment %}
 {% assign grouped_members = valid_members | group_by:"position" | sort:"name" %}
 
-{%- for group in grouped_members -%}
+{% for group in grouped_members %}
   <h2>{{ group.name }}</h2>
   {% assign sorted_members = group.items | sort:"name" %}
-  {%- for member in sorted_members -%}
+  {% for member in sorted_members %}
     <hr>
     <!-- The paddingtop and margin-top edits allow anchors to link properly. -->
     <div id="{{ member.name }}" class="row" style="padding-top: 60px; margin-top: -60px;">
@@ -72,8 +74,8 @@ group: members
         {{ member.description | markdownify }}
       </div>
     </div>
-  {%- endfor -%}
-{%- endfor -%}
+  {% endfor %}
+{% endfor %}
 
 <hr>
 
