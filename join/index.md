@@ -26,4 +26,4 @@ The laboratory, supported by the Research Grants Council of Hong Kong and The Ho
 <br>
 <br>
 # Application
-Prospective applicants may sent inquiry to: genomics@polyu.edu.hk
+Prospective applicants may sent inquiry to: genomics at polyu dot edu dot hk
