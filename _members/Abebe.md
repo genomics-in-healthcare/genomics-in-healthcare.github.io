@@ -1,5 +1,5 @@
 ---
-name: Fu QingHui
+name: Negesso, Abebe Edao
 startdate: [2024-09-01]
 enddate: []
 image: /static/img/members/AbebeEdao.jpg #365 x 365 pixels, 72 dpi
