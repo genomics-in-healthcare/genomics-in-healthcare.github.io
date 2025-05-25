@@ -473,6 +473,9 @@ group: publications
 <h3>1999</h3>
 
 ·  [AI] K.S. Tso, G.K. Tharp, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span> and A.T. Tai (1999) A multi-agent operator Interface for unmanned aerial vehicles, Proc of 18th Digital Avionics Systems Conf. Best paper award
+<br>
+<br>
+·  [AI] <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, State-Space Search: Algorithms, Complexity, Extensions, and Applications, Springer-Verlag, New York, NY, 1999.
 
 <h3>1998</h3>
 
