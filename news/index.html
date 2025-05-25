@@ -7,7 +7,7 @@ group: news
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 <hr>
-{{ post.title }}
+<h3>{{ post.title }}</h3>
 <p class="author">
   <span class="author"><a href="/members#{{post.author}}">{{post.author}}</a></span><br>
   <span class="date"><em>{{ post.date | date_to_long_string }}</em></span>
