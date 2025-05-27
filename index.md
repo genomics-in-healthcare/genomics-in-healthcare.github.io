@@ -5,7 +5,7 @@ group: home
 ---
 
 # Welcome to the Genmoics and Artificial Intelligence in Healthcare Lab!
-{: .display-4}
+{: .display-6}
 <br>
 We are part of the [Department of Health Technology and Informatics](https://www.polyu.edu.hk/hti/).
 {: .welcomefont}
