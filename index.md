@@ -6,7 +6,7 @@ group: home
 
 # Welcome to the Genmoics and Artificial Intelligence in Healthcare Lab!
 {: .display-6}
-<br>
+
 
 
 
