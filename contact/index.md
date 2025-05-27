@@ -4,7 +4,7 @@ layout: default
 group: contact
 ---
 
-# Contact the Genomics in Healthcare Lab
+# Contact the Genomics and Artificial Intelligence in Healthcare Lab
 
 <div class="row">
 
