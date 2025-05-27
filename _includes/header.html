@@ -6,7 +6,7 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="{{ site.description }}">
-    <meta name="theme-color" content="#052049">
+    <meta name="theme-color" content="#f8f9fa"> <!-- 设置为近乎白色的灰色 -->
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     {% if page.group == 'news' %}
@@ -19,14 +19,11 @@
   <body>
 
     <!-- Static navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2e86c1">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f8f9fa;"> <!-- 修改header颜色 -->
         <a class="navbar-brand" href="/">{{site.name}}</a>
-        <a href="https://www.polyu.edu.hk/">
-            <img class="inline-block navb-icon" src="/static/img/logo/PolyU-Logos.png" alt="Hong Kong Polytechnic University (PolyU) logo" style="width: 100px; height: auto;">
-        </a>
-        <a href="/static/img/logo/STEMJC_genomics_in_healthcare.png">
-            <img class="inline-block navb-icon" src="/static/img/logo/STEMJC_genomics_in_healthcare.png" alt="Genomics in Healthcare logo" style="width: 100px; height: auto;">
-        </a>
+        <div class="mx-auto">
+            <img class="inline-block navb-icon" src="/static/img/logo/STEMJC_genomics_in_healthcare.png" alt="Genomics in Healthcare logo" style="width: 200px; height: auto;"> <!-- 放大logo -->
+        </div>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,7 +31,7 @@
           <ul class="navbar-nav ml-auto">
             {% for link in site.data.navigation %}
               {% if page.group == link.group %}
-                <li class = "nav-item active"><a class="nav-link" href="{{link.link}}" alt="{{link.name}}"> {{link.name}}<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" href="{{link.link}}" alt="{{link.name}}"> {{link.name}}<span class="sr-only">(current)</span></a></li>
               {% else %}
                 <li class="nav-item"><a class="nav-link" href="{{link.link}}" alt="{{link.name}}"> {{link.name}}</a></li>
               {% endif %}
