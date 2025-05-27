@@ -1,5 +1,5 @@
 ---
-title: Contact the Fraser Lab
+title: Contact the Genomics and Artificial Intelligence in Healthcare Lab
 layout: default
 group: contact
 ---
