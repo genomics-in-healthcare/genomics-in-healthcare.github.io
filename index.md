@@ -4,7 +4,7 @@ layout: home
 group: home
 ---
 
-# Welcome to the Genmoics and Artificial Intelligence in Healthcare Lab!
+Welcome to the Genmoics and Artificial Intelligence in Healthcare Lab!
 {: .display-6}
 
 
