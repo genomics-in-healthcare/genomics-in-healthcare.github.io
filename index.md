@@ -9,14 +9,9 @@ group: home
     <span style="color: darkred;">We are actively recruiting PhD students, research assistants, and postdoctoral fellows.</span>
 </h3>
 
-
-
-
 Research in the lab is focused on advancing genomic medicine and developing AI technology for healthcare.  We are interested in interdisciplinary systems biology and genomics.
 {: .welcomefont}
 
-We are located in Lee Shau Kee Building of The Hong Kong Polytechnic University.
-{: .welcomefont}
 
 <h3> Recent Posts </h3>
 <ul>
