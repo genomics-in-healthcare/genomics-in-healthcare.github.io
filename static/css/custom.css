@@ -1,4 +1,3 @@
-
 @media (min-width: 992px) {
    .navbar-collapse {
        display: none !important;
@@ -8,7 +7,9 @@
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
 }
 
 .video-container iframe,
@@ -24,7 +25,7 @@
 .chart {
   position: relative;
   width: 100%;
-  height: 500px
+  height: 500px;
 }
 
 .smalltxt {
@@ -41,6 +42,7 @@
 
 .navbar {
   margin-bottom: 20px;
+  background-color: #ffffff; /* Header背景颜色 */
 }
 
 .welcomefont {
@@ -48,76 +50,16 @@
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-
-/*
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
+/* Header文字颜色 */
+.navbar-brand {
+  color: #000000; /* 品牌名称颜色 */
 }
 
-/*
-.navbar-default {
-  background-color: #052049;
-  border-color: #668a75;
+.navbar-nav > li > a {
+  color: #000000; /* 导航链接颜色 */
 }
 
-.navbar-default .navbar-brand {
-  font-family: "Lucida Bright", Georgia, serif;
-
-  color: #f6f6f6;
+.navbar-nav > li > a:hover, 
+.navbar-nav > li > a:focus {
+  color: #333333; /* 悬停时颜色 */
 }
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #fdfdfd;
-}
-.navbar-default .navbar-text {
-  color: #f6f6f6;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #f6f6f6;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #fdfdfd;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #fdfdfd;
-  background-color: #668a75;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #fdfdfd;
-  background-color: #668a75;
-}
-.navbar-default .navbar-toggle {
-  border-color: #668a75;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #668a75;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #f6f6f6;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #f6f6f6;
-}
-.navbar-default .navbar-link {
-  color: #f6f6f6;
-}
-.navbar-default .navbar-link:hover {
-  color: #fdfdfd;
-}
-
-
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #f6f6f6;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #fdfdfd;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #fdfdfd;
-    background-color: #668a75;
-  }
-}
-*/
