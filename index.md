@@ -4,7 +4,10 @@ layout: home
 group: home
 ---
 
-# Welcome to the Genmoics and Artificial Intelligence in Healthcare Lab!
+<h3>
+    Welcome to the Genomics and Artificial Intelligence in Healthcare Lab! 
+    <span style="color: darkred;">We are actively recruiting PhD students, research assistants, and postdoctoral fellows.</span>
+</h3>
 
 
 
