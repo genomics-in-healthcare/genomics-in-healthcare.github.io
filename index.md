@@ -17,3 +17,10 @@ Research in the lab is focused on advancing genomic medicine and developing AI t
 
 We are located in Lee Shau Kee Building of The Hong Kong Polytechnic University.
 {: .welcomefont}
+
+<h3> Recent Posts </h3>
+<ul>
+  {% for post in site.posts limit: 5 %}
+    <li><a href="{{ post.url }}"><b>{{ post.title }}</b></a></li>
+  {% endfor %}
+</ul>
