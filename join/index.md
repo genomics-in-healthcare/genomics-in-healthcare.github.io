@@ -1,5 +1,5 @@
 ---
-title: Join the Fraser Lab
+title: Join the Genomics and Artificial Intelligence in Healthcare Lab
 layout: default
 group: join
 ---
