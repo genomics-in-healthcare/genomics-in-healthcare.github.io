@@ -1,5 +1,7 @@
 ---
 name: Sun Canghao
+startdate: [2024-09-01]
+enddate: []
 image: /static/img/members/Suncanghao.jpg #365 x 365 pixels, 72 dpi
 position: Ph.D. Student
 #subsequent:  update once you become an alumnus
