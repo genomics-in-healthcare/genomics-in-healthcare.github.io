@@ -72,8 +72,10 @@ color: #fdfdfd;
 .navbar-default .navbar-text {
 color: #f6f6f6;
 }
+/* 调整导航栏字体大小 */
 .navbar-default .navbar-nav > li > a {
-color: #f6f6f6;
+  color: #f6f6f6;
+  font-size: 1rem;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 color: #fdfdfd;
