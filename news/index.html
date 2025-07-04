@@ -4,8 +4,8 @@ layout: post
 group: news
 ---
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
+<!-- This loops through all news posts -->
+{% for post in site.posts %}
 <div class="news-item">
   <p class="author">
     <span class="author"><a href="/members#{{post.author}}">{{post.author}}</a></span><br>
@@ -29,22 +29,5 @@ group: news
 </div>
 {% endfor %}
 
-<!-- This makes links to other paginator pages -->
-{% if paginator.total_pages > 1 %}
-<ul class="pagination">
-  <li> {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path }}"> {% endif %} Prev</a>&nbsp;</li>
 
-  {% for page in (1..paginator.total_pages) %}
-  {% if page == paginator.page %}
-  <li class="active">{{ page }}&nbsp;</li>
-  {% elsif page == 1 %}
-  <li><a href="/news/">{{ page }}</a>&nbsp;</li>
-  {% else %}
-  <li><a href="/news/page{{ page }}">{{ page }}</a>&nbsp;</li>
-  {% endif %}
-  {% endfor %}
-
-  <li> {% if paginator.next_page %} <a href="{{ paginator.next_page_path }}"> {% endif %} Next</a></li>
-</ul>
-{% endif %}
 

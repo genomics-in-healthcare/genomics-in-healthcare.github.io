@@ -4,8 +4,7 @@ description: "This is the official web page for the Genomics and Artificial Inte
 url: "https://genomics-in-healthcare.github.io/"
 
 paginate: 10
-plugins: [jekyll-paginate]
-paginate_path: "news/page:num"
+
 
 permalink: /:collection/:path/
 markdown: kramdown
