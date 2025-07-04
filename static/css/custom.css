@@ -35,8 +35,22 @@ font-size: 0.9rem;
 height: 1em;
 }
 
+
 .navb-icon {
-height: 1.8em;
+  height: 1.8em;
+}
+
+/* 让导航栏固定在页面顶端 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+body {
+  padding-top: 70px; /* 根据导航栏高度调整 */
 }
 
 .navbar {
