@@ -23,6 +23,8 @@ group: news
   font-size: 14px;
   display: flex; /* 使用弹性布局 */
   align-items: flex-start; /* 顶部对齐 */
+  font-family: Arial; /* 添加Arial字体 */
+  line-height: 1.4; /* 调整行高与Publications页面一致 */
 }
 /* 灰白交替背景 */
 .news-item:nth-child(even) {
@@ -36,22 +38,32 @@ group: news
   margin-right: 20px; /* 日期和内容之间的间距 */
   font-size: 14px;
   color: #333;
+  font-family: Arial; /* 添加Arial字体 */
 }
 .news-content {
   flex: 1; /* 内容占据剩余空间 */
+  font-family: Arial; /* 添加Arial字体 */
 }
 .news-title {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: bold;
+  font-family: Arial; /* 添加Arial字体 */
 }
 .author {
   font-size: 14px;
+  font-family: Arial; /* 添加Arial字体 */
 }
 .tag-section {
   margin-top: 5px;
   font-size: 13px;
   color: #777;
+  font-family: Arial; /* 添加Arial字体 */
+}
+/* 添加Publications页面的h标签样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial;
+  color: #333;
 }
 </style>
 
@@ -90,6 +102,3 @@ group: news
   </div>
   {% endfor %}
 </div>
-
-
-
