@@ -20,11 +20,11 @@ group: news
   margin-bottom: 10px;
   /* 移除边框并使用!important确保覆盖外部CSS */
   border-bottom: none !important;
-  font-size: 14px;
+  font-size: 15px; /* 调整正文字体大小 */
   display: flex; /* 使用弹性布局 */
   align-items: flex-start; /* 顶部对齐 */
-  font-family: Arial; /* 添加Arial字体 */
-  line-height: 1.4; /* 调整行高与Publications页面一致 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  line-height: 1.5; /* 调整行高与Publications页面一致 */
 }
 /* 灰白交替背景 */
 .news-item:nth-child(even) {
@@ -36,38 +36,71 @@ group: news
 .news-date {
   min-width: 120px; /* 日期固定宽度 */
   margin-right: 20px; /* 日期和内容之间的间距 */
-  font-size: 14px;
-  color: #333;
-  font-family: Arial; /* 添加Arial字体 */
+  font-size: 14px; /* 日期字体大小 */
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 .news-content {
   flex: 1; /* 内容占据剩余空间 */
-  font-family: Arial; /* 添加Arial字体 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  font-size: 15px; /* 新闻内容字体大小 */
 }
 .news-title {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: normal; /* 将加粗改为普通字重 */
-  font-family: Arial; /* 添加Arial字体 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  font-size: 18px; /* 新闻标题字体大小 */
+  color: #222;
 }
 .author {
   font-size: 14px;
-  font-family: Arial; /* 添加Arial字体 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 .tag-section {
-  margin-top: 5px;
+  margin-top: 8px;
   font-size: 13px;
-  color: #777;
-  font-family: Arial; /* 添加Arial字体 */
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 /* 添加Publications页面的h标签样式 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial;
-  color: #333;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  color: #222;
+}
+/* 页面主标题样式 */
+h1.page-header {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 /* 移除h4标题的加粗效果 */
 h4.news-title {
   font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+/* 优化链接样式 */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+a:hover {
+  text-decoration: underline;
+}
+.tag-link {
+  font-size: 12px;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 4px;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+.tag-link:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
 }
 </style>
 
