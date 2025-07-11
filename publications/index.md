@@ -4,122 +4,184 @@ layout: default
 group: publications
 ---
 
+<link rel="stylesheet" href="{{ site.url }}/static/css/publications-custom.css">
+
+<style>
+/* 直接在页面中添加样式，确保优先级 */
+.publication-item:nth-child(even) {
+  background-color: #f2f2f2 !important;
+}
+.publication-item-even {
+  background-color: #f2f2f2 !important;
+}
+</style>
+
+<div class="publication-list">
+
 <h3>2025</h3>
-
+<div class="year-group">
+<div class="publication-item">
 ·  [ml/dm] C. Huo, D. He, Y. Li, D. Jin, J. Dang, W. Pedrycz, L. Wu, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Heterogeneous Graph Neural Networks using Self-supervised Reciprocally Contrastive Learning, ACM Trans. Intell. Syst. Technol, 2025, 16(1):1-21.
-<br>
-<br>
-·  [medImg] H. Guo, Y. Xiao, S. Dong, J. Yang, P. Zhao, T. Zhao, A. Cai, L. Tang, J. Liu, H. Wang, R. Hua, R. Liu, Y. Wei, D. Sun, Z. Liu, M. Xia, Y. He, Y. Wu, T. Si, F. Womer, F. Xu, Y. Tang, J. Wang, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, X. Zhang & F. Wang , Bridging animal models and humans: neuroimaging as intermediate phenotypes linking genetic or stress factors to anhedonia. BMC medicine, 2025, 23(1):38.
-<br>
-<br>
-·  [ml/dm]  <span style="color:blue; font-weight:bold; font-style:italic;">Q. Zhao</span>, <span style="color:blue; font-weight:bold; font-style:italic;">C. Zhang</span>, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, dnaGrinder: a lightweight and high-capacity genomic foundation model, arXiv, 2024, https://arxiv.org/abs/2409.15697.
-<h3>2024</h3>
+</div>
 
+<div class="publication-item publication-item-even" style="background-color: #f2f2f2;">
+·  [medImg] H. Guo, Y. Xiao, S. Dong, J. Yang, P. Zhao, T. Zhao, A. Cai, L. Tang, J. Liu, H. Wang, R. Hua, R. Liu, Y. Wei, D. Sun, Z. Liu, M. Xia, Y. He, Y. Wu, T. Si, F. Womer, F. Xu, Y. Tang, J. Wang, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, X. Zhang & F. Wang , Bridging animal models and humans: neuroimaging as intermediate phenotypes linking genetic or stress factors to anhedonia. BMC medicine, 2025, 23(1):38.
+</div>
+
+<div class="publication-item">
+·  [ml/dm]  <span style="color:blue; font-weight:bold; font-style:italic;">Q. Zhao</span>, <span style="color:blue; font-weight:bold; font-style:italic;">C. Zhang</span>, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, dnaGrinder: a lightweight and high-capacity genomic foundation model, arXiv, 2024, https://arxiv.org/abs/2409.15697.
+</div>
+</div>
+
+<h3>2024</h3>
+<div class="year-group">
+<div class="publication-item">
 ·  [ml/dm] D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning, IEEE Trans. Neural Networks and Learning Systems, 2024, 35(4):4438-50.
-<br>
-<br>
+</div>
+
+<div class="publication-item publication-item-even" style="background-color: #f2f2f2;">
 ·  [ml/dm] D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Exploitation of a latent mechanism in graph contrastive learning: Representation scattering, Proc 38-th Conf on Neural Information Processing Systems (NeurIPS 2024).
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ml/dm] Y. Zhou, D. Jin, J. Wei, D. He, Z. Yu, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Generalized taxonomy-guided graph neural networks, Proc 33-rd Intern. Joint Conf. on AI (IJCAI-24).
+</div>
+</div>
 
 <h3>2023</h3>
-
+<div class="year-group">
+<div class="publication-item">
 ·  [ml/dm] D. He, J. Zhao, R. Guo, Z. Feng, D. Jin, Y. Huang , Z. Wang and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Contrastive learning meets homophily: Two birds with one stone. Conf. on Machine Learning (ICML-2023)
-<br>
-<br>
+</div>
+
+<div class="publication-item publication-item-even">
 ·  [medImg] Y. Xiao, FY. Womer, S. Dong, R.Zhu, R. Zhang, J. Yang, L. Zhang, J. Liu, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Z. Liu, X. Zhang, F. Wang*, A neuroimaging-based precision medicine framework for depression,Asian J Psychiatr, 91:103803, 2023.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ml/dm] X. Wei, C. Pan, X. Zhang*, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, Total network controllability analysis discovers explainable drugs for Covid-19 treatment, Biology Direct, 18(1):55, 2023.
-<br>
-<br>
+</div>
+
+<div class="publication-item publication-item-even">
 ·  [ml/dm] X. Zhang*, C. Pan, X. Wei, M. Yu, S. Liu, J. An, J. Yang, B. Wei, W. Hao, Y. Yao*, Y. Zhu*, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, Cancer-keeper genes as therapeutic targets, iScience, 26(8):107296, 2023.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ml/dm] D. Jin, Z. Yu, P. Jiao, S. Pan, D. He, J. Wu, P. Yu, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, A survey of community detection approaches: From statistical modeling to deep learning, IEEE Trans. on Knowledge and Data Engineering, 35(2):1149-90, 2023.
-<br>
-<br>
-·  [PCMM] S. He, <span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, M.Pan, J. P Palavicini, H. Wang, X. Li, A. Bhattacharjee, S. Barannikov, K. F Bieniek, J. L Dupree and X. Han, Marked reduction of spinal cord lipids causes neurogenic bladder in late Alzheimer’s disease, Clin. Transl. Med., 2023 accepted.
-<br>
-<br>
+</div>
+
+<div class="publication-item publication-item-even">
+·  [PCMM] S. He, <span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, M.Pan, J. P Palavicini, H. Wang, X. Li, A. Bhattacharjee, S. Barannikov, K. F Bieniek, J. L Dupree and X. Han, Marked reduction of spinal cord lipids causes neurogenic bladder in late Alzheimer's disease, Clin. Transl. Med., 2023 accepted.
+</div>
+
+<div class="publication-item">
 ·  [PCMM] <span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, S. He, J. Wang, H. Wang, A. Bhattacharjee, X. Li, M. Saeed, J. L. Dupree, X. Han, Adult-onset CNS sulfatide deficiency causes sex-dependent metabolic disruption in aging, Int J Mol Sci, 24(13), 2023.
-<br>
-<br>
+</div>
+
+<div class="publication-item publication-item-even">
 ·  [PCMM] <span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, J. P. Palavicini, X. Han, Myelin lipid deficiency: a new key driver of Alzheimer's disease, Neural Regen Res, 18:121-122, 2023.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [PCMM] Dustin, E., E. Suarez-Pozos, C. Stotesberry,<span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, J. P. Palavicini, X. Han and J. L. Dupree, Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion, Biomedicines, 11(5), 2023.
+</div>
+</div>
 
 <h3>2022</h3>
-
+<div class="year-group">
+<div class="publication-item">
 ·  [ml/dm] D. Jin, R. Wang, M. Ge, H. He, X. Li, W. Lin and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, RAW-GNN: Random Walk Aggregation based graph neural network, Proc 31-st Intern. Joint Conf. on AI(IJCAI-22).
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ml/dm] D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning, IEEE Trans. On Neural Networks and Learning Systems, IEEE Transactions on Neural Networks and Learning Systems, published online March 2022.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ncRNA] P. Xuan*, L. Zhan, H. Cui, T. Zhang, T. Nakaguchi, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Graph Triple-Attention Network for Disease-Related LncRNA Prediction, IEEE J Biomedical and Health Informatics, 26(6):2839-49, 2022.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [PCMM] Palavicini, J. P., L. Ding, M. Pan, <span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, H. Wang, Q. Shen, J. L. Dupree and X. Han, Sulfatide Deficiency, an Early Alzheimer's Lipidomic Signature, Causes Brain Ventricular Enlargement in the Absence of Classical Neuropathological Hallmarks, Int J Mol Sci, 24(1), 2022.
+</div>
+</div>
 
 <h3>2021</h3>
-
+<div class="year-group">
+<div class="publication-item">
 ·  [genom] M. Chang, F. Womer, X. Gong, X. Chen, L. Tang, R. Feng, S. Dong, J. Duan, Y. Chen, R. Zhang, Y. Wang, S. Ren, Y. Wang, J. Kang, Z. Yin, Y. Wei, S. Wei, X. Jian, K. Xu, B. Cao, Y. Zhang, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Y. Tang, X. Zhang, F. Wang*, Identifying and validating subtypes within major psychiatric disorders based on frontal-posterior functional imbalance via deep learning, Molecular Psychiatry, 26(7):2991-3002, 2021.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [genom] L. Chen, J. Zhou, T. Li, Z. Fang, L. Li, G. Huang, L. Gao, X. Zhu, X. Zhou, H. Xiao, J. Zhang, Q. Xiong, J. Zhang, A. Ma, W. Zhai, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, and H. Peng*, GmoDetector: An accurate and efficient GMO identification approach and its application, Food Research Intern, 149:110662, 2021.
-<br>
-<br>
+</div>
+<div class="publication-item">
 ·  [ncRNA] X. Liu, J. Frost, A. Bowcock, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, Canonical and interior circular RNAs function as competing endogenous RNAs in psoriatic skin, Intern. J. Molecular Sciences, 22(10), 5182, 2021.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [medImg] Z. Zhang, T. Zhao, H. Gay,<span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>* , B. Sun*, Weaving attention U-net: A novel hybrid CNN and attention-based method for organs-at-risk segmentation in head and neck CT images, Medical Physics, 48(11):7052-62, 2021.
-<br>
-<br>
+</div>
+<div class="publication-item">
 ·  [medImg] Z. Zhang, T. Zhao, H. Gay,<span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, B. Sun*, ARPM-net: A novel CNN-based adversarial method with Markov Random Field enhancement for prostate and organs at risk segmentation in pelvic CT images, Medical Physics, 48(1):227-37, 2021.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [medImg] Z. Zhang, T. Zhao, H. Gay, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, B. Sun*, Semi-supervised semantic segmentation of prostate and organs-at-risk on 3D pelvic CT images Biomedical Physics Engineering Express. 7(6), 2021
-<br>
-<br>
+</div>
+<div class="publication-item">
 ·  [ml/dm] D. Jin, X. Wang, D. He, J. Dang, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Robust detection of link communities with summary description in social networks, IEEE Transactions on Knowledge and Data Engineering, 33(6):2737-49, 2021.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [PCMM] <span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, J. P. Palavicini, J. Wang, N. S. Gonzalez, S. He, E. Dustin, C. Zou, L. Ding, A. Bhattacharjee, C. E. Van Skike, V. Galvan, J. L. Dupree, X. Han. Adult-onset CNS myelin sulfatide deficiency is sufficient to cause Alzheimer's disease-like neuroinflammation and cognitive impairment. Mol Neurodegener 16:64, 2021.
+</div>
 
 <h3>2020</h3>
-
+<div class="year-group">
+<div class="publication-item">
 ·  [ml/dm] D. He, Y. Song, D. Jin, Z. Feng, B. Zhang, Z. Yu and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Community-centric graph Convolutional Network for unsupervised community detection, Proc 29-th Intern. Joint Conf. on AI (IJCAI-20).
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [AI] X. Zhang, J. Gao, Y. Lv and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Early and efficient identification of useless constraint propagation for alldifferent constraints, Proc 29-th Intern. Joint Conf. on AI (IJCAI-20).
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [genom] L. Li, H. Peng, S. Tan, J. Zhou, Z. Fang, Z. Hu, L. Gao, T. Li, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, and L. Chen*, Effects of early cold stress on gene expression in Chlamydomonas reinhardtii, Genomics, 112(2):1128-38, 2020.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ncRNA] X. Liu, Z. Hu, J. Zhou, C. Tian, G. Tian, M. He, L. Gao, L. Chen, T. Li, P. Peng, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>*, Interior circular RNA, RNA Biology, 17(1):87-97, 2020.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ml/dm] M. Li, D. Jin, D. He, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Modeling with node popularities for autonomous overlapping community detection, ACM Transactions on Information Systems, 11(3):27, 2020.
+</div>
+</div>
 
 <h3>2019</h3>
-
+<div class="year-group">
+<div class="publication-item">
 ·  [ml/dm] D. Jin, B. Li, P. Jiao, D. He and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Network-specific variational Auto-Encoder for embedding of attribute networks, Proc 28-th Intern. Joint Conf. on AI (IJCAI-19).
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ml/dm] D. Jin, Z. Liu, W. Li, D. He and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Graph convolutional networks meet Markov Random Fields: Semi-supervised community detection in attribute networks, Proc 33-th AAAI Conf on AI (AAAI-19).
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [medlmg] D. Lam, X. Zhang, H. Li, Y. Deshan, B. Schott, T. Zhao, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, S. Mutic, and B. Sun*, Predicting gamma passing rates for portal dosimetry-based IMRT QA using machine learning, Medical Physics, 46(10):4666-75, 2019.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [ml/dm] L. Yang, Y. Wang, J. Gu, X. Cao, X. Wang, D. Jin, G. Ding, J. Han, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Autonomous semantic community detection via adaptively weighted low-rank approximation, ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM), 15(3s), 2019.
-<br>
-<br>
+</div>
+
+<div class="publication-item">
 ·  [PCMM] <span style="color:blue; font-weight:bold; font-style:italic;">S. Qiu</span>, T. Liu, C. Piao, Y. Wang, K. Wang, Y. Zhou, L. Cai, S. Zheng, F. Lan, J. Du. AMPKalpha2 knockout enhances tumour inflammation through exacerbated liver injury and energy deprivation-associated AMPKalpha1 activation. J Cell Mol Med, 23:1687-1697, 2019.
+</div>
+</div>
 
 <h3>2018</h3>
 
@@ -519,3 +581,5 @@ group: publications
 <h3>1989</h3>
 
 ·  [AI] <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>Representation of assembly and automatic robot planning by Petri net, IEEE Trans. on Systems, Man and Cybernetics, 19(2):418-22, 1989.
+
+</div>

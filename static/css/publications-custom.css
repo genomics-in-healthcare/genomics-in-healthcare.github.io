@@ -1,0 +1,32 @@
+/* 用于publications页面的自定义样式 */
+
+/* 缩小上下两栏之间的距离 */
+.publication-item {
+  margin-bottom: 8px; /* 缩小行间距 */
+  padding: 5px;
+}
+
+/* 为每个年份组内的双数行添加灰色背景 - 使用更直接的选择器 */
+.publication-item:nth-of-type(2n) {
+  background-color: #f2f2f2 !important; /* 浅灰色背景，使用!important确保优先级 */
+}
+
+/* 直接标记双数条目的样式（备用方法） */
+.publication-item-even {
+  background-color: #f2f2f2 !important;
+}
+
+/* 确保左右两边对齐 */
+.publication-list {
+  padding-left: 0;
+}
+
+/* 年份标题下方增加一点间距 */
+h3 {
+  margin-bottom: 15px;
+}
+
+/* 年份组下方增加间距 */
+.year-group {
+  margin-bottom: 20px;
+} 
