@@ -5,7 +5,7 @@ group: software
 ---
 
 <div style="padding: 20px;">
-  <h1 style="font-size: 30px; font-weight: 500; margin-bottom: 15px; font-family: Arial, Helvetica, sans-serif; color: #222;">Software</h1>
+  <h1 style="font-size: 30px; font-weight: 500; margin-bottom: 40px; font-family: Arial, Helvetica, sans-serif; color: #222;">Software</h1>
   <p style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; margin-bottom: 30px;">The software tools here were developed in the Zhang lab over many years by grant support from NSF, NIH, The Alzheimer's Association and Monsanto Corporation.</p>
 
   <h2 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; font-family: Arial, Helvetica, sans-serif; color: #222; font-weight: 500;">Computational Biology</h2>
