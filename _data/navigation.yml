@@ -14,6 +14,10 @@
   link: "/publications"
   group: publications
 
+- name: software
+  link: "/software"
+  group: software
+
 - name: members
   link: "/members"
   group: members

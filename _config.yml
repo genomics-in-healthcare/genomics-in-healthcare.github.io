@@ -5,6 +5,10 @@ url: "https://genomics-in-healthcare.github.io/"
 
 paginate: 10
 
+# 允许直接访问.htm文件
+include: 
+  - "*.htm"
+  - "*.html"
 
 permalink: /:collection/:path/
 markdown: kramdown

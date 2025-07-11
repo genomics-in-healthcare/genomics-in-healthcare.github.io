@@ -4,27 +4,79 @@ layout: post
 group: news
 ---
 
+<style>
+/* 添加新闻页面样式 */
+.news-item {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  /* 移除边框并使用!important确保覆盖外部CSS */
+  border-bottom: none !important;
+  font-size: 14px;
+  display: flex; /* 使用弹性布局 */
+  align-items: flex-start; /* 顶部对齐 */
+}
+/* 灰白交替背景 */
+.news-item:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.news-item:nth-child(odd) {
+  background-color: #ffffff;
+}
+.news-date {
+  min-width: 120px; /* 日期固定宽度 */
+  margin-right: 20px; /* 日期和内容之间的间距 */
+  font-size: 14px;
+  color: #333;
+}
+.news-content {
+  flex: 1; /* 内容占据剩余空间 */
+}
+.news-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.author {
+  font-size: 14px;
+}
+.tag-section {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #777;
+}
+</style>
+
 <!-- This loops through all news posts -->
 {% for post in site.posts %}
 <div class="news-item">
-  <p class="author">
-    <span class="author"><a href="/members#{{post.author}}">{{post.author}}</a></span><br>
-    <span class="date"><em>{{ post.date | date_to_long_string }}</em></span>
-    {% if post.tags.size > 0 %}
-    <br>tags:
-    {% for tag in post.tags %}
-    {% assign tag_slug = tag | slugify: "raw" %}
-    <a class="tag-link" href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }} rel="category tag">
-      #{{ tag }}
-    </a>
-    {% endfor %}
-    {% endif %}
-  </p>
-  <div class="content">
+  <div class="news-date">
+    {{ post.date | date: "%d %B %Y" }}
+  </div>
+  <div class="news-content">
     {% if post.title and post.title != "" %}
       <h4 class="news-title">{{ post.title }}</h4>
     {% endif %}
     {{ post.content }}
+    
+    {% if post.author or post.tags.size > 0 %}
+    <div class="tag-section">
+      {% if post.author %}
+        <span class="author"><a href="/members#{{post.author}}">{{post.author}}</a></span>
+      {% endif %}
+      
+      {% if post.tags.size > 0 %}
+        {% if post.author %} | {% endif %}
+        tags:
+        {% for tag in post.tags %}
+        {% assign tag_slug = tag | slugify: "raw" %}
+        <a class="tag-link" href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }} rel="category tag">
+          #{{ tag }}
+        </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% endif %}
   </div>
 </div>
 {% endfor %}
