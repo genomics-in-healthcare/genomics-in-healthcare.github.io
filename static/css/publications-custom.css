@@ -3,25 +3,26 @@
 /* 基础样式设置 */
 .publication-list {
   padding-left: 0;
-  margin-top: 20px;
+  margin-top: 15px; /* 减小顶部边距 */
 }
 
 /* 所有publication条目的通用样式 */
 .publication-item {
-  margin-bottom: 12px; /* 增加行间距 */
-  padding: 10px 15px; /* 增加内边距，让内容有更多呼吸空间 */
-  border-radius: 4px; /* 圆角边框 */
-  transition: all 0.3s ease; /* 平滑过渡效果 */
-  border: 1px solid #f0f0f0; /* 为所有项添加非常淡的边框 */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* 轻微阴影效果 */
+  margin-bottom: 8px; /* 减小行间距 */
+  padding: 8px 12px; /* 减小内边距 */
+  border-radius: 3px; /* 稍微减小圆角 */
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03); /* 减轻阴影 */
+  line-height: 1.4; /* 减小行高 */
 }
 
 /* 双数行样式（灰色背景） */
 .publication-item:nth-of-type(2n),
 .publication-item-even,
 .publication-item[style*="background-color"] {
-  background-color: #f7f7f7 !important; /* 使用更柔和的灰色 */
-  border: 1px solid #e8e8e8; /* 略深的边框 */
+  background-color: #f7f7f7 !important;
+  border: 1px solid #e8e8e8;
 }
 
 /* 单数行样式（白色背景带淡边框） */
@@ -32,20 +33,75 @@
 
 /* 鼠标悬停效果 */
 .publication-item:hover {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 /* 年份标题样式 */
 h3 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #f2f2f2;
+  margin-top: 20px; /* 减小顶部间距 */
+  margin-bottom: 15px; /* 减小底部间距 */
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f2f2f2; /* 减小边框厚度 */
   font-weight: bold;
   color: #333;
 }
 
 /* 年份组下方增加间距 */
 .year-group {
-  margin-bottom: 25px;
+  margin-bottom: 18px; /* 减小底部间距 */
+}
+
+/* 针对pub-list的样式修改 */
+.pub-list li {
+  margin-bottom: 6px; /* 减小间距 */
+  padding: 8px 12px; /* 减小内边距 */
+  line-height: 1.4; /* 紧凑行高 */
+}
+
+/* 调整blockquote间距 */
+.pub-list blockquote {
+  margin-left: 15px;
+  margin-bottom: 8px;
+}
+
+/* 调整列表间距 */
+.pub-list ul {
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+/* 紧凑年份导航链接 */
+.pub-list p a {
+  margin-right: 2px;
+  white-space: nowrap;
+}
+
+/* 文本样式优化 */
+.pub-list font {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* 紧凑PDF链接 */
+.pub-list a[href$=".pdf"] {
+  padding: 1px 2px;
+  font-size: 90%;
+}
+
+/* 减少论文标题和作者之间的间距 */
+.pub-list b {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+/* 优化分隔线 */
+.pub-list hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #eaeaea;
+}
+
+/* 学术期刊名称样式 */
+.pub-list u i {
+  font-size: 95%;
 } 
