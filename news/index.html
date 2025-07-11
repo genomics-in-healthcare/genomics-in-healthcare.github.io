@@ -47,7 +47,7 @@ group: news
 .news-title {
   margin-top: 0;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: normal; /* 将加粗改为普通字重 */
   font-family: Arial; /* 添加Arial字体 */
 }
 .author {
@@ -64,6 +64,10 @@ group: news
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial;
   color: #333;
+}
+/* 移除h4标题的加粗效果 */
+h4.news-title {
+  font-weight: normal;
 }
 </style>
 
