@@ -13,40 +13,89 @@ group: publications
 </div>
 
 <style>
+  /* 调整Publications页面样式，与News页面保持一致 */
   .pub-list blockquote {
     margin-left: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .pub-list ul {
     padding-left: 25px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   .pub-list li {
-    margin-bottom: 6px;
-    padding: 8px 12px;
-    line-height: 1.4;
+    margin-bottom: 10px;
+    padding: 16px 20px;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.01em;
   }
-  /* 灰白交替背景 */
+  /* 灰白交替背景 - 奇数行灰色，偶数行白色 */
   .pub-list li:nth-child(even) {
-    background-color: #f7f7f7;
-  }
-  .pub-list li:nth-child(odd) {
     background-color: #ffffff;
   }
+  .pub-list li:nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+  /* 页面标题样式 */
   .page-header {
     margin-left: 0;
     padding-left: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
   }
+  /* 文本样式 */
   .pub-list font {
-    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 15px;
   }
+  /* 分割线 */
   .pub-list hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-top: 1px solid #eaeaea;
   }
+  /* 段落 */
   .pub-list p {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  /* 年份标题 */
+  .pub-list p b {
+    font-size: 19px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* 子分类标题 */
+  .pub-list blockquote font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  /* 链接样式 */
+  .pub-list a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .pub-list a:hover {
+    text-decoration: underline;
+  }
+  /* 增加容器边距 */
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* 调整列表项内论文标题加粗效果 */
+  .pub-list li b {
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 </style>
 
@@ -1898,7 +1947,8 @@ table.MsoNormalTable
 	font-size:10.0pt;
 	font-family:"Times New Roman";}
 </style>
-<![endif]--><!--StartFragment--><!--EndFragment--> </p>
+<![endif]-->
+            <!--StartFragment--><!--EndFragment--> </p>
         </li>
       </ul>
       <font face="Arial"> </font>
