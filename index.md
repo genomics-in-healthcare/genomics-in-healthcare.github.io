@@ -19,6 +19,16 @@ group: home
 <h3> Recent Posts </h3>
 <ul>
   {% for post in site.posts limit: 5 %}
-    <li><a href="{{ post.url }}"><b>{{ post.title }}</b></a></li>
+    <li><a href="{{ post.url }}">
+      <b>
+      {% if post.title != "" %}
+        {{ post.title }}
+      {% elsif post.link_title %}
+        {{ post.link_title }}
+      {% else %}
+        News Link
+      {% endif %}
+      </b>
+    </a></li>
   {% endfor %}
 </ul>
