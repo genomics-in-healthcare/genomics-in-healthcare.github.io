@@ -7,9 +7,25 @@
     </div> -->
 
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/popper.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/parallax.min.js"></script>
+    <script src="/static/js/jquery.min.js" defer></script>
+    <script src="/static/js/popper.min.js" defer></script>
+    <script src="/static/js/bootstrap.min.js" defer></script>
+    <script src="/static/js/parallax.min.js" defer></script>
+    
+    <!-- Cache control -->
+    <script>
+      // Add cache control headers via service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful');
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
