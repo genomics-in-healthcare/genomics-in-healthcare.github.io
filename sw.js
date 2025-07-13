@@ -1,15 +1,12 @@
 // Service Worker for genomics-in-healthcare.github.io
-const CACHE_NAME = 'genomics-cache-v1.2';
+const CACHE_NAME = 'genomics-cache-v1.3';
 
 // 基本资源
 const ESSENTIAL_RESOURCES = [
   '/',
   '/static/css/bootstrap.min.css',
-  '/static/css/custom.css',
-  '/static/css/syntax.css',
-  '/static/css/members-center.css',
-  '/static/img/logo/STEMJC_genomics_in_healthcare.png',
-  '/static/img/logo/PolyU-Logos.png'
+  '/static/css/custom.css'
+  // 已移除 syntax.css 和 members-center.css，因为它们现在内联在HTML中
 ];
 
 // JS资源（低优先级）
@@ -20,13 +17,27 @@ const JS_RESOURCES = [
   '/static/js/parallax.min.js'
 ];
 
+// 预加载图像
+const PRELOAD_IMAGES = [
+  '/static/img/logo/STEMJC_genomics_in_healthcare.png',
+  '/static/img/logo/PolyU-Logos.png'
+];
+
+// GitHub相关域名，避免阻塞渲染
+const GITHUB_DOMAINS = [
+  'github.com',
+  'githubusercontent.com',
+  'githubassets.com'
+];
+
 // 安装事件 - 缓存基本资源
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('缓存基本资源');
-        return cache.addAll(ESSENTIAL_RESOURCES);
+        return cache.addAll(ESSENTIAL_RESOURCES)
+          .then(() => cache.addAll(PRELOAD_IMAGES));
       })
   );
   // 立即激活
@@ -53,10 +64,22 @@ self.addEventListener('activate', event => {
   );
 });
 
+// 检查URL是否来自GitHub域名
+function isGitHubResource(url) {
+  return GITHUB_DOMAINS.some(domain => url.includes(domain));
+}
+
 // Fetch事件 - 从缓存或网络提供内容
 self.addEventListener('fetch', event => {
   // 获取请求URL
   const requestUrl = new URL(event.request.url);
+  
+  // 处理GitHub相关资源 - 使用网络优先策略，减少阻塞
+  if (isGitHubResource(requestUrl.hostname)) {
+    // 不拦截GitHub的请求，让它们自然完成
+    // 这些资源不在关键渲染路径上
+    return;
+  }
   
   // 只处理同源请求
   if (requestUrl.origin === self.location.origin) {
@@ -73,6 +96,11 @@ self.addEventListener('fetch', event => {
             // 否则从网络获取
             return fetch(event.request)
               .then(response => {
+                // 只缓存成功响应
+                if (!response || response.status !== 200 || response.type !== 'basic') {
+                  return response;
+                }
+                
                 // 克隆响应用于缓存
                 const responseToCache = response.clone();
                 
@@ -96,6 +124,11 @@ self.addEventListener('fetch', event => {
       event.respondWith(
         fetch(event.request)
           .then(response => {
+            // 只缓存成功响应
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            
             // 克隆响应用于缓存
             const responseToCache = response.clone();
             
@@ -112,11 +145,26 @@ self.addEventListener('fetch', event => {
           })
       );
     }
-    // JS策略 - 仅当从页面请求时缓存
+    // JS策略 - 仅当从页面请求时缓存，低优先级加载
     else if (event.request.url.match(/\.js$/)) {
       event.respondWith(
         fetch(event.request)
           .then(response => {
+            // 只缓存成功响应
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            
+            // 克隆响应用于缓存
+            const responseToCache = response.clone();
+            
+            // 低优先级缓存JS
+            setTimeout(() => {
+              caches.open(CACHE_NAME).then(cache => {
+                cache.put(event.request, responseToCache);
+              });
+            }, 1000);
+            
             return response;
           })
           .catch(() => {

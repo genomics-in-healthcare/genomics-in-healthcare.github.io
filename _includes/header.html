@@ -10,15 +10,23 @@
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
     
     <!-- 预加载关键CSS资源 -->
-    <link rel="preload" href="/static/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="/static/css/custom.css" as="style">
+    <link rel="preload" href="/static/css/critical.css" as="style">
     
     <!-- 内联关键CSS -->
     <style>
       /* 最基本的关键样式，用于首屏渲染 */
       body {
         padding-top: 70px;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
       }
+      
+      /* 导航栏样式 */
       .navbar {
         position: fixed;
         top: 0;
@@ -27,7 +35,9 @@
         z-index: 1030;
         background-color: #2e86c1;
         margin-bottom: 20px;
+        padding: 0.5rem 1rem;
       }
+      
       .container {
         width: 100%;
         padding-right: 15px;
@@ -35,45 +45,20 @@
         margin-right: auto;
         margin-left: auto;
       }
+      
       @media (min-width: 768px) {
         .container {
           max-width: 720px;
         }
       }
+      
       @media (min-width: 992px) {
         .container {
           max-width: 960px;
         }
       }
       
-      /* 修复导航栏样式问题 */
-      .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-        color: rgba(255, 255, 255, 0.85) !important;
-        text-decoration: none !important;
-      }
-      .navbar-nav .nav-item.active .nav-link {
-        color: #fff !important;
-      }
-      .navbar-brand {
-        text-decoration: none !important;
-        color: #fff !important;
-      }
-      a {
-        text-decoration: none !important;
-      }
-      a:hover {
-        text-decoration: underline !important;
-      }
-      .navbar a:hover {
-        text-decoration: none !important;
-      }
-      
-      /* 确保导航项目不会被挤压 */
-      .navbar-expand-lg .navbar-nav {
-        flex-direction: row;
-      }
+      /* 导航栏组件样式 */
       .navbar-nav {
         display: flex;
         flex-direction: row;
@@ -81,6 +66,35 @@
         margin-bottom: 0;
         list-style: none;
       }
+      
+      .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        color: rgba(255, 255, 255, 0.85) !important;
+        text-decoration: none !important;
+      }
+      
+      .navbar-nav .nav-item.active .nav-link {
+        color: #fff !important;
+      }
+      
+      .navbar-brand {
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+        text-decoration: none !important;
+        color: #fff !important;
+      }
+      
+      /* 确保导航项目不会被挤压 */
+      .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+      }
+      
       @media (max-width: 992px) {
         .navbar-collapse {
           width: 100%;
@@ -89,24 +103,130 @@
           flex-direction: column;
         }
       }
+      
+      /* 内联 members-center.css */
+      /* members 页面居中样式 */
+      .members-center {
+        display: block; /* 改为block布局，防止flex布局导致内容挤压 */
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      /* 修复成员卡片布局 */
+      .members-center .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+
+      .members-center .col-sm-9,
+      .members-center .col-sm-12 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      @media (min-width: 576px) {
+        .members-center .col-sm-9 {
+          flex: 0 0 75%;
+          max-width: 75%;
+        }
+        .members-center .col-sm-12 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+
+      .justify-content-center {
+        justify-content: center !important;
+      }
+      
+      /* 内联 syntax.css */
+      .highlight  { background: #ffffff; }
+      .highlight .c { color: #999988; font-style: italic } /* Comment */
+      .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+      .highlight .k { font-weight: bold } /* Keyword */
+      .highlight .o { font-weight: bold } /* Operator */
+      .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+      .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+      .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+      .highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+      .highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+      .highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+      .highlight .ge { font-style: italic } /* Generic.Emph */
+      .highlight .gr { color: #aa0000 } /* Generic.Error */
+      .highlight .gh { color: #999999 } /* Generic.Heading */
+      .highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+      .highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+      .highlight .go { color: #888888 } /* Generic.Output */
+      .highlight .gp { color: #555555 } /* Generic.Prompt */
+      .highlight .gs { font-weight: bold } /* Generic.Strong */
+      .highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+      .highlight .gt { color: #aa0000 } /* Generic.Traceback */
+      .highlight .kc { font-weight: bold } /* Keyword.Constant */
+      .highlight .kd { font-weight: bold } /* Keyword.Declaration */
+      .highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+      .highlight .kr { font-weight: bold } /* Keyword.Reserved */
+      .highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+      .highlight .m { color: #009999 } /* Literal.Number */
+      .highlight .s { color: #d14 } /* Literal.String */
+      .highlight .na { color: #008080 } /* Name.Attribute */
+      .highlight .nb { color: #0086B3 } /* Name.Builtin */
+      .highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+      .highlight .no { color: #008080 } /* Name.Constant */
+      .highlight .ni { color: #800080 } /* Name.Entity */
+      .highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+      .highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+      .highlight .nn { color: #555555 } /* Name.Namespace */
+      .highlight .nt { color: #000080 } /* Name.Tag */
+      .highlight .nv { color: #008080 } /* Name.Variable */
+      .highlight .ow { font-weight: bold } /* Operator.Word */
+      .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+      .highlight .mf { color: #009999 } /* Literal.Number.Float */
+      .highlight .mh { color: #009999 } /* Literal.Number.Hex */
+      .highlight .mi { color: #009999 } /* Literal.Number.Integer */
+      .highlight .mo { color: #009999 } /* Literal.Number.Oct */
+      .highlight .sb { color: #d14 } /* Literal.String.Backtick */
+      .highlight .sc { color: #d14 } /* Literal.String.Char */
+      .highlight .sd { color: #d14 } /* Literal.String.Doc */
+      .highlight .s2 { color: #d14 } /* Literal.String.Double */
+      .highlight .se { color: #d14 } /* Literal.String.Escape */
+      .highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+      .highlight .si { color: #d14 } /* Literal.String.Interpol */
+      .highlight .sx { color: #d14 } /* Literal.String.Other */
+      .highlight .sr { color: #009926 } /* Literal.String.Regex */
+      .highlight .s1 { color: #d14 } /* Literal.String.Single */
+      .highlight .ss { color: #990073 } /* Literal.String.Symbol */
+      .highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+      .highlight .vc { color: #008080 } /* Name.Variable.Class */
+      .highlight .vg { color: #008080 } /* Name.Variable.Global */
+      .highlight .vi { color: #008080 } /* Name.Variable.Instance */
+      .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
     </style>
     
-    <!-- 恢复使用原始Bootstrap -->
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- 非关键CSS使用非阻塞加载 -->
+    <link rel="preload" href="/static/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/static/css/bootstrap.min.css"></noscript>
+    <link rel="preload" href="/static/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/static/css/custom.css"></noscript>
     
     {% if page.group == 'news' %}
     <link rel="alternate" type="application/atom+xml" title="Genomics in Healthcare Lab News Feed" href="/news.xml">
-    <link rel="stylesheet" href="/static/css/news-custom.css">
+    <link rel="preload" href="/static/css/news-custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/static/css/news-custom.css"></noscript>
     {% endif %}
-
-    <!-- 其他CSS -->
-    <link href="/static/css/syntax.css" rel="stylesheet">
-    <link href="/static/css/custom.css" rel="stylesheet">
-    <link href="/static/css/members-center.css" rel="stylesheet">
     
     <!-- 预加载页面中的关键图像 -->
     <link rel="preload" href="/static/img/logo/STEMJC_genomics_in_healthcare.png" as="image">
     <link rel="preload" href="/static/img/logo/PolyU-Logos.png" as="image">
+    
+    <!-- 添加加载CSS的后备脚本 -->
+    <script>
+      // 非阻塞CSS加载的后备方案
+      !function(e){"use strict";var n=function(n,t,o){function i(e){if(a.body)return e();setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+    </script>
   </head>
 
   <body>
