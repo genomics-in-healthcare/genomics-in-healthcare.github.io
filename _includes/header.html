@@ -44,6 +44,24 @@
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
+        box-sizing: border-box;
+      }
+      
+      /* 防止布局偏移的图像样式 */
+      .navb-icon {
+        height: auto;
+        display: inline-block;
+      }
+      
+      /* 明确设置图片占位空间 */
+      .navb-icon.stem-logo {
+        width: 88px; /* 根据2.2em实际尺寸设置 */
+        height: 40px;
+      }
+      
+      .navb-icon.polyu-logo {
+        width: 72px; /* 根据1.8em实际尺寸设置 */
+        height: 32px;
       }
       
       @media (min-width: 768px) {
@@ -234,8 +252,8 @@
     <!-- Static navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2e86c1; display: flex; align-items: center; justify-content: center;">
         <a class="navbar-brand mr-2" href="/">{{site.name}}</a>
-        <img class="navb-icon mx-2" src="/static/img/logo/STEMJC_genomics_in_healthcare.png" alt="JC STEM Lab of Genomics in Healthcare" style="height: 2.2em; width: auto;">
-        <a href="https://www.polyu.edu.hk/"><img class="inline-block navb-icon ml-2" src="/static/img/logo/PolyU-Logos.png" alt="Hong Kong Polytechnic University (PolyU) logo" style="height: 1.8em; width: auto;"></a>
+        <img class="navb-icon mx-2 stem-logo" src="/static/img/logo/STEMJC_genomics_in_healthcare.png" alt="JC STEM Lab of Genomics in Healthcare">
+        <a href="https://www.polyu.edu.hk/"><img class="navb-icon ml-2 polyu-logo" src="/static/img/logo/PolyU-Logos.png" alt="Hong Kong Polytechnic University (PolyU) logo"></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

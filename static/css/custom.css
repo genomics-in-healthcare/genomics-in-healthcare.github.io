@@ -33,6 +33,35 @@ display: none !important;
   text-decoration: none !important;
 }
 
+/* 预防布局偏移 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 为所有图片添加默认样式，防止CLS */
+img:not([width]):not([height]) {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* 内容稳定性，防止CLS */
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 在页面完全加载之前保持内容区域的最小高度 */
+.jumbotron {
+  min-height: 300px;
+}
+
+/* 确保欢迎文本有固定尺寸 */
+.welcomefont {
+  min-height: 2.5em;
+  margin-bottom: 1em;
+  display: block;
+}
+
 .video-container {
 position: relative;
 padding-bottom: 56.25%;
