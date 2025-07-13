@@ -5,6 +5,34 @@ display: none !important;
 }
 }
 
+/* 导航栏修复 */
+@media (min-width: 992px) {
+  .navbar .container {
+    width: auto;
+  }
+  .navbar > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-brand {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar-nav .nav-item {
+    margin-left: 0.5rem;
+  }
+}
+
+/* 修复导航链接样式 */
+.navbar a {
+  text-decoration: none !important;
+}
+
 .video-container {
 position: relative;
 padding-bottom: 56.25%;
@@ -61,77 +89,3 @@ margin-bottom: 20px;
 font-size: 1.5em;
 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-
-/*
-body {
-padding-top: 60px;
-padding-bottom: 40px;
-}
-
-/*
-.navbar-default {
-background-color: #052049;
-border-color: #668a75;
-}
-
-.navbar-default .navbar-brand {
-font-family: "Lucida Bright", Georgia, serif;
-
-color: #f6f6f6;
-}
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-color: #fdfdfd;
-}
-.navbar-default .navbar-text {
-color: #f6f6f6;
-}
-/* 调整导航栏字体大小 */
-.navbar-default .navbar-nav > li > a {
-  color: #f6f6f6;
-  font-size: 1rem;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-color: #fdfdfd;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-color: #fdfdfd;
-background-color: #668a75;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-color: #fdfdfd;
-background-color: #668a75;
-}
-.navbar-default .navbar-toggle {
-border-color: #668a75;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-background-color: #668a75;
-}
-.navbar-default .navbar-toggle .icon-bar {
-background-color: #f6f6f6;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-border-color: #f6f6f6;
-}
-.navbar-default .navbar-link {
-color: #f6f6f6;
-}
-.navbar-default .navbar-link:hover {
-color: #fdfdfd;
-}
-
-@media (max-width: 767px) {
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-color: #f6f6f6;
-}
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-color: #fdfdfd;
-}
-.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-color: #fdfdfd;
-background-color: #668a75;
-}
-}
-*/

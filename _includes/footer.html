@@ -6,24 +6,32 @@
       </div>
     </div> -->
 
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- 将JavaScript放在页面底部加载 -->
     <script src="/static/js/jquery.min.js" defer></script>
     <script src="/static/js/popper.min.js" defer></script>
     <script src="/static/js/bootstrap.min.js" defer></script>
     <script src="/static/js/parallax.min.js" defer></script>
     
-    <!-- Cache control -->
+    <!-- Service Worker - 优化缓存策略 -->
     <script>
-      // Add cache control headers via service worker
+      // 确保之前的service worker已被卸载
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful');
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+          }
+          
+          // 等待一段时间后再注册新的service worker
+          setTimeout(function() {
+            // 注册新的service worker
+            navigator.serviceWorker.register('/sw.js', {
+              scope: '/'
+            }).then(function(registration) {
+              console.log('ServiceWorker 注册成功，范围: ', registration.scope);
+            }).catch(function(error) {
+              console.log('ServiceWorker 注册失败: ', error);
+            });
+          }, 1000);
         });
       }
     </script>
