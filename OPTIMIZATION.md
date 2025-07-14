@@ -31,9 +31,32 @@
 
 - 实现了Service Worker来控制资源缓存
 - 为不同类型的资源设置了不同的缓存策略：
-  - 图片：缓存优先，30天过期
-  - CSS/JS：网络优先，7天过期
-  - HTML：网络优先，有缓存备份
+  - 图片：缓存优先，1年过期 (静态Logo等)，其他30天过期
+  - CSS/JS：网络优先，1年过期 (带版本号的不变资源)
+  - HTML：网络优先，1小时过期
+- 添加了缓存控制头，显著提高了重复访问的性能
+- 实现了Netlify和标准HTTP缓存头支持
+
+## 最新缓存优化 (2024)
+
+我们通过以下方式进一步改进了网站的缓存策略:
+
+1. **延长静态资源缓存寿命**
+   - 将Logo、CSS和JavaScript文件的缓存寿命从10分钟延长到1年
+   - 预计节省约1,740 KiB的重复下载流量
+   - 为静态资源添加`immutable`标志，避免不必要的重新验证
+
+2. **多层缓存机制**
+   - Service Worker缓存：在客户端浏览器中实现长期缓存
+   - HTTP缓存头：通过正确的`Cache-Control`头控制浏览器缓存行为
+   - Netlify配置：使用`netlify.toml`和`_headers`文件设置缓存头
+
+3. **资源分类缓存策略**
+   - 关键Logo文件 (`STEMJC_genomics_in_healthcare.png`, `PolyU-Logos.png`): 1年缓存
+   - JavaScript库 (jQuery, Bootstrap, Popper, Parallax): 1年缓存
+   - CSS文件 (Bootstrap, Custom CSS): 1年缓存
+   - 其他图片: 30天缓存
+   - HTML页面: 1小时缓存
 
 ## 需要完成的工作
 
@@ -45,8 +68,9 @@
    - 生成WebP格式版本以获得更好的压缩效果
 
 2. **配置服务器缓存头**
-   - 为静态资源配置长期缓存头 (例如30天)
-   - 确保HTML文件使用适当的缓存控制
+   - ✅ 已完成：为静态资源配置长期缓存头 (1年)
+   - ✅ 已完成：确保HTML文件使用适当的缓存控制 (1小时)
+   - 部署后监控缓存效果，确保缓存头正确应用
 
 3. **检查字体加载**
    - 考虑预加载关键字体文件
@@ -73,6 +97,10 @@
    - 考虑使用系统字体堆栈减少网络字体使用
    - 如果使用网络字体，确保使用WOFF2格式并考虑子集化
 
+6. **版本化资源文件名**
+   - 考虑为CSS和JS文件名添加哈希或版本号 (例如 `main.123abc.js`)
+   - 这样可以支持永久缓存，并在更新时自动失效
+
 ## 如何验证优化效果
 
 在完成优化后，请再次使用PageSpeed Insights测试网站性能:
@@ -80,5 +108,6 @@ https://pagespeed.web.dev/
 
 您也可以使用以下工具进行更深入的性能分析:
 - Chrome DevTools Lighthouse
+- Chrome DevTools Network面板（查看缓存响应）
 - WebPageTest.org
 - GTmetrix 

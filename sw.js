@@ -1,5 +1,6 @@
 // Service Worker for genomics-in-healthcare.github.io
-const CACHE_NAME = 'genomics-cache-v1.3';
+const CACHE_NAME = 'genomics-cache-v1.4';
+const CACHE_MAX_AGE = 31536000; // 1 year in seconds
 
 // 基本资源
 const ESSENTIAL_RESOURCES = [
@@ -30,6 +31,20 @@ const GITHUB_DOMAINS = [
   'githubassets.com'
 ];
 
+// 添加缓存控制头
+function addCacheControlHeader(response, maxAge = CACHE_MAX_AGE) {
+  if (response && response.status === 200) {
+    const headers = new Headers(response.headers);
+    headers.set('Cache-Control', `public, max-age=${maxAge}, immutable`);
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: headers
+    });
+  }
+  return response;
+}
+
 // 安装事件 - 缓存基本资源
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -37,7 +52,14 @@ self.addEventListener('install', event => {
       .then(cache => {
         console.log('缓存基本资源');
         return cache.addAll(ESSENTIAL_RESOURCES)
-          .then(() => cache.addAll(PRELOAD_IMAGES));
+          .then(() => {
+            console.log('缓存JS资源');
+            return cache.addAll(JS_RESOURCES);
+          })
+          .then(() => {
+            console.log('缓存预加载图像');
+            return cache.addAll(PRELOAD_IMAGES);
+          });
       })
   );
   // 立即激活
@@ -104,12 +126,15 @@ self.addEventListener('fetch', event => {
                 // 克隆响应用于缓存
                 const responseToCache = response.clone();
                 
+                // 添加缓存控制头
+                const enhancedResponse = addCacheControlHeader(response);
+                
                 // 缓存图片
                 caches.open(CACHE_NAME).then(cache => {
                   cache.put(event.request, responseToCache);
                 });
                 
-                return response;
+                return enhancedResponse;
               })
               .catch(error => {
                 console.error('获取图片失败:', error);
@@ -132,12 +157,15 @@ self.addEventListener('fetch', event => {
             // 克隆响应用于缓存
             const responseToCache = response.clone();
             
+            // 添加缓存控制头
+            const enhancedResponse = addCacheControlHeader(response);
+            
             // 缓存CSS
             caches.open(CACHE_NAME).then(cache => {
               cache.put(event.request, responseToCache);
             });
             
-            return response;
+            return enhancedResponse;
           })
           .catch(() => {
             // 如果网络请求失败，尝试从缓存获取
@@ -158,14 +186,15 @@ self.addEventListener('fetch', event => {
             // 克隆响应用于缓存
             const responseToCache = response.clone();
             
-            // 低优先级缓存JS
-            setTimeout(() => {
-              caches.open(CACHE_NAME).then(cache => {
-                cache.put(event.request, responseToCache);
-              });
-            }, 1000);
+            // 添加缓存控制头
+            const enhancedResponse = addCacheControlHeader(response);
             
-            return response;
+            // 缓存JS
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(event.request, responseToCache);
+            });
+            
+            return enhancedResponse;
           })
           .catch(() => {
             // 如果网络请求失败，尝试从缓存获取
@@ -178,7 +207,8 @@ self.addEventListener('fetch', event => {
       event.respondWith(
         fetch(event.request)
           .then(response => {
-            return response;
+            // HTML缓存较短时间
+            return addCacheControlHeader(response, 3600); // 1小时
           })
           .catch(() => {
             return caches.match(event.request);
@@ -190,7 +220,10 @@ self.addEventListener('fetch', event => {
       event.respondWith(
         caches.match(event.request)
           .then(response => {
-            return response || fetch(event.request);
+            return response || fetch(event.request).then(fetchResponse => {
+              // 默认缓存时间
+              return addCacheControlHeader(fetchResponse, 86400); // 1天
+            });
           })
       );
     }

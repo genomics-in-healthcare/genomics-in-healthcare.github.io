@@ -1,62 +1,45 @@
-# 图片优化指南
+# genomics-in-healthcare.github.io
+====================
 
-根据PageSpeed Insights的报告，以下图片需要进行优化:
+Technologies this website uses:  
 
-## 需要优化的图片
+    Jekyll  
+    Github Pages  
+    Twitter Bootstrap 4.4.1
 
-1. `/static/img/logo/STEMJC_genomics_in_healthcare.png`
-   - 当前尺寸: 5920x2368 (1,713.4 KiB)
-   - 显示尺寸: 88x35
-   - 推荐操作: 调整尺寸并压缩，目标尺寸176x70 (2倍像素密度)
+Before pushing changes, please check that they will work on your system first with the plugins included in the Gemfile using the bundler tool (results served at [localhost:4000](localhost:4000)):
 
-2. `/static/img/logo/PolyU-Logos.png`
-   - 当前尺寸: 4368x1092 (92.8 KiB)
-   - 显示尺寸: 115x29
-   - 推荐操作: 调整尺寸并压缩，目标尺寸230x58 (2倍像素密度)
+    sudo gem install bundler
+    bundle install
+    bundle exec jekyll serve
+    
+To create a conda environment to locally test and host, the following should suffice:
 
-## 优化步骤
+    conda create -n jekyll -c conda-forge rb-jekyll
+    conda activate jekyll
+    bundle install
+    bundle exec jekyll serve
 
-1. 使用图像编辑软件(如GIMP, Photoshop或在线工具如squoosh.app)调整图片尺寸
-2. 保存为WebP格式以提供更好的压缩
-3. 为不支持WebP的旧浏览器提供PNG备用方案
-4. 在HTML中使用`<picture>`元素来提供不同格式和分辨率的图片
+## Caching Strategy
 
-## 示例HTML代码
+This site implements a multi-layered caching strategy to improve performance for returning visitors:
 
-```html
-<picture>
-  <source srcset="/static/img/optimized/STEMJC_genomics_in_healthcare.webp" type="image/webp">
-  <source srcset="/static/img/optimized/STEMJC_genomics_in_healthcare.png" type="image/png">
-  <img class="navb-icon mx-2" src="/static/img/optimized/STEMJC_genomics_in_healthcare.png" 
-       alt="JC STEM Lab of Genomics in Healthcare" 
-       width="88" height="35" style="height: 2.2em; width: 88px;">
-</picture>
+1. **HTTP Cache Headers**: The site uses cache control headers to tell browsers how long to cache resources:
+   - Static assets (JS, CSS, logos): 1 year cache with `immutable` flag
+   - Other images: 30 days cache
+   - HTML pages: 1 hour cache
 
-<picture>
-  <source srcset="/static/img/optimized/PolyU-Logos.webp" type="image/webp">
-  <source srcset="/static/img/optimized/PolyU-Logos.png" type="image/png">
-  <img class="inline-block navb-icon ml-2" src="/static/img/optimized/PolyU-Logos.png" 
-       alt="Hong Kong Polytechnic University (PolyU) logo" 
-       width="115" height="29" style="height: 1.8em; width: 115px;">
-</picture>
-```
+2. **Service Worker**: A service worker (`sw.js`) provides offline capabilities and manages cache:
+   - Pre-caches critical resources
+   - Uses appropriate cache strategies based on file type
+   - Updates when site content changes (via cache versioning)
 
-## 命令行优化示例
+3. **Deployment Configuration**:
+   - `_headers` file for standard HTTP caching headers
+   - `netlify.toml` for Netlify-specific configuration
 
-使用ImageMagick调整图片尺寸:
+When modifying the site, be aware that changes to cached resources might not be immediately visible to returning users. To force cache invalidation:
+- Update the `CACHE_NAME` version in `sw.js` when making significant changes
+- Consider using versioned filenames for critical resources (e.g., `style.v2.css`)
 
-```bash
-# 安装ImageMagick (如果尚未安装)
-# Ubuntu/Debian
-# sudo apt-get install imagemagick
-
-# 调整尺寸并输出为PNG
-convert /static/img/logo/STEMJC_genomics_in_healthcare.png -resize 176x70 /static/img/optimized/STEMJC_genomics_in_healthcare.png
-convert /static/img/logo/PolyU-Logos.png -resize 230x58 /static/img/optimized/PolyU-Logos.png
-
-# 转换为WebP格式(如果已安装WebP工具)
-cwebp -q 80 /static/img/optimized/STEMJC_genomics_in_healthcare.png -o /static/img/optimized/STEMJC_genomics_in_healthcare.webp
-cwebp -q 80 /static/img/optimized/PolyU-Logos.png -o /static/img/optimized/PolyU-Logos.webp
-```
-
-优化后，请替换HTML中的图片引用，使用`<picture>`元素或直接更新路径。 
+For more details, see `OPTIMIZATION.md`.
