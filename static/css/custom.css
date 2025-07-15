@@ -1,38 +1,416 @@
 
+/* 桌面端导航栏样式 */
 @media (min-width: 992px) {
-.navbar-collapse {
-display: none !important;
-}
-}
-
-/* 导航栏修复 */
-@media (min-width: 992px) {
-  .navbar .container {
-    width: auto;
+  .navbar-collapse {
+    display: flex !important;
   }
-  .navbar > .container {
+  
+  .navbar .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+    flex-wrap: wrap;
   }
-  .navbar-brand {
-    display: inline-block;
-    margin-right: 1rem;
-  }
-  .navbar-nav {
+  
+  /* 新的导航头部样式 */
+  .nav-header {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
   }
+  
+  /* 品牌名称容器 */
+  .brand-container {
+    flex: 0 0 auto;
+    max-width: 100%;
+    margin-right: 20px;
+  }
+  
+  /* 导航品牌名称 */
+  .navbar-brand {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: 0;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 5px 0;
+    display: block; /* 桌面端显示网站名称 */
+  }
+  
+  /* Logo包装器 */
+  .logos-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  /* Logo对 */
+  .logo-pair {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Logo链接 */
+  .logo-link {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Logo图标样式 - 调整为相同的视觉大小 */
+  .navb-icon.stem-logo {
+    height: 55px;
+    width: auto;
+  }
+  
+  .navb-icon.polyu-logo {
+    height: 45px; /* 进一步减小理工大学logo的高度 */
+    width: auto;
+    display: block; /* 桌面端显示理工大学logo */
+  }
+  
+  /* 理工大学logo链接 */
+  .polyu-logo-link {
+    display: block; /* 桌面端显示 */
+  }
+  
+  /* 导航菜单样式 */
+  .navbar-nav {
+    display: flex;
+    flex-direction: row !important;
+    margin-left: auto;
+  }
+  
   .navbar-nav .nav-item {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
+  }
+  
+  .navbar-toggler {
+    display: none !important;
   }
 }
 
-/* 修复导航链接样式 */
+/* 移动端导航栏优化 */
+@media (max-width: 991px) {
+  /* Material Design风格的下拉菜单 */
+  .md-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* Material Design使用白色背景 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1); /* Material Design阴影 */
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+    padding: 0;
+    opacity: 0;
+    transform-origin: top;
+  }
+  
+  .md-menu.show {
+    max-height: 500px; /* 足够高以容纳所有菜单项 */
+    opacity: 1;
+  }
+  
+  /* 移动端导航项样式 - Material Design风格 */
+  .navbar-nav {
+    flex-direction: column !important;
+    width: 100%;
+    padding: 8px 0;
+    margin: 0;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0;
+    position: relative;
+  }
+  
+  /* Material Design菜单项样式 */
+  .md-menu-item {
+    padding: 16px 24px !important;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87) !important; /* Material Design文本颜色 */
+    transition: background-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .navbar-nav .nav-item.active .md-menu-item {
+    color: #2e86c1 !important; /* 活动项使用主题色 */
+    font-weight: 500;
+  }
+  
+  .md-menu-item:hover,
+  .md-menu-item:focus {
+    background-color: rgba(0, 0, 0, 0.04); /* Material Design悬停颜色 */
+    color: rgba(0, 0, 0, 0.87) !important;
+  }
+  
+  /* Material Design涟漪效果 */
+  .md-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    animation: md-ripple 0.6s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes md-ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  /* 移动端导航头部 */
+  .nav-header {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* 居中显示 */
+    padding: 0;
+  }
+  
+  /* 品牌容器 - 移动端隐藏 */
+  .brand-container {
+    display: none; /* 移动端隐藏网站名称 */
+  }
+  
+  /* Logos包装器 */
+  .logos-wrapper {
+    flex: 1;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  
+  /* Logo对 */
+  .logo-pair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Material Design风格的汉堡菜单按钮 */
+  .md-menu-btn {
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%; /* Material Design圆形按钮 */
+    background-color: transparent;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+    order: 0;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .md-menu-btn:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .md-menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Material Icons样式 */
+  .md-menu-btn .material-icons {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  /* 移动端导航栏布局 */
+  .navbar {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Material Design阴影 */
+  }
+  
+  /* 移动端LOGO和品牌名称布局优化 */
+  .navbar-brand {
+    display: none; /* 移动端隐藏网站名称 */
+  }
+  
+  /* 移动端Logo尺寸 - 调整为相同的视觉大小 */
+  .navb-icon.stem-logo {
+    height: 45px;
+    width: auto;
+  }
+  
+  /* 理工大学logo在移动端隐藏 */
+  .navb-icon.polyu-logo {
+    display: none;
+  }
+  
+  /* 理工大学logo链接在移动端隐藏 */
+  .polyu-logo-link {
+    display: none;
+  }
+  
+  /* 确保logo链接在移动端显示 */
+  .logo-link.stem-logo-link {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  /* 确保菜单项有正确的颜色和样式 */
+  .md-menu {
+    background: #fff;
+  }
+  
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid #e3e3e3;
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+  
+  .navbar-nav .nav-link,
+  .md-menu-item {
+    color: #212529 !important; /* 确保文本为黑色 */
+    font-weight: 500;
+    background: #fff;
+    display: block;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item.active .nav-link,
+  .navbar-nav .nav-item.active .md-menu-item {
+    color: #1565c0 !important; /* 活动项使用蓝色 */
+    background: #f5f5f5;
+  }
+  
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link:hover,
+  .md-menu-item:focus,
+  .md-menu-item:hover {
+    background: #f5f5f5 !important; /* 浅灰色高亮 */
+    color: #1565c0 !important; /* 悬停时蓝色 */
+  }
+}
+
+/* 确保在超小屏幕上也能正常显示 */
+@media (max-width: 480px) {
+  /* 适配超小屏幕 */
+  .brand-container {
+    display: none; /* 确保在超小屏幕上也隐藏 */
+  }
+  
+  .navbar-brand {
+    display: none; /* 确保在超小屏幕上也隐藏 */
+  }
+  
+  .logos-wrapper {
+    margin: 0;
+    flex: 1;
+  }
+  
+  .logo-pair {
+    justify-content: center;
+  }
+  
+  /* 超小屏幕Logo尺寸 - 只显示实验室logo */
+  .navb-icon.stem-logo {
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  /* Material Design按钮在超小屏幕上的位置 */
+  .md-menu-btn {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  /* 确保菜单项在超小屏幕上有正确的颜色 */
+  .navbar-nav .nav-link,
+  .md-menu-item {
+    color: #212529 !important;
+    font-size: 15px;
+    padding: 14px 20px !important;
+  }
+}
+
+/* 通用导航栏样式 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #2e86c1;
+}
+
+/* 防止Logo变形 */
+.navb-icon {
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 特别针对logo的视觉平衡调整 */
+.stem-logo {
+  max-width: 200px; /* 限制最大宽度 */
+}
+
+.polyu-logo {
+  max-width: 160px; /* 减小最大宽度 */
+  object-position: center; /* 确保logo居中显示 */
+}
+
+/* 确保导航链接样式 */
 .navbar a {
   text-decoration: none !important;
 }
 
+/* 内容区域适配 */
+body {
+  padding-top: 140px; /* 增加内容区域的顶部填充，以适应新的导航栏高度 */
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 80px; /* 移动端减少内容区域的顶部填充，因为导航栏变小了 */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px; /* 超小屏幕减少内容区域的顶部填充 */
+  }
+}
+
+/* 其他样式保持不变 */
 /* 预防布局偏移 */
 img {
   max-width: 100%;
@@ -90,31 +468,4 @@ font-size: 0.9rem;
 
 .mem-icon {
 height: 1em;
-}
-
-
-.navb-icon {
-  height: 1.8em;
-}
-
-/* 让导航栏固定在页面顶端 */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1030;
-}
-
-body {
-  padding-top: 70px; /* 根据导航栏高度调整 */
-}
-
-.navbar {
-margin-bottom: 20px;
-}
-
-.welcomefont {
-font-size: 1.5em;
-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }

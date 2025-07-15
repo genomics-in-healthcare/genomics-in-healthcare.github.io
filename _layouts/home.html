@@ -1,9 +1,11 @@
 {% include header.html %}
-<div class="container px-2" style="max-width: 1200px; min-height: 500px;"> <!-- 调整宽度并添加最小高度 -->
+<div class="container px-2" style="max-width: 1200px;"> <!-- 调整宽度并移除最小高度，适应移动端 -->
     <div class="row">
         <div class="col-sm-12"> <!-- 修改为12列，确保更宽 -->
             <div class="jumbotron h-100"> <!-- 设置灰色背景 -->
-                {{ content }}
+                <div class="content-wrapper">
+                    {{ content }}
+                </div>
             </div>
         </div>
     </div>

@@ -4,10 +4,32 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="{{ site.description }}">
     <meta name="theme-color" content="#052049">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- 禁用非阻塞加载效果 -->
+    <script>
+      // 确保页面完全刷新，禁用任何非阻塞加载效果
+      if (window.performance && window.performance.navigation.type === 0) {
+        // 这是一个新页面加载，不是从缓存恢复
+        window.addEventListener('beforeunload', function() {
+          // 在页面卸载前清除任何可能的缓存状态
+          sessionStorage.setItem('forceReload', 'true');
+        });
+      }
+      
+      // 检查是否需要强制刷新
+      if (sessionStorage.getItem('forceReload') === 'true') {
+        sessionStorage.removeItem('forceReload');
+        // 确保页面从服务器重新加载而不是从缓存
+        if (window.location.reload) {
+          window.location.reload(true);
+        }
+      }
+    </script>
     
     <!-- 预加载关键CSS资源 -->
     <link rel="preload" href="/static/css/critical.css" as="style">
@@ -224,21 +246,22 @@
       .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
     </style>
     
-    <!-- 非关键CSS使用非阻塞加载 -->
-    <link rel="preload" href="/static/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/static/css/bootstrap.min.css"></noscript>
-    <link rel="preload" href="/static/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/static/css/custom.css"></noscript>
+    <!-- 非关键CSS使用阻塞加载，确保页面正确显示 -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/css/mobile.css">
     
     {% if page.group == 'news' %}
     <link rel="alternate" type="application/atom+xml" title="Genomics in Healthcare Lab News Feed" href="/news.xml">
-    <link rel="preload" href="/static/css/news-custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/static/css/news-custom.css"></noscript>
+    <link rel="stylesheet" href="/static/css/news-custom.css">
     {% endif %}
     
     <!-- 预加载页面中的关键图像 -->
     <link rel="preload" href="/static/img/logo/STEMJC_genomics_in_healthcare.png" as="image">
-    <link rel="preload" href="/static/img/logo/PolyU-Logos.png" as="image">
+    <link rel="preload" href="/static/img/logo/PolyU-Logo.png" as="image">
+    
+    <!-- 添加Material Icons字体 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- 添加加载CSS的后备脚本 -->
     <script>
@@ -249,26 +272,134 @@
 
   <body>
 
-    <!-- Static navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2e86c1; display: flex; align-items: center; justify-content: center;">
-        <a class="navbar-brand mr-2" href="/">{{site.name}}</a>
-        <img class="navb-icon mx-2 stem-logo" src="/static/img/logo/STEMJC_genomics_in_healthcare.png" alt="JC STEM Lab of Genomics in Healthcare">
-        <a href="https://www.polyu.edu.hk/"><img class="navb-icon ml-2 polyu-logo" src="/static/img/logo/PolyU-Logos.png" alt="Hong Kong Polytechnic University (PolyU) logo"></a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarContent">
+    <!-- 全新导航栏设计 -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2e86c1;">
+      <div class="container">
+        <!-- 全新的Logo布局结构 -->
+        <div class="nav-header">
+          <!-- Material Design风格的汉堡菜单按钮 -->
+          <button type="button" class="navbar-toggler md-menu-btn" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-icons">menu</span>
+          </button>
+
+          <!-- 创建两层结构：品牌名+Logo组 -->
+          <div class="brand-container">
+            <a class="navbar-brand" href="/">{{site.name}}</a>
+          </div>
+          
+          <div class="logos-wrapper">
+            <div class="logo-pair">
+              <a href="/" class="logo-link stem-logo-link">
+                <img class="navb-icon stem-logo" src="/static/img/logo/STEMJC_genomics_in_healthcare.png" alt="JC STEM Lab of Genomics in Healthcare" width="200" height="55">
+              </a>
+              <a href="https://www.polyu.edu.hk/" class="logo-link polyu-logo-link">
+                <img class="navb-icon polyu-logo" src="/static/img/logo/PolyU-Logo.png" alt="Hong Kong Polytechnic University (PolyU) logo" width="160" height="45">
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Material Design风格的下拉菜单 -->
+        <div class="navbar-collapse collapse md-menu" id="navbarContent">
           <ul class="navbar-nav ml-auto">
             {% for link in site.data.navigation %}
               {% if page.group == link.group %}
-                <li class = "nav-item active"><a class="nav-link" href="{{link.link}}" alt="{{link.name}}"> {{link.name}}<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active">
+                  <a class="nav-link md-menu-item" href="{{link.link}}" aria-current="page"> 
+                    {{link.name}}<span class="sr-only">(current)</span>
+                  </a>
+                </li>
               {% else %}
-                <li class="nav-item"><a class="nav-link" href="{{link.link}}" alt="{{link.name}}"> {{link.name}}</a></li>
+                <li class="nav-item">
+                  <a class="nav-link md-menu-item" href="{{link.link}}"> 
+                    {{link.name}}
+                  </a>
+                </li>
               {% endif %}
             {% endfor %}
-            <!-- <li><a href="https://sites.google.com/a/fraserlab.com/ucsf-private/" alt="Lab Private Area">private</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
-      </nav>
+      </div>
+    </nav>
 
     <div class="container">
+
+    <!-- 添加JavaScript脚本，改善移动端导航体验 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 处理移动端导航栏展开/折叠，添加Material Design风格的动画效果
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        if (navbarToggler) {
+          navbarToggler.addEventListener('click', function() {
+            if (navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+              // Material Design风格的关闭动画
+              navbarCollapse.style.opacity = '0';
+              setTimeout(function() {
+                navbarCollapse.style.display = 'none';
+              }, 300);
+            } else {
+              // Material Design风格的打开动画
+              navbarCollapse.style.display = 'block';
+              setTimeout(function() {
+                navbarCollapse.classList.add('show');
+                navbarCollapse.style.opacity = '1';
+              }, 10);
+            }
+          });
+        }
+        
+        // 点击链接后自动收起导航菜单（仅在移动端）
+        var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        function isSmallScreen() {
+          return window.innerWidth < 992;
+        }
+        
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            if (isSmallScreen() && navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+              // Material Design风格的关闭动画
+              navbarCollapse.style.opacity = '0';
+              setTimeout(function() {
+                navbarCollapse.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+        
+        // 监听窗口尺寸变化，适配导航栏样式
+        window.addEventListener('resize', function() {
+          if (!isSmallScreen() && navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+            navbarCollapse.style.opacity = '';
+            navbarCollapse.style.display = '';
+          }
+        });
+        
+        // 添加Material Design风格的涟漪效果
+        var buttons = document.querySelectorAll('.md-menu-btn, .md-menu-item');
+        
+        buttons.forEach(function(button) {
+          button.addEventListener('click', function(e) {
+            var rect = button.getBoundingClientRect();
+            var x = e.clientX - rect.left;
+            var y = e.clientY - rect.top;
+            
+            var ripple = document.createElement('span');
+            ripple.className = 'md-ripple';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            button.appendChild(ripple);
+            
+            setTimeout(function() {
+              ripple.remove();
+            }, 600);
+          });
+        });
+      });
+    </script>

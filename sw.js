@@ -1,13 +1,13 @@
 // Service Worker for genomics-in-healthcare.github.io
-const CACHE_NAME = 'genomics-cache-v1.4';
-const CACHE_MAX_AGE = 31536000; // 1 year in seconds
+const CACHE_NAME = 'genomics-cache-v1.6'; // 更新版本号强制重新加载
+const CACHE_MAX_AGE = 31536000; // 1年缓存时间（秒）
 
 // 基本资源
 const ESSENTIAL_RESOURCES = [
   '/',
   '/static/css/bootstrap.min.css',
-  '/static/css/custom.css'
-  // 已移除 syntax.css 和 members-center.css，因为它们现在内联在HTML中
+  '/static/css/custom.css',
+  '/static/css/critical.css'
 ];
 
 // JS资源（低优先级）
@@ -31,35 +31,21 @@ const GITHUB_DOMAINS = [
   'githubassets.com'
 ];
 
-// 添加缓存控制头
-function addCacheControlHeader(response, maxAge = CACHE_MAX_AGE) {
-  if (response && response.status === 200) {
-    const headers = new Headers(response.headers);
-    headers.set('Cache-Control', `public, max-age=${maxAge}, immutable`);
-    return new Response(response.body, {
-      status: response.status,
-      statusText: response.statusText,
-      headers: headers
-    });
-  }
-  return response;
-}
-
 // 安装事件 - 缓存基本资源
 self.addEventListener('install', event => {
+  console.log('Service Worker 正在安装');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('缓存基本资源');
-        return cache.addAll(ESSENTIAL_RESOURCES)
-          .then(() => {
-            console.log('缓存JS资源');
-            return cache.addAll(JS_RESOURCES);
-          })
-          .then(() => {
-            console.log('缓存预加载图像');
-            return cache.addAll(PRELOAD_IMAGES);
-          });
+        return Promise.all([
+          cache.addAll(ESSENTIAL_RESOURCES),
+          cache.addAll(JS_RESOURCES),
+          cache.addAll(PRELOAD_IMAGES)
+        ]);
+      })
+      .catch(error => {
+        console.error('缓存资源失败:', error);
       })
   );
   // 立即激活
@@ -68,6 +54,7 @@ self.addEventListener('install', event => {
 
 // 激活事件 - 清理旧缓存
 self.addEventListener('activate', event => {
+  console.log('Service Worker 激活中');
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
@@ -96,17 +83,22 @@ self.addEventListener('fetch', event => {
   // 获取请求URL
   const requestUrl = new URL(event.request.url);
   
+  // 只处理GET请求
+  if (event.request.method !== 'GET') return;
+  
   // 处理GitHub相关资源 - 使用网络优先策略，减少阻塞
   if (isGitHubResource(requestUrl.hostname)) {
     // 不拦截GitHub的请求，让它们自然完成
-    // 这些资源不在关键渲染路径上
     return;
   }
   
   // 只处理同源请求
   if (requestUrl.origin === self.location.origin) {
-    // 图片策略 - 优先使用缓存
-    if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
+    // 静态资源策略（图片、CSS、JS等）- 优先使用缓存
+    if (
+      event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/) ||
+      event.request.url.match(/\.(css|js)$/)
+    ) {
       event.respondWith(
         caches.match(event.request)
           .then(cachedResponse => {
@@ -126,109 +118,53 @@ self.addEventListener('fetch', event => {
                 // 克隆响应用于缓存
                 const responseToCache = response.clone();
                 
-                // 添加缓存控制头
-                const enhancedResponse = addCacheControlHeader(response);
-                
-                // 缓存图片
+                // 缓存资源
                 caches.open(CACHE_NAME).then(cache => {
                   cache.put(event.request, responseToCache);
+                  console.log('资源已缓存:', event.request.url);
                 });
                 
-                return enhancedResponse;
+                return response;
               })
               .catch(error => {
-                console.error('获取图片失败:', error);
-                // 如果网络请求失败，尝试返回默认图片或处理错误
-                return new Response('Image not available', { status: 404 });
+                console.error('获取资源失败:', error, event.request.url);
+                return caches.match(event.request);
               });
           })
       );
     }
-    // CSS策略 - 网络优先，缓存作为备份
-    else if (event.request.url.match(/\.css$/)) {
-      event.respondWith(
-        fetch(event.request)
-          .then(response => {
-            // 只缓存成功响应
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-            
-            // 克隆响应用于缓存
-            const responseToCache = response.clone();
-            
-            // 添加缓存控制头
-            const enhancedResponse = addCacheControlHeader(response);
-            
-            // 缓存CSS
-            caches.open(CACHE_NAME).then(cache => {
-              cache.put(event.request, responseToCache);
-            });
-            
-            return enhancedResponse;
-          })
-          .catch(() => {
-            // 如果网络请求失败，尝试从缓存获取
-            return caches.match(event.request);
-          })
-      );
-    }
-    // JS策略 - 仅当从页面请求时缓存，低优先级加载
-    else if (event.request.url.match(/\.js$/)) {
-      event.respondWith(
-        fetch(event.request)
-          .then(response => {
-            // 只缓存成功响应
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-            
-            // 克隆响应用于缓存
-            const responseToCache = response.clone();
-            
-            // 添加缓存控制头
-            const enhancedResponse = addCacheControlHeader(response);
-            
-            // 缓存JS
-            caches.open(CACHE_NAME).then(cache => {
-              cache.put(event.request, responseToCache);
-            });
-            
-            return enhancedResponse;
-          })
-          .catch(() => {
-            // 如果网络请求失败，尝试从缓存获取
-            return caches.match(event.request);
-          })
-      );
-    }
-    // HTML策略 - 网络优先
-    else if (event.request.url.match(/\/$|\.html$/)) {
-      event.respondWith(
-        fetch(event.request)
-          .then(response => {
-            // HTML缓存较短时间
-            return addCacheControlHeader(response, 3600); // 1小时
-          })
-          .catch(() => {
-            return caches.match(event.request);
-          })
-      );
+    // HTML策略 - 直接从网络获取，不使用缓存作为备份，移除非阻塞加载效果
+    else if (event.request.url.match(/\/$|\.html$|\.md$/)) {
+      // 不拦截HTML请求，让浏览器直接处理，确保页面跳转时完全重新加载
+      return;
     }
     // 其他资源 - 尝试缓存但不主动缓存
     else {
       event.respondWith(
         caches.match(event.request)
           .then(response => {
-            return response || fetch(event.request).then(fetchResponse => {
-              // 默认缓存时间
-              return addCacheControlHeader(fetchResponse, 86400); // 1天
-            });
+            return response || fetch(event.request);
           })
       );
     }
-  } else {
-    // 对于跨源请求，不进行特殊处理
-    return;
+  }
+});
+
+// 向主线程报告缓存状态
+self.addEventListener('message', event => {
+  if (event.data && event.data.action === 'checkCacheStatus') {
+    caches.open(CACHE_NAME).then(cache => {
+      cache.keys().then(keys => {
+        self.clients.matchAll().then(clients => {
+          clients.forEach(client => {
+            client.postMessage({
+              action: 'cacheStatus',
+              version: CACHE_NAME,
+              count: keys.length
+            });
+          });
+        });
+      });
+    });
   }
 }); 

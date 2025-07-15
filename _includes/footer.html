@@ -7,33 +7,118 @@
     </div> -->
 
     <!-- 将JavaScript放在页面底部加载 -->
-    <script src="/static/js/jquery.min.js" defer></script>
-    <script src="/static/js/popper.min.js" defer></script>
-    <script src="/static/js/bootstrap.min.js" defer></script>
-    <script src="/static/js/parallax.min.js" defer></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/parallax.min.js"></script>
     
-    <!-- Service Worker - 优化缓存策略 -->
+    <!-- 移动端导航菜单优化 -->
     <script>
-      // 确保之前的service worker已被卸载
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then(function(registrations) {
-          for(let registration of registrations) {
-            registration.unregister();
+      document.addEventListener('DOMContentLoaded', function() {
+        // 处理移动端导航栏展开/折叠
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        // 只在移动端处理导航栏交互
+        function isSmallScreen() {
+          return window.innerWidth < 992;
+        }
+        
+        if (navbarToggler && navbarCollapse) {
+          // 初始化时确保大屏幕下导航栏可见
+          if (!isSmallScreen()) {
+            navbarCollapse.classList.remove('show');
+            navbarCollapse.style.display = 'flex';
           }
           
-          // 等待一段时间后再注册新的service worker
-          setTimeout(function() {
-            // 注册新的service worker
-            navigator.serviceWorker.register('/sw.js', {
-              scope: '/'
-            }).then(function(registration) {
-              console.log('ServiceWorker 注册成功，范围: ', registration.scope);
-            }).catch(function(error) {
-              console.log('ServiceWorker 注册失败: ', error);
-            });
-          }, 1000);
+          navbarToggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+            } else {
+              navbarCollapse.classList.add('show');
+            }
+          });
+        }
+        
+        // 点击链接后自动收起导航菜单（仅在移动端）
+        var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            if (isSmallScreen() && navbarCollapse && navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+            }
+          });
         });
-      }
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', function(event) {
+          if (navbarToggler && navbarCollapse) {
+            var isClickInsideNavbar = navbarToggler.contains(event.target) || 
+                                     navbarCollapse.contains(event.target);
+            
+            if (!isClickInsideNavbar && isSmallScreen() && navbarCollapse && 
+                navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+            }
+          }
+        });
+        
+        // 监听窗口尺寸变化，适配导航栏样式
+        window.addEventListener('resize', function() {
+          if (navbarCollapse) {
+            if (isSmallScreen()) {
+              // 移动端
+              if (!navbarCollapse.classList.contains('show')) {
+                navbarCollapse.style.display = '';
+              }
+            } else {
+              // 桌面端
+              navbarCollapse.style.display = 'flex';
+              navbarCollapse.classList.remove('show');
+            }
+          }
+        });
+        
+        // 为表格添加响应式包装
+        var tables = document.querySelectorAll('table');
+        tables.forEach(function(table) {
+          if (!table.parentElement.classList.contains('table-responsive')) {
+            var wrapper = document.createElement('div');
+            wrapper.className = 'table-responsive';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          }
+        });
+        
+        // 添加触摸优化
+        if ('ontouchstart' in window) {
+          var touchElements = document.querySelectorAll('a, button');
+          touchElements.forEach(function(el) {
+            el.addEventListener('touchstart', function() {}, {passive: true});
+          });
+        }
+        
+        // 确保所有链接使用传统导航方式
+        document.querySelectorAll('a').forEach(function(link) {
+          // 只处理同站点链接
+          if (link.href && 
+              link.href.startsWith(window.location.origin) && 
+              !link.hasAttribute('download') && 
+              link.target !== '_blank') {
+            
+            link.addEventListener('click', function(e) {
+              // 使用传统导航方式，确保完全刷新页面
+              e.preventDefault();
+              window.location.href = this.href;
+            });
+          }
+        });
+      });
     </script>
+    
+    <!-- Service Worker - 优化缓存策略 -->
+    <script src="/static/js/sw-register.js"></script>
   </body>
 </html>

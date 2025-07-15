@@ -1,0 +1,421 @@
+/* 移动设备适配样式 */
+
+/* 基础移动端适配 */
+@media (max-width: 767px) {
+  body {
+    padding-top: 80px; /* 减少顶部填充，因为导航栏变小了 */
+    font-size: 16px;
+  }
+  
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  h1, .h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2, .h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3, .h3 {
+    font-size: 1.3rem;
+  }
+  
+  .welcomefont {
+    font-size: 1.2em !important;
+    min-height: auto;
+  }
+  
+  /* 移动端logo尺寸优化 - 只显示实验室logo */
+  .navb-icon.stem-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain; /* 保持图像比例 */
+    max-width: 180px; /* 限制最大宽度 */
+    margin: 0 auto; /* 居中显示 */
+  }
+  
+  /* 隐藏理工大学logo */
+  .navb-icon.polyu-logo {
+    display: none;
+  }
+  
+  /* 隐藏理工大学logo链接 */
+  .polyu-logo-link {
+    display: none;
+  }
+  
+  /* 隐藏网站名称 */
+  .navbar-brand,
+  .brand-container {
+    display: none;
+  }
+  
+  /* 确保实验室logo链接在移动端显示 */
+  .logo-link.stem-logo-link {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 确保导航头部在移动端正确显示 */
+  .nav-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .logos-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .logo-pair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Material Design风格的汉堡菜单按钮 */
+  .md-menu-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+  }
+  
+  /* Material Design风格的下拉菜单 */
+  .md-menu {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 0;
+    padding: 8px 0;
+  }
+  
+  /* Material Design菜单项 */
+  .md-menu-item {
+    padding: 16px 24px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    transition: background-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Material Design涟漪效果 */
+  .md-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    animation: md-ripple 0.6s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes md-ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}
+
+/* 导航栏移动端适配 - 仅保留与custom.css不冲突的样式 */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 10px;
+    min-height: 60px; /* 确保导航栏有足够的高度 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Material Design阴影 */
+  }
+  
+  /* Material Design风格的菜单动画 */
+  .md-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+  }
+  
+  .md-menu.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* 内容区域适配 */
+@media (max-width: 767px) {
+  .jumbotron {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .col-sm-9, .col-sm-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* 成员页面适配 */
+@media (max-width: 767px) {
+  .members-center .row {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  
+  .members-center img {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .member-card {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .member-card h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .member-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  /* 使成员列表在小屏幕上单列显示 */
+  .members-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .member-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* 图片和视频适配 */
+@media (max-width: 767px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .video-container {
+    margin-bottom: 15px;
+  }
+}
+
+/* 触摸交互优化 - Material Design风格 */
+@media (max-width: 767px) {
+  a, button, .nav-link {
+    min-height: 48px; /* Material Design推荐的触摸目标尺寸 */
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Material Design按钮触摸反馈 */
+  .md-menu-btn:active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .md-menu-item:active {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* 表格适配 */
+@media (max-width: 767px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* 修复特定布局问题 */
+@media (max-width: 767px) {
+  /* 发布物清单适配 */
+  ul {
+    padding-left: 20px;
+  }
+  
+  /* 确保页面内容可读性 */
+  p, li {
+    word-break: break-word;
+  }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 767px) and (orientation: landscape) {
+  body {
+    padding-top: 70px; /* 减少顶部填充 */
+  }
+  
+  .navbar {
+    min-height: 50px;
+  }
+  
+  /* 横屏模式下隐藏网站名称和理工大学logo */
+  .brand-container,
+  .navbar-brand,
+  .polyu-logo-link,
+  .navb-icon.polyu-logo {
+    display: none;
+  }
+  
+  /* 横屏模式下调整实验室logo位置 */
+  .logos-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .logo-pair {
+    justify-content: center;
+  }
+  
+  /* 调整横屏模式下的实验室logo尺寸 */
+  .navb-icon.stem-logo {
+    height: 40px;
+    max-width: 160px;
+    margin: 0 auto;
+  }
+  
+  /* Material Design菜单在横屏模式下的调整 */
+  .md-menu {
+    max-height: 80vh; /* 限制高度，避免溢出屏幕 */
+    overflow-y: auto; /* 添加滚动条 */
+  }
+  
+  .md-menu-item {
+    padding: 12px 24px; /* 减小内边距 */
+  }
+  
+  .jumbotron {
+    padding: 1rem 0.5rem;
+    min-height: auto;
+  }
+  
+  /* 横屏下成员页面两列布局 */
+  .members-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .member-item {
+    width: 50%;
+    padding: 0 5px;
+  }
+}
+
+/* 大型手机优化 (例如 iPhone Plus/Pro Max 等) */
+@media (min-width: 414px) and (max-width: 767px) {
+  .welcomefont {
+    font-size: 1.3em !important;
+  }
+  
+  h1, .h1 {
+    font-size: 2rem;
+  }
+  
+  h2, .h2 {
+    font-size: 1.7rem;
+  }
+  
+  /* 为较大的手机屏幕提供更好的间距 */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 359px) {
+  body {
+    padding-top: 70px; /* 超小屏幕顶部填充 */
+  }
+  
+  /* 确保超小屏幕上也隐藏网站名称和理工大学logo */
+  .brand-container,
+  .navbar-brand,
+  .polyu-logo-link,
+  .navb-icon.polyu-logo {
+    display: none;
+  }
+  
+  /* 超小屏幕logo视觉优化 */
+  .navb-icon.stem-logo {
+    height: 35px;
+    max-width: 140px;
+    margin: 0 auto;
+  }
+  
+  /* 调整Material Design菜单在超小屏幕上的显示 */
+  .md-menu-item {
+    padding: 14px 20px; /* 减小内边距 */
+    font-size: 15px; /* 稍微减小字体 */
+  }
+}
+
+/* 处理特定的移动浏览器问题 */
+@supports (-webkit-touch-callout: none) {
+  /* iOS特定优化 */
+  .md-menu {
+    -webkit-overflow-scrolling: touch; /* 平滑滚动 */
+  }
+  
+  /* 修复iOS上的浮动元素高度问题 */
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .navbar, .navbar-toggler {
+    display: none !important;
+  }
+  
+  body {
+    padding-top: 0;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+} 
