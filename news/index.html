@@ -16,15 +16,15 @@ group: news
 /* 添加新闻页面样式 */
 .news-item {
   width: 100%;
-  padding: 16px 20px; /* 增加内边距 */
-  margin-bottom: 14px; /* 增加项目间距 */
+  padding: 10px 15px; /* 减少内边距 */
+  margin-bottom: 8px; /* 减少项目间距 */
   /* 移除边框并使用!important确保覆盖外部CSS */
   border-bottom: none !important;
-  font-size: 15px; /* 调整正文字体大小 */
+  font-size: 14px; /* 减小正文字体大小 */
   display: flex; /* 使用弹性布局 */
   align-items: flex-start; /* 顶部对齐 */
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
-  line-height: 1.6; /* 增加行高，使文本更加通透 */
+  line-height: 1.5; /* 稍微紧凑的行高 */
 }
 /* 灰白交替背景 - 交换颜色 */
 .news-item:nth-child(even) {
@@ -34,35 +34,35 @@ group: news
   background-color: #f7f7f7; /* 奇数行为灰色 */
 }
 .news-date {
-  min-width: 130px; /* 增加日期宽度 */
-  margin-right: 25px; /* 增加日期和内容之间的间距 */
-  font-size: 14px; /* 日期字体大小 */
+  min-width: 110px; /* 减少日期宽度 */
+  margin-right: 15px; /* 减少日期和内容之间的间距 */
+  font-size: 14px; /* 恢复日期字体大小 */
   color: #444;
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 .news-content {
   flex: 1; /* 内容占据剩余空间 */
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
-  font-size: 15px; /* 新闻内容字体大小 */
-  max-width: 90%; /* 限制内容宽度，避免太宽导致阅读困难 */
-  letter-spacing: 0.01em; /* 轻微增加字符间距 */
+  font-size: 14.5px; /* 调整新闻内容字体大小为折中值 */
+  max-width: 95%; /* 增加内容宽度使用比例 */
+  letter-spacing: normal; /* 恢复字符间距 */
 }
 .news-title {
   margin-top: 0;
-  margin-bottom: 15px; /* 增加标题和内容间距 */
+  margin-bottom: 8px; /* 减少标题和内容间距 */
   font-weight: normal; /* 将加粗改为普通字重 */
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
-  font-size: 19px; /* 略微增大标题字体大小 */
+  font-size: 17px; /* 减小标题字体大小 */
   color: #222;
-  letter-spacing: 0.01em; /* 轻微增加字符间距 */
+  letter-spacing: normal; /* 恢复字符间距 */
 }
 .author {
-  font-size: 14px;
+  font-size: 13px;
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 .tag-section {
-  margin-top: 12px; /* 增加标签区域上边距 */
-  font-size: 13px;
+  margin-top: 8px; /* 减少标签区域上边距 */
+  font-size: 12px;
   color: #666;
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
@@ -73,9 +73,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* 页面主标题样式 */
 h1.page-header {
-  font-size: 30px; /* 稍微增大标题大小 */
+  font-size: 28px; /* 减小标题大小 */
   font-weight: 500;
-  margin-bottom: 40px; /* 增加页面标题和内容间距，与Publications页面保持一致 */
+  margin-bottom: 25px; /* 减少页面标题和内容间距 */
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 /* 移除h4标题的加粗效果 */
@@ -96,9 +96,9 @@ a:hover {
   font-size: 12px;
   color: #666;
   background-color: #f0f0f0;
-  padding: 3px 8px; /* 增加标签内边距 */
+  padding: 2px 6px; /* 减少标签内边距 */
   border-radius: 3px;
-  margin-right: 6px; /* 增加标签之间的间距 */
+  margin-right: 5px; /* 减少标签之间的间距 */
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
 .tag-link:hover {
@@ -107,13 +107,22 @@ a:hover {
 }
 /* 为段落添加间距 */
 p {
-  margin-bottom: 12px;
-  line-height: 1.6;
+  margin-bottom: 8px; /* 减少段落间距 */
+  line-height: 1.5; /* 减少行高 */
+}
+/* 减少图片间距 */
+.news-content img {
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
 /* 增加容器边距 */
 .container-fluid {
   padding-left: 15px;
   padding-right: 15px;
+}
+/* 优化新闻内容显示 */
+.news-content p:last-child {
+  margin-bottom: 0;
 }
 </style>
 
