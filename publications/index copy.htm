@@ -4,10 +4,10 @@ layout: default
 group: publications
 ---
 
-<div class="container-fluid p-0 mt-5">
+<div class="container-fluid p-0 mt-4">
   <div class="row">
     <div class="col-md-12">
-      <!-- Publications标题已删除 -->
+      <h1 class="page-header" style="padding-left: 0;">Publications</h1>
     </div>
   </div>
 </div>
@@ -16,20 +16,20 @@ group: publications
   /* 调整Publications页面样式，与News页面保持一致 */
   .pub-list blockquote {
     margin-left: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .pub-list ul {
     padding-left: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     list-style-type: none;
   }
   .pub-list li {
-    margin-bottom: 8px;
-    padding: 10px 15px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    padding: 16px 20px;
+    line-height: 1.6;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14.5px;
-    letter-spacing: normal;
+    font-size: 15px;
+    letter-spacing: 0.01em;
     list-style-type: none; /* 去除列表项前的点符号 */
   }
   /* 灰白交替背景 - 奇数行灰色，偶数行白色 */
@@ -44,7 +44,7 @@ group: publications
     margin-left: 0;
     padding-left: 0;
     margin-bottom: 25px;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
@@ -52,33 +52,33 @@ group: publications
   /* 文本样式 */
   .pub-list font {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    font-size: 14.5px;
+    line-height: 1.6;
+    font-size: 15px;
   }
   /* 分割线 */
   .pub-list hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     border-top: 1px solid #eaeaea;
   }
   /* 段落 */
   .pub-list p {
-    margin-bottom: 8px;
-    line-height: 1.5;
+    margin-bottom: 12px;
+    line-height: 1.6;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14.5px;
+    font-size: 15px;
   }
   /* 年份标题 */
   .pub-list p b {
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 19px;
+    margin-bottom: 15px;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
   }
   /* 子分类标题 */
   .pub-list blockquote font {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
   }
   /* 链接样式 */
   .pub-list a {
@@ -97,15 +97,7 @@ group: publications
   /* 调整列表项内论文标题加粗效果 */
   .pub-list li b {
     font-weight: 600;
-    letter-spacing: normal;
-  }
-  /* 优化列表内容 */
-  .pub-list li p {
-    margin-bottom: 0;
-  }
-  /* 减少空白间距 */
-  .pub-list br {
-    display: none;
+    letter-spacing: 0.01em;
   }
 </style>
 
@@ -125,44 +117,44 @@ group: publications
     <blockquote> </blockquote>
     <font face="Arial"> </font><font face="Arial"> </font>
     <ul>
-      <li><font face="Arial">C. Huo, D. He, Y. Li, D. Jin, J. Dang, W. Pedrycz, L. Wu, and W. Zhang, <a href="https://arxiv.org/pdf/2205.00256.pdf">Heterogeneous Graph Neural Networks using Self-supervised Reciprocally Contrastive Learning</a>, <u><i>ACM Transactions on Knowledge Discovery from Data</i></u>, 2022.</font></li>
-      <li><font face="Arial">H. Guo, Y. Xiao, S. Dong, J. Yang, P. Zhao, T. Zhao, A. Cai, L. Tang, J. Liu, H. Wang, R. Hua, R. Liu, Y. Wei, D. Sun, Z. Liu, M. Xia, Y. He, Y. Wu, T. Si, F. Womer, F. Xu, Y. Tang, J. Wang, W. Zhang, X. Zhang & F. Wang, <a href="https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-025-03850-4">Bridging animal models and humans: neuroimaging as intermediate phenotypes linking genetic or stress factors to anhedonia</a>, <u><i>BMC medicine</i></u>, 23(1):38, 2025.</font></li>
-      <li><font face="Arial">Q. Zhao, C. Zhang, W. Zhang, <a href="https://arxiv.org/pdf/2409.15697.pdf">dnaGrinder: a lightweight and high-capacity genomic foundation model</a>, arXiv, 2024, https://arxiv.org/abs/2409.15697.</font></li>
+      <li><font face="Arial">C. Huo, D. He, Y. Li, D. Jin, J. Dang, W. Pedrycz, L. Wu, and W. Zhang, <b>Heterogeneous Graph Neural Networks using Self-supervised Reciprocally Contrastive Learning</b>, <u><i>ACM Transactions on Knowledge Discovery from Data</i></u>, 2022. [<a href="https://arxiv.org/pdf/2205.00256.pdf">PDF</a>]</font></li>
+      <li><font face="Arial">H. Guo, Y. Xiao, S. Dong, J. Yang, P. Zhao, T. Zhao, A. Cai, L. Tang, J. Liu, H. Wang, R. Hua, R. Liu, Y. Wei, D. Sun, Z. Liu, M. Xia, Y. He, Y. Wu, T. Si, F. Womer, F. Xu, Y. Tang, J. Wang, W. Zhang, X. Zhang & F. Wang, <b>Bridging animal models and humans: neuroimaging as intermediate phenotypes linking genetic or stress factors to anhedonia</b>, <u><i>BMC medicine</i></u>, 23(1):38, 2025. [<a href="https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-025-03850-4">PDF</a>]</font></li>
+      <li><font face="Arial">Q. Zhao, C. Zhang, W. Zhang, <b>dnaGrinder: a lightweight and high-capacity genomic foundation model</b>, arXiv, 2024, https://arxiv.org/abs/2409.15697. [<a href="https://arxiv.org/pdf/2409.15697.pdf">PDF</a>]</font></li>
     </ul>
 
-          <p><font face="Arial"><b>2024<a name="2024"></a></b></font></p>
+    <p><font face="Arial"><b>2024<a name="2024"></a></b></font></p>
     <ul>
-      <li><font face="Arial">D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and W. Zhang, <a href="https://ieeexplore.ieee.org/iel7/5962385/6104215/09724614.pdf">Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning</a>, <u><i>IEEE Transactions on Neural Networks and Learning Systems</i></u>, 35(4):4438-50, 2024.</font></li>
-      <li><font face="Arial">D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, W. Zhang, <a href="https://openreview.net/forum?id=R8SolCx62K&referrer=%5Bthe%20profile%20of%20Zhen%20Wang%5D(%2Fprofile%3Fid%3D~Zhen_Wang11)">Exploitation of a latent mechanism in graph contrastive learning: Representation scattering</a>, <u><i>Proc 38-th Conference on Neural Information Processing Systems</i></u> (NeurIPS 2024).</font></li>
-      <li><font face="Arial">Y. Zhou, D. Jin, J. Wei, D. He, Z. Yu, and W. Zhang, <a href="https://www.ijcai.org/proceedings/2024/289">Generalized taxonomy-guided graph neural networks</a>, <u><i>Proc 33-rd Intern. Joint Conf. on AI</i></u> (IJCAI-24).</font></li>
+      <li><font face="Arial">D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and W. Zhang, <b>Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning</b>, <u><i>IEEE Transactions on Neural Networks and Learning Systems</i></u>, 35(4):4438-50, 2024. [<a href="https://ieeexplore.ieee.org/iel7/5962385/6104215/09724614.pdf">PDF</a>]</font></li>
+      <li><font face="Arial">D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, W. Zhang, <b>Exploitation of a latent mechanism in graph contrastive learning: Representation scattering</b>, <u><i>Proc 38-th Conference on Neural Information Processing Systems</i></u> (NeurIPS 2024). [<a href="https://openreview.net/forum?id=R8SolCx62K&referrer=%5Bthe%20profile%20of%20Zhen%20Wang%5D(%2Fprofile%3Fid%3D~Zhen_Wang11)">PDF</a>]</font></li>
+      <li><font face="Arial">Y. Zhou, D. Jin, J. Wei, D. He, Z. Yu, and W. Zhang, <b>Generalized taxonomy-guided graph neural networks</b>, <u><i>Proc 33-rd Intern. Joint Conf. on AI</i></u> (IJCAI-24). [<a href="https://www.ijcai.org/proceedings/2024/289">PDF</a>]</font></li>
     </ul>
 
     <p><font face="Arial"><b>2023<a name="2023"></a></b></font></p>
     <ul>
-      <li><font face="Arial">D. He, J. Zhao, R. Guo, Z. Feng, D. Jin, Y. Huang, Z. Wang and W. Zhang, <a href="https://openreview.net/forum?id=YIcb3pR8ld">Contrastive learning meets homophily: Two birds with one stone</a>, <u><i>Conference on Machine Learning</i></u> (ICML-2023).</font></li>
-      <li><font face="Arial">X. Wei, C. Pan, X. Zhang*, W. Zhang*, <a href="https://biologydirect.biomedcentral.com/articles/10.1186/s13062-023-00410-9">Total network controllability analysis discovers explainable drugs for Covid-19 treatment</a>, <u><i>Biology Direct</i></u>, 18(1):55, 2023.</font></li>
-      <li><font face="Arial">X. Zhang*, C. Pan, X. Wei, M. Yu, S. Liu, J. An, J. Yang, B. Wei, W. Hao, Y. Yao*, Y. Zhu*, and W. Zhang*, <a href="https://pubmed.ncbi.nlm.nih.gov/37520717/">Cancer-keeper genes as therapeutic targets</a>, <u><i>iScience</i></u>, 26(8):107296, 2023.</font></li>
-      <li><font face="Arial">D. Jin, Z. Yu, P. Jiao, S. Pan, D. He, J. Wu, P. Yu, W. Zhang, <a href="hhttps://arxiv.org/pdf/2101.01669">A survey of community detection approaches: From statistical modeling to deep learning</a>, <u><i>IEEE Transactions on Knowledge and Data Engineering</i></u>, 35(2):1149-90, 2023.</font></li>
-      <li><font face="Arial">Y. Xiao, FY. Womer, S. Dong, R.Zhu, R. Zhang, J. Yang, L. Zhang, J. Liu, W. Zhang, Z. Liu, X. Zhang, F. Wang*, <a href="https://pubmed.ncbi.nlm.nih.gov/37992593/">A neuroimaging-based precision medicine framework for depression</a>, <u><i>Asian Journal of Psychiatry</i></u>, 91:103803, 2023.</font></li>
-      <li><font face="Arial">S. He, S. Qiu, M.Pan, J. P Palavicini, H. Wang, X. Li, A. Bhattacharjee, S. Barannikov, K. F Bieniek, J. L Dupree and X. Han, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10361545/">Marked reduction of spinal cord lipids causes neurogenic bladder in late Alzheimer's disease</a>, <u><i>Clinical and Translational Medicine</i></u>, 2023.</font></li>
-      <li><font face="Arial">S. Qiu, S. He, J. Wang, H. Wang, A. Bhattacharjee, X. Li, M. Saeed, J. L. Dupree, X. Han, <a href="https://pubmed.ncbi.nlm.nih.gov/37445661/">Adult-onset CNS sulfatide deficiency causes sex-dependent metabolic disruption in aging</a>, <u><i>International Journal of Molecular Sciences</i></u>, 24(13), 2023.</font></li>
-      <li><font face="Arial">S. Qiu, J. P. Palavicini, X. Han, <a href="https://pubmed.ncbi.nlm.nih.gov/35799524/">Myelin lipid deficiency: a new key driver of Alzheimer's disease</a>, <u><i>Neural Regeneration Research</i></u>, 18:121-122, 2023.</font></li>
-      <li><font face="Arial">Dustin, E., E. Suarez-Pozos, C. Stotesberry, S. Qiu, J. P. Palavicini, X. Han and J. L. Dupree, <a href="https://pubmed.ncbi.nlm.nih.gov/37239102/">Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion</a>, <u><i>Biomedicines</i></u>, 11(5), 2023.</font></li>
+      <li><font face="Arial">D. He, J. Zhao, R. Guo, Z. Feng, D. Jin, Y. Huang, Z. Wang and W. Zhang, <b>Contrastive learning meets homophily: Two birds with one stone</b>, <u><i>Conference on Machine Learning</i></u> (ICML-2023). [<a href="https://openreview.net/forum?id=YIcb3pR8ld">PDF</a>]</font></li>
+      <li><font face="Arial">X. Wei, C. Pan, X. Zhang*, W. Zhang*, <b>Total network controllability analysis discovers explainable drugs for Covid-19 treatment</b>, <u><i>Biology Direct</i></u>, 18(1):55, 2023. [<a href="https://biologydirect.biomedcentral.com/articles/10.1186/s13062-023-00410-9">PDF</a>]</font></li>
+      <li><font face="Arial">X. Zhang*, C. Pan, X. Wei, M. Yu, S. Liu, J. An, J. Yang, B. Wei, W. Hao, Y. Yao*, Y. Zhu*, and W. Zhang*, <b>Cancer-keeper genes as therapeutic targets</b>, <u><i>iScience</i></u>, 26(8):107296, 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/37520717/">PDF</a>]</font></li>
+      <li><font face="Arial">D. Jin, Z. Yu, P. Jiao, S. Pan, D. He, J. Wu, P. Yu, W. Zhang, <b>A survey of community detection approaches: From statistical modeling to deep learning</b>, <u><i>IEEE Transactions on Knowledge and Data Engineering</i></u>, 35(2):1149-90, 2023. [<a href="hhttps://arxiv.org/pdf/2101.01669">PDF</a>]</font></li>
+      <li><font face="Arial">Y. Xiao, FY. Womer, S. Dong, R.Zhu, R. Zhang, J. Yang, L. Zhang, J. Liu, W. Zhang, Z. Liu, X. Zhang, F. Wang*, <b>A neuroimaging-based precision medicine framework for depression</b>, <u><i>Asian Journal of Psychiatry</i></u>, 91:103803, 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/37992593/">PDF</a>]</font></li>
+      <li><font face="Arial">S. He, S. Qiu, M.Pan, J. P Palavicini, H. Wang, X. Li, A. Bhattacharjee, S. Barannikov, K. F Bieniek, J. L Dupree and X. Han, <b>Marked reduction of spinal cord lipids causes neurogenic bladder in late Alzheimer's disease</b>, <u><i>Clinical and Translational Medicine</i></u>, 2023. [<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10361545/">PDF</a>]</font></li>
+      <li><font face="Arial">S. Qiu, S. He, J. Wang, H. Wang, A. Bhattacharjee, X. Li, M. Saeed, J. L. Dupree, X. Han, <b>Adult-onset CNS sulfatide deficiency causes sex-dependent metabolic disruption in aging</b>, <u><i>International Journal of Molecular Sciences</i></u>, 24(13), 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/37445661/">PDF</a>]</font></li>
+      <li><font face="Arial">S. Qiu, J. P. Palavicini, X. Han, <b>Myelin lipid deficiency: a new key driver of Alzheimer's disease</b>, <u><i>Neural Regeneration Research</i></u>, 18:121-122, 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/35799524/">PDF</a>]</font></li>
+      <li><font face="Arial">Dustin, E., E. Suarez-Pozos, C. Stotesberry, S. Qiu, J. P. Palavicini, X. Han and J. L. Dupree, <b>Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion</b>, <u><i>Biomedicines</i></u>, 11(5), 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/37239102/">PDF</a>]</font></li>
     </ul>
 
     <p><font face="Arial"><b>2022<a name="2022"></a></b></font></p>
     <ul>
-      <li><font face="Arial">D. Jin, R. Wang, M. Ge, H. He, X. Li, W. Lin and W. Zhang, <a href="https://www.ijcai.org/proceedings/2022/0293.pdf">RAW-GNN: Random Walk Aggregation based graph neural network</a>, <u><i>Proc 31-st Intern. Joint Conf. on AI</i></u> (IJCAI-22).</font></li>
-      <li><font face="Arial">D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and W. Zhang, <a href="https://ieeexplore.ieee.org/iel7/5962385/6104215/09724614.pdf">Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning</a>, <u><i>IEEE Transactions on Neural Networks and Learning Systems</i></u>, published online March 2022.</font></li>
-      <li><font face="Arial">P. Xuan*, L. Zhan, H. Cui, T. Zhang, T. Nakaguchi, W. Zhang, <a href="https://pubmed.ncbi.nlm.nih.gov/34813484/">Graph Triple-Attention Network for Disease-Related LncRNA Prediction</a>, <u><i>IEEE Journal of Biomedical and Health Informatics</i></u>, 26(6):2839-49, 2022.</font></li>
-      <li><font face="Arial">Palavicini, J. P., L. Ding, M. Pan, S. Qiu, H. Wang, Q. Shen, J. L. Dupree and X. Han, <a href="https://pubmed.ncbi.nlm.nih.gov/36613677/">Sulfatide Deficiency, an Early Alzheimer's Lipidomic Signature, Causes Brain Ventricular Enlargement in the Absence of Classical Neuropathological Hallmarks</a>, <u><i>International Journal of Molecular Sciences</i></u>, 24(1), 2022.</font></li>
+      <li><font face="Arial">D. Jin, R. Wang, M. Ge, H. He, X. Li, W. Lin and W. Zhang, <b>RAW-GNN: Random Walk Aggregation based graph neural network</b>, <u><i>Proc 31-st Intern. Joint Conf. on AI</i></u> (IJCAI-22). [<a href="https://www.ijcai.org/proceedings/2022/0293.pdf">PDF</a>]</font></li>
+      <li><font face="Arial">D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and W. Zhang, <b>Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning</b>, <u><i>IEEE Transactions on Neural Networks and Learning Systems</i></u>, published online March 2022. [<a href="https://ieeexplore.ieee.org/iel7/5962385/6104215/09724614.pdf">PDF</a>]</font></li>
+      <li><font face="Arial">P. Xuan*, L. Zhan, H. Cui, T. Zhang, T. Nakaguchi, W. Zhang, <b>Graph Triple-Attention Network for Disease-Related LncRNA Prediction</b>, <u><i>IEEE Journal of Biomedical and Health Informatics</i></u>, 26(6):2839-49, 2022. [<a href="https://pubmed.ncbi.nlm.nih.gov/34813484/">PDF</a>]</font></li>
+      <li><font face="Arial">Palavicini, J. P., L. Ding, M. Pan, S. Qiu, H. Wang, Q. Shen, J. L. Dupree and X. Han, <b>Sulfatide Deficiency, an Early Alzheimer's Lipidomic Signature, Causes Brain Ventricular Enlargement in the Absence of Classical Neuropathological Hallmarks</b>, <u><i>International Journal of Molecular Sciences</i></u>, 24(1), 2022. [<a href="https://pubmed.ncbi.nlm.nih.gov/36613677/">PDF</a>]</font></li>
     </ul>
 
     <ul>
-      <li><font face="Arial">S. He, S. Qiu, M.Pan, J. P Palavicini, H. Wang, X. Li, A. Bhattacharjee, S. Barannikov, K. F Bieniek, J. L Dupree and X. Han, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10361545/">Marked reduction of spinal cord lipids causes neurogenic bladder in late Alzheimer's disease</a>, <u><i>Clinical and Translational Medicine</i></u>, 2023.</font></li>
-      <li><font face="Arial">S. Qiu, S. He, J. Wang, H. Wang, A. Bhattacharjee, X. Li, M. Saeed, J. L. Dupree, X. Han, <a href="https://pubmed.ncbi.nlm.nih.gov/37445661/">Adult-onset CNS sulfatide deficiency causes sex-dependent metabolic disruption in aging</a>, <u><i>International Journal of Molecular Sciences</i></u>, 24(13), 2023.</font></li>
-      <li><font face="Arial">S. Qiu, J. P. Palavicini, X. Han, <a href="https://pubmed.ncbi.nlm.nih.gov/35799524/">Myelin lipid deficiency: a new key driver of Alzheimer's disease</a>, <u><i>Neural Regeneration Research</i></u>, 18:121-122, 2023.</font></li>
-      <li><font face="Arial">Dustin, E., E. Suarez-Pozos, C. Stotesberry, S. Qiu, J. P. Palavicini, X. Han and J. L. Dupree, <a href="https://pubmed.ncbi.nlm.nih.gov/37239102/">Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion</a>, <u><i>Biomedicines</i></u>, 11(5), 2023.</font></li>
+      <li><font face="Arial">S. He, S. Qiu, M.Pan, J. P Palavicini, H. Wang, X. Li, A. Bhattacharjee, S. Barannikov, K. F Bieniek, J. L Dupree and X. Han, <b>Marked reduction of spinal cord lipids causes neurogenic bladder in late Alzheimer's disease</b>, <u><i>Clinical and Translational Medicine</i></u>, 2023. [<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10361545/">PDF</a>]</font></li>
+      <li><font face="Arial">S. Qiu, S. He, J. Wang, H. Wang, A. Bhattacharjee, X. Li, M. Saeed, J. L. Dupree, X. Han, <b>Adult-onset CNS sulfatide deficiency causes sex-dependent metabolic disruption in aging</b>, <u><i>International Journal of Molecular Sciences</i></u>, 24(13), 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/37445661/">PDF</a>]</font></li>
+      <li><font face="Arial">S. Qiu, J. P. Palavicini, X. Han, <b>Myelin lipid deficiency: a new key driver of Alzheimer's disease</b>, <u><i>Neural Regeneration Research</i></u>, 18:121-122, 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/35799524/">PDF</a>]</font></li>
+      <li><font face="Arial">Dustin, E., E. Suarez-Pozos, C. Stotesberry, S. Qiu, J. P. Palavicini, X. Han and J. L. Dupree, <b>Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion</b>, <u><i>Biomedicines</i></u>, 11(5), 2023. [<a href="https://pubmed.ncbi.nlm.nih.gov/37239102/">PDF</a>]</font></li>
     </ul>
 
     <p><font face="Arial"><b>2021<a name="2021"></a></b></font></p>
@@ -172,35 +164,39 @@ group: publications
             Gong, X. Chen, L. Tang, R. Feng, S. Dong, J. Duan, Y. Chen,
             R. Zhang, Y. Wang, S. Ren, Y. Wang, J. Kang, Z. Yin, Y. Wei,
             S. Wei, X. Jian, K. Xu, B. Cao, Y. Zhang, W. Zhang, Y. Tang,
-            X. Zhang, F. Wang, <a href="https://www.nature.com/articles/s41380-020-00892-3">Identifying and validating subtypes
+            X. Zhang, F. Wang, <b>Identifying and validating subtypes
               within major psychiatric disorders based on
-              frontal-posterior functional imbalance via deep learning</a>,
-            <u><i>Molecular Psychiatry</i></u>, available online.</font>.
+              frontal-posterior functional imbalance via deep learning</b>,
+            <u><i>Molecular Psychiatry</i></u>, available online. [<a
+              href="https://www.nature.com/articles/s41380-020-00892-3">PDF</a>]</font>.
         </font> </li>
       <li>
         <p><font face="Arial"><font face="Arial"><font face="Arial">X.
-                Liu, J. Frost, A. Bowcock, W. Zhang*, <a href="https://pubmed.ncbi.nlm.nih.gov/34068434/">Canonical and
-                  interior circular RNAs function as competing
-                  endogenous RNAs in psoriatic skin</a>, <u><i>Intern</i></u><u><i>.
-                    J. Molecular Sciences</i></u>, 22(10):5182, 2021.</font></font>.
+                Liu, J. Frost, A. Bowcock, W. Zhang*, <b>Canonical and
+                  interior cir</b><b>cular RNAs function as competing
+                  endogenous RNAs in psoriatic skin</b>, <u><i>Intern</i></u><u><i>.
+                    J. Molecular Sciences</i></u>, 22(10):5182, 2021. [<a
+                  href="https://pubmed.ncbi.nlm.nih.gov/34068434/">PDF</a>]</font></font>.
             <br>
           </font></p>
       </li>
       <li><font face="Arial">L. Chen, J. Zhou, T. Li, Z. Fang, L. Li, G.
           Huang, L. Gao, X. Zhu, X. Zhou, H. Xiao, J. Zhang, Q. Xiong,
-          J. Zhang, A. Ma, W. Zhai, W. Zhang*, and H. Peng*, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0963996921005615">GmoDetector:
+          J. Zhang, A. Ma, W. Zhai, W. Zhang*, and H. Peng*, <b>GmoDetector:
 
             An accurate and efficient GMO identification approach and
-            its application</a>, <u><i>Food Research International</i></u>,
-          149:110662, 2021.</font></li>
+            its application</b>, <u><i>Food Research International</i></u>,
+          149:110662, 2021. [<a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0963996921005615">PDF</a>]</font></li>
     </ul>
 
     <ul>
       <li><font face="Arial"><font face="Arial">D. Jin, Z. Yu, P. Jiao,
-            S. Pan, D. He, J. Wu, P. Yu, and W. Zhang, <a href="https://www.computer.org/csdl/journal/tk/5555/01/09511798/1vYRDDazcJ2">A survey of
+            S. Pan, D. He, J. Wu, P. Yu, and W. Zhang, <b>A survey of
               community detection approaches: From statistical modeling
-              to deep learning</a>, <u><i>IEEE Trans. on Knowledge and
-                Data Engineering</i></u>, available online.</font>.</font></li>
+              to deep learning</b>, <u><i>IEEE Trans. on Knowledge and
+                Data Engineering</i></u>, available online. [<a
+href="https://www.computer.org/csdl/journal/tk/5555/01/09511798/1vYRDDazcJ2">PDF</a>]</font>.</font></li>
     </ul>
     <ul>
       <li><font face="Arial">Z. Zhang, T. Zhao, H. Gay, W. Zhang*, B.
@@ -208,10 +204,11 @@ group: publications
     </ul>
     <ul>
       <li><font face="Arial">Z. Zhang, T. Zhao, H. Gay, W. Zhang*, B.
-          Sun*, <a href="https://pubmed.ncbi.nlm.nih.gov/33151620/">ARPM-net: A novel CNN-based adversarial method with
+          Sun*, <b>ARPM-net: A novel CNN-based adversarial method with
             Markov Random Field enhancement for prostate and organs at
-            risk segmentation in pelvic CT images</a>, <u><i>Medical
-            Physics</i></u>, 48(1):227-37, 2021.</font></li>
+            risk segmentation in pelvic CT images</b>, <u><i>Medical
+            Physics</i></u>, 48(1):227-37, 2021. [<a
+            href="https://pubmed.ncbi.nlm.nih.gov/33151620/">PDF</a>]</font></li>
       <li>
         <p><font face="Arial"><font face="Arial"><font face="Arial"><font
                   face="Arial">Z. Zhang, T. Zhao, H. Gay, W. Zhang*, B.
@@ -226,11 +223,15 @@ group: publications
     <font face="Arial"> </font> <font face="Arial">
       <p><b>2020</b><b><font face="Arial"><a name="2020"></a></font></b></p>
     </font><font face="Arial">
+      <blockquote><font color="#000099"><b><span style="text-decoration:
+              underline;">Genomics, Molecular and Computational Biology
+            </span></b></font></blockquote>
       <ul>
         <li>
           <p>X. Liu, Z. Hu, J. Zhou, C. Tian, G. Tian, M. He, L. Gao, L.
-            Chen, T. Li, H. Peng, and W. Zhang*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/31532701">Interior circular
-              RNA</a>, <u><i>RNA Biology</i></u>, 17(1):87-97, 2020.
+            Chen, T. Li, H. Peng, and W. Zhang*, <b>Interior circular
+              RNA</b>, <u><i>RNA Biology</i></u>, 17(1):87-97, 2020. [<a
+              href="https://www.ncbi.nlm.nih.gov/pubmed/31532701">PDF</a>]
             <font color="#cc0000"><a
 href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discovery-of-new-class-of-RNA.aspx">News
 
@@ -241,40 +242,58 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
       </ul>
       <ul>
         <li><font face="Arial"><font face="Arial"><font face="Arial">P.
-                Xuan, T. Shen, X. Wang, T. Zhang and W. Zhang, <a href="https://www.ncbi.nlm.nih.gov/pubmed/30281474">Inferring
+                Xuan, T. Shen, X. Wang, T. Zhang and W. Zhang, <b>Inferring
 
 
                   disease-associated microRNAs in heterogeneous networks
-                  with node attributes</a>, <u><i>IEEE/</i></u><u><i>ACM
+                  with node attributes</b>, <u><i>IEEE/</i></u><u><i>ACM
 
 
                     Trans. Computational Biology a</i></u><u><i>nd
                     Bioinformati</i></u><u><i>cs</i></u>, 17(3):1019-31,
-                2020.</font></font></font></li>
+                2020. <font face="Arial"><font face="Arial"> </font><font
+                    face="Arial">[<a
+                      href="https://www.ncbi.nlm.nih.gov/pubmed/30281474">PDF</a>]</font></font></font></font></font></li>
         <li>
           <p><font face="Arial">S. Climer*, A.R. Templeton, M. Garvin,
               D. Jacobson, M. Lane, S. Hulver, B. Scheid, and W. Zhang*,
-              <a href="https://www.biorxiv.org/content/10.1101/2020.01.28.923730v1.">Syncronized genetic activities in Alzheimer's brains
-                revealed by heterogeneity-capturing network analysis</a>,
-              bioRxiv.</font><br>
-            </p>
+              <b>Syncronized genetic activities in Alzheimer's brains
+                revealed by heterogeneity-capturing network analy</b><b>sis</b>,
+              bioRxiv, [<a
+                href="https://www.biorxiv.org/content/10.1101/2020.01.28.923730v1.">PDF</a>]</font><br>
+            <a
+              href="https://www.biorxiv.org/content/10.1101/2020.01.28.923730v1"><span
+                style="color: rgb(51, 51, 51); font-family:
+                GillSansRegular, &quot;Gill Sans MT&quot;, &quot;Gill
+                Sans&quot;, Helvetica, Arial, sans-serif; font-size:
+                14.7px; font-style: normal; font-variant-ligatures:
+                normal; font-variant-caps: normal; font-weight: 400;
+                letter-spacing: normal; orphans: 2; text-align: start;
+                text-indent: 0px; text-transform: none; white-space:
+                normal; widows: 2; word-spacing: 0px;
+                -webkit-text-stroke-width: 0px; background-color:
+                rgb(255, 255, 255); text-decoration-style: initial;
+                text-decoration-color: initial; display: inline
+                !important; float: none;"></span></a></p>
         </li>
         <li>S. Zhang, Z. Xia, W. Zhang, C. Li, X. Wang, X. Lu, X. Zhao,
           H. Ma, W. Zhang, X. Zhou, T. Zhu, P. Liu, G. Liu, H. Yang, J.
-          Arango, M. Peters, W. Wang*, and T. Xia*, <a href="https://www.biorxiv.org/content/10.1101/2020.02.28.970749v1">Chromosome-scale
+          Arango, M. Peters, W. Wang*, and T. Xia*, <b>Chromosome-scale
             genome assembly provides insights into speciation of
             allotetraploid and massive biomass accumulation of elephant
-            grass (<i>Pennisetum purpureum Schum.</i>)</a>, bioRxiv.<br>
+            grass (<i>Pennisetum purpureum</i> Schum.)</b>, bioRxiv, [<a
+href="https://www.biorxiv.org/content/10.1101/2020.02.28.970749v1">PDF</a>]<br>
         </li>
       </ul>
+      <blockquote><font color="#000099"><b><span style="text-decoration:
+              underline;">Machine Learning<br>
+            </span></b></font></blockquote>
+      <ul>
       </ul>
     </font><font face="Arial">
       <ul>
         <li><font face="Arial"><font face="Arial"><font face="Arial"><font
                   face="Arial">M. Li, D. Jin, D. He, and W. Zhang, <b>Modeling
-                    with node popularities for autonomous overlapping
-                    community detection</b>, <u><i>ACM Transactions on
-                      Information Systems</i></u>, 11(3):27, 2020</font></font></font></font>.</li>
 
 
 
@@ -293,20 +312,31 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
             <i>Proc 29-th Intern. Joint Conf. on AI </i>(IJCAI-20)</font></li>
       </ul>
       <p><b>2019</b> <a name="2019"></a></p>
+      <blockquote><font color="#000099"><b><span style="text-decoration:
+              underline;">Molecular and Computational Biology</span></b></font><br>
+      </blockquote>
       <ul>
         <li>L. Li, H. Peng, S. Tan, J. Zhou, Z. Fang, Z. Hu, L. Gao, T.
-          Li, W. Zhang*, and L. Chen*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/31251979">Effects of early cold stress
-            on gene expression in Chlamydomonas reinhardtii</a>, <i>Genomics</i>,
-          2019, doi: 10.1016/j.ygeno.2019.06.027.<i><br>
+          Li, W. Zhang*, and L. Chen*, <b>Effects of early cold stress
+            on gene expression in Chlamydomonas reinhardtii</b>, <i>Genomics</i>,
+          2019, doi: 10.1016/j.ygeno.2019.06.027. [<a
+            href="https://www.ncbi.nlm.nih.gov/pubmed/31251979">PDF</a>]<i><br>
           </i></li>
       </ul>
+      <b> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b> <b><font
+          color="#000099"><b><span style="text-decoration: underline;">Machine
+
+
+
+              Learning/Datamining</span></b></font></b><br>
       <ul>
         <li>
           <p>D. Lam, X. Zhang, H. Li, Y. Deshan, B. Schott, T. Zhao, W.
-            Zhang, S. Mutic, and B. Sun*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/31386761">Predicting gamma passing
+            Zhang, S. Mutic, and B. Sun*, <b>Predicting gamma passing
               rates for portal dosimetry-based IMRT QA using machine
-              learning</a>, <i>Medical Physics</i>, doi:
-            10.1002/mp.13752, 2019.</p>
+              learning</b>, <i>Medical Physics</i>, doi:
+            10.1002/mp.13752, 2019. [<a
+              href="https://www.ncbi.nlm.nih.gov/pubmed/31386761">PDF</a>]</p>
         </li>
         <li>X. Wang, D. Jin, D. He, and W. Zhang, <b>Robust detection
             of link communities with summary descr</b><b>iption in
@@ -315,70 +345,91 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
         </li>
         <br>
         <li>L. Yang, Y. Wang, J. Gu, X. Cao, X. Wang, D. Jin, G. Ding,
-          J. Han, and W. Zhang, <a href="https://dl.acm.org/citation.cfm?id=3355393">Autonomous semantic community
-            detection via adaptively weighted low-rank approximation</a>,
+          J. Han, and W. Zhang, <b>Autonomous semantic community
+            detection via adaptively weighted low-rank approximation</b>,
           <i>ACM Transactions on Multimedia Computing</i>, <i>Communications,
 
 
 
-            and Applications</i> (TOMM), 15(3s), 2019.</li>
+            and Applications</i> (TOMM), 15(3s), 2019. [<a
+            href="https://dl.acm.org/citation.cfm?id=3355393">PDF</a>] </li>
         <li>
-          <p>D. Jin, Z. Liu, W. Li, D. He, and W. Zhang, <a href="https://www.aaai.org/ojs/index.php/AAAI/article/view/3780/3658">Graph
+          <p>D. Jin, Z. Liu, W. Li, D. He, and W. Zhang, <b>Graph
               Convolutional Networks meet Markov Random Fields:
-              Semi-supervised community detection in attribute networks</a>,
+              Semi-supervised community detection in attribute networks</b>,
             <i>Pr</i><i>oc 33-rd</i><i> AAAI Conf</i><i> on A</i><i>I</i>
-            (AAAI-19).<br>
+            (AAAI-19). [<a
+              href="https://www.aaai.org/ojs/index.php/AAAI/article/view/3780/3658">PDF</a>]<br>
           </p>
         </li>
-        <li>D. Jin, B. Li, P. Jiao, D. He, and W. Zhang, <a href="https://www.ijcai.org/proceedings/2019/0370.pdf">Network-specific
+        <li>D. Jin, B. Li, P. Jiao, D. He, and W. Zhang, <b>Network-specific
 
 
 
             variational auto-encoder for embedding of attributed
-            networks</a>, <i>Proc 28-th IJCAI</i> (IJCAI-19).<br>
+            networks</b>, <i>Proc 28-th IJCAI</i> (IJCAI-19). [<a
+            href="https://www.ijcai.org/proceedings/2019/0370.pdf">PDF</a>]<br>
         </li>
       </ul>
       <font color="#000099"><b><span style="text-decoration: underline;"></span></b></font>
       <p><b>2018<a name="2018"></a><br>
-        </b>
+        </b><strong style="font-weight: bold; font-style: italic;"><em><u><strong
+                style="font-weight: bold; font-style: italic;
+                text-decoration: underline;"><em></em></strong></u></em></strong>
       </p>
+      <font color="#000099"><strong style="font-weight: bold;"><u><strong
+              style="font-weight: bold; text-decoration: underline;"></strong></u></strong></font>
+      <blockquote> </blockquote>
+      <blockquote><font color="#000099"><b><span style="text-decoration:
+              underline;">Molecular and Computational Biology</span></b></font><br>
+      </blockquote>
       <ul>
         <li>
           <p><font face="Arial">L. Li, G. Tian, H. Peng, D. Meng, L.
               Wang, X. Hu, C. Tian, M. He, J. Zhou, L. Chen, C. Fu, W.
-              Zhang* and Z. Hu*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/29632184">New class of transcription factors
+              Zhang* and Z. Hu*, <b>New class of transcription factors
                 controls flagellar assembly by recruiting RNA polymerase
-                II in <i>Chlamydomonas</i></a>, <i><u>Proceedings
+                II in <i>Chl</i><i>amydomonas</i></b>, <i><u>Proceedings
 
 
                   of National Academy of Sciences of the USA</u> </i>(PNAS),
 
 
 
-              115(17):4435-40, 2018</font><font face="Arial">.</font></p>
+              115(17):4435-40, 2018</font><font face="Arial">.&nbsp;</font><font
+              face="Arial"> [<a
+                href="https://www.ncbi.nlm.nih.gov/pubmed/29632184">PDF</a>]</font><font
+              face="Arial">.</font></p>
         </li>
         <li>
           <p><font face="Arial"><font face="Arial">L. Gao, Z. Fang, J.
                 Zhou, L. Li, L. Lu, L. Li, L. Chen, W. Zhang, W. Zhai,
-                and H. Peng*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/30120263">Transcriptional insights into the
-                  pyramided resistance to rice bacterial blight</a>, </font><font
+                and H. Peng*, <b>Transcriptional insights into the
+                  pyramided resistance to rice bacterial blight</b>, </font><font
                 face="Arial"><font face="Arial"><u><i><font face="Arial"><i>Scientific
 
 
 
                           Reports</i></font></i></u><font face="Arial">,
-                    8(1):12358, 2018, doi:10.1038/s41598-018-29899-1. </font></font></font></font></p>
+                    8(1):12358, 2018, doi:10.1038/s41598-018-29899-1. </font></font></font><font
+                face="Arial"><font face="Arial"><font face="Arial">[<a
+                      href="https://www.ncbi.nlm.nih.gov/pubmed/30120263">PDF</a>]</font></font></font></font></p>
         </li>
         <li>
           <p><font face="Arial">Y. Zhong, P. Xuan*, X. Wang, T. Zhang,
-              J. Li, Y. Liu and W. Zhang, <a href="https://www.ncbi.nlm.nih.gov/pubmed/28968753">A non-negative matrix
+              J. Li, Y. Liu and W. Zhang, <b>A non-negative matrix
                 factorization based method for predicting
                 disease-associated miRNAs in miRNA-disease bilayer
-                network</a>, <u><i>Bioinformatics</i></u>,
-              34(2):267-77, 2018. </font><font
+                network</b>, <u><i>Bioinformatics</i></u>,
+              34(2):267-77, 2018. [<a
+                href="https://www.ncbi.nlm.nih.gov/pubmed/28968753">PDF</a>]</font><font
               face="Arial">.</font></p>
         </li>
       </ul>
+      <blockquote><font face="Arial"><font color="#000099"><b><span
+                style="text-decoration: underline;">Machine
+                Learning/Datamining and beyond<br>
+              </span></b></font></font></blockquote>
       <ul>
         <li><font face="Arial">X. Zhang and W. Zhang, <b>A fast
               algorithm for generalized arc consistency of the
@@ -411,31 +462,48 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
                 (AAAI-18)</font></font>.</font></li>
         <o:p></o:p>
       </ul>
+      <font face="Arial"><font color="#000099"><b><span
+              style="text-decoration: underline;"></span></b></font></font>
       <p><font face="Arial"><b>2017 <a name="2017" id="2005"></a><br>
-          </b>
+          </b><strong style="font-weight: bold; font-style: italic;"><em><u><strong
+                  style="font-weight: bold; font-style: italic;
+                  text-decoration: underline;"><em></em></strong></u></em></strong></font>
       </p>
+      <font face="Arial"><font color="#000099"><strong
+            style="font-weight: bold;"><u><strong style="font-weight:
+                bold; text-decoration: underline;"></strong></u></strong></font>
+      </font>
+      <blockquote> </blockquote>
       <font face="Arial"> </font>
+      <blockquote><font face="Arial"><font color="#000099"><b><span
+                style="text-decoration: underline;">Genomics and
+                genetics</span></b></font></font> <font face="Arial"> </font>
+      </blockquote>
       <ul>
         <li><font face="Arial">L. Li, Z. Fang, J. Zhou, H. Chen, Z. Hu,
             L. Gao, L. Chen, S. Ren, H. Ma, L. Lu, W. Zhang* and H.
-            Peng*, <a href="https://academic.oup.com/nar/article/45/10/e88/2981921/An-accurate-and-efficient-method-for-large-scale">An accurate and efficient method for large-scale
-              SSR genotyping and applications</a>, <i>Nucleic Acids
-              Research</i>, 45(10):e88, 2017, doi:10.1093/nar/gkx093. </font>
+            Peng*, <b>An accurate and efficient method for large-scale
+              SSR genotyping and applications</b>, <i>Nucleic Acids
+              Research</i>, 45(10):e88, 2017, doi:</font><font
+            face="Arial">10.1093/nar/gkx093. [<a
+href="https://academic.oup.com/nar/article/45/10/e88/2981921/An-accurate-and-efficient-method-for-large-scale">PDF</a>]
           </font></li>
         <li>
           <p><font face="Arial">J. Xia, L. Li, T. Li, Z. Fang, K. Zhang,
-              J. Zhou, H. Peng, and W. Zhang*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/29036674">Detecting and
+              J. Zhou, H. Peng, and W. Zhang*, <b>Detecting and
                 characterizing microRNAs of diverse genomic origins via
-                miRvial</a>, </font><font face="Arial"><font
+                miRvial</b>, </font><font face="Arial"><font
                 face="Arial"><i>Nucleic Acids Research</i></font>,
-              45(21):e176, 2017. </font><br>
+              45(21):e176, 2017. [<a
+                href="https://www.ncbi.nlm.nih.gov/pubmed/29036674">PDF</a>]<br>
             </font></p>
         </li>
         <li><font face="Arial">C. Zeng, J. Xia, X. Chen, Y. Zhou, M.
-              Peng* and W. Zhang*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/29214993">MicroRNA-like RNAs from the
-                same miRNA precursors play a role in cassava
-              chilling responses</a>, <i>Scientific Reports</i>,
-              7(1):17135, 2017. </font><br>
+            Peng* and W. Zhang*, <b>MicroRN</b><b>A-like RNAs from the
+              same miR</b><b>NA precursors play a role in cassava
+              chilling responses</b>, <i>Scientific Reports</i>,
+            7(1):17135, 2017. [<a
+              href="https://www.ncbi.nlm.nih.gov/pubmed/29214993">PDF</a>]<br>
           </font></li>
         <o:p></o:p>
         <li>
@@ -443,21 +511,26 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
               Borisjuk, P. Chu, H. Zhang, J. Xia, J. Zhou, H. Peng, M.E.
               Baidouri, B. ten Hallers, AR. Hastie, T. Liang, K. Acosta,
               S. Gilbert, C. McEntee, SA. Jackson, TC. Mockler, W. Zhang
-              and E. Lam*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/27754575">Comprehensive definition of genome
+              and E. Lam*, <b>Comprehensive definition of genome
                 features in Spirodela polyrhiza by high-depth physical
-                mapping and short-read DNA sequencing strategies</a>, <i>The
+                mapping and short-read DNA sequencing strategies</b>, <i>The
 
 
                 Plant J</i><i>ournal</i>, 89(3):617-35, 2017</font><font
-              face="Arial">. </font>
+              face="Arial">. [<a
+                href="https://www.ncbi.nlm.nih.gov/pubmed/27754575">PDF</a>]</font>
           </p>
-        </li>
+          <font face="Arial"><font color="#000099"><b><span
+                  style="text-decoration: underline;"></span></b></font></font><font
+            face="Arial"><font color="#000099"><b><span
+                  style="text-decoration: underline;">Machine Learning
+                  and Datamining</span></b></font></font></li>
         <li>
           <p><font face="Arial"><font face="Arial"><font face="Arial"><font
-                    face="Arial">D. He, D. Jin and W. Zhang, </font><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14251"><font
+                    face="Arial">D. He, D. Jin and W. Zhang, </font><b><font
                       face="Arial">Joint identification of network
                       communities and semantics via integrative modeling
-                      of network topologies and node contents</font></a><font
+                      of network topologies and node contents</font></b><font
                     face="Arial">, </font><font face="Arial"><i>Pr</i><i>oc
 
 
@@ -467,23 +540,25 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
         </li>
         <li>
           <p><font face="Arial"><font face="Arial">J. Fu, W. Zhang and
-                J. Wu, </font><a href="https://www.nature.com/articles/s41598-017-00718-3"><font face="Arial">Identification of
+                J. Wu, </font><b><font face="Arial">Identification of
                   leader and self-organizing communities in complex
-                  networks</font></a><font face="Arial">, </font><font
+                  networks</font></b><font face="Arial">, </font><font
                 face="Arial"><i>Scientific Reports</i>, 7(1):704, 2017.
-                </
+                [<a
+                  href="https://www.nature.com/articles/s41598-017-00718-3">PDF</a>]<br>
               </font></font></p>
         </li>
         <li><font face="Arial"><font face="Arial"><font face="Arial"><font
-                  face="Arial">X. Zhang, J. Han and W. Zhang, <a href="https://www.nature.com/articles/s41598-017-10744-w">An
+                  face="Arial">X. Zhang, J. Han and W. Zhang, <b>An
                     efficient algorithm for finding all possible input
-                    nodes for controlling complex networks</a></font><font
+                    nodes for controlling complex networks</b></font><font
                   face="Arial">, </font><font face="Arial"><i>Scientific
 
 
 
                     Reports</i>, 7(1):10677, 2017</font></font></font>.
-            </font><br>
+            [<a
+              href="https://www.nature.com/articles/s41598-017-10744-w">PDF</a>]<br>
           </font></li>
       </ul>
       <p><font face="Arial"><b>2016 <a name="2016" id="2005"></a><br>
@@ -498,19 +573,27 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
       <blockquote> </blockquote>
       <font face="Arial"> </font>
       <ul>
+      </ul>
+      <blockquote><font face="Arial"><font color="#000099"><b><span
+                style="text-decoration: underline;">Genome Sequencing,
+                transcriptome profiling and genetic studies</span></b></font></font>
+        <font face="Arial"> </font> </blockquote>
+      <ul>
         <li><font face="Arial">D. Tiosano, L. Audi, S. Climer, W. Zhang,
             A.R. Templeton*, M. Fernandez-Cancio, R. Gershoni-Baruch,
-            J.M. Sanchez-Muro, M.E. Kholy, Z. Hochberg, <a href="https://www.g3journal.org/content/6/5/1251.long">Latitudinal
-              Clines of the human Vitamin D rec</b><b>ept</b><b> or and
-              skin </b><b>col</b><b>or-genes</a>, <i>Genes, Genomes,
+            J.M. Sanchez-Muro, M.E. Kholy, Z. Hochberg, <b>Latitudinal
+              Clines of the human Vitamin D rec</b><b>ept</b><b>or and
+              skin </b><b>col</b><b>or-genes</b>, <i>Genes, Genomes,
               Genetics</i>, 6(5):1251-66, 2016. doi:
-            10.1534/g3.115.026773.</font></li>
+            10.1534/g3.115.026773.</font><font face="Arial"> [<a
+              href="http://www.g3journal.org/content/6/5/1251.long">PDF</a>]</font></li>
         <li>
           <p><font face="Arial">J. Xia, X. Wang, P-F. Perroud, Y. He, R.
-                Quatrano and W. Zhang*, <a href="https://www.nature.com/articles/srep30118">Endogenous small-noncoding
+              Quatrano and W. Zhang*, <b>Endogenous small-noncoding
                 RNAs and potential functions in desiccation tolerance in
-                Physcomitrella patens</a>, <i>Scientific Reports</i>,
-              6:30118, 2016. </font><br>
+                Physcomitrella patens</b>, <i>Scientific Reports</i>,
+              6:30118, 2016. [<a
+                href="http://www.nature.com/articles/srep30118">PDF</a>]</font><br>
             <meta name="Title" content="">
           </p>
           <p>
@@ -931,24 +1014,32 @@ table.MsoNormalTable
         <li>
           <p> <font face="Arial"><font face="Arial">Z-Y. Li, J. Xia, Z.
                 Chen, Y. Yu, Q-F. Li, Y-C. Zhang, J-P. Zhang, C-Y. Wang,
-                X-Y. Zhu, W. Zhang* and Y-Q. Chen*, <a href="https://www.nature.com/articles/srep25493">Large-scale
+                X-Y. Zhu, W. Zhang* and Y-Q. Chen*, <b>Large-scale
                   rewiring of innate immunity circuitry and microRNA
-                  regulation during initial rice blast infection</a>, <i>Scientific
+                  regulation during initial rice blast infection</b>, <i>Scientific
 
 
 
-                  Reports</i>, 6:25493, 2016. </font></font></p>
+                  Reports</i>, 6:25493, 2016. [<a
+                  href="http://www.nature.com/articles/srep25493">PDF</a>]</font></font></p>
         </li>
         <li>
           <p><font face="Arial">L. <font face="Arial">Chen, J. Han, X.
                 Deng, S. Tan, L. Li, L. Li, J. Zhou, H. Peng, G. Yang*,
-                W. Zhang*, <a href="https://www.nature.com/articles/srep21623">Expansion and stress responses of
-                  AP2/EREBP superfamily in Brachypodium distachyon</i></a>,
+                W. Zhang*, <b>Expansion and stress responses of
+                  AP2/EREBP superfamily in <i>Brachypodium distachyon</i></b>,
                 <i>Scientific Reports</i>, 6:21623, 2016</font>. </font><font
+              face="Arial">[<a
+                href="http://www.ncbi.nlm.nih.gov/pubmed/26869021">PDF</a>]</font><font
               face="Arial"><font color="#000099"><b><span
                     style="text-decoration: underline;"></span></b></font></font></p>
         </li>
       </ul>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><b><span
+                  style="text-decoration: underline;">Machine Learning
+                  and optimization</span></b></font></font> </p>
+      </blockquote>
       <meta http-equiv="Content-Type" content="text/html;
         charset=windows-1252">
       <meta http-equiv="Content-Type" content="text/html;
@@ -959,34 +1050,38 @@ table.MsoNormalTable
               face="Arial">. </font><font face="Arial">
               <meta http-equiv="content-type" content="text/html;
                 charset=windows-1252">
-              <a href="https://www.sciencedirect.com/science/article/pii/S1570866716300090">Complete Parsimony Haplotype Inference Problem and
+              <b>Complete Parsimony Haplotype Inference Problem and
                 Algorithms Based on Integer Programming,
-                Branch-and-Bound and Boolean Satisfiability</a>, <i>J</i><i>.
-                Discrete Algorithms</i>, 37:68-83, 2016. </font><br>
+                Branch-and-Bound and Boolean Satisfiability</b>, <i>J</i><i>.
+                Discrete Algorithms</i>, 37:68-83, 2016. [<a
+href="http://www.sciencedirect.com/science/article/pii/S1570866716300090">PDF</a>]<br>
             </font></p>
         </li>
-        <li><font face="Arial">L. Yang, X. Cao, D. He, W. Zhang, <a
-            href="https://www.ijcai.org/Proceedings/16/Papers/200.pdf">Modularity
-              based co</b><b>mmuni</b><b>ty detection with deep learning</a>,
+        <li><font face="Arial">L. Yang, X. Cao, D. He, W. Zhang, <b>Modularity
+
+
+
+              based co</b><b>mmuni</b><b>ty detection with deep learning</b>,
             <i>Proc 25-th Intern. Joint Conf. on AI</i> (IJCAI-16), to
-            appear. </font><br>
+            appear. [<a href="ijcai16-DL.pdf">PDF</a>]<br>
           </font></li>
         <li>
           <p><font face="Arial">D. Jin, H. Wang, J. Dang, D. He and W.
-              Zhang, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12111">Detect overlapping communities via ranking node
-                popularities</a>, <i>Pr</i><i>oc 30</i><i>-</i><i>th
+              Zhang, <b>Detect overlapping communities via ranking node
+                popularities</b>, <i>Pr</i><i>oc 30</i><i>-</i><i>th
                 AAAI Conf</i><i> on A</i><i>I</i> (AAAI-16), to appear.
-            </font></p>
+            </font><font face="Arial">[<a href="aaai16-rankingnodes.pdf">PDF</a>]</font></p>
         </li>
         <li>
           <p><font face="Arial">X. Wang, D. Jin, X. Cao, L. Yang and W.
-            Zhang, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12111">Semantic community identification in large
-                attribute networks</a>, </font><font face="Arial"><i>Pr</i><i>oc
+              Zhang, <b>Semantic community identification in large
+                attribute networks</b>, </font><font face="Arial"><i>Pr</i><i>oc
 
 
 
                 30</i><i>-</i><i>th AAAI Conf</i><i> on A</i><i>I</i>
-              (AAAI-16), to appear. </font></p>
+              (AAAI-16), to appear. </font><font face="Arial">[<a
+                href="aaai16-attributenetworks.pdf">PDF</a>]</font></p>
         </li>
       </ul>
       <p><font face="Arial"><b>2015 <a name="2015" id="2005"></a><br>
@@ -995,69 +1090,100 @@ table.MsoNormalTable
                   text-decoration: underline;"><em></em></strong></u></em></strong></font>
       </p>
       <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><b><span
+                  style="text-decoration: underline;">Network based
+                  genome-wide association studies (GWAS)</span></b></font><strong
+              style="font-weight: bold; font-style: italic;
+              text-decoration: underline;"><em><br>
+              </em></strong></font></p>
+      </blockquote>
+      <font face="Arial"> </font>
       <ul>
         <li> <font face="Arial">S. Climer*, A. Templeton and W. Zhang*,
-              <a href="https://www.nature.com/articles/ncomms7534">Human <i>gephyrin</i> is encompassed within giant
-              functional noncoding yin-yang sequences</a>, <i>Nature
+            <b>Human <i>gephyrin</i> is encompassed within giant
+              functional noncoding yin-yang sequences</b>, <i>Nature
               Communications</i>, 6:6534, 2015, doi: 10.1038/ncomms7534.
+            [<a href="http://www.ncbi.nlm.nih.gov/pubmed/25813846">PDF</a>]
             [<a href="http://www.cse.wustl.edu/%7Ezhang/software">Software</a>]
             [<a
               href="http://news.wustl.edu/news/Pages/big-data-genetic-clues.aspx">News</a>]<strong
               style="font-weight: bold; font-style: italic;
               text-decoration: underline;"><em></em></strong></font></li>
       </ul>
+      <font face="Arial"> <font color="#000099"><strong
+            style="font-weight: bold;">&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp; <u>Plant transcriptome profiling
+              in response to biotic and abiotic stresses</u></strong><strong
+            style="font-weight: bold;"><u><strong style="font-weight:
+                bold; text-decoration: underline;"></strong></u></strong></font>
+      </font>
+      <blockquote> </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">H. Peng, Z. Chen, Z. Fang, J. Zhou, Z.
             Xia, L. Gao, L. Chen, L. Li, T. Li, W. Zhai, and W. Zhang*,
-            <a href="https://www.nature.com/articles/srep12165">Rice Xa21 primed genes and pathways that are
-              critical for combating bacterial blight infection</a>, <i>Scientific
+            <b>Rice <i>Xa21</i> primed genes and pathways that are
+              critical for combating bacterial blight infection</b>, <i>Scientific
 
 
 
-              Reports</i>, 5:12165, 2015 </font></li>
+              Reports</i>, 5:12165, 2015 [<a
+              href="http://www.nature.com/articles/srep12165">PDF</a>]</font></li>
         <li>
           <p><font face="Arial">X. Chen, J. Xia, Z. Xia, H. Zhang, C.
-              Zeng, C. Lu, W. Zhang and W. Wang*, <a href="http://www.biomedcentral.com/1471-2229/15/33">Potential
+              Zeng, C. Lu, W. Zhang and W. Wang*, <b>Potential
                 functions of microRNAs in starch metabolism and
                 development revealed by miRNA transcriptome profiling of
-                cassava cultivars and their wild progenitor</a>, <i>BMC
-                Plant Biology</i>, 15(1):33, 2015.&nbsp; </font></p>
+                cassava cultivars and their wild progenitor</b>, <i>BMC
+                Plant Biology</i>, 15(1):33, 2015.&nbsp; [<a
+                href="http://www.biomedcentral.com/1471-2229/15/33">PDF</a>]</font></p>
         </li>
         <li>
           <p><font face="Arial">D. Nie, J. Xia, C. Jiang, B. Qi, X.
-              Ling, S. Lin, W. Zhang, J. Guo, H. Jin and H. Zhao, <a href="http://www.ncbi.nlm.nih.gov/pubmed/26526683">Bacillus
+              Ling, S. Lin, W. Zhang, J. Guo, H. Jin and H. Zhao, <b>Bacillus
 
 
 
                 cereus AR156 primes induced systemic resistance by
                 suppressing miR825/825* and activating defense related
-                genes in Arabidopsis</a>, <i>J Integrative Plant Biol.</i>,
-              doi: 10.1111/jipb.12446. </font>
+                genes in Arabidopsis</b>, <i>J Integrative Plant Biol.</i>,
+              doi: 10.1111/jipb.12446. [<a
+                href="http://www.ncbi.nlm.nih.gov/pubmed/26526683">PDF</a>]</font>
           </p>
         </li>
       </ul>
+      <font face="Arial"> <font color="#000099"><strong
+            style="font-weight: bold;">&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp; </strong><strong
+            style="font-weight: bold;"><u><strong style="font-weight:
+                bold; text-decoration: underline;">Machine learning /
+                Datamining and applications</strong></u></strong></font>
+      </font>
+      <blockquote> </blockquote>
       <font face="Arial"> </font>
       <ul>
-        <li><font face="Arial">D. He, D. Jin, Z. Chen and W. Zhang, <a href="https://www.nature.com/articles/srep08638">Identification
+        <li><font face="Arial">D. He, D. Jin, Z. Chen and W. Zhang, <b>Identification
 
 
 
-              of hybrid node and link communities in complex networks</a>,
-            <i>Scientific Reports</i>, 5:8638, 2015.&nbsp; </font>
+              of hybrid node and link communities in complex networks</b>,
+            <i>Scientific Reports</i>, 5:8638, 2015.&nbsp; </font><font
+            face="Arial">[<a
+href="http://www.nature.com/srep/2015/150302/srep08638/full/srep08638.html">PDF</a>]</font>
         </li>
         <li>
           <p><font face="Arial">Z. Chen, M. Chen, K. Weinberger and W.
-              Zhang, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9595">Marginalized denoising for link prediction and
-                multi-label learning</a>, <i>Pr</i><i>oc 2</i><i>9-</i><i>th
+              Zhang, <b>Marginalized denoising for link prediction and
+                multi-label learning</b>, <i>Pr</i><i>oc 2</i><i>9-</i><i>th
 
 
 
                 AAAI Conf</i><i> on A</i><i>I</i> (AAAI-15), Jan 25-30,
-                Austin, Texas, USA. </font></p>
+              Austin, Texas, USA. [<a href="mllpAAA15.pdf">PDF</a>]</font></p>
         </li>
         <li>
-          <p><font face="Arial">D. Jin, Z. Chen, D. He and W. Zhang, <a href="nodeDegreeAAA15.pdf">Modeling
+          <p><font face="Arial">D. Jin, Z. Chen, D. He and W. Zhang, <b>Modeling
 
 
 
@@ -1067,15 +1193,16 @@ table.MsoNormalTable
 
 
                 2</i><i>9-</i><i>th AAAI Conf</i><i> on A</i><i>I</i>
-              (AAAI-15), Jan 25-30, Austin, Texas, USA. </font><br>
+              (AAAI-15), Jan 25-30, Austin, Texas, USA. [<a
+                href="nodeDegreeAAA15.pdf">PDF</a>]</font><br>
           </p>
         </li>
-        <li><font face="Arial">D. He, D. Liu, D. Jin and W. Zhang, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9595">A
+        <li><font face="Arial">D. He, D. Liu, D. Jin and W. Zhang, <b>A
               stochastic model for the detection of heterogeneous link
-              communities in complex networks</a>, </font><font
+              communities in complex networks</b>, </font><font
             face="Arial"><i>Pr</i><i>oc 2</i><i>9-</i><i>th AAAI Conf</i><i>
               on A</i><i>I</i> (AAAI-15), Jan 25-30, Austin, Texas, USA.
-              </font></li>
+            [<a href="stocModelaaai15.pdf">PDF</a>]</font></li>
       </ul>
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2014 <a name="2014" id="2005"></a></b></font></p>
@@ -1085,7 +1212,8 @@ table.MsoNormalTable
       <ul>
         <li><font face="Arial">W. Zhang, <span style="font-weight:
               bold;">Ten simple rules for writing research papers</span>,
-            <i>PLOS Computational Biology</i>, 10(1):e1003453, 2014. 
+            <i>PLOS Computational Biology</i>, 10(1):e1003453, 2014. [<a
+href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003453">PDF</a>]
           </font></li>
       </ul>
       <font face="Arial"> </font>
@@ -1099,78 +1227,111 @@ table.MsoNormalTable
             Zhou, P. Li, W. Zhang, et al., <span style="font-weight:
               bold;">Cassava genome from a wild ancestor to cultivated
               varieties</span><span style="font-style: italic;">, Nature
-              Communications</span>, 5:5110, 2014. <br>
+              Communications</span>, 5:5110, 2014. [<a
+href="http://www.nature.com/ncomms/2014/141010/ncomms6110/full/ncomms6110.html">PDF</a>]<br>
           </font> </li>
       </ul>
       <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><b><span
+                  style="text-decoration: underline;">Network based
+                  genome-wide association studies (GWAS)</span></b></font><strong
+              style="font-weight: bold; font-style: italic;
+              text-decoration: underline;"><em><br>
+              </em></strong></font></p>
+      </blockquote>
+      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial"> S. Climer*, A. Templeton and W. Zhang*,
-            <a href="https://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003766">Allele-specific network reveals combinatorial
+            <b>Allele-specific network reveals combinatorial
               interactions that transcends small effects in psoriasis
-              GWAS</a>, <i>PLOS Computational Biology</i>,
-            10(9):e1003766.&nbsp; 
+              GWA</b><b>S</b>, <i>PLOS Computational Biology</i>,
+            10(9):e1003766.&nbsp; [<a
+href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003766">PDF</a>]
             [<a href="http://www.cse.wustl.edu/%7Ezhang/software">Software</a>]<br>
           </font></li>
       </ul>
       <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><b><span
+                  style="text-decoration: underline;">Small noncoding
+                  RNAs</span></b></font><strong style="font-weight:
+              bold; font-style: italic; text-decoration: underline;"><em><br>
+              </em></strong></font></p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
-          <p><font face="Arial">J. Xia and W. Zhang*, <a href="https://www.ncbi.nlm.nih.gov/pubmed/24326350">MicroRNAs in normal and
-                psoriatic skin, <span style="font-style: italic;">
+          <p><font face="Arial">J. Xia and W. Zhang*, <span
+                style="font-weight: bold;">MicroRNAs in normal and
+                psoriatic skin</span><span style="font-style: italic;">,
                 Physiological Genomics</span>, 46(4):113-22, 2014.&nbsp;
-                Invited review. <br>
+              Invited review. [<a
+                href="http://www.ncbi.nlm.nih.gov/pubmed/24326350">PDF</a>]<br>
             </font> </p>
         </li>
         <li>
-          <p><font face="Arial">J. Xia and W. Zhang*, <a href="http://nar.oxfordjournals.org/content/42/3/1427.long">A meta-analysis revealed
+          <p><font face="Arial">J. Xia and W. Zhang*, <span
+                style="font-weight: bold;">A meta-analysis revealed
                 insights into the sources, conservation and impact of
-                microRNA 5'-isoforms in four model species</a><span
+                microRNA 5'-isoforms in four model species</span><span
                 style="font-style: italic;">, Nucleic Acids Research</span>,
-              42(3):1427-41, 2014. </font></p>
+              42(3):1427-41, 2014. [<a
+                href="http://nar.oxfordjournals.org/content/42/3/1427.long">PDF</a>]</font></p>
         </li>
         <li>
           <p><font face="Arial">J. Xia, C. Zeng, Z. Chen, K. Zhang, X.
               Chen, Y. Zhou, S. Song, C. Lu, R. Yang, Z. Yang, J. Zhou,
-              H. Peng, W. Wang, M. Peng*, W. Zhang*, <a href="http://www.biomedcentral.com/1471-2164/15/634">Endogenous
+              H. Peng, W. Wang, M. Peng*, W. Zhang*, <b>Endogenous
                 small-noncoding RNAs and their roles in chilling
-                response and stress acclimation in cassava</a>, <i>BMC
-                Genomics</i>, 15:634, 2014. </font></p>
+                response and stress acclimation in cassava</b>, <i>BMC
+                Genomics</i>, 15:634, 2014. [<a
+                href="http://www.biomedcentral.com/1471-2164/15/634">PDF</a>]</font></p>
         </li>
         <li><font face="Arial">W. Goettel, Z. Liu, J. Xia, W. Zhang,
-            P.X. Zhao and Y-Q. An*, <a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0086153">Systems and evolutionary
+            P.X. Zhao and Y-Q. An*, <b>Systems and evolutionary
               characterization of microRNAs and their underlying
-              regulatory networks in soybean cotyledons</a>, <i>PLOS
-                ONE</i>, 9(1):e86153, 2014. 
+              regulatory networks in soybean cotyledons</b>, <i>PLOS
+              ONE</i>, 9(1):e86153, 2014. [<a
+href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0086153">PDF</a>]
           </font></li>
       </ul>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><b><span style="text-decoration:
+                underline;"><font color="#000099">Machine learning /
+                  Datamining and applications to transcriptome analysis</font></span></b>
+          </font></p>
+      </div>
       <ul>
         <li>
           <p><font face="Arial">C. Zeng, Z. Chen, J. Xia, K. Zhang, X.
               Chen, Y. Zhou, W. Bo, S. Song, D. Deng, X. Guo, B. Wang,
-              J. Zhou, H. Peng, W. Wang, M. Peng*, W. Zhang*, <a href="http://www.biomedcentral.com/1471-2229/14/207">Chilling
+              J. Zhou, H. Peng, W. Wang, M. Peng*, W. Zhang*, <b>Chilling
 
 
 
                 acclimation provides immunity to stress by altering
                 regulatory networks and inducing genes with protective
-                functions in cassava</a>, <i>BMC Plant Biology</i>,
-              14(1):207, 2014. </font></p>
+                functions in cassava</b>, <i>BMC Plant Biology</i>,
+              14(1):207, 2014<b>. </b>[<a
+                href="http://www.biomedcentral.com/1471-2229/14/207">PDF</a>]</font></p>
         </li>
       </ul>
       <font face="Arial"> </font>
       <ul>
-        <li><font face="Arial">Z. Chen and W. Zhang, A marginalized denoising method
-              for link prediction in relational data,<span
+        <li><font face="Arial">Z. Chen and W. Zhang, <span
+              style="font-weight: bold;">A marginalized denoising method
+              for link prediction in relational data,</span> <span
               style="font-style: italic;">Proc. SIAM Intern. Conf. on
               Data Mining, </span>April 24-26, 2014, Philadelphia, USA.
             (Full paper, oral presentation) </font></li>
         <li>
           <p><font face="Arial">Y. Gan, J. Guan, S. Zhou and W. Zhang*,
-              <a href="https://ieeexplore.ieee.org/document/6646168">Identifying cis-regulatory elements and modules using
-                Conditional Random Fields</a>, <i>IEEE/ACM Transactions
+              <b>Identifying cis-regulatory elements and modules using
+                Conditional Random Fields</b>, <i>IEEE/ACM Transactions
                 on Computational Biology and Bioinformatics</i>,
-              11(1):73-82, 2014. 
+              11(1):73-82, 2014. [<a
+href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6646168">PDF</a>]
             </font></p>
         </li>
       </ul>
@@ -1179,24 +1340,44 @@ table.MsoNormalTable
       <font face="Arial"> </font>
       <blockquote> </blockquote>
       <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><strong style="font-weight: bold;
+              font-style: italic; text-decoration: underline;"><em></em></strong></font></p>
+        <p><font face="Arial"><b><span style="text-decoration:
+                underline;"><font color="#000099">Small noncoding RNAs</font></span></b></font></p>
+      </blockquote>
+      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">J. Xia, C.E. Joyce, A.M. Bowcock* and W.
-              Zhang*, <b>Noncanonical
+              Zhang*, <span style="font-weight: bold;">Noncanonical
                 microRNAs and endogenous siRNAs in normal and psoriatic
-                human skin</b>, <span style="font-style: italic;">Human
+                human skin,</span> <span style="font-style: italic;">Human
 
 
 
-                Molecular Genetics</span>, 22(4):737-48, 2013. </font></p>
+                Molecular Genetics</span>, 22(4):737-48, 2013. <a
+                href="http://www.ncbi.nlm.nih.gov/pubmed/23175445"><img
+                  alt="" src="pdf.jpg" width="12" height="13" border="0"></a></font></p>
         </li>
       </ul>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><b><span style="text-decoration:
+                underline;"><font color="#000099">Transcriptome and
+                  epigenom analysis, and Machine learning/Datamining
+                  related</font></span></b><strong style="font-weight:
+              bold; font-style: italic; text-decoration: underline;"><em><br>
+              </em></strong><strong style="font-weight: bold;
+              font-style: italic; text-decoration: underline;"></strong></font></p>
+      </div>
       <ul>
         <li>
           <p><font face="Arial">Z. Chen and W. Zhang*, <b>Integrative
                 analysis using module-guided Random Forests reveals
                 correlated genetic factors related to mouse weight</b>,
-              <i>PLOS Computational Biology</i>, 9(3):e1002956, 2013. 
+              <i>PLOS Computational Biology</i>, 9(3):e1002956, 2013. <a
+href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1002956"><img
+                  alt="" src="pdf.jpg" width="12" height="13" border="0"></a>
               [<a href="http://www.cse.wustl.edu/%7Ezhang/software">Software</a>]<br>
             </font></p>
         </li>
@@ -1208,7 +1389,9 @@ table.MsoNormalTable
                 backcross rice with disease resistant gene Xa21</b>, <i>BMC
 
 
-                Genomics</i>, 14(1):738, 2013. <br
+                Genomics</i>, 14(1):738, 2013. <a
+                href="http://www.biomedcentral.com/1471-2164/14/738"><img
+                  alt="" src="pdf.jpg" width="12" height="13" border="0"></a><br>
             </font> </p>
         </li>
         <li><font face="Arial">H. Peng, G. Jiang, J. Zhang, W. Zhang and
@@ -1232,6 +1415,13 @@ table.MsoNormalTable
                 style="text-decoration: underline;"><em></em></strong></font></p>
         </li>
       </ul>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><b><span style="text-decoration:
+                underline;"><font color="#000099">Search, planning and
+                  combinatorial optimization</font></span></b><strong
+              style="font-weight: bold; font-style: italic;
+              text-decoration: underline;"><em></em></strong></font></p>
+      </div>
       <ul>
         <li>
           <p><font face="Arial">Q. Lu, R. Huang, Y. Chen, Y. Xu, W.
@@ -1250,6 +1440,18 @@ table.MsoNormalTable
       <font face="Arial"> <strong style="text-decoration: underline;"></strong>
       </font>
       <p><font face="Arial"><b>2012<a name="2012" id="2005"></a></b></font></p>
+      <font face="Arial"> </font>
+      <blockquote>
+        <p>
+          <meta http-equiv="content-type" content="text/html;
+            charset=windows-1252">
+        </p>
+        <p><font face="Arial" color="#000099"><strong
+              style="font-weight: bold; text-decoration: underline;">Small
+
+
+              noncoding RNAs</strong></font></p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
@@ -1277,9 +1479,10 @@ table.MsoNormalTable
                   0px solid; width: 12px; height: 13px;" width="12"
                   height="13" border="0"></a></font></p>
         </li>
-        <li><font face="Arial">J. Xia and W. Zhang*, <b>Noncanonical microRNAs and
+        <li><font face="Arial">J. Xia and W. Zhang*, <span
+              style="font-weight: bold;">Noncanonical microRNAs and
               endogenous siRNAs in lytic infection of murine
-              gammaherpesvirus</b>, <i>PLOS ONE</i>, 7(10):e47863,
+              gammaherpesvirus,</span> <i>PLOS ONE</i>, 7(10):e47863,
             2012. <a
 href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0047863"><img
                 alt="" src="pdf.jpg" width="12" height="13" border="0"></a></font></li>
@@ -1702,6 +1905,14 @@ table.MsoNormalTable
         </li>
       </ul>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><font color="#000099"><strong
+                style="text-decoration: underline;">Machine learning and
+                data mining related</strong></font><strong
+              style="font-weight: bold; font-style: italic;
+              text-decoration: underline;"><em></em></strong></font></p>
+      </div>
+      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial"> D. He, D. Liu, W. Zhang, B. Yang and D.
             Jin, <b>Discovering link communities in complex networks by
@@ -1724,6 +1935,14 @@ table.MsoNormalTable
         </li>
       </ul>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><font color="#000099"><strong
+                style="text-decoration: underline;">Search, planning and
+                combinatorial optimization</strong></font><strong
+              style="font-weight: bold; font-style: italic;
+              text-decoration: underline;"><em></em></strong></font></p>
+      </div>
+      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">R. Huang, Y. Chen and W. Zhang, <span
               style="font-weight: bold;">SAS+ planning as Satisfiability</span>,<span
@@ -1736,6 +1955,16 @@ table.MsoNormalTable
       </ul>
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2011<a name="2011" id="2005"></a></b></font></p>
+      <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><strong
+                style="font-weight: bold; text-decoration: underline;">Small
+
+
+
+                noncoding RNAs</strong></font><em><strong><span
+                  style="text-decoration: underline;"> </span></strong></em></font></p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
@@ -1764,6 +1993,11 @@ table.MsoNormalTable
       <font face="Arial"> <b>2010 <a name="2010" id="2005"></a></b> </font>
       <ul>
       </ul>
+      <font face="Arial"> </font>
+      <p style="margin-left: 40px;"><font face="Arial"><strong
+            style="font-weight: bold; font-style: italic;"><em></em></strong><font
+            color="#000099"><strong style="font-weight: bold;
+              text-decoration: underline;">Small noncoding RNAs</strong></font></font></p>
       <font face="Arial"> </font>
       <ul>
         <li>
@@ -1876,6 +2110,13 @@ table.MsoNormalTable
                 12px; height: 13px;"></a> </li>
       </ul>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><strong style="font-weight: bold;
+              font-style: italic; text-decoration: underline;"><em></em></strong><font
+              color="#000099"><strong style="font-weight: bold;
+                text-decoration: underline;">Transcriptome analysis</strong></font></font></p>
+      </div>
+      <font face="Arial"> </font>
       <p><font face="Arial"><em><strong><span style="text-decoration:
                 underline;"></span></strong></em><em><strong><span
                 style="text-decoration: underline;"></span></strong></em></font></p>
@@ -1938,6 +2179,16 @@ table.MsoNormalTable
             2010, Niagara Falls, NY, USA, accepted as a full paper.</font></li>
       </ul>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><strong style="font-weight: bold;
+              font-style: italic; text-decoration: underline;"><em></em></strong><b><span
+                style="text-decoration: underline;"><font
+                  color="#000099">Haplotype inferencing</font></span></b><strong
+              style="font-weight: bold; font-style: italic;
+              text-decoration: underline;"><em><br>
+              </em></strong></font></p>
+      </div>
+      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">S. Climer, A. Templeton and W. Zhang, <span
@@ -1950,6 +2201,14 @@ table.MsoNormalTable
             </font> </p>
         </li>
       </ul>
+      <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><font color="#000099"><strong
+                style="text-decoration: underline;">Search, planning and
+                combinatorial optimization</strong></font><strong
+              style="font-weight: bold; font-style: italic;
+              text-decoration: underline;"><em></em></strong></font></p>
+      </div>
       <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">G. Jaeger and W. Zhang, <span
@@ -2003,6 +2262,16 @@ table.MsoNormalTable
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2009 <a name="2009" id="2005"></a></b></font></p>
       <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><strong
+                style="font-weight: bold; text-decoration: underline;">Computational
+
+
+
+                biology/genomics - Small noncoding RNAs</strong></font><em><strong><span
+                  style="text-decoration: underline;"> </span></strong></em></font></p>
+      </blockquote>
+      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">X. Zhou, R. Sunkar, H. Jin, J-K. Zhu and
@@ -2043,6 +2312,14 @@ table.MsoNormalTable
         </li>
       </ul>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial" color="#000099"><strong
+              style="font-weight: bold; text-decoration: underline;">Computational
+
+
+            </strong><strong style="font-weight: bold; text-decoration:
+              underline;">biology/genomics - Transcriptome analysis</strong></font></p>
+      </div>
       <font face="Arial"> </font>
       <p><font face="Arial"><em><strong><span style="text-decoration:
                 underline;"></span></strong></em><em><strong><span
@@ -2090,6 +2367,18 @@ table.MsoNormalTable
         </li>
       </ul>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><font color="#000099"><strong
+                style="font-weight: bold; text-decoration: underline;">Computational
+
+
+
+              </strong></font><strong style="font-weight: bold;
+              font-style: italic; text-decoration: underline;"><font
+                color="#000099">biology/genomics - Haplotype inferencing</font><em><br>
+              </em></strong></font></p>
+      </div>
+      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">S. Climer, G. Jaeger, A. Templeton and
@@ -2109,6 +2398,12 @@ table.MsoNormalTable
               Sept, 7-9, 2009.</font></p>
         </li>
       </ul>
+      <font face="Arial"> </font>
+      <blockquote>
+        <p style="text-decoration: underline;"><font face="Arial"
+            color="#000099"><strong>Search, planning and combinatorial
+              optimization</strong></font> </p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
@@ -2132,6 +2427,17 @@ table.MsoNormalTable
       </ul>
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2008 <a name="2008" id="2005"></a></b></font></p>
+      <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><strong
+                style="font-weight: bold; text-decoration: underline;">Computational
+
+
+
+                biology/genomics - Small noncoding RNAs</strong></font><em><strong><span
+                  style="text-decoration: underline;"><br>
+                </span></strong></em></font></p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
@@ -2189,6 +2495,19 @@ table.MsoNormalTable
         </li>
       </ul>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial"><font color="#000099"><strong
+                style="font-weight: bold; text-decoration: underline;">Computational
+
+
+
+              </strong><strong style="font-weight: bold;
+                text-decoration: underline;">biology/genomics -
+                Transcriptome analysis</strong></font><em><strong><span
+                  style="text-decoration: underline;"></span></strong></em></font></p>
+        <p><font face="Arial"><em><strong><span style="text-decoration:
+                  underline;"></span></strong></em></font></p>
+      </div>
       <font face="Arial"> </font>
       <p><font face="Arial"><em><strong><span style="text-decoration:
                 underline;"></span></strong></em><em><strong><span
@@ -2236,6 +2555,12 @@ href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0001564
         </li>
       </ul>
       <font face="Arial"> </font>
+      <blockquote>
+        <p style="text-decoration: underline;"><font face="Arial"
+            color="#000099"><strong>Search, planning and combinatorial
+              optimization</strong></font> </p>
+      </blockquote>
+      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">Y. Chen, R. Huang and W. Zhang, <span
@@ -2264,9 +2589,19 @@ href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0001564
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2007 <a name="2007" id="2005"></a></b></font></p>
       <font face="Arial"> </font>
+      <div style="margin-left: 40px;">
+        <p><font face="Arial" color="#000099"><strong
+              style="font-weight: bold; text-decoration: underline;">Computational
+
+
+              molecular biology</strong><span style="font-weight: bold;
+              text-decoration: underline;">, </span><strong><span
+                style="text-decoration: underline;">Machine Learning and
+                Datamining</span></strong></font></p>
+      </div>
       <font face="Arial"> </font>
       <ul>
-        <li>  
+        <li>
           <p><font face="Arial">X. Zhou, G. Wang and W. Zhang*, <span
                 style="font-weight: bold;">UV-B light responsive
                 microRNA genes in <span style="font-style: italic;">Arabidopsis
@@ -2379,6 +2714,12 @@ href="http://nar.oxfordjournals.org/cgi/content/full/gkl814v1"><img
         </li>
       </ul>
       <font face="Arial"> </font>
+      <blockquote>
+        <p style="text-decoration: underline;"><font face="Arial"
+            color="#000099"><strong>Search, planning and combinatorial
+              optimization</strong></font> </p>
+        <font color="#000099"> </font></blockquote>
+      <font face="Arial" color="#000099"> </font>
       <ul>
         <font color="#000099"> </font>
         <li><font color="#000099"> </font>
@@ -2397,6 +2738,22 @@ href="http://nar.oxfordjournals.org/cgi/content/full/gkl814v1"><img
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2006 <a name="2006" id="2005"></a></b></font></p>
       <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><strong
+                style="font-weight: bold; text-decoration: underline;">Computational
+
+
+
+                molecular biology</strong><strong style="font-weight:
+                bold; text-decoration: underline;"></strong><span
+                style="font-weight: bold; text-decoration: underline;">,
+              </span><strong><span style="text-decoration: underline;">Machine
+
+
+                  Learning and Datamining</span></strong></font><em><strong>
+              </strong></em><em><strong><span style="text-decoration:
+                  underline;"></span> </strong></em></font></p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
@@ -2480,6 +2837,12 @@ href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Retrieve&a
         </li>
       </ul>
       <font face="Arial"> </font>
+      <blockquote>
+        <p style="text-decoration: underline;"><font face="Arial"
+            color="#000099"><strong>Search, planning and combinatorial
+              optimization</strong></font> </p>
+      </blockquote>
+      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">S. Climer and W. Zhang, <span
@@ -2529,6 +2892,17 @@ href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Retrieve&a
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2005 <a name="2005" id="2005"></a></b></font></p>
       <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><strong
+                style="text-decoration: underline;">Computational
+                molecular biology</strong><strong style="font-weight:
+                bold; text-decoration: underline;"></strong><span
+                style="font-weight: bold; text-decoration: underline;">,
+              </span></font><strong><font color="#000099"><span
+                  style="text-decoration: underline;">Machine Learning
+                  and Datamining</span></font></strong><em><strong> </strong></em><em><strong><span
+                  style="text-decoration: underline;"></span> </strong></em></font></p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
@@ -2596,6 +2970,12 @@ href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=pubmed&a
         </li>
       </ul>
       <font face="Arial"> </font>
+      <blockquote>
+        <p style="text-decoration: underline;"><font face="Arial"
+            color="#000099"><strong>Heuristic search and combinatorial
+              optimization</strong></font> </p>
+      </blockquote>
+      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">R. Korf, W. Zhang, I. Thayer and H.
@@ -2644,6 +3024,15 @@ href="http://portal.acm.org/citation.cfm?id=1089023.1089024&amp;coll=GUIDE&amp;d
       </ul>
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2004 <a name="2004"></a></b></font></p>
+      <font face="Arial"> </font>
+      <blockquote>
+        <p><font face="Arial"><font color="#000099"><b><span
+                  style="text-decoration: underline;">Computational
+                  molecular biology</span></b><b><span
+                  style="text-decoration: underline;"> </span></b><b><span
+                  style="text-decoration: underline;">and Machine
+                  Learning</span></b></font><em><strong> </strong></em></font></p>
+      </blockquote>
       <font face="Arial"> </font>
       <ul>
         <li>
