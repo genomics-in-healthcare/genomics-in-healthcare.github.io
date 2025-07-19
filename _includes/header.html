@@ -118,6 +118,16 @@
         color: #fff !important;
       }
       
+      @media (max-width: 991px) {
+        .navbar-nav .nav-link {
+          color: #757575 !important; /* 灰色文本，小屏幕模式 */
+        }
+        
+        .navbar-nav .nav-item.active .nav-link {
+          color: #212529 !important; /* 黑色文本，小屏幕模式 */
+        }
+      }
+      
       .navbar-brand {
         display: inline-block;
         padding-top: 0.3125rem;
