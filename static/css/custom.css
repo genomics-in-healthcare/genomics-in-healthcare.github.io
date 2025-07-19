@@ -296,8 +296,8 @@
   
   .navbar-nav .nav-link,
   .md-menu-item {
-    color: #212529 !important; /* 确保文本为黑色 */
-    font-weight: 500;
+    color: #757575 !important; /* 灰色文本 */
+    font-weight: 400;
     background: #fff;
     display: block;
     width: 100%;
@@ -305,7 +305,8 @@
   
   .navbar-nav .nav-item.active .nav-link,
   .navbar-nav .nav-item.active .md-menu-item {
-    color: #1565c0 !important; /* 活动项使用蓝色 */
+    color: #212529 !important; /* 活动项使用黑色 */
+    font-weight: 400; /* 与悬停状态保持一致的字体粗细 */
     background: #f5f5f5;
   }
   
@@ -314,7 +315,8 @@
   .md-menu-item:focus,
   .md-menu-item:hover {
     background: #f5f5f5 !important; /* 浅灰色高亮 */
-    color: #1565c0 !important; /* 悬停时蓝色 */
+    color: #212529 !important; /* 悬停时黑色 */
+    font-weight: 400; /* 确保字体粗细一致 */
   }
 }
 
@@ -355,9 +357,24 @@
   /* 确保菜单项在超小屏幕上有正确的颜色 */
   .navbar-nav .nav-link,
   .md-menu-item {
-    color: #212529 !important;
+    color: #757575 !important; /* 灰色文本 */
     font-size: 15px;
     padding: 14px 20px !important;
+    font-weight: 400;
+  }
+  
+  .navbar-nav .nav-item.active .nav-link,
+  .navbar-nav .nav-item.active .md-menu-item {
+    color: #212529 !important; /* 黑色文本 */
+    font-weight: 400; /* 与悬停状态保持一致的字体粗细 */
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus,
+  .md-menu-item:hover,
+  .md-menu-item:focus {
+    color: #212529 !important; /* 悬停时黑色 */
+    font-weight: 400; /* 确保字体粗细一致 */
   }
 }
 
