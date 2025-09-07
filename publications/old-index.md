@@ -5,12 +5,12 @@ group: publications
 ---
 
 <style>
-/* 直接在页面中添加内联样式 */
+/* Add inline styles directly in the page */
 .pub-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 30px;
-  font-size: 14px; /* 添加控制字体大小 */
+  font-size: 14px; /* Add font size control */
 }
 .pub-table tr:nth-child(even) {
   background-color: #f7f7f7;

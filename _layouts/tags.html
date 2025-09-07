@@ -2,13 +2,16 @@
 layout: post
 ---
 
-<div>
-    <h1>Articles tagged with "{{ page.tag-name }}"</h1>
-    <ul style='padding-top: 16px;'>
+<div class="flat-tag-page">
+    <h1 class="flat-tag-title">Articles tagged with "{{ page.tag-name }}"</h1>
+    <ul class="flat-list">
 
         {% for post in site.posts %}
         {% if post.tags contains page.tag-name %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a>, published {{ post.date | date: "%Y-%m-%d" }}</li>
+        <li class="flat-list-item">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="flat-list-meta">published {{ post.date | date: "%Y-%m-%d" }}</div>
+        </li>
         {% endif %}
         {% endfor %}
     </ul>

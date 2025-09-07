@@ -1,5 +1,5 @@
 // Service Worker for genomics-in-healthcare.github.io
-const CACHE_NAME = 'genomics-cache-v1.6'; // 更新版本号强制重新加载
+const CACHE_NAME = 'genomics-cache-v2.0'; // 更新版本号强制重新加载
 const CACHE_MAX_AGE = 31536000; // 1年缓存时间（秒）
 
 // 基本资源
@@ -20,8 +20,10 @@ const JS_RESOURCES = [
 
 // 预加载图像
 const PRELOAD_IMAGES = [
-  '/static/img/logo/STEMJC_genomics_in_healthcare.png',
-  '/static/img/logo/PolyU-Logos.png'
+  '/static/img/logo/logo.png',
+  '/static/img/logo/PolyU-Logos.png',
+  '/static/img/pdf-icon.svg',
+  '/static/img/badge-highly-accessed.svg'
 ];
 
 // GitHub相关域名，避免阻塞渲染
@@ -94,9 +96,18 @@ self.addEventListener('fetch', event => {
   
   // 只处理同源请求
   if (requestUrl.origin === self.location.origin) {
+    // 为历史页面缺失资源提供回退（/publications/pdf.jpg, /publications/highlyaccessed.gif）
+    if (requestUrl.pathname.endsWith('/publications/pdf.jpg')) {
+      event.respondWith(fetch('/static/img/pdf-icon.svg'));
+      return;
+    }
+    if (requestUrl.pathname.endsWith('/publications/highlyaccessed.gif')) {
+      event.respondWith(fetch('/static/img/badge-highly-accessed.svg'));
+      return;
+    }
     // 静态资源策略（图片、CSS、JS等）- 优先使用缓存
     if (
-      event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/) ||
+      event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp|tif|tiff)$/) ||
       event.request.url.match(/\.(css|js)$/)
     ) {
       event.respondWith(

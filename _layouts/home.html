@@ -1,13 +1,219 @@
 {% include header.html %}
-<div class="container px-2" style="max-width: 1200px;"> <!-- 调整宽度并移除最小高度，适应移动端 -->
-    <div class="row">
-        <div class="col-sm-12"> <!-- 修改为12列，确保更宽 -->
-            <div class="jumbotron h-100"> <!-- 设置灰色背景 -->
-                <div class="content-wrapper">
-                    {{ content }}
-                </div>
-            </div>
-        </div>
+
+<!-- Enhanced Hero Section with Layered Design -->
+  <section class="hero-section" style="
+    background: 
+      linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(30, 64, 175, 0.05) 100%),
+      url('/static/img/logo/homepage_background.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; 
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
+  ">
+  <div style="text-align: center; width: 100%; padding: 0 24px;">
+    <h1 style="font-size: 3rem; font-weight: 700; margin: 0 auto 24px auto; line-height: 1.2; color: #000000; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); white-space: nowrap; text-align: center; width: fit-content; display: block;">
+      JC STEM Lab of Genomics in Healthcare
+    </h1>
+    <p style="font-size: 1.25rem; margin-bottom: 40px; color: #4a5568; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);">
+      Advancing genomic medicine through cutting-edge AI technologies and interdisciplinary research in systems biology
+    </p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+      <a href="/join" class="md-button md-button--primary" style="background: #1e40af; color: white; border: none; padding: 14px 28px; font-size: 1rem; border-radius: 4px; font-weight: 500;">
+        <span class="material-icons" style="margin-right: 8px; font-size: 20px;">person_add</span>
+        Join Our Team
+      </a>
+      <a href="/research" class="md-button md-button--secondary" style="background: transparent; color: #4a5568; border: 1px solid #4a5568; padding: 14px 28px; font-size: 1rem; border-radius: 4px; font-weight: 500; transition: all 0.3s ease;">
+        <span class="material-icons" style="margin-right: 8px; font-size: 20px;">science</span>
+        Explore Research
+      </a>
     </div>
+    
+    <!-- Scroll Indicator -->
+    <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
+      <span class="material-icons" style="font-size: 32px; color: rgba(255,255,255,0.8);">keyboard_arrow_down</span>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Responsive styles for the hero title */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+    margin: 0 auto 24px auto !important;
+    width: fit-content !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+    margin: 0 auto 24px auto !important;
+    width: fit-content !important;
+    display: block !important;
+  }
+}
+</style>
+
+<!-- Main Content -->
+<div class="md-main-content" style="margin-top: 0; position: relative; z-index: 2; padding-top: 0;">
+  <!-- Research Areas Section with Enhanced Layering -->
+  <section style="margin: 48px 0; position: relative; margin-top: 100vh; padding-top: 80px;">
+    <div style="position: absolute; top: -20px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);"></div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+      <h2 style="font-size: 2rem; font-weight: 600; margin: 0; color: #1e293b; position: relative;">
+        <span style="position: relative; z-index: 1; background: #f8f9fa; padding: 0 24px;">Our Research Focus</span>
+      </h2>
+    </div>
+    <div class="md-grid md-grid--3-cols" style="gap: 24px; max-width: 1000px; margin: 0 auto;">
+      <a href="/research" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+        <div style="width: 64px; height: 64px; background: #059669; border-radius: 4px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+          <span class="material-icons" style="font-size: 32px; color: white;">hub</span>
+        </div>
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: #1e293b;">Network Biology</h3>
+        <p style="color: #64748b; line-height: 1.5; margin-bottom: 20px; font-size: 0.9rem;">Analyzing complex biological networks to understand disease mechanisms and regulatory pathways.</p>
+        <div style="color: #1e40af; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+          Learn More <span class="material-icons" style="font-size: 18px; margin-left: 4px;">arrow_forward</span>
+        </div>
+      </a>
+      
+      <a href="/research" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+        <div style="width: 64px; height: 64px; background: #1e40af; border-radius: 4px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+          <span class="material-icons" style="font-size: 32px; color: white;">biotech</span>
+        </div>
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: #1e293b;">Genomics & AI</h3>
+        <p style="color: #64748b; line-height: 1.5; margin-bottom: 20px; font-size: 0.9rem;">Developing cutting-edge genomic foundation models and AI algorithms for biomedical research applications.</p>
+        <div style="color: #1e40af; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+          Learn More <span class="material-icons" style="font-size: 18px; margin-left: 4px;">arrow_forward</span>
+        </div>
+      </a>
+      
+      <a href="/research" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+        <div style="width: 64px; height: 64px; background: #dc2626; border-radius: 4px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+          <span class="material-icons" style="font-size: 32px; color: white;">psychology</span>
+        </div>
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: #1e293b;">Clinical Applications</h3>
+        <p style="color: #64748b; line-height: 1.5; margin-bottom: 20px; font-size: 0.9rem;">Translating research findings into clinical applications for personalized medicine and treatment strategies.</p>
+        <div style="color: #1e40af; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+          Learn More <span class="material-icons" style="font-size: 18px; margin-left: 4px;">arrow_forward</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Call to Action Cards with Enhanced Layering -->
+  <div class="md-grid md-grid--2-cols" style="margin: 48px 0; gap: 24px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+    <a href="/join" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+      <div class="md-card__content" style="padding: 24px;">
+        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+          <div style="width: 50px; height: 50px; background: #1e40af; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+            <span class="material-icons" style="font-size: 28px; color: white;">person_add</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 600; margin: 0; color: #1e293b;">Join Our Team</h3>
+        </div>
+        <p style="color: #64748b; line-height: 1.5; margin-bottom: 20px; font-size: 0.9rem;">We are actively recruiting PhD students, research assistants, and postdoctoral researchers. Join our team to advance genomic medicine and AI healthcare technologies together.</p>
+        <div style="background: #1e40af; color: white; border: none; padding: 12px 24px; border-radius: 4px; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+          <span class="material-icons" style="margin-right: 8px; font-size: 20px;">arrow_forward</span>
+          Apply Now
+        </div>
+      </div>
+    </a>
+
+    <a href="/contact" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+      <div class="md-card__content" style="padding: 24px;">
+        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+          <div style="width: 50px; height: 50px; background: #1e40af; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+            <span class="material-icons" style="font-size: 28px; color: white;">science</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 600; margin: 0; color: #1e293b;">Research Collaboration</h3>
+        </div>
+        <p style="color: #64748b; line-height: 1.5; margin-bottom: 20px; font-size: 0.9rem;">Interested in collaborating with us? We welcome partnerships with academic institutions, healthcare organizations, and industry partners.</p>
+        <div style="background: transparent; color: #1e40af; border: 2px solid #1e40af; padding: 12px 24px; border-radius: 4px; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+          <span class="material-icons" style="margin-right: 8px; font-size: 20px;">mail</span>
+          Contact Us
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Latest News Section with Enhanced Layering -->
+  <section style="margin: 48px 0; position: relative;">
+    <div style="position: absolute; top: -20px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);"></div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+      <h2 style="font-size: 2rem; font-weight: 600; margin: 0; color: #1e293b; position: relative;">
+        <span style="position: relative; z-index: 1; background: #f8f9fa; padding: 0 24px;">Latest News</span>
+      </h2>
+      <a href="/news" class="md-button md-button--text" style="color: #1e40af; font-weight: 500;">
+        View All News <span class="material-icons" style="font-size: 18px; margin-left: 4px;">arrow_forward</span>
+      </a>
+    </div>
+    
+    <div class="md-grid md-grid--2-cols" style="gap: 24px; max-width: 1000px; margin: 0 auto;">
+      {% for post in site.posts limit: 4 %}
+        <a href="{{ post.url }}" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-decoration: none; color: inherit;">
+          <div class="md-card__content" style="padding: 20px;">
+            <div style="display: flex; align-items: center; margin-bottom: 16px;">
+              <div style="width: 40px; height: 40px; background: #eff6ff; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <span class="material-icons" style="font-size: 20px; color: #1e40af;">article</span>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 4px;">{{ post.date | date: "%B %d, %Y" }}</div>
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin: 0; color: #1e293b; line-height: 1.4;">
+                  {% if post.title != "" %}
+                    {{ post.title }}
+                  {% elsif post.link_title %}
+                    {{ post.link_title }}
+                  {% else %}
+                    News Update
+                  {% endif %}
+                </h3>
+              </div>
+            </div>
+            {% if post.excerpt %}
+              <p style="color: #64748b; line-height: 1.5; margin-bottom: 16px; font-size: 0.9rem;">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            {% endif %}
+            <div style="color: #1e40af; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center;">
+              Read More <span class="material-icons" style="font-size: 16px; margin-left: 4px;">arrow_forward</span>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
 </div>
+
 {% include footer.html %}

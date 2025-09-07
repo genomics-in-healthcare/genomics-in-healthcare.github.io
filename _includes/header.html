@@ -3,403 +3,332 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>JC STEM Lab of Genomics in Healthcare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="{{ site.description }}">
-    <meta name="theme-color" content="#052049">
+    <meta name="theme-color" content="#1e88e5">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
     <meta name="format-detection" content="telephone=no">
     
-    <!-- 禁用非阻塞加载效果 -->
-    <script>
-      // 确保页面完全刷新，禁用任何非阻塞加载效果
-      if (window.performance && window.performance.navigation.type === 0) {
-        // 这是一个新页面加载，不是从缓存恢复
-        window.addEventListener('beforeunload', function() {
-          // 在页面卸载前清除任何可能的缓存状态
-          sessionStorage.setItem('forceReload', 'true');
-        });
+    <!-- Google Fonts - Inter (JC STEM Style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="/static/css/material-design.css">
+    
+    <!-- Site Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    
+    <!-- Material Design JavaScript -->
+    <script src="/static/js/material-design.js" defer></script>
+    
+    <!-- 强制覆盖侧边栏活跃状态样式 -->
+    <style>
+      /* 强制覆盖所有可能的侧边栏活跃状态样式 */
+      .md-navigation-drawer__item,
+      .md-navigation-drawer__item.active,
+      .md-navigation-drawer__item--active,
+      .md-navigation-drawer .active,
+      .md-navigation-drawer .nav-item.active .md-navigation-drawer__item,
+      .md-navigation-drawer .nav-item.active .md-menu-item,
+      .md-navigation-drawer .navbar-nav .nav-item.active .md-menu-item {
+        background-color: transparent !important;
+        background: transparent !important;
+        color: #1a1c1e !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-weight: 500 !important;
       }
       
-      // 检查是否需要强制刷新
-      if (sessionStorage.getItem('forceReload') === 'true') {
-        sessionStorage.removeItem('forceReload');
-        // 确保页面从服务器重新加载而不是从缓存
-        if (window.location.reload) {
-          window.location.reload(true);
-        }
+      /* 覆盖悬停状态，确保没有特殊效果 */
+      .md-navigation-drawer__item:hover,
+      .md-navigation-drawer__item:focus {
+        background-color: transparent !important;
+        color: #1a1c1e !important;
+      }
+    </style>
+    
+    <!-- Cache Clear Script -->
+    <script>
+      // 检查并清除旧版本缓存
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            if (registration.scope.includes('genomics-in-healthcare.github.io')) {
+              registration.unregister().then(function(boolean) {
+                console.log('Service Worker 已注销，缓存将自动清除');
+                // 清除所有缓存
+                caches.keys().then(function(cacheNames) {
+                  return Promise.all(
+                    cacheNames.map(function(cacheName) {
+                      return caches.delete(cacheName);
+                    })
+                  );
+                });
+              });
+            }
+          }
+        });
       }
     </script>
     
-    <!-- 预加载关键CSS资源 -->
-    <link rel="preload" href="/static/css/critical.css" as="style">
+    <!-- Preload critical images -->
+    <link rel="preload" href="/static/img/logo/logo.png" as="image">
     
-    <!-- 内联关键CSS -->
+    <!-- Inline critical CSS -->
     <style>
-      /* 最基本的关键样式，用于首屏渲染 */
+      /* Critical rendering path optimization */
       body {
-        padding-top: 70px;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        background-color: #fff;
+        padding: 0;
+        font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        background-image: 
+          radial-gradient(circle at 20px 20px, rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+          radial-gradient(circle at 40px 40px, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+        color: #1e293b;
       }
       
-      /* 导航栏样式 */
-      .navbar {
+      /* Prevent layout shift */
+      .md-app-bar {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        z-index: 1030;
-        background-color: #2e86c1;
-        margin-bottom: 20px;
-        padding: 0.5rem 1rem;
+        right: 0;
+        z-index: 1000;
+        background-color: transparent;
+        color: #1e293b;
+        box-shadow: none;
+        border-bottom: none;
+        transition: all 0.3s ease-in-out;
       }
       
-      .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
+      /* 滚动时导航栏显现的样式 */
+      .md-app-bar.scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .md-app-bar a,
+      .md-app-bar .md-button,
+      .md-app-bar .material-icons,
+      .md-app-bar h1 {
+        color: #1e293b;
+      }
+      .md-app-bar .md-button--active {
+        color: #1e40af;
+        background-color: #eff6ff;
+      }
+      
+      .md-main-content {
+        margin-top: 0;
+        padding: 24px;
+        max-width: 1200px;
         margin-left: auto;
-        box-sizing: border-box;
+        margin-right: auto;
+        background-color: transparent;
       }
       
-      /* 防止布局偏移的图像样式 */
-      .navb-icon {
-        height: auto;
-        display: inline-block;
-      }
-      
-      /* 明确设置图片占位空间 */
-      .navb-icon.stem-logo {
-        width: 88px; /* 根据2.2em实际尺寸设置 */
-        height: 40px;
-      }
-      
-      .navb-icon.polyu-logo {
-        width: 72px; /* 根据1.8em实际尺寸设置 */
-        height: 32px;
-      }
-      
-      @media (min-width: 768px) {
-        .container {
-          max-width: 720px;
-        }
-      }
-      
-      @media (min-width: 992px) {
-        .container {
-          max-width: 960px;
-        }
-      }
-      
-      /* 导航栏组件样式 */
-      .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        padding-left: 0;
-        margin-bottom: 0;
-        list-style: none;
-      }
-      
-      .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-        color: rgba(255, 255, 255, 0.85) !important;
-        text-decoration: none !important;
-      }
-      
-      .navbar-nav .nav-item.active .nav-link {
-        color: #fff !important;
-      }
-      
-      .navbar-brand {
-        display: inline-block;
-        padding-top: 0.3125rem;
-        padding-bottom: 0.3125rem;
-        margin-right: 1rem;
-        font-size: 1.25rem;
-        line-height: inherit;
-        white-space: nowrap;
-        text-decoration: none !important;
-        color: #fff !important;
-      }
-      
-      /* 确保导航项目不会被挤压 */
-      .navbar-expand-lg .navbar-nav {
-        flex-direction: row;
-      }
-      
-      @media (max-width: 992px) {
-        .navbar-collapse {
-          width: 100%;
-        }
-        .navbar-nav {
-          flex-direction: column;
-        }
-      }
-      
-      /* 内联 members-center.css */
-      /* members 页面居中样式 */
-      .members-center {
-        display: block; /* 改为block布局，防止flex布局导致内容挤压 */
-        max-width: 100%;
-        margin: 0 auto;
-      }
-
-      /* 修复成员卡片布局 */
-      .members-center .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-      }
-
-      .members-center .col-sm-9,
-      .members-center .col-sm-12 {
-        position: relative;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-      }
-
-      @media (min-width: 576px) {
-        .members-center .col-sm-9 {
-          flex: 0 0 75%;
-          max-width: 75%;
-        }
-        .members-center .col-sm-12 {
-          flex: 0 0 100%;
-          max-width: 100%;
-        }
-      }
-
-      .justify-content-center {
-        justify-content: center !important;
-      }
-      
-      /* 内联 syntax.css */
-      .highlight  { background: #ffffff; }
-      .highlight .c { color: #999988; font-style: italic } /* Comment */
-      .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
-      .highlight .k { font-weight: bold } /* Keyword */
-      .highlight .o { font-weight: bold } /* Operator */
-      .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
-      .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
-      .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
-      .highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
-      .highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
-      .highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
-      .highlight .ge { font-style: italic } /* Generic.Emph */
-      .highlight .gr { color: #aa0000 } /* Generic.Error */
-      .highlight .gh { color: #999999 } /* Generic.Heading */
-      .highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
-      .highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
-      .highlight .go { color: #888888 } /* Generic.Output */
-      .highlight .gp { color: #555555 } /* Generic.Prompt */
-      .highlight .gs { font-weight: bold } /* Generic.Strong */
-      .highlight .gu { color: #aaaaaa } /* Generic.Subheading */
-      .highlight .gt { color: #aa0000 } /* Generic.Traceback */
-      .highlight .kc { font-weight: bold } /* Keyword.Constant */
-      .highlight .kd { font-weight: bold } /* Keyword.Declaration */
-      .highlight .kp { font-weight: bold } /* Keyword.Pseudo */
-      .highlight .kr { font-weight: bold } /* Keyword.Reserved */
-      .highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
-      .highlight .m { color: #009999 } /* Literal.Number */
-      .highlight .s { color: #d14 } /* Literal.String */
-      .highlight .na { color: #008080 } /* Name.Attribute */
-      .highlight .nb { color: #0086B3 } /* Name.Builtin */
-      .highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
-      .highlight .no { color: #008080 } /* Name.Constant */
-      .highlight .ni { color: #800080 } /* Name.Entity */
-      .highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
-      .highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
-      .highlight .nn { color: #555555 } /* Name.Namespace */
-      .highlight .nt { color: #000080 } /* Name.Tag */
-      .highlight .nv { color: #008080 } /* Name.Variable */
-      .highlight .ow { font-weight: bold } /* Operator.Word */
-      .highlight .w { color: #bbbbbb } /* Text.Whitespace */
-      .highlight .mf { color: #009999 } /* Literal.Number.Float */
-      .highlight .mh { color: #009999 } /* Literal.Number.Hex */
-      .highlight .mi { color: #009999 } /* Literal.Number.Integer */
-      .highlight .mo { color: #009999 } /* Literal.Number.Oct */
-      .highlight .sb { color: #d14 } /* Literal.String.Backtick */
-      .highlight .sc { color: #d14 } /* Literal.String.Char */
-      .highlight .sd { color: #d14 } /* Literal.String.Doc */
-      .highlight .s2 { color: #d14 } /* Literal.String.Double */
-      .highlight .se { color: #d14 } /* Literal.String.Escape */
-      .highlight .sh { color: #d14 } /* Literal.String.Heredoc */
-      .highlight .si { color: #d14 } /* Literal.String.Interpol */
-      .highlight .sx { color: #d14 } /* Literal.String.Other */
-      .highlight .sr { color: #009926 } /* Literal.String.Regex */
-      .highlight .s1 { color: #d14 } /* Literal.String.Single */
-      .highlight .ss { color: #990073 } /* Literal.String.Symbol */
-      .highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
-      .highlight .vc { color: #008080 } /* Name.Variable.Class */
-      .highlight .vg { color: #008080 } /* Name.Variable.Global */
-      .highlight .vi { color: #008080 } /* Name.Variable.Instance */
-      .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+      /* Syntax highlighting styles */
+      .highlight { background: #ffffff; }
+      .highlight .c { color: #999988; font-style: italic }
+      .highlight .err { color: #a61717; background-color: #e3d2d2 }
+      .highlight .k { font-weight: bold }
+      .highlight .o { font-weight: bold }
+      .highlight .cm { color: #999988; font-style: italic }
+      .highlight .cp { color: #999999; font-weight: bold }
+      .highlight .c1 { color: #999988; font-style: italic }
+      .highlight .cs { color: #999999; font-weight: bold; font-style: italic }
+      .highlight .gd { color: #000000; background-color: #ffdddd }
+      .highlight .gd .x { color: #000000; background-color: #ffaaaa }
+      .highlight .ge { font-style: italic }
+      .highlight .gr { color: #aa0000 }
+      .highlight .gh { color: #999999 }
+      .highlight .gi { color: #000000; background-color: #ddffdd }
+      .highlight .gi .x { color: #000000; background-color: #aaffaa }
+      .highlight .go { color: #888888 }
+      .highlight .gp { color: #555555 }
+      .highlight .gs { font-weight: bold }
+      .highlight .gu { color: #aaaaaa }
+      .highlight .gt { color: #aa0000 }
+      .highlight .kc { font-weight: bold }
+      .highlight .kd { font-weight: bold }
+      .highlight .kp { font-weight: bold }
+      .highlight .kr { font-weight: bold }
+      .highlight .kt { color: #445588; font-weight: bold }
+      .highlight .m { color: #009999 }
+      .highlight .s { color: #d14 }
+      .highlight .na { color: #008080 }
+      .highlight .nb { color: #0086B3 }
+      .highlight .nc { color: #445588; font-weight: bold }
+      .highlight .no { color: #008080 }
+      .highlight .ni { color: #800080 }
+      .highlight .ne { color: #990000; font-weight: bold }
+      .highlight .nf { color: #990000; font-weight: bold }
+      .highlight .nn { color: #555555 }
+      .highlight .nt { color: #000080 }
+      .highlight .nv { color: #008080 }
+      .highlight .ow { font-weight: bold }
+      .highlight .w { color: #bbbbbb }
+      .highlight .mf { color: #009999 }
+      .highlight .mh { color: #009999 }
+      .highlight .mi { color: #009999 }
+      .highlight .mo { color: #009999 }
+      .highlight .sb { color: #d14 }
+      .highlight .sc { color: #d14 }
+      .highlight .sd { color: #d14 }
+      .highlight .s2 { color: #d14 }
+      .highlight .se { color: #d14 }
+      .highlight .sh { color: #d14 }
+      .highlight .si { color: #d14 }
+      .highlight .sx { color: #d14 }
+      .highlight .sr { color: #009926 }
+      .highlight .s1 { color: #d14 }
+      .highlight .ss { color: #990073 }
+      .highlight .bp { color: #999999 }
+      .highlight .vc { color: #008080 }
+      .highlight .vg { color: #008080 }
+      .highlight .vi { color: #008080 }
+      .highlight .il { color: #009999 }
     </style>
-    
-    <!-- 非关键CSS使用阻塞加载，确保页面正确显示 -->
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/custom.css">
-    <link rel="stylesheet" href="/static/css/mobile.css">
+    <!-- Override: remove underline on link focus globally -->
+    <style>
+      a:focus,
+      a:focus-visible,
+      a:focus:hover,
+      a:active:focus,
+      a:visited:focus,
+      .md-app-bar a:focus,
+      .md-app-bar a:focus-visible,
+      .md-app-bar a:focus:hover,
+      .md-navigation-drawer__item:focus,
+      .md-navigation-drawer__item:focus-visible,
+      .md-navigation-drawer__item:focus:hover,
+      .navbar a:focus,
+      .navbar a:focus-visible,
+      .navbar a:focus:hover,
+      .md-button:focus,
+      .md-button:focus-visible,
+      .md-button:focus:hover {
+        text-decoration: none !important;
+      }
+    </style>
     
     {% if page.group == 'news' %}
     <link rel="alternate" type="application/atom+xml" title="Genomics in Healthcare Lab News Feed" href="/news.xml">
-    <link rel="stylesheet" href="/static/css/news-custom.css">
     {% endif %}
-    
-    <!-- 预加载页面中的关键图像 -->
-    <link rel="preload" href="/static/img/logo/STEMJC_genomics_in_healthcare.png" as="image">
-    <link rel="preload" href="/static/img/logo/PolyU-Logo.png" as="image">
-    
-    <!-- 添加Material Icons字体 -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- 添加加载CSS的后备脚本 -->
-    <script>
-      // 非阻塞CSS加载的后备方案
-      !function(e){"use strict";var n=function(n,t,o){function i(e){if(a.body)return e();setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
-    </script>
   </head>
 
   <body>
-
-    <!-- 全新导航栏设计 -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2e86c1;">
-      <div class="container">
-        <!-- 全新的Logo布局结构 -->
-        <div class="nav-header">
-          <!-- Material Design风格的汉堡菜单按钮 -->
-          <button type="button" class="navbar-toggler md-menu-btn" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="material-icons">menu</span>
-          </button>
-
-          <!-- 创建两层结构：品牌名+Logo组 -->
-          <div class="brand-container">
-            <a class="navbar-brand" href="/">{{site.name}}</a>
-          </div>
-          
-          <div class="logos-wrapper">
-            <div class="logo-pair">
-              <a href="/" class="logo-link stem-logo-link">
-                <img class="navb-icon stem-logo" src="/static/img/logo/STEMJC_genomics_in_healthcare.png" alt="JC STEM Lab of Genomics in Healthcare" width="200" height="55">
-              </a>
-              <a href="https://www.polyu.edu.hk/" class="logo-link polyu-logo-link">
-                <img class="navb-icon polyu-logo" src="/static/img/logo/PolyU-Logo.png" alt="Hong Kong Polytechnic University (PolyU) logo" width="160" height="45">
-              </a>
-            </div>
+    <!-- Clean App Bar -->
+    <header class="md-app-bar">
+      <div class="md-app-bar__container">
+        <!-- Mobile menu button -->
+        <button class="md-button md-button--text" id="menuButton" aria-label="Open menu" style="color: #64748b;">
+          <span class="material-icons">menu</span>
+        </button>
+        
+        <!-- Logo and Title -->
+        <div style="display: flex; align-items: center; flex: 1;">
+          <img class="md-app-bar__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+          <div>
+            <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">JC STEM Lab</div>
+            <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics in Healthcare</div>
           </div>
         </div>
         
-        <!-- Material Design风格的下拉菜单 -->
-        <div class="navbar-collapse collapse md-menu" id="navbarContent">
-          <ul class="navbar-nav ml-auto">
-            {% for link in site.data.navigation %}
-              {% if page.group == link.group %}
-                <li class="nav-item active">
-                  <a class="nav-link md-menu-item" href="{{link.link}}" aria-current="page"> 
-                    {{link.name}}<span class="sr-only">(current)</span>
-                  </a>
-                </li>
-              {% else %}
-                <li class="nav-item">
-                  <a class="nav-link md-menu-item" href="{{link.link}}"> 
-                    {{link.name}}
-                  </a>
-                </li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div><!--/.nav-collapse -->
+        <!-- Desktop navigation -->
+        <nav class="md-app-bar__actions" id="desktopNav" style="gap: 8px;">
+          {% for link in site.data.navigation %}
+            <a href="{{ link.link }}" class="md-button md-button--text {% if page.group == link.group %}md-button--active{% endif %}" style="color: #64748b; font-weight: 500; padding: 12px 16px; border-radius: 4px; transition: background-color 0.15s ease;">
+              {{ link.name }}
+            </a>
+          {% endfor %}
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <div class="container">
+    <!-- JC STEM Style Navigation Drawer -->
+    <aside class="md-navigation-drawer" id="navigationDrawer">
+      <div class="md-navigation-drawer__header">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; flex: 1;">
+            <img class="md-navigation-drawer__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+            <div>
+              <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">JC STEM Lab</div>
+              <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics in Healthcare</div>
+            </div>
+          </div>
+          <button class="md-button md-button--text" id="closeDrawerButton" aria-label="Close menu" style="color: #64748b; padding: 8px;">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="md-navigation-drawer__content">
+        {% for link in site.data.navigation %}
+          <a href="{{ link.link }}" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            {{ link.name }}
+          </a>
+        {% endfor %}
+      </div>
+    </aside>
 
-    <!-- 添加JavaScript脚本，改善移动端导航体验 -->
+    <!-- Backdrop -->
+    <div class="md-backdrop" id="backdrop"></div>
+
+    <!-- Main Content -->
+    <main class="md-main-content">
+    
+    <!-- 导航栏滚动效果脚本 -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // 处理移动端导航栏展开/折叠，添加Material Design风格的动画效果
-        var navbarToggler = document.querySelector('.navbar-toggler');
-        var navbarCollapse = document.querySelector('.navbar-collapse');
+        // 支持两种导航栏：Material Design 和 Bootstrap
+        const mdNavbar = document.querySelector('.md-app-bar');
+        const bsNavbar = document.querySelector('.navbar');
+        const navbar = mdNavbar || bsNavbar;
         
-        if (navbarToggler) {
-          navbarToggler.addEventListener('click', function() {
-            if (navbarCollapse.classList.contains('show')) {
-              navbarCollapse.classList.remove('show');
-              // Material Design风格的关闭动画
-              navbarCollapse.style.opacity = '0';
-              setTimeout(function() {
-                navbarCollapse.style.display = 'none';
-              }, 300);
-            } else {
-              // Material Design风格的打开动画
-              navbarCollapse.style.display = 'block';
-              setTimeout(function() {
-                navbarCollapse.classList.add('show');
-                navbarCollapse.style.opacity = '1';
-              }, 10);
-            }
-          });
-        }
+        if (!navbar) return;
         
-        // 点击链接后自动收起导航菜单（仅在移动端）
-        var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        let lastScrollTop = 0;
         
-        function isSmallScreen() {
-          return window.innerWidth < 992;
-        }
-        
-        navLinks.forEach(function(link) {
-          link.addEventListener('click', function() {
-            if (isSmallScreen() && navbarCollapse.classList.contains('show')) {
-              navbarCollapse.classList.remove('show');
-              // Material Design风格的关闭动画
-              navbarCollapse.style.opacity = '0';
-              setTimeout(function() {
-                navbarCollapse.style.display = 'none';
-              }, 300);
-            }
-          });
-        });
-        
-        // 监听窗口尺寸变化，适配导航栏样式
-        window.addEventListener('resize', function() {
-          if (!isSmallScreen() && navbarCollapse.classList.contains('show')) {
-            navbarCollapse.classList.remove('show');
-            navbarCollapse.style.opacity = '';
-            navbarCollapse.style.display = '';
+        function handleScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          // 当滚动超过50px时，添加scrolled类
+          if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
           }
-        });
+          
+          lastScrollTop = scrollTop;
+        }
         
-        // 添加Material Design风格的涟漪效果
-        var buttons = document.querySelectorAll('.md-menu-btn, .md-menu-item');
+        // 使用节流函数优化性能
+        let ticking = false;
+        function requestTick() {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              handleScroll();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
         
-        buttons.forEach(function(button) {
-          button.addEventListener('click', function(e) {
-            var rect = button.getBoundingClientRect();
-            var x = e.clientX - rect.left;
-            var y = e.clientY - rect.top;
-            
-            var ripple = document.createElement('span');
-            ripple.className = 'md-ripple';
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            
-            button.appendChild(ripple);
-            
-            setTimeout(function() {
-              ripple.remove();
-            }, 600);
-          });
-        });
+        // 监听滚动事件
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // 页面加载时检查滚动位置
+        handleScroll();
       });
     </script>
+
