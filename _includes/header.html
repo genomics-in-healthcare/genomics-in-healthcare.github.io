@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>JC STEM Lab of Genomics in Healthcare</title>
+    <title>Hong Kong JC STEM Lab of Genomics and AI in Healthcare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="{{ site.description }}">
     <meta name="theme-color" content="#1e88e5">
@@ -136,6 +136,10 @@
         margin-right: auto;
         background-color: transparent;
       }
+      /* Add top spacing below fixed header on all non-Home pages */
+      body.non-home .md-main-content {
+        padding-top: 80px;
+      }
       
       /* Syntax highlighting styles */
       .highlight { background: #ffffff; }
@@ -223,11 +227,11 @@
     </style>
     
     {% if page.group == 'news' %}
-    <link rel="alternate" type="application/atom+xml" title="Genomics in Healthcare Lab News Feed" href="/news.xml">
+    <link rel="alternate" type="application/atom+xml" title="Genomics and AI in Healthcare Lab News Feed" href="/news.xml">
     {% endif %}
   </head>
 
-  <body>
+  <body class="{% if page.layout == 'home' %}home{% else %}non-home{% endif %}">
     <!-- Clean App Bar -->
     <header class="md-app-bar">
       <div class="md-app-bar__container">
@@ -240,8 +244,8 @@
         <div style="display: flex; align-items: center; flex: 1;">
           <img class="md-app-bar__logo" src="{{ site.baseurl }}/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
           <div>
-            <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">JC STEM Lab</div>
-            <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics in Healthcare</div>
+            <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+            <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics and AI in Healthcare</div>
           </div>
         </div>
         
@@ -263,8 +267,8 @@
           <div style="display: flex; align-items: center; flex: 1;">
             <img class="md-navigation-drawer__logo" src="{{ site.baseurl }}/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
             <div>
-              <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">JC STEM Lab</div>
-              <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics in Healthcare</div>
+              <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+              <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics and AI in Healthcare</div>
             </div>
           </div>
           <button class="md-button md-button--text" id="closeDrawerButton" aria-label="Close menu" style="color: #64748b; padding: 8px;">

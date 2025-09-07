@@ -1,4 +1,3 @@
-## Alumni
 {% assign sorted = site.members | sort: "enddate" | reverse %}
 {% for member in sorted %}
 
@@ -15,98 +14,117 @@
 {% endunless %}
 {% endif %}
 
-<hr>
-<div id = "{{member.name}}" style="padding-top: 60px; margin-top: -60px;">
-<p><strong>{{member.name}}</strong><br>
-<em>{{member.position | markdownify | remove: '<p>' | remove: '</p>' }}</em><br>
-
-{% if member.pronouns %}
-<em>{{member.pronouns}}</em> <br>
-{% endif %}
-
-{% assign start = member.startdate | first | date:"%Y" %}
-{% assign end = member.enddate | last | date:"%Y" %}
-
-{% if start == end %}
-{{ start }}<br>
-{% else %}
-{{ start }} - {{ end }}<br>
-{% endif %}
-
-{% if member.subsequent %}
-Subsequently: {{member.subsequent}} <br>
-{% endif %}
-
-{% if member.email %}
-{% unless member.email contains "ucsf.edu" or "fraserlab" %}
-<em>{{member.email}}</em> <br>
-{% endunless %}
-{% endif %}
-
-{% if member.website %}
-<a style="overflow-wrap: break-word;" href= "{{member.website}}">{{member.website}}</a> <br>
-{% endif %}
-
-{% if member.orcid %}
-<a href="http://orcid.org"><img class="inline-block mem-icon" src="/static/img/logo/orcid_logo.svg"></a>
-<a href="http://orcid.org/{{member.orcid}}"> {{member.orcid}}</a> <br>
-{% endif %}
-
-{% if member.linkedin %}
-<a href="http://www.linkedin.com"><img class="inline-block mem-icon" src="/static/img/logo/linkedin_logo.svg"></a>
-<a href= "http://www.linkedin.com/in/{{member.linkedin}}"> {{member.linkedin}} </a> <br>
-{% endif %}
-
-{% if member.scholar %}
-<a href="http://scholar.google.com"><img class="inline-block mem-icon" src="/static/img/logo/gscholar_logo.svg"></a>
-<a href= "http://scholar.google.com/citations?user={{member.scholar}}"> {% if member.timeline_name %}{{ member.timeline_name }}{% else %}{{ member.name | split: " " | first }}{% endif %}'s Citations </a> <br>
-{% endif %}
-
-{% if member.twitter %}
-<a href="http://twitter.com"><img class="inline-block mem-icon" src="/static/img/logo/twitter_logo.svg"></a>
-<a href= "http://twitter.com/{{member.twitter}}"> @{{member.twitter}} </a> <br>
-{% endif %}
-
-{% if member.github %}
-<a href="http://github.com"><img class="inline-bloc mem-icon" src="/static/img/logo/github_logo.svg"></a>
-<a href= "http://github.com/{{member.github}}"> {{member.github}} </a> <br>
-{% endif %}
-</p>
+<div id="{{member.name}}" class="member-item">
+    <div class="member-info">
+        <h3 class="member-name">{{member.name}}</h3>
+        <p class="member-position">{{member.position | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        
+        {% if member.pronouns %}
+            <p class="member-position">{{member.pronouns}}</p>
+        {% endif %}
+        
+        {% assign start = member.startdate | first | date:"%Y" %}
+        {% assign end = member.enddate | last | date:"%Y" %}
+        
+        <div class="member-contact">
+            {% if start == end %}
+                <span>{{ start }}</span>
+            {% else %}
+                <span>{{ start }} - {{ end }}</span>
+            {% endif %}
+            
+            {% if member.subsequent %}
+                <br><span>Subsequently: {{member.subsequent}}</span>
+            {% endif %}
+        </div>
+        
+        <div class="member-contact">
+            {% if member.email %}
+                {% unless member.email contains "ucsf.edu" or "fraserlab" %}
+                    <a href="mailto:{{member.email}}">{{member.email}}</a>
+                {% endunless %}
+            {% endif %}
+            
+            {% if member.website %}
+                <a href="{{member.website}}" target="_blank">Website</a>
+            {% endif %}
+        </div>
+        
+        <div class="member-links">
+            {% if member.orcid %}
+                <a href="http://orcid.org/{{member.orcid}}" class="member-link" target="_blank">
+                    <span class="material-icons">fingerprint</span>
+                    ORCID
+                </a>
+            {% endif %}
+            
+            {% if member.linkedin %}
+                <a href="http://www.linkedin.com/in/{{member.linkedin}}" class="member-link" target="_blank">
+                    <span class="material-icons">work</span>
+                    LinkedIn
+                </a>
+            {% endif %}
+            
+            {% if member.scholar %}
+                <a href="http://scholar.google.com/citations?user={{member.scholar}}" class="member-link" target="_blank">
+                    <span class="material-icons">school</span>
+                    Scholar
+                </a>
+            {% endif %}
+            
+            {% if member.twitter %}
+                <a href="http://twitter.com/{{member.twitter}}" class="member-link" target="_blank">
+                    <span class="material-icons">chat</span>
+                    Twitter
+                </a>
+            {% endif %}
+            
+            {% if member.github %}
+                <a href="http://github.com/{{member.github}}" class="member-link" target="_blank">
+                    <span class="material-icons">code</span>
+                    GitHub
+                </a>
+            {% endif %}
+        </div>
+    </div>
 </div>
 {% endfor %}
 
-<br>
-## Visitors
+<!-- Visitors Section -->
 {% for visitor in sorted %}
-
 {% assign position = visitor.position | downcase %}
 {% unless position contains "visiting" %}
 {% continue %}
 {% endunless %}
 
-<hr>
-<div id = "{{visitor.name}}" style="padding-top: 60px; margin-top: -60px;">
-{% if visitor.current %}
-<p><strong>{{visitor.name}}</strong> - <em>{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }} from {{visitor.current}}</em><br>
-{% else  %}
-<p><strong>{{visitor.name}}</strong> - <em>{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }}</em><br>
-{% endif %}
-
-{% assign start = visitor.startdate | first | date:"%Y" %}
-{% assign end = visitor.enddate | last | date:"%Y" %}
-
-{% if end %}
-{% if start == end %}
-{{ start }}<br>
-{% else %}
-{{ start }} - {{ end }}<br>
-{% endif %}
-{% else %}
-{{ start }} - Present<br>
-{% endif %}
-
-{% if visitor.pronouns %}
-<em>{{visitor.pronouns}}</em> <br>
-{% endif %}
-</p>
-</div> {% endfor %}
+<div id="{{visitor.name}}" class="member-item">
+    <div class="member-info">
+        <h3 class="member-name">{{visitor.name}}</h3>
+        
+        {% if visitor.current %}
+            <p class="member-position">{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }} from {{visitor.current}}</p>
+        {% else %}
+            <p class="member-position">{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        {% endif %}
+        
+        {% if visitor.pronouns %}
+            <p class="member-position">{{visitor.pronouns}}</p>
+        {% endif %}
+        
+        {% assign start = visitor.startdate | first | date:"%Y" %}
+        {% assign end = visitor.enddate | last | date:"%Y" %}
+        
+        <div class="member-contact">
+            {% if end %}
+                {% if start == end %}
+                    <span>{{ start }}</span>
+                {% else %}
+                    <span>{{ start }} - {{ end }}</span>
+                {% endif %}
+            {% else %}
+                <span>{{ start }} - Present</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
