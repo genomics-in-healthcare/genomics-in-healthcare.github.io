@@ -21,7 +21,12 @@
          alt="{{ member.name }}">
     <div class="member-info">
         <h3 class="member-name">{{member.name}}</h3>
-        <p class="member-position">{{member.position | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        {% assign pos_text = member.position | markdownify | remove: '<p>' | remove: '</p>' %}
+        {% if pos_text contains "Research Fellow" %}
+            <p class="member-position" style="color:#111827;">{{ pos_text }}</p>
+        {% else %}
+            <p class="member-position">{{ pos_text }}</p>
+        {% endif %}
         
         {% if member.pronouns %}
             <p class="member-position">{{member.pronouns}}</p>
@@ -30,7 +35,7 @@
         {% assign start = member.startdate | first | date:"%Y" %}
         {% assign end = member.enddate | last | date:"%Y" %}
         
-        <div class="member-contact">
+        <div class="member-contact" style="margin-bottom:0;">
             {% if start == end %}
                 <span>{{ start }}</span>
             {% else %}
@@ -109,10 +114,19 @@
     <div class="member-info">
         <h3 class="member-name">{{visitor.name}}</h3>
         
+        {% assign vpos_text = visitor.position | markdownify | remove: '<p>' | remove: '</p>' %}
         {% if visitor.current %}
-            <p class="member-position">{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }} from {{visitor.current}}</p>
+            {% if vpos_text contains "Research Fellow" %}
+                <p class="member-position" style="color:#111827;">{{ vpos_text }} from {{visitor.current}}</p>
+            {% else %}
+                <p class="member-position">{{ vpos_text }} from {{visitor.current}}</p>
+            {% endif %}
         {% else %}
-            <p class="member-position">{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            {% if vpos_text contains "Research Fellow" %}
+                <p class="member-position" style="color:#111827;">{{ vpos_text }}</p>
+            {% else %}
+                <p class="member-position">{{ vpos_text }}</p>
+            {% endif %}
         {% endif %}
         
         {% if visitor.pronouns %}
@@ -122,7 +136,7 @@
         {% assign start = visitor.startdate | first | date:"%Y" %}
         {% assign end = visitor.enddate | last | date:"%Y" %}
         
-        <div class="member-contact">
+        <div class="member-contact" style="margin-bottom:0;">
             {% if end %}
                 {% if start == end %}
                     <span>{{ start }}</span>

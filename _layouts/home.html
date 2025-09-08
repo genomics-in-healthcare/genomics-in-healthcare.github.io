@@ -24,7 +24,7 @@
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
   ">
   <div style="text-align: center; width: 100%; padding: 0 24px;">
-    <h1 style="font-size: 3rem; font-weight: 700; margin: 0 auto 24px auto; line-height: 1.2; color: #000000; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); white-space: nowrap; text-align: center; width: fit-content; display: block;">
+    <h1 style="font-size: 3rem; font-weight: 600; margin: 0 auto 24px auto; line-height: 1.2; color: #334155; text-shadow: 1px 1px 2px rgba(0,0,0,0.06); white-space: nowrap; text-align: center; width: fit-content; display: block;">
       Hong Kong JC STEM Lab of Genomics and AI in Healthcare
     </h1>
     <p style="font-size: 1.25rem; margin-bottom: 40px; color: #4a5568; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);">
@@ -146,6 +146,14 @@
 .research-focus .md-card .material-icons {
   transition: none;
 }
+
+/* Prevent dark border on hover/focus for cards on the homepage */
+.md-card--clickable:hover,
+.md-card--clickable:focus,
+.md-card--clickable:active {
+  border-color: #e2e8f0 !important;
+  outline: none;
+}
 </style>
 
 <!-- Main Content -->
@@ -159,7 +167,7 @@
       </h2>
     </div>
     <div class="md-grid md-grid--3-cols" style="gap: 24px; max-width: 1000px; margin: 0 auto;">
-      <a href="/research" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+      <a href="/research" class="md-card md-card--clickable md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
         <div style="width: 64px; height: 64px; background: #059669; border-radius: 4px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
           <span class="material-icons" style="font-size: 32px; color: white;">hub</span>
         </div>
@@ -170,7 +178,7 @@
         </div>
       </a>
       
-      <a href="/research" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+      <a href="/research" class="md-card md-card--clickable md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
         <div style="width: 64px; height: 64px; background: #1e40af; border-radius: 4px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
           <span class="material-icons" style="font-size: 32px; color: white;">biotech</span>
         </div>
@@ -181,7 +189,7 @@
         </div>
       </a>
       
-      <a href="/research" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+      <a href="/research" class="md-card md-card--clickable md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
         <div style="width: 64px; height: 64px; background: #dc2626; border-radius: 4px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
           <span class="material-icons" style="font-size: 32px; color: white;">psychology</span>
         </div>
@@ -196,7 +204,7 @@
 
   <!-- Call to Action Cards with Enhanced Layering -->
   <div class="md-grid md-grid--2-cols" style="margin: 48px 0; gap: 24px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-    <a href="/join" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+    <a href="/join" class="md-card md-card--clickable md-fade-in" style="text-decoration: none; color: inherit; position: relative; overflow: hidden;">
       <div class="md-card__content" style="padding: 24px;">
         <div style="display: flex; align-items: center; margin-bottom: 16px;">
           <div style="width: 50px; height: 50px; background: #1e40af; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
@@ -212,7 +220,7 @@
       </div>
     </a>
 
-    <a href="/contact" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+    <a href="/contact" class="md-card md-card--clickable md-fade-in" style="text-decoration: none; color: inherit; position: relative; overflow: hidden;">
       <div class="md-card__content" style="padding: 24px;">
         <div style="display: flex; align-items: center; margin-bottom: 16px;">
           <div style="width: 50px; height: 50px; background: #1e40af; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
@@ -243,7 +251,7 @@
     
     <div class="md-grid md-grid--2-cols" style="gap: 24px; max-width: 1000px; margin: 0 auto;">
       {% for post in site.posts limit: 4 %}
-        <a href="{{ post.url }}" class="md-card md-card--clickable md-card--black-border md-fade-in" style="text-decoration: none; color: inherit;">
+        <a href="{{ post.url }}" class="md-card md-card--clickable md-fade-in" style="text-decoration: none; color: inherit;">
           <div class="md-card__content" style="padding: 20px;">
             <div style="display: flex; align-items: center; margin-bottom: 16px;">
               <div style="width: 40px; height: 40px; background: #eff6ff; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">

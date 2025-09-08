@@ -139,7 +139,7 @@ a:hover { text-decoration: none; }
   <h2 class="section-header">Application</h2>
 
   <div class="contact-box">
-    Prospective applicants may send inquiry to: <strong>genomics at polyu dot edu dot hk</strong>
+    Prospective applicants may send inquiry to: <strong>genomics@polyu.edu.hk</strong>
   </div>
 </div>
 

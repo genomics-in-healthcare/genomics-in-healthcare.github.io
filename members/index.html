@@ -6,7 +6,7 @@ group: members
 
 {% assign all_members = site.members %}
 
-{% assign positions_order = "Principal Investigator, Principal Research Fellow, Research Assistant Professor, Research Fellow, Postdoctoral Scholar, Ph.D. Student, MPhil Student, Research Assistant" | split: ", " %}
+{% assign positions_order = "Principal Investigator, Principal Research Fellow, Research Assistant Professor, Postdoctoral Scholar, Ph.D. Student, MPhil Student, Research Assistant" | split: ", " %}
 
 {% for position in positions_order %}
     {% assign members_in_position = all_members | where: "position", position | sort: "name" %}
