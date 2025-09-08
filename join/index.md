@@ -4,6 +4,8 @@ layout: default
 group: join
 ---
 
+{::nomarkdown}
+
 <div class="container-fluid p-0">
   <div class="row">
     <div class="col-md-12">
@@ -16,12 +18,12 @@ group: join
 /* 添加Join页面样式 - 基于News页面的紧凑布局 */
 .join-section {
   width: 100%;
-  padding: 20px 12px;
-  margin-bottom: 8px;
+  padding: 6px 12px;
+  margin-bottom: 4px;
   border-bottom: none !important;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
+  line-height: 1.2;
   background-color: #ffffff;
 }
 
@@ -35,11 +37,11 @@ group: join
 
 .join-title {
   margin-top: 0;
-  margin-bottom: 12px;
-  font-weight: 600;
+  margin-bottom: 4px;
+  font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #1e40af;
+  font-size: 17px;
+  color: #222;
   letter-spacing: normal;
 }
 
@@ -48,7 +50,7 @@ group: join
   font-size: 15px;
   max-width: 98%;
   letter-spacing: normal;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .position-list {
@@ -128,13 +130,13 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* 为段落添加间距 */
 p {
-  margin-bottom: 8px;
-  line-height: 1.4;
+  margin-bottom: 4px;
+  line-height: 1.2;
 }
 
 /* 减少容器边距 */
@@ -217,3 +219,5 @@ p {
     </div>
   </div>
 </div>
+
+{:/nomarkdown}
