@@ -101,6 +101,27 @@
   .navbar-toggler {
     display: none !important;
   }
+
+  /* Force tighter spacing for Material header nav */
+  .md-app-bar__actions {
+    gap: 4px !important;
+  }
+
+  .md-app-bar__actions .md-button {
+    padding: 8px 12px !important;
+  }
+}
+
+/* Publications list styling */
+.pub-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.pub-list li {
+  margin: 0 0 0.25rem 0; /* minimal separation between items */
+  line-height: 1.5; /* same as normal text */
 }
 
 /* Modern JC STEM Style - Mobile Navigation */

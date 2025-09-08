@@ -138,7 +138,7 @@
       }
       /* Add top spacing below fixed header on all non-Home pages */
       body.non-home .md-main-content {
-        padding-top: 80px;
+        padding-top: 40px;
       }
       
       /* Syntax highlighting styles */
@@ -244,15 +244,15 @@
         <div style="display: flex; align-items: center; flex: 1;">
           <img class="md-app-bar__logo" src="{{ site.baseurl }}/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
           <div>
-            <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
-            <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics and AI in Healthcare</div>
+            <div style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+            <div style="font-size: 1.125rem; color: #1e293b; line-height: 1.25;">Genomics and AI in Healthcare</div>
           </div>
         </div>
         
         <!-- Desktop navigation -->
-        <nav class="md-app-bar__actions" id="desktopNav" style="gap: 8px;">
+        <nav class="md-app-bar__actions" id="desktopNav" style="gap: 4px;">
           {% for link in site.data.navigation %}
-            <a href="{{ link.link }}" class="md-button md-button--text {% if page.group == link.group %}md-button--active{% endif %}" style="color: #64748b; font-weight: 500; padding: 12px 16px; border-radius: 4px; transition: background-color 0.15s ease;">
+            <a href="{{ link.link }}" class="md-button md-button--text {% if page.group == link.group %}md-button--active{% endif %}" style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease;">
               {{ link.name }}
             </a>
           {% endfor %}
@@ -267,8 +267,8 @@
           <div style="display: flex; align-items: center; flex: 1;">
             <img class="md-navigation-drawer__logo" src="{{ site.baseurl }}/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
             <div>
-              <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
-              <div style="font-size: 0.8125rem; color: #64748b; line-height: 1.25;">Genomics and AI in Healthcare</div>
+              <div style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+              <div style="font-size: 1.125rem; color: #1e293b; line-height: 1.25;">Genomics and AI in Healthcare</div>
             </div>
           </div>
           <button class="md-button md-button--text" id="closeDrawerButton" aria-label="Close menu" style="color: #64748b; padding: 8px;">

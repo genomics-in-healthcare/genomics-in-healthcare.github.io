@@ -15,6 +15,10 @@
 {% endif %}
 
 <div id="{{member.name}}" class="member-item">
+    <img class="member-photo" 
+         src="{{ member.image }}" 
+         {% if member.altimage %} onmouseover="this.src='{{ member.altimage }}';" onmouseout="this.src='{{ member.image }}';" {% endif %}
+         alt="{{ member.name }}">
     <div class="member-info">
         <h3 class="member-name">{{member.name}}</h3>
         <p class="member-position">{{member.position | markdownify | remove: '<p>' | remove: '</p>' }}</p>
@@ -85,6 +89,10 @@
                     GitHub
                 </a>
             {% endif %}
+        </div>
+
+        <div class="member-description">
+            {{ member.description | markdownify }}
         </div>
     </div>
 </div>

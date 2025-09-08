@@ -182,29 +182,7 @@ p {
       <div class="research-description">
         The Hong Kong Polytechnic University Jockey Club STEM Lab of Genomics in Healthcare is dedicated to transforming biomedical research through the seamless integration of artificial intelligence, genomics, and experimental biology. We combine interdisciplinary expertise in AI, data science, genomics, molecular biology, and neuroscience.
       </div>
-      
-      <!-- 资金信息 -->
-      <div class="funding-info">
-        <div class="funding-stat">
-          <span class="funding-number">80M+</span>
-          <div class="funding-label">HKD Research Funding</div>
-        </div>
-        <div class="funding-stat">
-          <span class="funding-number">5+</span>
-          <div class="funding-label">Major Funding Sources</div>
-        </div>
-        <div class="funding-stat">
-          <span class="funding-number">Multi-</span>
-          <div class="funding-label">Disciplinary Approach</div>
-        </div>
-      </div>
-      
-      <div class="research-highlights">
-        Funding Sources: 
-        <a class="highlight-link" href="#">RGC</a>
-        <a class="highlight-link" href="#">HMRF</a>
-        <a class="highlight-link" href="#">NSFC</a>
-      </div>
+
     </div>
   </div>
 

@@ -10,11 +10,9 @@ email: weixiong dot zhang at polyu dot edu dot hk
 scholar: Minb5QMAAAAJ
 website:
 POLYU: Weixiong.Zhang
-description: "Hong Kong Global STEM Professor
-
-
-Chair Professor of Systems Biology and Artificial Intelligence
-
-
+description: "BS in Computer Engineering, Tsinghua University<br>
+PhD in Computer Science, UCLA<br>
+Hong Kong Global STEM Professor<br>
+Chair Professor of Systems Biology and Artificial Intelligence<br>
 Associate Director, PolyU Academy of Interdisciplinary Research"
 ---
