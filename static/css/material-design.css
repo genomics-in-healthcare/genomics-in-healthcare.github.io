@@ -310,8 +310,8 @@ a:active {
 .md-navigation-drawer .active,
 .md-navigation-drawer .nav-item.active .md-navigation-drawer__item {
   background-color: transparent !important;
-  color: var(--md-on-surface) !important;
-  font-weight: 500 !important;
+  color: #1e40af !important;
+  font-weight: 600 !important;
   border-left: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
@@ -322,8 +322,9 @@ a:active {
 .md-navigation-drawer .nav-item.active .md-menu-item,
 .md-navigation-drawer .navbar-nav .nav-item.active .md-menu-item {
   background-color: transparent !important;
-  color: var(--md-on-surface) !important;
+  color: #1e40af !important;
   background: transparent !important;
+  font-weight: 600 !important;
 }
 
 /* 确保侧边栏中没有任何活跃状态的视觉差异 */
@@ -333,9 +334,11 @@ a:active {
 .md-navigation-drawer .nav-item.active * {
   background-color: transparent !important;
   background: transparent !important;
-  color: var(--md-on-surface) !important;
+  color: #1e40af !important;
   border: none !important;
   box-shadow: none !important;
+  font-weight: 600 !important;
+}
 }
 
 /* Enhanced focus states for accessibility */

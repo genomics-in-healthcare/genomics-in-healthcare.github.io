@@ -94,8 +94,9 @@
   
   .navbar-nav .nav-item.active .nav-link,
   .navbar-nav .nav-link:hover {
-    color: #4a5568;
-    background-color: #f7fafc;
+    color: #1e40af;
+    background-color: transparent;
+    font-weight: 600;
   }
   
   .navbar-toggler {
@@ -109,6 +110,13 @@
 
   .md-app-bar__actions .md-button {
     padding: 8px 12px !important;
+  }
+
+  /* Material Design button active state */
+  .md-button--active {
+    color: #1e40af !important;
+    background-color: transparent !important;
+    font-weight: 600 !important;
   }
 }
 
@@ -178,13 +186,15 @@
   
   .navbar-nav .nav-item.active .md-menu-item {
     color: #1e40af !important;
-    background-color: #eff6ff;
+    background-color: transparent;
+    font-weight: 600;
   }
   
   .md-menu-item:hover,
   .md-menu-item:focus {
-    background-color: #f8fafc;
+    background-color: transparent;
     color: #1e40af !important;
+    font-weight: 600;
   }
   
   /* Mobile header layout */
@@ -317,8 +327,9 @@
   
   .navbar-nav .nav-item.active .nav-link,
   .navbar-nav .nav-item.active .md-menu-item {
-    color: #4a5568 !important; /* 活动项使用柔和的灰色 */
-    background: #f7fafc;
+    color: #1e40af !important; /* 活动项使用蓝色 */
+    background: transparent;
+    font-weight: 600;
   }
   
   /* 覆盖侧边栏中的活跃状态样式 */
@@ -335,8 +346,9 @@
   .navbar-nav .nav-link:hover,
   .md-menu-item:focus,
   .md-menu-item:hover {
-    background: #f1f5f9 !important; /* 柔和的浅灰高亮 */
-    color: #4a5568 !important; /* 悬停时柔和的灰色 */
+    background: transparent !important; /* 移除背景色 */
+    color: #1e40af !important; /* 悬停时使用蓝色 */
+    font-weight: 600;
   }
 }
 

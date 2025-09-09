@@ -21,31 +21,11 @@
          alt="{{ member.name }}">
     <div class="member-info">
         <h3 class="member-name">{{member.name}}</h3>
-        {% assign pos_text = member.position | markdownify | remove: '<p>' | remove: '</p>' %}
-        {% if pos_text contains "Research Fellow" %}
-            <p class="member-position" style="color:#111827;">{{ pos_text }}</p>
-        {% else %}
-            <p class="member-position">{{ pos_text }}</p>
+        {% if member.subsequent %}
+            <div class="member-contact" style="margin-bottom:0;">
+                <span>Subsequently: {{member.subsequent}}</span>
+            </div>
         {% endif %}
-        
-        {% if member.pronouns %}
-            <p class="member-position">{{member.pronouns}}</p>
-        {% endif %}
-        
-        {% assign start = member.startdate | first | date:"%Y" %}
-        {% assign end = member.enddate | last | date:"%Y" %}
-        
-        <div class="member-contact" style="margin-bottom:0;">
-            {% if start == end %}
-                <span>{{ start }}</span>
-            {% else %}
-                <span>{{ start }} - {{ end }}</span>
-            {% endif %}
-            
-            {% if member.subsequent %}
-                <br><span>Subsequently: {{member.subsequent}}</span>
-            {% endif %}
-        </div>
         
         <div class="member-contact">
             {% if member.email %}
