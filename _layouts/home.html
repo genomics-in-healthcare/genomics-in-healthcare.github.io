@@ -10,27 +10,25 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     color: white; 
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    position: relative;
+    margin-top: 64px;
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
   ">
-  <div style="text-align: center; width: 100%; padding: 0 24px;">
-    <h1 style="font-size: 3rem; font-weight: 600; margin: 0 auto 24px auto; line-height: 1.2; color: #334155; text-shadow: 1px 1px 2px rgba(0,0,0,0.06); white-space: nowrap; text-align: center; width: fit-content; display: block;">
-      Hong Kong JC STEM Lab of Genomics and AI in Healthcare
+  <div style="text-align: center; width: 100%; padding: 0 24px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 style="font-size: 3rem; font-weight: 600; margin: 0 0 24px 0; line-height: 1.2; color: #334155; text-shadow: 1px 1px 2px rgba(0,0,0,0.06); text-align: center; width: 100%; display: block;">
+      Genomics and AI in Healthcare
     </h1>
-    <p style="font-size: 1.25rem; margin-bottom: 40px; color: #4a5568; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.25rem; margin-bottom: 40px; color: #4a5568; line-height: 1.6; max-width: 600px; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1); text-align: center;">
       Advancing genomic medicine through cutting-edge AI technologies and interdisciplinary research in systems biology
     </p>
-    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
       <a href="/join" class="md-button md-button--primary" style="background: #1e40af; color: white; border: none; padding: 14px 28px; font-size: 1rem; border-radius: 4px; font-weight: 500;">
         <span class="material-icons" style="margin-right: 8px; font-size: 20px;">person_add</span>
         Join Our Team
@@ -40,51 +38,48 @@
         Explore Research
       </a>
     </div>
-    
-    <!-- Scroll Indicator -->
-    <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
-      <span class="material-icons" style="font-size: 32px; color: rgba(255,255,255,0.8);">keyboard_arrow_down</span>
-    </div>
   </div>
 </section>
 
 <style>
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
 
 /* Responsive styles for the hero title */
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 2.5rem !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
     text-align: center !important;
     margin: 0 auto 24px auto !important;
-    width: fit-content !important;
+    width: 100% !important;
     display: block !important;
+    line-height: 1.2 !important;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section h1 {
     font-size: 2rem !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
     text-align: center !important;
     margin: 0 auto 24px auto !important;
-    width: fit-content !important;
+    width: 100% !important;
     display: block !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Responsive styles for section titles */
+@media (max-width: 768px) {
+  .research-focus h2,
+  .latest-news h2,
+  section h2 {
+    font-size: 1.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .research-focus h2,
+  .latest-news h2,
+  section h2 {
+    font-size: 1.5rem !important;
   }
 }
 
@@ -154,18 +149,88 @@
   border-color: #e2e8f0 !important;
   outline: none;
 }
+
+/* Funding partners logo hover effects */
+.funding-partners img:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+.funding-partners img {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive design for funding partners */
+@media (min-width: 1200px) {
+  .funding-partners {
+    gap: 20px !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .funding-partners img {
+    height: 70px !important;
+    width: auto !important;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .funding-partners {
+    gap: 18px !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .funding-partners img {
+    height: 65px !important;
+    width: auto !important;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+  .funding-partners {
+    gap: 16px !important;
+  }
+  
+  .funding-partners img {
+    height: 60px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .funding-partners {
+    gap: 16px !important;
+  }
+  
+  .funding-partners img {
+    height: 55px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .funding-partners {
+    gap: 12px !important;
+  }
+  
+  .funding-partners img {
+    height: 50px !important;
+    width: auto !important;
+  }
+}
 </style>
 
 <!-- Main Content -->
 <div class="md-main-content" style="margin-top: 0; position: relative; z-index: 2; padding-top: 0;">
   <!-- Research Areas Section with Enhanced Layering -->
-  <section class="research-focus" style="margin: 48px 0; position: relative; margin-top: 100vh; padding-top: 80px;">
+  <section class="research-focus" style="margin: 24px 0; position: relative; padding-top: 40px;">
     <div style="position: absolute; top: -20px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);"></div>
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-      <h2 style="font-size: 2rem; font-weight: 600; margin: 0; color: #1e293b; position: relative;">
-        <span style="position: relative; z-index: 1; background: #f8f9fa; padding: 0 24px;">Our Research Focus</span>
-      </h2>
-    </div>
+      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+       <h2 style="font-size: 2rem; font-weight: 600; margin: 0; color: #334155; position: relative;">
+         <span style="position: relative; z-index: 1; background: #f8f9fa; padding: 0 24px;">Our Research Focus</span>
+       </h2>
+      </div>
     <div class="md-grid md-grid--3-cols" style="gap: 24px; max-width: 1000px; margin: 0 auto;">
       <a href="/research" class="md-card md-card--clickable md-fade-in" style="text-align: center; padding: 24px 20px; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
         <div style="width: 64px; height: 64px; background: #059669; border-radius: 4px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
@@ -241,7 +306,7 @@
   <section class="latest-news" style="margin: 48px 0; position: relative;">
     <div style="position: absolute; top: -20px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);"></div>
     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-      <h2 style="font-size: 2rem; font-weight: 600; margin: 0; color: #1e293b; position: relative;">
+      <h2 style="font-size: 2rem; font-weight: 600; margin: 0; color: #334155; position: relative;">
         <span style="position: relative; z-index: 1; background: #f8f9fa; padding: 0 24px;">Latest News</span>
       </h2>
       <a href="/news" class="md-button md-button--text" style="color: #1e40af; font-weight: 500;">
@@ -258,8 +323,8 @@
                 <span class="material-icons" style="font-size: 20px; color: #1e40af;">article</span>
               </div>
               <div style="flex: 1;">
-                <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 4px;">{{ post.date | date: "%B %d, %Y" }}</div>
-                <h3 style="font-size: 1.125rem; font-weight: 600; margin: 0; color: #1e293b; line-height: 1.4;">
+                <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 4px;">{{ post.date | date: "%B %d, %Y" }}</div>
+                <h3 style="font-size: 1rem; font-weight: 600; margin: 0; color: #1e293b; line-height: 1.4;">
                   {% if post.title != "" %}
                     {{ post.title }}
                   {% elsif post.link_title %}
@@ -271,14 +336,30 @@
               </div>
             </div>
             {% if post.excerpt %}
-              <p style="color: #64748b; line-height: 1.5; margin-bottom: 16px; font-size: 0.9rem;">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+              <p style="color: #64748b; line-height: 1.5; margin-bottom: 16px; font-size: 0.8rem;">{{ post.excerpt | strip_html | truncate: 120 }}</p>
             {% endif %}
-            <div style="color: #1e40af; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center;">
+            <div style="color: #1e40af; font-size: 0.8rem; font-weight: 500; display: flex; align-items: center;">
               Read More <span class="material-icons" style="font-size: 16px; margin-left: 4px;">arrow_forward</span>
             </div>
           </div>
         </a>
       {% endfor %}
+    </div>
+  </section>
+
+  <!-- Funding Partners Section -->
+  <section style="margin: 48px 0; position: relative; background: #f8f9fa; padding: 40px 0;">
+    <div style="position: absolute; top: -20px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);"></div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+      <h2 style="font-size: 2rem; font-weight: 600; margin: 0 0 32px 0; color: #334155; text-align: center;">
+        Supported By
+      </h2>
+      <div class="funding-partners" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px;">
+        <img src="/static/img/logo/hksar.png" alt="Hong Kong SAR" style="height: 60px; width: auto; margin: 6px; display: inline-block; filter: grayscale(0%); opacity: 0.9; transition: opacity 0.3s ease;" />
+        <img src="/static/img/logo/hkjcct.png" alt="Hong Kong Jockey Club Charities Trust" style="height: 60px; width: auto; margin: 6px; display: inline-block; filter: grayscale(0%); opacity: 0.9; transition: opacity 0.3s ease;" />
+        <img src="/static/img/logo/rgc.png" alt="RGC" style="height: 60px; width: auto; margin: 6px; display: inline-block; filter: grayscale(0%); opacity: 0.9; transition: opacity 0.3s ease;" />
+        <img src="/static/img/logo/nsfc.png" alt="NSFC" style="height: 60px; width: auto; margin: 6px; display: inline-block; filter: grayscale(0%); opacity: 0.9; transition: opacity 0.3s ease;" />
+      </div>
     </div>
   </section>
 </div>
