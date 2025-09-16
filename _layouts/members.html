@@ -69,6 +69,69 @@
 
 .member-contact a:hover { text-decoration: underline; }
 
+/* Email protection styles */
+.email-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.email-display:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.email-parts {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.email-user, .email-domain {
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.email-at {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.email-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.email-copy-btn:hover {
+  background-color: #d1d5db;
+  opacity: 1;
+}
+
+.email-copy-btn .material-icons {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.email-copy-btn:hover .material-icons {
+  color: #374151;
+}
+
 .member-links {
   display: flex;
   flex-wrap: wrap;
@@ -155,5 +218,9 @@
     </div>
   </div>
 </div>
+
+<script>
+// No interactive email logic needed when using plain obfuscated text
+</script>
 
 {% include footer.html %}

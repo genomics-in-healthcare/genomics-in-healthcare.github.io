@@ -39,7 +39,7 @@ group: members
                             {% if normalized_email or member.website %}
                                 <div class="member-contact">
                                     {% if normalized_email %}
-                                        <a href="mailto:{{ normalized_email }}">{{ normalized_email }}</a>
+                                        <span class="email-text">{{ normalized_email | replace: '@', ' at ' | replace: '.', ' dot ' }}</span>
                                     {% endif %}
                                     {% if member.website %}
                                         <a href="{{ member.website }}" target="_blank">Website</a>
