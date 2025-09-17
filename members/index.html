@@ -22,12 +22,7 @@ group: members
                              alt="{{ member.name }}">
                         
                         <div class="member-info">
-                            <h3 class="member-name">{{ member.name }}{% if member.scholar and member.scholar == 'Minb5QMAAAAJ' %} 
-                                <a href="http://scholar.google.com/citations?user={{ member.scholar }}" class="member-link" target="_blank">
-                                    <span class="material-icons">school</span>
-                                    Scholar
-                                </a>
-                            {% endif %}</h3>
+                            <h3 class="member-name">{{ member.name }}</h3>
                             
                             {% if member.pronouns %}
                                 <p class="member-position">{{ member.pronouns }}</p>
@@ -67,7 +62,7 @@ group: members
                                             UCSF Profile
                                         </a>
                                     {% endif %}
-                                    {% if member.scholar and member.scholar != 'Minb5QMAAAAJ' %}
+                                    {% if member.scholar %}
                                         <a href="http://scholar.google.com/citations?user={{ member.scholar }}" class="member-link" target="_blank">
                                             <span class="material-icons">school</span>
                                             Scholar

@@ -69,14 +69,20 @@ h1.page-header {
   margin-bottom: 15px; /* 进一步减少页面标题和内容间距 */
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
-/* 优化链接样式 */
-a {
-  color: #1a73e8;
+/* 优化链接样式（提高优先级，确保为蓝色） */
+.contact-item .contact-content a,
+.contact-item .contact-content a:link,
+.contact-item .contact-content a:visited {
+  color: #1a73e8 !important;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
 }
-a:hover {
-  text-decoration: none;
+.contact-item .contact-content a:hover { text-decoration: underline; }
+
+/* 针对 Google 地图链接的明确覆盖 */
+.contact-item .contact-content a[href*="google.com/maps"],
+.contact-item .contact-content a[href*="maps.google"] {
+  color: #1a73e8 !important;
 }
 /* 为段落添加间距 */
 p {
@@ -109,6 +115,11 @@ p {
 .contact-group:last-child {
   margin-bottom: 0;
 }
+
+/* 局部覆盖全局主题变量（将次要色设为蓝色，仅此页生效） */
+.md-main-content { 
+  --md-secondary: #1a73e8; 
+}
 </style>
 
 <div class="container-fluid p-0">
@@ -118,7 +129,7 @@ p {
     <div class="contact-content">
       <h4 class="contact-title">Lab Location</h4>
       <div class="contact-group">
-        <strong>Department:</strong> <a href="https://www.polyu.edu.hk/hti/" target="_blank">Department of Health Technology and Informatics</a>
+        <strong>Department:</strong> Department of Health Technology and Informatics
       </div>
       <div class="contact-group">
         <strong>Address:</strong> Lee Shau Kee Building, Block Y520, The Hong Kong Polytechnic University<br>

@@ -12,7 +12,7 @@
 .member-item {
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   padding: 20px 22px;
   margin-bottom: 14px;
@@ -56,18 +56,26 @@
 }
 
 .member-contact {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-size: 14px;
   color: #6b7280;
 }
 
 .member-contact a {
-  color: #2563eb;
+  color: #1a73e8;
   text-decoration: none;
   margin-right: 12px;
 }
 
 .member-contact a:hover { text-decoration: underline; }
+.member-contact a:visited { color: #1a73e8; }
+
+/* Optional middle-dot separator for contact links on wide screens */
+.member-contact a + a::before {
+  content: '·';
+  margin: 0 8px;
+  color: #9ca3af;
+}
 
 /* Email protection styles */
 .email-display {
@@ -146,7 +154,7 @@
   background-color: #f3f4f6;
   border: 1px solid #e5e7eb;
   border-radius: 9999px;
-  color: #374151;
+  color: #1a73e8;
   text-decoration: none;
   font-size: 12px;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
@@ -155,15 +163,38 @@
 .member-link:hover {
   background-color: #eef2f7;
   border-color: #d1d5db;
-  color: #111827;
+  color: #1558d6;
 }
+
+.member-link:visited { color: #1a73e8; }
 
 .member-link .material-icons { font-size: 16px; margin-right: 6px; }
 
 .member-description {
   color: #374151;
-  line-height: 1.7;
+  line-height: 1.5;
   font-size: 14px;
+}
+
+.member-description p {
+  margin: 0 0 2px 0;
+  font-weight: 400;
+}
+
+/* Ensure links in member descriptions are blue */
+.member-description a { color: #1a73e8; text-decoration: none; }
+.member-description a:hover { text-decoration: underline; }
+.member-description a:visited { color: #1a73e8; }
+
+.member-description > p:first-child { margin-top: 0; }
+
+.member-description ul {
+  margin: 2px 0 6px 18px;
+  padding-left: 18px;
+}
+
+.member-description li {
+  margin: 0;
 }
 
 .section-title {
@@ -188,10 +219,13 @@
 /* Responsive */
 @media (max-width: 768px) {
   .members-container { padding: 16px 12px; }
-  .member-item { flex-direction: column; text-align: center; padding: 16px; }
+  .member-item { flex-direction: column; text-align: center; padding: 16px; align-items: center; }
   .member-photo { width: 88px; height: 88px; margin: 0 auto; }
   .member-links { justify-content: center; }
   .section-title { font-size: 24px; }
+  /* Hide middle-dot and stack contact items on narrow screens */
+  .member-contact { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+  .member-contact a + a::before { content: ''; margin: 0; }
 }
 
 @media (max-width: 480px) {
