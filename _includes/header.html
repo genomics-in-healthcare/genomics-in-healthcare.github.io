@@ -204,6 +204,27 @@
       .highlight .vi { color: #008080 }
       .highlight .il { color: #009999 }
     </style>
+    <!-- Global logo sizing -->
+    <style>
+      /* Standardize all brand logos heights site-wide */
+      img[src*="/static/img/logo/"] {
+        max-height: 60px !important;
+        height: auto !important;
+        width: auto !important;
+        max-width: 100% !important;
+        vertical-align: middle;
+      }
+      @media (max-width: 480px) {
+        img[src*="/static/img/logo/"] { max-height: 48px !important; }
+      }
+      /* Keep header/drawer site logo at fixed height */
+      img.md-app-bar__logo,
+      img.md-navigation-drawer__logo {
+        max-height: none !important;
+        height: 43px !important;
+        width: auto !important;
+      }
+    </style>
     <!-- Override: remove underline on link focus globally -->
     <style>
       a:focus,
