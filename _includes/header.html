@@ -109,6 +109,20 @@
         border-bottom: none;
         transition: all 0.3s ease-in-out;
       }
+      /* Home: at top (not scrolled), keep nav transparent but retain default dark text */
+      body.home .md-app-bar:not(.scrolled) {
+        background-color: transparent !important;
+        color: #1e293b;
+      }
+      body.home .md-app-bar:not(.scrolled) a,
+      body.home .md-app-bar:not(.scrolled) .md-button,
+      body.home .md-app-bar:not(.scrolled) .material-icons,
+      body.home .md-app-bar:not(.scrolled) h1 {
+        color: #1e293b !important;
+      }
+      body.home .md-app-bar:not(.scrolled) .md-button--active {
+        color: #1e40af !important;
+      }
       
       /* 滚动时导航栏显现的样式 */
       .md-app-bar.scrolled {
@@ -136,6 +150,10 @@
         margin-left: auto;
         margin-right: auto;
         background-color: transparent;
+      }
+      /* Home page: remove top padding so hero can flush to top under fixed header */
+      body.home .md-main-content {
+        padding-top: 0;
       }
       /* Add top spacing below fixed header on all non-Home pages */
       body.non-home .md-main-content {
