@@ -41,7 +41,7 @@
 
 /* 年份标题样式 */
 h3 {
-  margin-top: 40px;
+  margin-top: 56px;
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none; /* 去掉下边线，避免视觉空隙 */
@@ -58,8 +58,20 @@ h3 {
 
 /* 针对pub-list的样式修改 */
 .pub-list {
-  margin-top: -12px !important; /* 进一步上移列表，贴住年份 */
+  margin-top: -16px !important; /* 进一步上移列表，贴住年份 */
   padding-left: 0; /* 与页面左侧对齐 */
+}
+
+/* 年份在部分页面为 <p><b>YYYY</b></p> 形式：统一控制间距 */
+.pub-list p > b {
+  display: inline-block;
+  margin-top: 28px; /* 增大与上一组内容的距离 */
+  margin-bottom: 0; /* 减小与下方列表的距离 */
+}
+.pub-list p + ul,
+.pub-list p + font + ul,
+.pub-list p + br + ul {
+  margin-top: 4px; /* 列表向上靠拢年份 */
 }
 
 .pub-list li {

@@ -23,6 +23,8 @@
     
     <!-- Site Custom CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/static/css/custom.css">
+    <!-- Publications page custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/static/css/publications-custom.css">
     
     <!-- Material Design JavaScript -->
     <script src="{{ site.baseurl }}/static/js/material-design.js" defer></script>
@@ -109,18 +111,20 @@
         border-bottom: none;
         transition: all 0.3s ease-in-out;
       }
-      /* Home: at top (not scrolled), keep nav transparent but retain default dark text */
-      body.home .md-app-bar:not(.scrolled) {
-        background-color: transparent !important;
+      /* Home: use solid white navbar */
+      body.home .md-app-bar {
+        background-color: #ffffff !important;
         color: #1e293b;
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       }
-      body.home .md-app-bar:not(.scrolled) a,
-      body.home .md-app-bar:not(.scrolled) .md-button,
-      body.home .md-app-bar:not(.scrolled) .material-icons,
-      body.home .md-app-bar:not(.scrolled) h1 {
+      body.home .md-app-bar a,
+      body.home .md-app-bar .md-button,
+      body.home .md-app-bar .material-icons,
+      body.home .md-app-bar h1 {
         color: #1e293b !important;
       }
-      body.home .md-app-bar:not(.scrolled) .md-button--active {
+      body.home .md-app-bar .md-button--active {
         color: #1e40af !important;
       }
       

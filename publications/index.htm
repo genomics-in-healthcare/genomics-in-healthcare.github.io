@@ -18,6 +18,22 @@ group: publications
     margin-left: 10px;
     margin-bottom: 6px;
   }
+  /* 年份行是 p>b 的形式，增大与上一组内容的距离，减少与下一组列表的距离 */
+  .pub-list p > b {
+    display: inline-block;
+    margin-top: 28px; /* 与上一组内容拉开 */
+    margin-bottom: 0; /* 去掉年份自身的下边距 */
+  }
+  /* 紧贴年份的第一个列表向上靠拢 */
+  .pub-list p + ul { margin-top: 4px; }
+  /* 一些年份后可能有空的字体/换行节点，尽量覆盖常见情况 */
+  .pub-list p + font + ul,
+  .pub-list p + br + ul { margin-top: 4px; }
+  /* 年份标题与内容间距（与全局自定义CSS保持一致） */
+  h3 {
+    margin-top: 56px; /* 增加年份与上一年内容的距离 */
+    margin-bottom: 0;
+  }
   .pub-list ul {
     padding-left: 18px;
     margin-bottom: 6px;
@@ -33,6 +49,7 @@ group: publications
     list-style: disc; /* 确保显示项目符号 */
     background: transparent; /* 移除背景色 */
   }
+  .pub-list { margin-top: -16px !important; }
   /* 取消灰白交替背景 */
   .pub-list li:nth-child(even),
   .pub-list li:nth-child(odd) {
