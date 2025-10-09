@@ -1,4 +1,5 @@
 /* 用于publications页面的自定义样式 */
+/* 注意：h3标签和p>b标签的年份标题样式已统一，确保视觉一致性 */
 
 /* 基础样式设置 */
 .publication-list {
@@ -41,11 +42,11 @@
 
 /* 年份标题样式 */
 h3 {
-  margin-top: 56px;
+  margin-top: 80px; /* 增大与上一年内容的距离 */
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none; /* 去掉下边线，避免视觉空隙 */
-  font-weight: 500;
+  font-weight: 600;
   color: #222;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 19px;
@@ -65,13 +66,28 @@ h3 {
 /* 年份在部分页面为 <p><b>YYYY</b></p> 形式：统一控制间距 */
 .pub-list p > b {
   display: inline-block;
-  margin-top: 28px; /* 增大与上一组内容的距离 */
+  margin-top: 80px; /* 与h3标题保持一致的上边距 */
   margin-bottom: 0; /* 减小与下方列表的距离 */
+  font-size: 19px; /* 与h3标题保持一致的字体大小 */
+  font-weight: 600; /* 与h3标题保持一致的字体粗细 */
+  color: #222; /* 与h3标题保持一致的颜色 */
 }
 .pub-list p + ul,
 .pub-list p + font + ul,
-.pub-list p + br + ul {
-  margin-top: 4px; /* 列表向上靠拢年份 */
+.pub-list p + br + ul,
+.pub-list p + font + blockquote + font + font + ul,
+.pub-list p + font + blockquote + font + ul {
+  margin-top: 0; /* 减小年份与列表的距离，使列表紧贴年份 */
+}
+
+/* 确保h3标题下的内容与p>b标题下的内容间距一致 */
+h3 + ul,
+h3 + p + ul,
+h3 + br + ul,
+h3 + font + ul,
+h3 + blockquote + ul,
+h3 + font + blockquote + font + ul {
+  margin-top: 0; /* 减小年份与列表的距离，使列表紧贴年份 */
 }
 
 .pub-list li {
@@ -80,6 +96,16 @@ h3 {
   line-height: 1.6; /* 增加行高 */
   font-family: Arial, Helvetica, sans-serif; /* 指定字体 */
   font-size: var(--md-font-size-body1); /* 与全站正文一致 */
+}
+
+/* 增加列表最后一项与下一个年份之间的间距 */
+.pub-list ul {
+  margin-bottom: 40px; /* 增加列表底部边距，与下一个年份拉开距离 */
+}
+
+/* 确保列表项之间有足够的间距 */
+.pub-list li:last-child {
+  margin-bottom: 20px; /* 增加最后一个列表项的底部边距 */
 }
 
 /* 第一条目与年份更紧凑 */
@@ -152,7 +178,7 @@ h3 {
 }
 
 /* 减少论文标题和作者之间的间距 */
-.pub-list b {
+.pub-list li b {
   margin-left: 2px;
   margin-right: 2px;
   font-weight: 600;
@@ -195,4 +221,22 @@ h3 {
 .container-fluid {
   padding-left: 15px;
   padding-right: 15px;
-} 
+}
+
+/* 减少空白间距 */
+.pub-list br,
+.pub-list blockquote:empty,
+.pub-list font:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  line-height: 0;
+}
+
+/* 处理blockquote元素 */
+.pub-list blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
