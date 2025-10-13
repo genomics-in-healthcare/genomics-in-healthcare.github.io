@@ -267,6 +267,7 @@ a:active {
   border-bottom: none;
   font-weight: 500;
   font-size: var(--md-font-size-body1);
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .md-navigation-drawer__item:hover {
@@ -595,7 +596,7 @@ a:active {
   padding: var(--md-spacing-sm) var(--md-spacing-md);
   border: none;
   border-radius: var(--md-border-radius-sm);
-  font-family: var(--md-font-family);
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   font-size: var(--md-font-size-body2);
   font-weight: 500;
   text-transform: capitalize;
@@ -638,6 +639,7 @@ a:active {
   background-color: var(--md-primary);
   color: var(--md-on-primary);
   box-shadow: none;
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .md-button--primary:hover {
@@ -651,6 +653,7 @@ a:active {
   border: 2px solid var(--md-secondary);
   position: relative;
   overflow: hidden;
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .md-button--secondary:hover {
@@ -664,6 +667,7 @@ a:active {
   color: var(--md-primary);
   padding: var(--md-spacing-sm);
   position: relative;
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .md-button--text:hover {

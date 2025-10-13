@@ -3,6 +3,9 @@ description: "This is the official web page for the Genomics and Artificial Inte
 
 url: "https://genomics-in-healthcare.github.io/"
 
+# Allow future posts to be included
+future: true
+
 paginate: 10
 
 # 允许直接访问.htm文件
