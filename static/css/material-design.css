@@ -1283,6 +1283,7 @@ a:active {
 }
 
 .flat-post-content {
+  font-size: var(--md-font-size-h1);
   line-height: 1.6;
   color: var(--md-on-surface);
 }
