@@ -1,0 +1,201 @@
+name: 自动化测试
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # 每天凌晨2点运行完整测试
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      test_type:
+        description: '测试类型'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+        - all
+        - smoke
+        - regression
+        - performance
+
+jobs:
+  # 冒烟测试 - 快速验证基本功能
+  smoke-tests:
+    if: github.event_name == 'push' || github.event.inputs.test_type == 'smoke' || github.event.inputs.test_type == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 设置Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 安装依赖
+      run: npm install
+      
+    - name: 安装Playwright浏览器
+      run: npx playwright install --with-deps
+      
+    - name: 运行冒烟测试
+      run: npm run test:smoke
+      
+    - name: 上传测试报告
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: smoke-test-results
+        path: test-results/
+
+  # 回归测试 - 完整功能测试
+  regression-tests:
+    if: github.event_name == 'pull_request' || github.event.inputs.test_type == 'regression' || github.event.inputs.test_type == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]
+        
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 设置Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 安装依赖
+      run: npm install
+      
+    - name: 安装Playwright浏览器
+      run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+    - name: 运行回归测试
+      run: npm run test:regression
+      
+    - name: 上传测试报告
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: regression-test-results-${{ matrix.browser }}
+        path: test-results/
+
+  # 性能测试
+  performance-tests:
+    if: github.event_name == 'schedule' || github.event.inputs.test_type == 'performance' || github.event.inputs.test_type == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 设置Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 安装依赖
+      run: npm install
+      
+    - name: 安装Playwright浏览器
+      run: npx playwright install --with-deps
+      
+    - name: 运行性能测试
+      run: npm run test:performance
+      
+    - name: 上传性能测试报告
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: performance-test-results
+        path: test-results/
+
+  # 移动端测试
+  mobile-tests:
+    if: github.event_name == 'pull_request' || github.event.inputs.test_type == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 设置Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 安装依赖
+      run: npm install
+      
+    - name: 安装Playwright浏览器
+      run: npx playwright install --with-deps
+      
+    - name: 运行移动端测试
+      run: npx playwright test --project="Mobile Chrome" --project="Mobile Safari"
+      
+    - name: 上传移动端测试报告
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: mobile-test-results
+        path: test-results/
+
+  # 测试结果汇总
+  test-summary:
+    if: always()
+    needs: [smoke-tests, regression-tests, performance-tests, mobile-tests]
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 下载所有测试报告
+      uses: actions/download-artifact@v4
+      
+    - name: 生成测试摘要
+      run: |
+        echo "# 测试结果摘要" > test-summary.md
+        echo "## 测试时间: $(date)" >> test-summary.md
+        echo "" >> test-summary.md
+        
+        if [ -d "smoke-test-results" ]; then
+          echo "✅ 冒烟测试: 完成" >> test-summary.md
+        else
+          echo "❌ 冒烟测试: 未运行" >> test-summary.md
+        fi
+        
+        if [ -d "regression-test-results-chromium" ]; then
+          echo "✅ 回归测试: 完成" >> test-summary.md
+        else
+          echo "❌ 回归测试: 未运行" >> test-summary.md
+        fi
+        
+        if [ -d "performance-test-results" ]; then
+          echo "✅ 性能测试: 完成" >> test-summary.md
+        else
+          echo "❌ 性能测试: 未运行" >> test-summary.md
+        fi
+        
+        if [ -d "mobile-test-results" ]; then
+          echo "✅ 移动端测试: 完成" >> test-summary.md
+        else
+          echo "❌ 移动端测试: 未运行" >> test-summary.md
+        fi
+        
+    - name: 上传测试摘要
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-summary
+        path: test-summary.md
