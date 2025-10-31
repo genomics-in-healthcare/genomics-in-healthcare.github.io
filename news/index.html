@@ -16,7 +16,7 @@ group: news
 /* 添加新闻页面样式 - 更紧凑的布局 */
 .news-item {
   width: 100%;
-  padding: 6px 12px; /* 进一步减少内边距 */
+  padding: 6px 12px; /* 宽屏保持原有内边距 */
   margin-bottom: 4px; /* 进一步减少项目间距 */
   /* 移除边框并使用!important确保覆盖外部CSS */
   border-bottom: none !important;
@@ -115,10 +115,27 @@ p {
   margin-bottom: 4px;
   margin-top: 4px;
 }
-/* 减少容器边距 */
-.container-fluid {
-  padding-left: 10px;
-  padding-right: 10px;
+/* 移动端增加容器和新闻项内边距 */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .news-item {
+    padding: 12px 16px !important; /* 增加移动端内边距 */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .news-item {
+    padding: 12px 16px !important; /* 增加移动端内边距 */
+  }
 }
 /* 优化新闻内容显示 */
 .news-content p:last-child {

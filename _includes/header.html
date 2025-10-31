@@ -163,10 +163,15 @@
       
       .md-main-content {
         margin-top: 0;
-        padding: 24px;
+        padding-top: var(--md-spacing-lg);
+        padding-bottom: var(--md-spacing-lg);
+        padding-left: clamp(16px, 2.5vw, 32px);
+        padding-right: clamp(16px, 2.5vw, 32px);
+        width: 100%;
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        box-sizing: border-box;
         background-color: transparent;
       }
       /* Home page: remove top padding so hero can flush to top under fixed header */

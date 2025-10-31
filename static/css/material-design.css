@@ -785,10 +785,15 @@ a:active {
 /* Main Content Area */
 .md-main-content {
   margin-top: 64px;
-  padding: var(--md-spacing-lg);
+  padding-top: var(--md-spacing-lg);
+  padding-bottom: var(--md-spacing-lg);
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: clamp(16px, 2.5vw, 32px);
+  padding-right: clamp(16px, 2.5vw, 32px);
+  box-sizing: border-box;
   background-color: transparent;
 }
 
@@ -821,7 +826,7 @@ a:active {
   }
   
   .md-main-content {
-    padding: var(--md-spacing-md);
+    padding: var(--md-spacing-lg) var(--md-spacing-md);
   }
   
   .md-grid--2-cols,
@@ -890,7 +895,7 @@ a:active {
   
   .md-main-content {
     margin-top: 56px;
-    padding: var(--md-spacing-sm);
+    padding: var(--md-spacing-lg) var(--md-spacing-md);
   }
   
   .md-card__header,

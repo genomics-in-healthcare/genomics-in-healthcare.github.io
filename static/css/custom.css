@@ -742,3 +742,52 @@ height: 1em;
     line-height: 1.2;
   }
 }
+
+/* 响应式导航抽屉标题字体大小 */
+/* 选择导航抽屉头部中的标题div */
+.md-navigation-drawer__header a > div > div:first-child {
+  font-size: 0.8125rem !important; /* 13px - Hong Kong JC STEM Lab - 默认大小 */
+  font-weight: 600 !important;
+  color: #64748b !important;
+  line-height: 1.25 !important;
+}
+
+.md-navigation-drawer__header a > div > div:last-child {
+  font-size: 1.125rem !important; /* 18px - Genomics and AI in Healthcare - 默认大小 */
+  color: #1e3a8a !important;
+  line-height: 1.25 !important;
+  font-weight: 550 !important;
+}
+
+/* 中等屏幕（768px - 991px） */
+@media (max-width: 991px) and (min-width: 769px) {
+  .md-navigation-drawer__header a > div > div:first-child {
+    font-size: 0.75rem !important; /* 12px */
+  }
+
+  .md-navigation-drawer__header a > div > div:last-child {
+    font-size: 1rem !important; /* 16px */
+  }
+}
+
+/* 小屏幕（480px - 768px） */
+@media (max-width: 768px) and (min-width: 481px) {
+  .md-navigation-drawer__header a > div > div:first-child {
+    font-size: 0.6875rem !important; /* 11px */
+  }
+
+  .md-navigation-drawer__header a > div > div:last-child {
+    font-size: 0.9375rem !important; /* 15px */
+  }
+}
+
+/* 超小屏幕（480px 以下） */
+@media (max-width: 480px) {
+  .md-navigation-drawer__header a > div > div:first-child {
+    font-size: 0.625rem !important; /* 10px */
+  }
+
+  .md-navigation-drawer__header a > div > div:last-child {
+    font-size: 0.875rem !important; /* 14px */
+  }
+}
