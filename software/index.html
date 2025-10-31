@@ -24,6 +24,8 @@ group: software
   align-items: flex-start;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 /* 灰白交替背景 */
 .software-item:nth-child(even) {
@@ -33,20 +35,27 @@ group: software
   background-color: #fafafa;
 }
 .software-name {
-  min-width: 120px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
   margin-right: 10px;
   font-size: 14px;
   color: #444;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
+  flex-shrink: 0;
 }
 .software-description {
   flex: 1;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px !important;
-  max-width: 98%;
   color: #222;
   letter-spacing: normal;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
 }
 .section-header {
   font-size: 17px !important;

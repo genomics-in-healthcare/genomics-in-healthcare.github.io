@@ -157,9 +157,6 @@ p {
       {{ post.date | date: "%d/%m/%y" }}
     </div>
     <div class="news-content">
-      {% if post.title and post.title != "" %}
-        <h4 class="news-title">{{ post.title }}</h4>
-      {% endif %}
       {{ post.content }}
       
       {% if post.author or post.tags.size > 0 %}

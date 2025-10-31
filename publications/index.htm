@@ -36,12 +36,18 @@ group: publications
   }
   .pub-list ul {
     padding-left: 18px;
-    margin-bottom: 6px;
+    margin-bottom: 0; /* 减少列表底部间距 */
+    margin-top: 0; /* 去除列表顶部间距 */
     list-style-type: disc; /* 显示圆点 */
   }
+  /* 消除连续ul列表之间的间距 */
+  .pub-list ul + ul {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
   .pub-list li {
-    margin: 0 0 2px 0; /* 项目之间最小间距 */
-    padding: 0; /* 去除额外内边距，避免明显分隔 */
+    margin: 0 !important; /* 完全去除项目之间的间距 */
+    padding: 0 !important; /* 去除额外内边距，避免明显分隔 */
     line-height: 1.5; /* 与正文一致的行距 */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -68,8 +74,11 @@ group: publications
   /* 文本样式 */
   .pub-list font {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.2;
+    line-height: 1.5; /* 统一行距 */
     font-size: 15px;
+    margin: 0;
+    padding: 0;
+    display: inline; /* 确保font标签不会产生块级间距 */
   }
   /* 分割线 */
   .pub-list hr {
@@ -80,7 +89,7 @@ group: publications
   /* 段落 */
   .pub-list p {
     margin-bottom: 6px;
-    line-height: 1.2;
+    line-height: 1.5; /* 统一行距 */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
   }
@@ -101,14 +110,34 @@ group: publications
     color: #1a73e8;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0; /* 修复链接间距 */
   }
   .pub-list a:hover {
     text-decoration: none;
+  }
+  /* 修复[software]等链接中]的间距 */
+  .pub-list a:after {
+    content: "";
+    letter-spacing: 0;
   }
   /* 增加容器边距 */
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  /* 确保Book部分在小屏幕上显示 */
+  .pub-list > font {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+  .pub-list blockquote {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
   }
   /* 调整列表项内论文标题加粗效果 */
   .pub-list li b {
@@ -117,7 +146,27 @@ group: publications
   }
   /* 优化列表内容 */
   .pub-list li p {
-    margin-bottom: 0;
+    margin: 0 !important; /* 完全去除段落的所有边距 */
+    padding: 0 !important;
+    line-height: 1.5; /* 保持行高一致性 */
+  }
+  /* 确保列表项内所有元素都不会产生额外间距 */
+  .pub-list li * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  /* 确保所有span标签也是inline，不产生额外间距 */
+  .pub-list li span {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  /* 确保所有元素的行距一致 */
+  .pub-list li,
+  .pub-list li p,
+  .pub-list li font,
+  .pub-list li span {
+    line-height: 1.5 !important;
   }
   /* 减少空白间距 */
   .pub-list br {
@@ -278,11 +327,8 @@ href="https://engineering.wustl.edu/news/Pages/Big-data-analysis-leads-to-discov
             grass (<i>Pennisetum purpureum Schum.</i>)</a>, bioRxiv.<br>
         </li>
       </ul>
-      </ul>
-    </font><font face="Arial">
       <ul>
-        <li><font face="Arial"><font face="Arial"><font face="Arial"><font
-                  face="Arial">M. Li, D. Jin, D. He, and <strong>W. Zhang</strong>, <b>Modeling
+        <li><font face="Arial">M. Li, D. Jin, D. He, and <strong>W. Zhang</strong>, <b>Modeling
                     with node popularities for autonomous overlapping
                     community detection</b>, <u><i>ACM Transactions on
                       Information Systems</i></u>, 11(3):27, 2020</font></font></font></font>.</li>
@@ -937,10 +983,6 @@ table.MsoNormalTable
                     style="text-decoration: underline;"></span></b></font></font></p>
         </li>
       </ul>
-      <meta http-equiv="Content-Type" content="text/html;
-        charset=windows-1252">
-      <meta http-equiv="Content-Type" content="text/html;
-        charset=windows-1252">
       <ul>
         <li>
           <p><font face="Arial">G. Jager, S. Climer and <strong>W. Zhang</strong></font><font
@@ -994,7 +1036,6 @@ table.MsoNormalTable
               style="font-weight: bold; font-style: italic;
               text-decoration: underline;"><em></em></strong></font></li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">H. Peng, Z. Chen, Z. Fang, J. Zhou, Z.
             Xia, L. Gao, L. Chen, L. Li, T. Li, W. Zhai, and <strong>W. Zhang</strong>*,
@@ -1025,7 +1066,6 @@ table.MsoNormalTable
           </p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">D. He, D. Jin, Z. Chen and <strong>W. Zhang</strong>, <a href="https://www.nature.com/articles/srep08638">Identification
 
@@ -1045,25 +1085,13 @@ table.MsoNormalTable
                 Austin, Texas, USA. </font></p>
         </li>
         <li>
-          <p><font face="Arial">D. Jin, Z. Chen, D. He and <strong>W. Zhang</strong>, <a href="nodeDegreeAAA15.pdf">Modeling
-
-
-
-                with node degree preservation can accurately find
-                communities</b>, </font><font face="Arial"><i>Pr</i><i>oc
-
-
-
-                2</i><i>9-</i><i>th AAAI Conf</i><i> on A</i><i>I</i>
-              (AAAI-15), Jan 25-30, Austin, Texas, USA. </font><br>
-          </p>
+          <p><font face="Arial">D. Jin, Z. Chen, D. He and <strong>W. Zhang</strong>, <span style="font-weight: bold;">Modeling with node degree preservation can accurately find communities</span>, <i>Proc 29-th AAAI Conf on AI</i> (AAAI-15), Jan 25-30, Austin, Texas, USA. <a href="nodeDegreeAAA15.pdf"><img alt="" src="pdf.jpg" style="border: 0px solid ; width: 12px; height: 13px;"></a></font></p>
         </li>
-        <li><font face="Arial">D. He, D. Liu, D. Jin and <strong>W. Zhang</strong>, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9595">
-              stochastic model for the detection of heterogeneous link
-              communities in complex networks</a>, </font><font
-            face="Arial"><i>Pr</i><i>oc 2</i><i>9-</i><i>th AAAI Conf</i><i>
-              on A</i><i>I</i> (AAAI-15), Jan 25-30, Austin, Texas, USA.
-              </font></li>
+        <li>
+          <p><font face="Arial">D. He, D. Liu, D. Jin and <strong>W. Zhang</strong>, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9595">A stochastic model for the detection of heterogeneous link
+              communities in complex networks</a>, <i>Proc 29-th AAAI Conf on AI</i> (AAAI-15), Jan 25-30, Austin, Texas, USA.
+              </font></p>
+        </li>
       </ul>
       <font face="Arial"> </font>
       <p><font face="Arial"><b>2014 <a name="2014" id="2005"></a></b></font></p>
@@ -1090,7 +1118,6 @@ table.MsoNormalTable
               Communications</span>, 5:5110, 2014. <br>
           </font> </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial"> S. Climer*, A. Templeton and <strong>W. Zhang</strong>*,
             <a href="https://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003766">Allele-specific network reveals combinatorial
@@ -1146,7 +1173,6 @@ table.MsoNormalTable
               14(1):207, 2014. </font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">Z. Chen and <strong>W. Zhang</strong>, A marginalized denoising method
               for link prediction in relational data,<span
@@ -1208,7 +1234,6 @@ table.MsoNormalTable
                 href="http://dl.acm.org/citation.cfm?id=2542200"><img
                   alt="" src="pdf.jpg" width="12" height="13" border="0"></a></font></li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
       </ul>
       <font face="Arial"> <strong style="text-decoration: underline;"></strong>
@@ -1248,7 +1273,6 @@ href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0047863
               2012. <a href="honeybee.pdf"><img alt="" src="pdf.jpg"
                   width="12" height="13" border="0"></a></font></li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial"><strong>W. Zhang</strong>*, X. Zhou, J. Xia and X. Zhou,
               <b>Identification of
@@ -1653,7 +1677,6 @@ table.MsoNormalTable
             <!--StartFragment--><!--EndFragment--> </p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial"> D. He, D. Liu, <strong>W. Zhang</strong>, B. Yang and D.
             Jin, <b>Discovering link communities in complex networks by
@@ -1675,7 +1698,6 @@ table.MsoNormalTable
                   border="0"></a></font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">R. Huang, Y. Chen and <strong>W. Zhang</strong>, <span
               style="font-weight: bold;">SAS+ planning as Satisfiability</span>,<span
@@ -1714,9 +1736,6 @@ table.MsoNormalTable
                 border: 0px solid; width: 12px; height: 13px;"></a></font></li>
       </ul>
       <font face="Arial"> <b>2010 <a name="2010" id="2005"></a></b> </font>
-      <ul>
-      </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial"><strong style="font-weight: bold;
@@ -1880,7 +1899,6 @@ table.MsoNormalTable
               italic;">Link Mining: Models, Algorithms and Applications</span>,
             Springer, pp.557-68, 2010.</font></li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">X. Zhou, J. Ruan and <strong>W. Zhang</strong>, <span
               style="font-weight: bold;">Promoter prediction based on a
@@ -1889,7 +1907,6 @@ table.MsoNormalTable
               Bioinformatics and Computational Biology</span>, Aug. 2-4,
             2010, Niagara Falls, NY, USA, accepted as a full paper.</font></li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">S. Climer, A. Templeton and <strong>W. Zhang</strong>, <span
@@ -1902,7 +1919,6 @@ table.MsoNormalTable
             </font> </p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">G. Jaeger and <strong>W. Zhang</strong>, <span
               style="font-weight: bold;">Phase transitions of and an
@@ -1942,7 +1958,6 @@ table.MsoNormalTable
               code</a>)<br>
           </font> </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li><font face="Arial">G. Jaeger and <strong>W. Zhang</strong>, A SAT based
             effective algorithm for the directed Hamiltonian cycle
@@ -2041,7 +2056,6 @@ table.MsoNormalTable
             </font> </p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">S. Climer, G. Jaeger, A. Templeton and
@@ -2061,7 +2075,6 @@ table.MsoNormalTable
               Sept, 7-9, 2009.</font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">Y. Chen, R. Huang, Z. Xing and <strong>W. Zhang</strong>,
@@ -2187,7 +2200,6 @@ href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0001564
               </a></font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">Y. Chen, R. Huang and <strong>W. Zhang</strong>, <span
@@ -2305,7 +2317,6 @@ href="http://nar.oxfordjournals.org/cgi/content/full/gkl814v1"><img
               2007.</font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">R. Souvenir, J. Buhler, G. Stormo and W.
@@ -2314,8 +2325,7 @@ href="http://nar.oxfordjournals.org/cgi/content/full/gkl814v1"><img
               <em>Methods in Molecular Biology, </em>402:245-68, 2007.
               <a href="pcrprimer.pdf"><img alt="" src="pdf.jpg"
                   style="border: 0px solid ; width: 12px; height: 13px;"></a>
-              [<a
-                href="http://www.cse.wustl.edu/%7Ezhang/projects/mips.zip">software</a>]</font></p>
+              [<a href="http://www.cse.wustl.edu/%7Ezhang/projects/mips.zip">software</a>]</font></p>
         </li>
         <li>
           <p><font face="Arial">M. Ray, J. Freudenberg and <strong>W. Zhang</strong>*, <span
@@ -2330,10 +2340,8 @@ href="http://nar.oxfordjournals.org/cgi/content/full/gkl814v1"><img
                   height: 13px;"></a></font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
-        <font color="#000099"> </font>
-        <li><font color="#000099"> </font>
+        <li>
           <p><font face="Arial">Z. Xing, Y. Chen and <strong>W. Zhang</strong>, <span
                 style="font-weight: bold;">Long-distance mutual
                 exclusions for propositional planning</span>, <span
@@ -2360,7 +2368,7 @@ href="http://nar.oxfordjournals.org/cgi/content/full/gkl814v1"><img
 
 
 
-              2006.&nbsp; [<a href="http://cic.cse.wustl.edu/wordspy">software</a>]&nbsp;
+              2006.&nbsp;[<a href="http://cic.cse.wustl.edu/wordspy">software</a>]&nbsp;
 
 
 
@@ -2370,7 +2378,6 @@ href="http://nar.oxfordjournals.org/cgi/content/full/gkl814v1"><img
                 91px; height: 12px;" alt="" src="highlyaccessed.gif"></font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">S. Climer and <strong>W. Zhang</strong>, <span
@@ -2431,7 +2438,6 @@ href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Retrieve&a
               San Diego, Dec. 1-3, 2006, (oral presentation).</font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">S. Climer and <strong>W. Zhang</strong>, <span
@@ -2547,7 +2553,6 @@ href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=pubmed&a
               in <em>PLoS Computational Biology</em>.</font></p>
         </li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
         <li>
           <p><font face="Arial">R. Korf, <strong>W. Zhang</strong>, I. Thayer and H.
@@ -2606,8 +2611,7 @@ href="http://portal.acm.org/citation.cfm?id=1089023.1089024&amp;coll=GUIDE&amp;d
 
 
 
-              2004.&nbsp; [<a href="http://cic.cse.wustl.edu/RNA/">web
-                server</a>]&nbsp; <a
+              2004.&nbsp;[<a href="http://cic.cse.wustl.edu/RNA/">web server</a>]&nbsp; <a
 href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=pubmed&amp;dopt=Abstract&amp;list_uids=15215368&amp;query_hl=8"><img
                   alt="" src="pdf.jpg" style="border: 0px solid ; width:
                   12px; height: 13px;"></a></font></p>
@@ -2652,9 +2656,6 @@ href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=pubmed&a
                 href="http://www-smi.stanford.edu/projects/helix/psb04/buhler.pdf"><img
                   alt="" src="pdf.jpg" style="border: 0px solid ; width:
                   12px; height: 13px;"></a></font></p>
-          <p style="text-decoration: underline;"><font face="Arial"
-              color="#000099"><strong>Heuristic search and combinatorial
-                optimization</strong></font> </p>
         </li>
         <li>
           <p><font face="Arial"><strong>W. Zhang</strong>,<span style="font-weight:
@@ -3250,7 +3251,6 @@ Combinatorial
               Problems</a>, <em>17th International Joint Conference on
               Artificial Intelligence (IJCAI-01).</em><em></em></font></li>
       </ul>
-      <font face="Arial"> </font>
       <ul>
       </ul>
     </font>

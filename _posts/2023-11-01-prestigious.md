@@ -1,6 +1,8 @@
 ---
 published: True
-title: Weixiong was selected into the list of "Top 2% of Global Scientists".
+title: ""
 layout: post
 group: news
 ---
+
+Weixiong was selected into the list of "Top 2% of Global Scientists".
