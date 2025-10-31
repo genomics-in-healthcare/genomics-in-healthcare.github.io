@@ -10,3 +10,6 @@ wsl -e bash -c "cd /mnt/d/documents/genomics-in-healthcare.github.io && bundle e
 pause
 
 
+
+
+

@@ -614,33 +614,65 @@ height: 1em;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    flex-shrink: 0; /* 防止按钮被压缩 */
+    min-width: 44px; /* 确保按钮有足够宽度 */
   }
   
   /* Logo 和标题容器靠左 */
-  .md-app-bar__container > div[style*="display: flex"] {
+  .md-app-bar__brand {
     display: flex !important;
     align-items: center;
     justify-content: flex-start;
     flex: 1;
     margin: 0;
+    min-width: 0; /* 允许内容收缩 */
+    padding-right: 60px; /* 为汉堡按钮预留空间 */
+    overflow: hidden; /* 防止内容溢出 */
   }
   
-  /* Logo 样式调整 */
+  /* Logo 样式调整 - 保持与标题的比例 */
   .md-app-bar__logo {
     display: block;
-    height: 32px;
+    height: 36px !important; /* 从 43px 缩小到 36px (约 84%) */
     width: auto;
-    margin: 0;
+    margin: 0 12px 0 0 !important; /* 从 14px 缩小到 12px，保持比例 */
+    flex-shrink: 0; /* 防止 logo 被压缩 */
   }
   
-  /* 标题文字靠左 */
-  .md-app-bar__container > div[style*="display: flex"] > div {
+  /* Logo 链接容器 */
+  .md-app-bar__brand > a {
+    display: flex !important;
+    align-items: center;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  /* 标题文字容器 */
+  .md-app-bar__title {
     text-align: left;
+    min-width: 0;
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  /* 标题文字允许换行和截断，但两个都显示 */
+  .md-app-bar__title-main,
+  .md-app-bar__title-sub {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
 
-  /* 窄屏下主标题字号与菜单一致（18px） */
-  .md-app-bar__container > div[style*="display: flex"] > div > div:first-child {
-    font-size: 1.125rem;
+  /* 平板屏幕下缩小标题，保持两个都显示 */
+  .md-app-bar__title-main {
+    font-size: 0.8125rem !important; /* 保持原始大小 13px */
+  }
+  
+  .md-app-bar__title-sub {
+    font-size: 1.0625rem !important; /* 从 18px 稍微缩小到 17px，保持与主标题的比例 */
   }
 }
 
@@ -652,22 +684,61 @@ height: 1em;
   
   #menuButton {
     right: 15px; /* 调整按钮位置 */
+    min-width: 44px; /* 确保按钮有足够宽度 */
   }
   
+  /* Logo 和标题容器需要更多右边距 */
+  .md-app-bar__brand {
+    padding-right: 55px !important; /* 为汉堡按钮预留空间 */
+  }
+  
+  /* 缩小 logo，保持与标题的比例 */
   .md-app-bar__logo {
-    height: 28px;
+    height: 32px !important; /* 从 43px 缩小到 32px (约 74%) */
+    margin-right: 10px !important; /* 从 14px 缩小到 10px，保持比例 */
   }
   
-  /* 超小屏幕下的标题文字调整 */
-  .md-app-bar__container > div[style*="display: flex"] > div {
-    font-size: 0.9rem; /* 保持容器基准字体 */
+  /* 同时显示两个标题，按比例缩小 */
+  .md-app-bar__title-main {
+    font-size: 0.75rem !important; /* 从 0.8125rem (13px) 缩小到 0.75rem (12px) */
+    line-height: 1.2;
   }
   
-  .md-app-bar__container > div[style*="display: flex"] > div > div:first-child {
-    font-size: 1.0625rem; /* 主标题：17px 与菜单一致 */
+  .md-app-bar__title-sub {
+    font-size: 1rem !important; /* 从 1.125rem (18px) 缩小到 1rem (16px)，保持与主标题的比例 */
+    line-height: 1.2;
+  }
+}
+
+/* 超小屏幕优化（360px 以下） */
+@media (max-width: 360px) {
+  .md-app-bar__container {
+    padding: 0 12px;
   }
   
-  .md-app-bar__container > div[style*="display: flex"] > div > div:last-child {
-    font-size: 0.8rem; /* 副标题 */
+  #menuButton {
+    right: 12px;
+    min-width: 40px;
+  }
+  
+  .md-app-bar__brand {
+    padding-right: 50px !important;
+  }
+  
+  /* 进一步缩小，保持比例 */
+  .md-app-bar__logo {
+    height: 28px !important; /* 进一步缩小 */
+    margin-right: 8px !important; /* 按比例缩小 */
+  }
+  
+  /* 两个标题都显示，进一步缩小 */
+  .md-app-bar__title-main {
+    font-size: 0.6875rem !important; /* 11px，保持与副标题的比例 */
+    line-height: 1.2;
+  }
+  
+  .md-app-bar__title-sub {
+    font-size: 0.875rem !important; /* 14px，保持与主标题的比例 (约 1.27 倍) */
+    line-height: 1.2;
   }
 }

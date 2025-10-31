@@ -30,3 +30,6 @@ echo "启动Jekyll服务器在 http://localhost:4000"
 bundle exec jekyll serve --force_polling --host 0.0.0.0 --port 4000
 
 
+
+
+

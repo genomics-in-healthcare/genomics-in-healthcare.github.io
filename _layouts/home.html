@@ -19,16 +19,16 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 32px 0;
     position: relative;
     margin-top: 60px;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: visible;
   ">
-  <div style="text-align: center; width: 100%; max-width: 1200px; padding: 0 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto;">
-    <h1 style="font-size: 1.5rem; font-weight: 400; margin: 0 0 24px 0; line-height: 1.4; color: #334155; text-shadow: 1px 1px 2px rgba(0,0,0,0.06); text-align: center; width: 100%; display: block; font-family: 'Georgia', 'Times New Roman', 'serif'; letter-spacing: 0.02em;">
+  <div style="text-align: center; width: 100%; max-width: 1200px; padding: 0 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto; word-wrap: break-word; overflow-wrap: break-word;">
+    <h1 style="font-size: 1.5rem; font-weight: 400; margin: 0; line-height: 1.5; color: #334155; text-shadow: 1px 1px 2px rgba(0,0,0,0.06); text-align: center; width: 100%; display: block; font-family: 'Georgia', 'Times New Roman', 'serif'; letter-spacing: 0.02em; word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;">
       Our mission is to advance AI and genomic technologies to enable personalized diagnosis and treatment for complex diseases, especially cancer and neuropsychiatric disorders like depression and schizophrenia. We focus on developing and combining AI with biological techniques, including reliable, explainable machine learning and single-cell spatial transcriptomics. Our research is highly interdisciplinary, spanning AI, data science, molecular biology, genetics, genomics, and neuroscience
     </h1>
   </div>
@@ -46,32 +46,41 @@
     margin-top: 56px !important;
     background-size: cover !important;
     background-position: center !important;
-    height: 35vh !important;
-    min-height: 200px !important;
-    max-height: 320px !important;
+    height: auto !important; /* 改为自动高度，适应内容 */
+    min-height: 280px !important; /* 增加最小高度 */
+    max-height: none !important; /* 移除最大高度限制 */
+    padding: 32px 0 !important; /* 添加上下内边距 */
+    overflow: visible !important; /* 允许内容显示 */
   }
   
   .hero-section > div {
     max-width: 100% !important;
-    padding: 0 16px !important;
+    padding: 0 20px !important; /* 增加左右内边距 */
+    min-height: 0 !important;
   }
   
   .hero-section h1 {
-    font-size: 1.25rem !important;
+    font-size: 1.1rem !important; /* 稍微减小字体 */
     text-align: center !important;
-    margin: 0 auto 24px auto !important;
+    margin: 0 !important; /* 移除底部margin */
     width: 100% !important;
     display: block !important;
-    line-height: 1.4 !important;
+    line-height: 1.5 !important; /* 增加行高 */
     font-family: 'Georgia', 'Times New Roman', 'serif' !important;
     font-weight: 400 !important;
-    letter-spacing: 0.02em !important;
+    letter-spacing: 0.01em !important; /* 减小字间距 */
+    word-wrap: break-word !important; /* 允许单词换行 */
+    overflow-wrap: break-word !important; /* 现代浏览器支持 */
+    hyphens: auto !important; /* 自动断字 */
+    padding: 0 !important;
   }
   
   .hero-section p {
-    font-size: 1.125rem !important;
+    font-size: 1rem !important;
     max-width: 100% !important;
-    padding: 0 16px !important;
+    padding: 0 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
 }
 
@@ -84,32 +93,58 @@
     margin-top: 56px !important;
     background-size: cover !important;
     background-position: center !important;
-    height: 35vh !important;
-    min-height: 180px !important;
-    max-height: 280px !important;
+    height: auto !important; /* 改为自动高度 */
+    min-height: 260px !important; /* 增加最小高度 */
+    max-height: none !important; /* 移除最大高度限制 */
+    padding: 28px 0 !important; /* 添加上下内边距 */
+    overflow: visible !important; /* 允许内容显示 */
   }
   
   .hero-section > div {
     max-width: 100% !important;
+    padding: 0 16px !important; /* 增加左右内边距 */
+    min-height: 0 !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 1rem !important; /* 进一步减小字体 */
+    text-align: center !important;
+    margin: 0 !important; /* 移除底部margin */
+    width: 100% !important;
+    display: block !important;
+    line-height: 1.5 !important; /* 增加行高 */
+    font-family: 'Georgia', 'Times New Roman', 'serif' !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.01em !important; /* 减小字间距 */
+    word-wrap: break-word !important; /* 允许单词换行 */
+    overflow-wrap: break-word !important; /* 现代浏览器支持 */
+    hyphens: auto !important; /* 自动断字 */
+    padding: 0 !important;
+  }
+  
+  .hero-section p {
+    font-size: 0.9rem !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+  .hero-section {
+    min-height: 240px !important;
+    padding: 24px 0 !important;
+  }
+  
+  .hero-section > div {
     padding: 0 12px !important;
   }
   
   .hero-section h1 {
-    font-size: 1.125rem !important;
-    text-align: center !important;
-    margin: 0 auto 24px auto !important;
-    width: 100% !important;
-    display: block !important;
+    font-size: 0.95rem !important;
     line-height: 1.4 !important;
-    font-family: 'Georgia', 'Times New Roman', 'serif' !important;
-    font-weight: 400 !important;
-    letter-spacing: 0.02em !important;
-  }
-  
-  .hero-section p {
-    font-size: 1rem !important;
-    max-width: 100% !important;
-    padding: 0 12px !important;
   }
 }
 
