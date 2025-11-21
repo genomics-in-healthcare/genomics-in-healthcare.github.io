@@ -1,3 +1,7 @@
+<h3>2025</h3>
+
+·  [ml/dm] L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and **W. Zhang**, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training (preprint), 2025.
+
 <h3>2024</h3>
 
 ·  [ml/dm] D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, **W. Zhang**, Exploitation of a latent mechanism in graph contrastive learning: Representation scattering, Proc 38-th Conf on Neural Information Processing Systems (NeurIPS 2024).
