@@ -1,6 +1,6 @@
 <h3>2025</h3>
 
-·  [ml/dm] Y. Zhu, S. Wang, Y. Han, Y. Lu, A. Xiong, S. Qiu, L. N. Jin, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, A Transformer-Based Deep Learning Framework for Predicting Air Organic Pollutant-Human Protein Interactions, Environmental Science & Technology, 2025, accepted.
+·  [ml/dm] Y. Zhu, S. Wang, Y. Han, Y. Lu, A. Xiong, S. Qiu, L. N. Jin, and <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant-Human Protein Interactions, Environmental Science & Technology, 2025, accepted.
 <br>
 <br>
 ·  [ml/dm] C. Pan, X. Zhang, H. Zheng, Z. Su, C. Zhang, <span style="color:blue; font-weight:bold; font-style:italic;">W. Zhang</span>, Adaptive Control of Dynamic Networks, IEEE Transactions on Network Science and Engineering, 14(8), 2025.
