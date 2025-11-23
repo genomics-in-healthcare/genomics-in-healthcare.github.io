@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import type { SectionProps } from '../../types/components'
 import './Section.css'
 
 /**

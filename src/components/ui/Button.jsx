@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import type { ButtonProps } from '../../types/components'
 import './Button.css'
 
 /**

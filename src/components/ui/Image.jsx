@@ -1,6 +1,5 @@
 import { memo } from 'react'
 import { siteConfig } from '../../data/navigation'
-import type { ImageProps } from '../../types/components'
 import './Image.css'
 
 /**

@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import type { CardProps } from '../../types/components'
 import './Card.css'
 
 /**

@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import type { ContainerProps } from '../../types/components'
 import './Container.css'
 
 /**
