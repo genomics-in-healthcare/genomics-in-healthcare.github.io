@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hong Kong JC STEM Lab of Genomics and AI in Healthcare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="This is the official web page for the Genomics and Artificial Intelligence in Healthcare Lab at Hong Kong PolyU.">
+    <meta name="theme-color" content="#1e88e5">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Google Fonts - Inter (JC STEM Style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Anthropic Serif Font -->
+    <style>
+      @font-face {
+        font-family: 'Anthropic Serif';
+        src: url('https://cdn.anthropic.com/fonts/anthropic-serif.woff2') format('woff2'),
+             url('https://cdn.anthropic.com/fonts/anthropic-serif.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="/static/css/material-design.css">
+    
+    <!-- Site Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <!-- Publications page custom CSS -->
+    <link rel="stylesheet" href="/static/css/publications-custom.css">
+    
+    <!-- Material Design JavaScript -->
+    <script src="/static/js/material-design.js" defer></script>
+    
+    <!-- 强制覆盖侧边栏活跃状态样式 -->
+    <style>
+      /* 强制覆盖所有可能的侧边栏活跃状态样式 */
+      .md-navigation-drawer__item,
+      .md-navigation-drawer__item.active,
+      .md-navigation-drawer__item--active,
+      .md-navigation-drawer .active,
+      .md-navigation-drawer .nav-item.active .md-navigation-drawer__item,
+      .md-navigation-drawer .nav-item.active .md-menu-item,
+      .md-navigation-drawer .navbar-nav .nav-item.active .md-menu-item {
+        background-color: transparent !important;
+        background: transparent !important;
+        color: #1a1c1e !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-weight: 500 !important;
+      }
+      
+      /* 覆盖悬停状态，确保没有特殊效果 */
+      .md-navigation-drawer__item:hover,
+      .md-navigation-drawer__item:focus {
+        background-color: transparent !important;
+        color: #1a1c1e !important;
+      }
+    </style>
+    
+    <!-- Cache Clear Script -->
+    <script>
+      // 检查并清除旧版本缓存
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            if (registration.scope.includes('genomics-in-healthcare.github.io')) {
+              registration.unregister().then(function(boolean) {
+                console.log('Service Worker 已注销，缓存将自动清除');
+                // 清除所有缓存
+                caches.keys().then(function(cacheNames) {
+                  return Promise.all(
+                    cacheNames.map(function(cacheName) {
+                      return caches.delete(cacheName);
+                    })
+                  );
+                });
+              });
+            }
+          }
+        });
+      }
+    </script>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="/static/img/logo/logo.png" as="image">
+    
+    <!-- Inline critical CSS -->
+    <style>
+      /* Critical rendering path optimization */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        background-image: 
+          radial-gradient(circle at 20px 20px, rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+          radial-gradient(circle at 40px 40px, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+        color: #1e293b;
+      }
+      
+      /* Prevent layout shift */
+      .md-app-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: transparent;
+        color: #1e293b;
+        box-shadow: none;
+        border-bottom: none;
+        transition: all 0.3s ease-in-out;
+      }
+      /* Home: use solid white navbar */
+      body.home .md-app-bar {
+        background-color: #ffffff !important;
+        color: #1e293b;
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      body.home .md-app-bar a,
+      body.home .md-app-bar .md-button,
+      body.home .md-app-bar .material-icons,
+      body.home .md-app-bar h1 {
+        color: #1e293b !important;
+      }
+      body.home .md-app-bar .md-button--active {
+        color: #1e40af !important;
+      }
+      
+      /* 滚动时导航栏显现的样式 */
+      .md-app-bar.scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .md-app-bar a,
+      .md-app-bar .md-button,
+      .md-app-bar .material-icons,
+      .md-app-bar h1 {
+        color: #1e293b;
+      }
+      .md-app-bar .md-button--active {
+        color: #1e40af;
+        background-color: transparent;
+        font-weight: 600;
+      }
+      
+      .md-main-content {
+        margin-top: 0;
+        padding-top: var(--md-spacing-lg);
+        padding-bottom: var(--md-spacing-lg);
+        padding-left: clamp(16px, 2.5vw, 32px);
+        padding-right: clamp(16px, 2.5vw, 32px);
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        background-color: transparent;
+      }
+      /* Home page: remove top padding so hero can flush to top under fixed header */
+      body.home .md-main-content {
+        padding-top: 0;
+      }
+      /* Add top spacing below fixed header on all non-Home pages */
+      body.non-home .md-main-content {
+        padding-top: 40px;
+      }
+      
+      /* Syntax highlighting styles */
+      .highlight { background: #ffffff; }
+      .highlight .c { color: #999988; font-style: italic }
+      .highlight .err { color: #a61717; background-color: #e3d2d2 }
+      .highlight .k { font-weight: bold }
+      .highlight .o { font-weight: bold }
+      .highlight .cm { color: #999988; font-style: italic }
+      .highlight .cp { color: #999999; font-weight: bold }
+      .highlight .c1 { color: #999988; font-style: italic }
+      .highlight .cs { color: #999999; font-weight: bold; font-style: italic }
+      .highlight .gd { color: #000000; background-color: #ffdddd }
+      .highlight .gd .x { color: #000000; background-color: #ffaaaa }
+      .highlight .ge { font-style: italic }
+      .highlight .gr { color: #aa0000 }
+      .highlight .gh { color: #999999 }
+      .highlight .gi { color: #000000; background-color: #ddffdd }
+      .highlight .gi .x { color: #000000; background-color: #aaffaa }
+      .highlight .go { color: #888888 }
+      .highlight .gp { color: #555555 }
+      .highlight .gs { font-weight: bold }
+      .highlight .gu { color: #aaaaaa }
+      .highlight .gt { color: #aa0000 }
+      .highlight .kc { font-weight: bold }
+      .highlight .kd { font-weight: bold }
+      .highlight .kp { font-weight: bold }
+      .highlight .kr { font-weight: bold }
+      .highlight .kt { color: #445588; font-weight: bold }
+      .highlight .m { color: #009999 }
+      .highlight .s { color: #d14 }
+      .highlight .na { color: #008080 }
+      .highlight .nb { color: #0086B3 }
+      .highlight .nc { color: #445588; font-weight: bold }
+      .highlight .no { color: #008080 }
+      .highlight .ni { color: #800080 }
+      .highlight .ne { color: #990000; font-weight: bold }
+      .highlight .nf { color: #990000; font-weight: bold }
+      .highlight .nn { color: #555555 }
+      .highlight .nt { color: #000080 }
+      .highlight .nv { color: #008080 }
+      .highlight .ow { font-weight: bold }
+      .highlight .w { color: #bbbbbb }
+      .highlight .mf { color: #009999 }
+      .highlight .mh { color: #009999 }
+      .highlight .mi { color: #009999 }
+      .highlight .mo { color: #009999 }
+      .highlight .sb { color: #d14 }
+      .highlight .sc { color: #d14 }
+      .highlight .sd { color: #d14 }
+      .highlight .s2 { color: #d14 }
+      .highlight .se { color: #d14 }
+      .highlight .sh { color: #d14 }
+      .highlight .si { color: #d14 }
+      .highlight .sx { color: #d14 }
+      .highlight .sr { color: #009926 }
+      .highlight .s1 { color: #d14 }
+      .highlight .ss { color: #990073 }
+      .highlight .bp { color: #999999 }
+      .highlight .vc { color: #008080 }
+      .highlight .vg { color: #008080 }
+      .highlight .vi { color: #008080 }
+      .highlight .il { color: #009999 }
+    </style>
+    <!-- Global logo sizing -->
+    <style>
+      /* Standardize all brand logos heights site-wide */
+      img[src*="/static/img/logo/"] {
+        max-height: 60px !important;
+        height: auto !important;
+        width: auto !important;
+        max-width: 100% !important;
+        vertical-align: middle;
+      }
+      @media (max-width: 480px) {
+        img[src*="/static/img/logo/"] { max-height: 48px !important; }
+      }
+      /* Keep header/drawer site logo at fixed height */
+      img.md-app-bar__logo,
+      img.md-navigation-drawer__logo {
+        max-height: none !important;
+        height: 43px !important;
+        width: auto !important;
+      }
+    </style>
+    <!-- Override: remove underline on link focus globally -->
+    <style>
+      a:focus,
+      a:focus-visible,
+      a:focus:hover,
+      a:active:focus,
+      a:visited:focus,
+      .md-app-bar a:focus,
+      .md-app-bar a:focus-visible,
+      .md-app-bar a:focus:hover,
+      .md-navigation-drawer__item:focus,
+      .md-navigation-drawer__item:focus-visible,
+      .md-navigation-drawer__item:focus:hover,
+      .navbar a:focus,
+      .navbar a:focus-visible,
+      .navbar a:focus:hover,
+      .md-button:focus,
+      .md-button:focus-visible,
+      .md-button:focus:hover {
+        text-decoration: none !important;
+      }
+    </style>
+    
+    
+    <link rel="alternate" type="application/atom+xml" title="Genomics and AI in Healthcare Lab News Feed" href="/news.xml">
+    
+  </head>
+
+  <body class="non-home">
+    <!-- Clean App Bar -->
+    <header class="md-app-bar">
+      <div class="md-app-bar__container">
+        <!-- Mobile menu button -->
+        <button class="md-button md-button--text" id="menuButton" aria-label="Open menu" style="color: #64748b;">
+          <span class="material-icons">menu</span>
+        </button>
+        
+        <!-- Logo and Title -->
+        <div class="md-app-bar__brand" style="display: flex; align-items: center; flex: 1;">
+          <a href="/" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+            <img class="md-app-bar__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+            <div class="md-app-bar__title">
+              <div class="md-app-bar__title-main" style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+              <div class="md-app-bar__title-sub" style="font-size: 1.125rem; color: #1e3a8a; line-height: 1.25; font-weight: 550;">Genomics and AI in Healthcare</div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Desktop navigation -->
+        <nav class="md-app-bar__actions" id="desktopNav" style="gap: 4px;">
+          
+            <a href="/" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Home
+            </a>
+          
+            <a href="/news" class="md-button md-button--text md-button--active" style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              News
+            </a>
+          
+            <a href="/research" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Research
+            </a>
+          
+            <a href="/publications" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Publications
+            </a>
+          
+            <a href="/software" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Software
+            </a>
+          
+            <a href="/members" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Members
+            </a>
+          
+            <a href="/join" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Join
+            </a>
+          
+            <a href="/contact" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Contact
+            </a>
+          
+        </nav>
+      </div>
+    </header>
+
+    <!-- JC STEM Style Navigation Drawer -->
+    <aside class="md-navigation-drawer" id="navigationDrawer">
+      <div class="md-navigation-drawer__header">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; flex: 1;">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+              <img class="md-navigation-drawer__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+              <div>
+                <div style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+                <div style="font-size: 1.125rem; color: #1e3a8a; line-height: 1.25; font-weight: 550;">Genomics and AI in Healthcare</div>
+              </div>
+            </a>
+          </div>
+          <button class="md-button md-button--text" id="closeDrawerButton" aria-label="Close menu" style="color: #64748b; padding: 8px;">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="md-navigation-drawer__content">
+        
+          <a href="/" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Home
+          </a>
+        
+          <a href="/news" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            News
+          </a>
+        
+          <a href="/research" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Research
+          </a>
+        
+          <a href="/publications" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Publications
+          </a>
+        
+          <a href="/software" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Software
+          </a>
+        
+          <a href="/members" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Members
+          </a>
+        
+          <a href="/join" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Join
+          </a>
+        
+          <a href="/contact" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Contact
+          </a>
+        
+      </div>
+    </aside>
+
+    <!-- Backdrop -->
+    <div class="md-backdrop" id="backdrop"></div>
+
+    <!-- Main Content -->
+    <main class="md-main-content">
+    
+    <!-- 导航栏滚动效果脚本 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 支持两种导航栏：Material Design 和 Bootstrap
+        const mdNavbar = document.querySelector('.md-app-bar');
+        const bsNavbar = document.querySelector('.navbar');
+        const navbar = mdNavbar || bsNavbar;
+        
+        if (!navbar) return;
+        
+        let lastScrollTop = 0;
+        
+        function handleScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          // 当滚动超过50px时，添加scrolled类
+          if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          
+          lastScrollTop = scrollTop;
+        }
+        
+        // 使用节流函数优化性能
+        let ticking = false;
+        function requestTick() {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              handleScroll();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+        
+        // 监听滚动事件
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // 页面加载时检查滚动位置
+        handleScroll();
+      });
+    </script>
+
+
+
+
+<div class="md-main-content">
+  <div class="flat-content-container">
+    <div class="flat-post-header">
+      <h1 class="flat-post-title"></h1>
+      
+        <p class="flat-post-meta">
+          <span class="material-icons" style="vertical-align: middle; margin-right: 4px; font-size: 16px;">schedule</span>
+          October 01, 2024
+        </p>
+      
+    </div>
+    <div class="flat-post-content">
+      <p>Welcome Chen Junyi to the Lab as RAP!</p>
+
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <!-- Footer with simple top border separator -->
+    <style>
+      footer {
+        border-top: 1px solid #e2e8f0;
+        margin: 48px 0 24px;
+        padding-top: 24px;
+        color: #1e293b;
+        background-color: #f8f9fa;
+        background-image: none;
+      }
+      
+      footer > div {
+        text-align: center;
+      }
+      
+      footer p {
+        margin: 0;
+        color: #4a5568;
+        font-size: 0.875rem; /* 小于页面正文的1rem，确保不超过 */
+        font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        line-height: 1.6;
+        padding: 0 16px;
+      }
+      
+      /* 响应式设计 - 平板和手机 */
+      @media (max-width: 768px) {
+        footer {
+          margin: 32px 0 20px;
+          padding-top: 20px;
+        }
+        
+        footer p {
+          font-size: 0.875rem; /* 保持小于正文的1rem */
+          padding: 0 12px;
+        }
+      }
+      
+      /* 响应式设计 - 小手机 */
+      @media (max-width: 480px) {
+        footer {
+          margin: 24px 0 16px;
+          padding-top: 16px;
+        }
+        
+        footer p {
+          font-size: 0.8125rem; /* 13px，小于正文的1rem */
+          padding: 0 8px;
+          line-height: 1.5;
+        }
+      }
+      
+      /* 响应式设计 - 超小屏幕 */
+      @media (max-width: 360px) {
+        footer {
+          margin: 20px 0 12px;
+          padding-top: 12px;
+        }
+        
+        footer p {
+          font-size: 0.75rem; /* 12px，小于正文的1rem */
+          padding: 0 6px;
+          line-height: 1.4;
+        }
+      }
+    </style>
+    
+    <footer>
+      <!-- Bottom Section -->
+      <div>
+        <p>
+          © 2025 Hong Kong JC STEM Lab of Genomics and AI in Healthcare. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Additional page-specific JavaScript -->
+    <script>
+      // Initialize after page load
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add responsive wrapper for all tables
+        const tables = document.querySelectorAll('table');
+        tables.forEach(function(table) {
+          if (!table.parentElement.classList.contains('table-responsive')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-responsive';
+            wrapper.style.overflowX = 'auto';
+            wrapper.style.margin = '16px 0';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          }
+        });
+        
+        // Add page load animation
+        const mainContent = document.querySelector('.md-main-content');
+        if (mainContent) {
+          mainContent.classList.add('md-fade-in');
+        }
+      });
+    </script>
+  </body>
+</html>
+

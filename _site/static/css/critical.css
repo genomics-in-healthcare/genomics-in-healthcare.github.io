@@ -1,0 +1,57 @@
+/* Critical CSS for preventing layout shifts */
+
+/* Basic body and container setup */
+body {
+  padding-top: 70px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Navigation elements */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #2e86c1;
+  height: 60px;
+}
+
+/* Container dimensions */
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Navigation logo placeholders */
+.navb-icon.stem-logo {
+  width: 88px;
+  height: 40px;
+  display: inline-block;
+}
+
+.navb-icon.polyu-logo {
+  width: 72px; 
+  height: 32px;
+  display: inline-block;
+}
+
+/* Content area placeholders */
+.jumbotron {
+  min-height: 300px;
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+}
+
+/* Welcome text placeholders */
+.welcomefont {
+  min-height: 2.5em;
+  margin-bottom: 1em;
+  display: block;
+  font-size: 1.5em;
+} 

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hong Kong JC STEM Lab of Genomics and AI in Healthcare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="This is the official web page for the Genomics and Artificial Intelligence in Healthcare Lab at Hong Kong PolyU.">
+    <meta name="theme-color" content="#1e88e5">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Google Fonts - Inter (JC STEM Style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Anthropic Serif Font -->
+    <style>
+      @font-face {
+        font-family: 'Anthropic Serif';
+        src: url('https://cdn.anthropic.com/fonts/anthropic-serif.woff2') format('woff2'),
+             url('https://cdn.anthropic.com/fonts/anthropic-serif.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="/static/css/material-design.css">
+    
+    <!-- Site Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <!-- Publications page custom CSS -->
+    <link rel="stylesheet" href="/static/css/publications-custom.css">
+    
+    <!-- Material Design JavaScript -->
+    <script src="/static/js/material-design.js" defer></script>
+    
+    <!-- 强制覆盖侧边栏活跃状态样式 -->
+    <style>
+      /* 强制覆盖所有可能的侧边栏活跃状态样式 */
+      .md-navigation-drawer__item,
+      .md-navigation-drawer__item.active,
+      .md-navigation-drawer__item--active,
+      .md-navigation-drawer .active,
+      .md-navigation-drawer .nav-item.active .md-navigation-drawer__item,
+      .md-navigation-drawer .nav-item.active .md-menu-item,
+      .md-navigation-drawer .navbar-nav .nav-item.active .md-menu-item {
+        background-color: transparent !important;
+        background: transparent !important;
+        color: #1a1c1e !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-weight: 500 !important;
+      }
+      
+      /* 覆盖悬停状态，确保没有特殊效果 */
+      .md-navigation-drawer__item:hover,
+      .md-navigation-drawer__item:focus {
+        background-color: transparent !important;
+        color: #1a1c1e !important;
+      }
+    </style>
+    
+    <!-- Cache Clear Script -->
+    <script>
+      // 检查并清除旧版本缓存
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            if (registration.scope.includes('genomics-in-healthcare.github.io')) {
+              registration.unregister().then(function(boolean) {
+                console.log('Service Worker 已注销，缓存将自动清除');
+                // 清除所有缓存
+                caches.keys().then(function(cacheNames) {
+                  return Promise.all(
+                    cacheNames.map(function(cacheName) {
+                      return caches.delete(cacheName);
+                    })
+                  );
+                });
+              });
+            }
+          }
+        });
+      }
+    </script>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="/static/img/logo/logo.png" as="image">
+    
+    <!-- Inline critical CSS -->
+    <style>
+      /* Critical rendering path optimization */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        background-image: 
+          radial-gradient(circle at 20px 20px, rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+          radial-gradient(circle at 40px 40px, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+        color: #1e293b;
+      }
+      
+      /* Prevent layout shift */
+      .md-app-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: transparent;
+        color: #1e293b;
+        box-shadow: none;
+        border-bottom: none;
+        transition: all 0.3s ease-in-out;
+      }
+      /* Home: use solid white navbar */
+      body.home .md-app-bar {
+        background-color: #ffffff !important;
+        color: #1e293b;
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      body.home .md-app-bar a,
+      body.home .md-app-bar .md-button,
+      body.home .md-app-bar .material-icons,
+      body.home .md-app-bar h1 {
+        color: #1e293b !important;
+      }
+      body.home .md-app-bar .md-button--active {
+        color: #1e40af !important;
+      }
+      
+      /* 滚动时导航栏显现的样式 */
+      .md-app-bar.scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .md-app-bar a,
+      .md-app-bar .md-button,
+      .md-app-bar .material-icons,
+      .md-app-bar h1 {
+        color: #1e293b;
+      }
+      .md-app-bar .md-button--active {
+        color: #1e40af;
+        background-color: transparent;
+        font-weight: 600;
+      }
+      
+      .md-main-content {
+        margin-top: 0;
+        padding-top: var(--md-spacing-lg);
+        padding-bottom: var(--md-spacing-lg);
+        padding-left: clamp(16px, 2.5vw, 32px);
+        padding-right: clamp(16px, 2.5vw, 32px);
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        background-color: transparent;
+      }
+      /* Home page: remove top padding so hero can flush to top under fixed header */
+      body.home .md-main-content {
+        padding-top: 0;
+      }
+      /* Add top spacing below fixed header on all non-Home pages */
+      body.non-home .md-main-content {
+        padding-top: 40px;
+      }
+      
+      /* Syntax highlighting styles */
+      .highlight { background: #ffffff; }
+      .highlight .c { color: #999988; font-style: italic }
+      .highlight .err { color: #a61717; background-color: #e3d2d2 }
+      .highlight .k { font-weight: bold }
+      .highlight .o { font-weight: bold }
+      .highlight .cm { color: #999988; font-style: italic }
+      .highlight .cp { color: #999999; font-weight: bold }
+      .highlight .c1 { color: #999988; font-style: italic }
+      .highlight .cs { color: #999999; font-weight: bold; font-style: italic }
+      .highlight .gd { color: #000000; background-color: #ffdddd }
+      .highlight .gd .x { color: #000000; background-color: #ffaaaa }
+      .highlight .ge { font-style: italic }
+      .highlight .gr { color: #aa0000 }
+      .highlight .gh { color: #999999 }
+      .highlight .gi { color: #000000; background-color: #ddffdd }
+      .highlight .gi .x { color: #000000; background-color: #aaffaa }
+      .highlight .go { color: #888888 }
+      .highlight .gp { color: #555555 }
+      .highlight .gs { font-weight: bold }
+      .highlight .gu { color: #aaaaaa }
+      .highlight .gt { color: #aa0000 }
+      .highlight .kc { font-weight: bold }
+      .highlight .kd { font-weight: bold }
+      .highlight .kp { font-weight: bold }
+      .highlight .kr { font-weight: bold }
+      .highlight .kt { color: #445588; font-weight: bold }
+      .highlight .m { color: #009999 }
+      .highlight .s { color: #d14 }
+      .highlight .na { color: #008080 }
+      .highlight .nb { color: #0086B3 }
+      .highlight .nc { color: #445588; font-weight: bold }
+      .highlight .no { color: #008080 }
+      .highlight .ni { color: #800080 }
+      .highlight .ne { color: #990000; font-weight: bold }
+      .highlight .nf { color: #990000; font-weight: bold }
+      .highlight .nn { color: #555555 }
+      .highlight .nt { color: #000080 }
+      .highlight .nv { color: #008080 }
+      .highlight .ow { font-weight: bold }
+      .highlight .w { color: #bbbbbb }
+      .highlight .mf { color: #009999 }
+      .highlight .mh { color: #009999 }
+      .highlight .mi { color: #009999 }
+      .highlight .mo { color: #009999 }
+      .highlight .sb { color: #d14 }
+      .highlight .sc { color: #d14 }
+      .highlight .sd { color: #d14 }
+      .highlight .s2 { color: #d14 }
+      .highlight .se { color: #d14 }
+      .highlight .sh { color: #d14 }
+      .highlight .si { color: #d14 }
+      .highlight .sx { color: #d14 }
+      .highlight .sr { color: #009926 }
+      .highlight .s1 { color: #d14 }
+      .highlight .ss { color: #990073 }
+      .highlight .bp { color: #999999 }
+      .highlight .vc { color: #008080 }
+      .highlight .vg { color: #008080 }
+      .highlight .vi { color: #008080 }
+      .highlight .il { color: #009999 }
+    </style>
+    <!-- Global logo sizing -->
+    <style>
+      /* Standardize all brand logos heights site-wide */
+      img[src*="/static/img/logo/"] {
+        max-height: 60px !important;
+        height: auto !important;
+        width: auto !important;
+        max-width: 100% !important;
+        vertical-align: middle;
+      }
+      @media (max-width: 480px) {
+        img[src*="/static/img/logo/"] { max-height: 48px !important; }
+      }
+      /* Keep header/drawer site logo at fixed height */
+      img.md-app-bar__logo,
+      img.md-navigation-drawer__logo {
+        max-height: none !important;
+        height: 43px !important;
+        width: auto !important;
+      }
+    </style>
+    <!-- Override: remove underline on link focus globally -->
+    <style>
+      a:focus,
+      a:focus-visible,
+      a:focus:hover,
+      a:active:focus,
+      a:visited:focus,
+      .md-app-bar a:focus,
+      .md-app-bar a:focus-visible,
+      .md-app-bar a:focus:hover,
+      .md-navigation-drawer__item:focus,
+      .md-navigation-drawer__item:focus-visible,
+      .md-navigation-drawer__item:focus:hover,
+      .navbar a:focus,
+      .navbar a:focus-visible,
+      .navbar a:focus:hover,
+      .md-button:focus,
+      .md-button:focus-visible,
+      .md-button:focus:hover {
+        text-decoration: none !important;
+      }
+    </style>
+    
+    
+    <link rel="alternate" type="application/atom+xml" title="Genomics and AI in Healthcare Lab News Feed" href="/news.xml">
+    
+  </head>
+
+  <body class="non-home">
+    <!-- Clean App Bar -->
+    <header class="md-app-bar">
+      <div class="md-app-bar__container">
+        <!-- Mobile menu button -->
+        <button class="md-button md-button--text" id="menuButton" aria-label="Open menu" style="color: #64748b;">
+          <span class="material-icons">menu</span>
+        </button>
+        
+        <!-- Logo and Title -->
+        <div class="md-app-bar__brand" style="display: flex; align-items: center; flex: 1;">
+          <a href="/" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+            <img class="md-app-bar__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+            <div class="md-app-bar__title">
+              <div class="md-app-bar__title-main" style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+              <div class="md-app-bar__title-sub" style="font-size: 1.125rem; color: #1e3a8a; line-height: 1.25; font-weight: 550;">Genomics and AI in Healthcare</div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Desktop navigation -->
+        <nav class="md-app-bar__actions" id="desktopNav" style="gap: 4px;">
+          
+            <a href="/" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Home
+            </a>
+          
+            <a href="/news" class="md-button md-button--text md-button--active" style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              News
+            </a>
+          
+            <a href="/research" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Research
+            </a>
+          
+            <a href="/publications" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Publications
+            </a>
+          
+            <a href="/software" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Software
+            </a>
+          
+            <a href="/members" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Members
+            </a>
+          
+            <a href="/join" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Join
+            </a>
+          
+            <a href="/contact" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Contact
+            </a>
+          
+        </nav>
+      </div>
+    </header>
+
+    <!-- JC STEM Style Navigation Drawer -->
+    <aside class="md-navigation-drawer" id="navigationDrawer">
+      <div class="md-navigation-drawer__header">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; flex: 1;">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+              <img class="md-navigation-drawer__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+              <div>
+                <div style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+                <div style="font-size: 1.125rem; color: #1e3a8a; line-height: 1.25; font-weight: 550;">Genomics and AI in Healthcare</div>
+              </div>
+            </a>
+          </div>
+          <button class="md-button md-button--text" id="closeDrawerButton" aria-label="Close menu" style="color: #64748b; padding: 8px;">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="md-navigation-drawer__content">
+        
+          <a href="/" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Home
+          </a>
+        
+          <a href="/news" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            News
+          </a>
+        
+          <a href="/research" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Research
+          </a>
+        
+          <a href="/publications" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Publications
+          </a>
+        
+          <a href="/software" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Software
+          </a>
+        
+          <a href="/members" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Members
+          </a>
+        
+          <a href="/join" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Join
+          </a>
+        
+          <a href="/contact" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Contact
+          </a>
+        
+      </div>
+    </aside>
+
+    <!-- Backdrop -->
+    <div class="md-backdrop" id="backdrop"></div>
+
+    <!-- Main Content -->
+    <main class="md-main-content">
+    
+    <!-- 导航栏滚动效果脚本 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 支持两种导航栏：Material Design 和 Bootstrap
+        const mdNavbar = document.querySelector('.md-app-bar');
+        const bsNavbar = document.querySelector('.navbar');
+        const navbar = mdNavbar || bsNavbar;
+        
+        if (!navbar) return;
+        
+        let lastScrollTop = 0;
+        
+        function handleScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          // 当滚动超过50px时，添加scrolled类
+          if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          
+          lastScrollTop = scrollTop;
+        }
+        
+        // 使用节流函数优化性能
+        let ticking = false;
+        function requestTick() {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              handleScroll();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+        
+        // 监听滚动事件
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // 页面加载时检查滚动位置
+        handleScroll();
+      });
+    </script>
+
+
+
+
+<div class="md-main-content">
+  <div class="flat-content-container">
+    <div class="container-fluid p-0">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- News标题已删除 -->
+    </div>
+  </div>
+</div>
+
+<style>
+/* 添加新闻页面样式 - 更紧凑的布局 */
+.news-item {
+  width: 100%;
+  padding: 6px 12px; /* 宽屏保持原有内边距 */
+  margin-bottom: 4px; /* 进一步减少项目间距 */
+  /* 移除边框并使用!important确保覆盖外部CSS */
+  border-bottom: none !important;
+  font-size: 15px; /* 稍微增大正文字体大小 */
+  display: flex; /* 使用弹性布局 */
+  align-items: flex-start; /* 顶部对齐 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  line-height: 1.2; /* 略微减小行高 */
+}
+/* 灰白交替背景 - 更微妙的对比 */
+.news-item:nth-child(even) {
+  background-color: #ffffff; /* 偶数行为白色 */
+}
+.news-item:nth-child(odd) {
+  background-color: #fafafa; /* 奇数行为更浅的灰色 */
+}
+.news-date {
+  min-width: 70px; /* 进一步减少日期宽度 */
+  margin-right: 8px; /* 进一步减少日期和内容之间的间距 */
+  font-size: 12px; /* 稍微增大日期字体大小 */
+  color: #64748b;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+.news-content {
+  flex: 1; /* 内容占据剩余空间 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  font-size: 15px; /* 稍微增大新闻内容字体大小 */
+  max-width: 98%; /* 增加内容宽度使用比例 */
+  letter-spacing: normal; /* 恢复字符间距 */
+}
+.news-title {
+  margin-top: 0;
+  margin-bottom: 4px; /* 进一步减少标题和内容间距 */
+  font-weight: 500; /* 稍微加粗以保持可读性 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  font-size: 17px; /* 稍微增大标题字体大小 */
+  color: #222;
+  letter-spacing: normal; /* 恢复字符间距 */
+}
+.author {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+.tag-section {
+  margin-top: 4px; /* 进一步减少标签区域上边距 */
+  font-size: 10px;
+  color: #777;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+/* 添加Publications页面的h标签样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+  color: #222;
+}
+/* 页面主标题样式 */
+h1.page-header {
+  font-size: 26px; /* 稍微增大标题大小 */
+  font-weight: 500;
+  margin-bottom: 15px; /* 进一步减少页面标题和内容间距 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+/* 移除h4标题的加粗效果 */
+h4.news-title {
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+/* 优化链接样式 */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+a:hover {
+  text-decoration: none;
+}
+.tag-link {
+  font-size: 10px;
+  color: #777;
+  background-color: #f5f5f5;
+  padding: 1px 4px; /* 进一步减少标签内边距 */
+  border-radius: 2px;
+  margin-right: 3px; /* 进一步减少标签之间的间距 */
+  font-family: Arial, Helvetica, sans-serif; /* 更改为与AIM小组网站类似的字体 */
+}
+.tag-link:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
+}
+/* 为段落添加间距 */
+p {
+  margin-bottom: 4px; /* 进一步减少段落间距 */
+  line-height: 1.2; /* 略微减小行高 */
+}
+/* 减少图片间距 */
+.news-content img {
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+/* 移动端增加容器和新闻项内边距 */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .news-item {
+    padding: 12px 16px !important; /* 增加移动端内边距 */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .news-item {
+    padding: 12px 16px !important; /* 增加移动端内边距 */
+  }
+}
+/* 优化新闻内容显示 */
+.news-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* 奖学金高亮样式 */
+.fellowship-highlight {
+  color: #1b5e20;
+  font-weight: bold;
+}
+</style>
+
+<div class="container-fluid p-0">
+  <!-- This loops through all news posts including future posts -->
+  
+  <div class="news-item">
+    <div class="news-date">
+      10/11/25
+    </div>
+    <div class="news-content">
+      <p>Weixiong has a paper accepted to AAAI-2026, titled “MUG: Meta-path-aware Universal Heterogeneous Graph Pre-Training”</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/11/25
+    </div>
+    <div class="news-content">
+      <p>Welcome Diao Xin to the lab as Postdoc</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      29/10/25
+    </div>
+    <div class="news-content">
+      <p>Yan Zhu’s work on a language model for PM2.5 and human health has been accepted to Environmental Science &amp; Technology (a top journal in environmental science)</p>
+
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      21/10/25
+    </div>
+    <div class="news-content">
+      <p>Weixiong Zhang will give a talk on Noncanonical circular RNAs as cancer diagnostic biomarkers at the <a href="https://apacprecisiononcology.com">1st Asia Pacific Precision Oncology Conference</a> on 01/11/25</p>
+
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      12/10/25
+    </div>
+    <div class="news-content">
+      <p>Weixiong Zhang will give a keynote talk at <a href="https://ngdc.cncb.ac.cn/conference/bdf2025">The 10th Big Data Forum for Life and Health Sciences</a> on 15/10/25</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      30/08/25
+    </div>
+    <div class="news-content">
+      <p>Chunyu’s paper, Adaptive control of dynamic networks, has been accepted to IEEE Trans on Network Science and Engineering</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      14/05/25
+    </div>
+    <div class="news-content">
+      <p><a href="https://www.polyu.edu.hk/publications/excelximpact/en/issue/202516/cover-story/cracking-the-code-of-complex-diseases">Cracking the Code of Complex Diseases</a></p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/02/25
+    </div>
+    <div class="news-content">
+      <p>Tan Yejun, an RA in the lab, received both <span class="fellowship-highlight">Hong Kong PhD Fellowship (HKPFS)</span> and <span class="fellowship-highlight">PolyU Presidential PhD Fellowship (PPPFS)</span></p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      24/11/24
+    </div>
+    <div class="news-content">
+      <p>Weixiong has a paper accepted to ACM Transactions on Intelligent Systems and Technology. The title is ‘Heterogeneous Graph Neural Networks using Self-supervised Reciprocally Contrastive Learning’</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/11/24
+    </div>
+    <div class="news-content">
+      <p>Welcome Huang Yin to the Lab as Research Fellow and Pan Chunyu as Postdoc!</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/10/24
+    </div>
+    <div class="news-content">
+      <p>Welcome Chen Junyi to the Lab as RAP!</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/09/24
+    </div>
+    <div class="news-content">
+      <p>Shulan has been promoted to Principal Research Fellow, the highest rank in the research track. Congratulations, Shulan!</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/09/24
+    </div>
+    <div class="news-content">
+      <p>We built our first foundation model on genomics, called dnaGrinder. A preprint of the manuscript on dnaGrinder is available at arXiv</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/09/24
+    </div>
+    <div class="news-content">
+      <p>Welcome Edao Abebe, Li Yixin, Han Nan, Wang Zhenqian, Wang Yuchuan and Zhang Jie to the Lab as PhD students!</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/08/24
+    </div>
+    <div class="news-content">
+      <p>Weixiong has been appointed to the position of Associate Director of PolyU Academy of Interdisciplinary Research (PAIR)</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/05/24
+    </div>
+    <div class="news-content">
+      <p>Welcome Zhang Chi to the Lab as PhD student!<br />Edao Abebe received <span class="fellowship-highlight">Hong Kong PhD Fellowship (HKPFS)</span></p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      02/04/24
+    </div>
+    <div class="news-content">
+      <p>Weixiong has a paper accepted to IJCAI-24. The title of the paper: Generalized taxonomy-guided graph neural networks</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/04/24
+    </div>
+    <div class="news-content">
+      <p>Weixiong published a paper with IEEE Transactions on Neural Networks and Learning Systems. The title of the paper: Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/04/24
+    </div>
+    <div class="news-content">
+      <p>Welcome Tu Yue to the Lab as Postdoc!</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/01/24
+    </div>
+    <div class="news-content">
+      <p>Welcome Fu Qinghui and Ma Ke to the Lab as PhD students!</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/12/23
+    </div>
+    <div class="news-content">
+      <p>Wang Zhenqian, a new coming student, received <span class="fellowship-highlight">PolyU Presidential PhD Fellowship</span></p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/11/23
+    </div>
+    <div class="news-content">
+      <p>Weixiong was selected into the list of “Top 2% of Global Scientists”</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/11/23
+    </div>
+    <div class="news-content">
+      <p>Our paper on A neuroimaging-based precision medicine framework for depression was published online with Asian J Psychiatry</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/11/23
+    </div>
+    <div class="news-content">
+      <p>Ma Ke, a new coming student, received <span class="fellowship-highlight">PolyU Presidential PhD Fellowship</span></p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/11/23
+    </div>
+    <div class="news-content">
+      <p>Wang Xin, a new coming postdoc, received PolyU Distinguished Postdoctoral Fellowship</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/09/23
+    </div>
+    <div class="news-content">
+      <p>Our paper on Total network controllability analysis discovers explainable drugs for Covid-19 treatment was published in Biology Direct</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/08/23
+    </div>
+    <div class="news-content">
+      <p>Shulan was promoted to Senior Research Fellow and took the position of STEM Lab manager</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/07/23
+    </div>
+    <div class="news-content">
+      <p>Our paper on cancer-keeper genes as therapeutic targets published online with iScience, a Cell Press journal</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/07/23
+    </div>
+    <div class="news-content">
+      <p>Weixiong, as project PC, received RGC Strategic Target Grant (STG) funding (five years and $37 million) to develop AI, genomic and biomedical technologies for developing genetic and neuroimaging markers and integrative approaches for objective diagnosis and personalized therapy of major psychiatric disorders, including depression, schizophrenia, and bipolar disorder</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/07/23
+    </div>
+    <div class="news-content">
+      <p>Weixiong was interviewed on NOW NEWS, a Hong Kong TV news station, to discuss the newly funded RGC Strategic Target Grant (STG) funding on developing AI/genomic technologies to diagnose and treat major psychiatric disorders</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/05/23
+    </div>
+    <div class="news-content">
+      <p>Dr. Qiu Shulan joined the lab as Research Fellow</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/04/23
+    </div>
+    <div class="news-content">
+      <p>This is a joint work with Professors Jin Di and He Dongxiao’s groups at Tianjin University. The title of the paper: Constructive learning meets homophily: Two birds with one stone</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/02/23
+    </div>
+    <div class="news-content">
+      <p>This is a joint work with Professors Jin Di and He Dongxiao’s groups at Tianjin University. The title of the paper: A survey of community detection approaches: From statistical modeling to deep learning</p>
+
+      
+      
+    </div>
+  </div>
+  
+  <div class="news-item">
+    <div class="news-date">
+      01/05/22
+    </div>
+    <div class="news-content">
+      <p>Weixiong received Health and Medical Research Fund (HMRF, three years and $1.4 million) to study schizophrenia using systems biology approaches</p>
+
+      
+      
+    </div>
+  </div>
+  
+</div>
+  </div>
+</div>
+
+    </main>
+
+    <!-- Footer with simple top border separator -->
+    <style>
+      footer {
+        border-top: 1px solid #e2e8f0;
+        margin: 48px 0 24px;
+        padding-top: 24px;
+        color: #1e293b;
+        background-color: #f8f9fa;
+        background-image: none;
+      }
+      
+      footer > div {
+        text-align: center;
+      }
+      
+      footer p {
+        margin: 0;
+        color: #4a5568;
+        font-size: 0.875rem; /* 小于页面正文的1rem，确保不超过 */
+        font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        line-height: 1.6;
+        padding: 0 16px;
+      }
+      
+      /* 响应式设计 - 平板和手机 */
+      @media (max-width: 768px) {
+        footer {
+          margin: 32px 0 20px;
+          padding-top: 20px;
+        }
+        
+        footer p {
+          font-size: 0.875rem; /* 保持小于正文的1rem */
+          padding: 0 12px;
+        }
+      }
+      
+      /* 响应式设计 - 小手机 */
+      @media (max-width: 480px) {
+        footer {
+          margin: 24px 0 16px;
+          padding-top: 16px;
+        }
+        
+        footer p {
+          font-size: 0.8125rem; /* 13px，小于正文的1rem */
+          padding: 0 8px;
+          line-height: 1.5;
+        }
+      }
+      
+      /* 响应式设计 - 超小屏幕 */
+      @media (max-width: 360px) {
+        footer {
+          margin: 20px 0 12px;
+          padding-top: 12px;
+        }
+        
+        footer p {
+          font-size: 0.75rem; /* 12px，小于正文的1rem */
+          padding: 0 6px;
+          line-height: 1.4;
+        }
+      }
+    </style>
+    
+    <footer>
+      <!-- Bottom Section -->
+      <div>
+        <p>
+          © 2025 Hong Kong JC STEM Lab of Genomics and AI in Healthcare. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Additional page-specific JavaScript -->
+    <script>
+      // Initialize after page load
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add responsive wrapper for all tables
+        const tables = document.querySelectorAll('table');
+        tables.forEach(function(table) {
+          if (!table.parentElement.classList.contains('table-responsive')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-responsive';
+            wrapper.style.overflowX = 'auto';
+            wrapper.style.margin = '16px 0';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          }
+        });
+        
+        // Add page load animation
+        const mainContent = document.querySelector('.md-main-content');
+        if (mainContent) {
+          mainContent.classList.add('md-fade-in');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+.logo-list__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #334155;
+  text-align: center;
+}
+
+.logo-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-list__item {
+  display: inline-block;
+  margin: 2px;
+}
+
+.logo-list__logo {
+  height: 40px;
+  width: auto;
+  filter: grayscale(0%);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.logo-list__logo:hover {
+  opacity: 1;
+}
+

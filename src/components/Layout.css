@@ -1,0 +1,48 @@
+.md-main-content {
+  margin-top: 0;
+  padding-top: var(--md-spacing-lg, 24px);
+  padding-bottom: var(--md-spacing-lg, 24px);
+  padding-left: clamp(16px, 2.5vw, 32px);
+  padding-right: clamp(16px, 2.5vw, 32px);
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+/* Home page: remove top padding so hero can flush to top under fixed header */
+.layout.home .md-main-content {
+  padding-top: 0;
+}
+
+/* Add top spacing below fixed header on all non-Home pages */
+.layout.non-home .md-main-content {
+  padding-top: 40px;
+}
+
+.md-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+
+
+
+

@@ -1,0 +1,44 @@
+import { useState, useEffect } from 'react'
+import { NewsItem } from '../components/common'
+import { Container } from '../components/ui'
+import { postsData } from '../data/posts'
+import './News.css'
+
+function News() {
+  const [newsPosts, setNewsPosts] = useState([])
+
+  useEffect(() => {
+    // Filter news posts and sort by date
+    const news = postsData
+      .filter(post => post.group === 'news' && post.published !== false)
+      .sort((a, b) => {
+        if (a.date < b.date) return 1
+        if (a.date > b.date) return -1
+        return 0
+      })
+    setNewsPosts(news)
+  }, [])
+
+  const formatDate = (dateString) => {
+    if (!dateString) return ''
+    const date = new Date(dateString)
+    const day = String(date.getDate()).padStart(2, '0')
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const year = String(date.getFullYear()).slice(-2)
+    return `${day}/${month}/${year}`
+  }
+
+  return (
+    <div className="md-main-content">
+      <Container size="medium">
+        <div className="news-container">
+          {newsPosts.map((post, index) => (
+            <NewsItem key={index} post={post} formatDate={formatDate} />
+          ))}
+        </div>
+      </Container>
+    </div>
+  )
+}
+
+export default News

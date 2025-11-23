@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hong Kong JC STEM Lab of Genomics and AI in Healthcare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="This is the official web page for the Genomics and Artificial Intelligence in Healthcare Lab at Hong Kong PolyU.">
+    <meta name="theme-color" content="#1e88e5">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Google Fonts - Inter (JC STEM Style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Anthropic Serif Font -->
+    <style>
+      @font-face {
+        font-family: 'Anthropic Serif';
+        src: url('https://cdn.anthropic.com/fonts/anthropic-serif.woff2') format('woff2'),
+             url('https://cdn.anthropic.com/fonts/anthropic-serif.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="/static/css/material-design.css">
+    
+    <!-- Site Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <!-- Publications page custom CSS -->
+    <link rel="stylesheet" href="/static/css/publications-custom.css">
+    
+    <!-- Material Design JavaScript -->
+    <script src="/static/js/material-design.js" defer></script>
+    
+    <!-- 强制覆盖侧边栏活跃状态样式 -->
+    <style>
+      /* 强制覆盖所有可能的侧边栏活跃状态样式 */
+      .md-navigation-drawer__item,
+      .md-navigation-drawer__item.active,
+      .md-navigation-drawer__item--active,
+      .md-navigation-drawer .active,
+      .md-navigation-drawer .nav-item.active .md-navigation-drawer__item,
+      .md-navigation-drawer .nav-item.active .md-menu-item,
+      .md-navigation-drawer .navbar-nav .nav-item.active .md-menu-item {
+        background-color: transparent !important;
+        background: transparent !important;
+        color: #1a1c1e !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-weight: 500 !important;
+      }
+      
+      /* 覆盖悬停状态，确保没有特殊效果 */
+      .md-navigation-drawer__item:hover,
+      .md-navigation-drawer__item:focus {
+        background-color: transparent !important;
+        color: #1a1c1e !important;
+      }
+    </style>
+    
+    <!-- Cache Clear Script -->
+    <script>
+      // 检查并清除旧版本缓存
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            if (registration.scope.includes('genomics-in-healthcare.github.io')) {
+              registration.unregister().then(function(boolean) {
+                console.log('Service Worker 已注销，缓存将自动清除');
+                // 清除所有缓存
+                caches.keys().then(function(cacheNames) {
+                  return Promise.all(
+                    cacheNames.map(function(cacheName) {
+                      return caches.delete(cacheName);
+                    })
+                  );
+                });
+              });
+            }
+          }
+        });
+      }
+    </script>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="/static/img/logo/logo.png" as="image">
+    
+    <!-- Inline critical CSS -->
+    <style>
+      /* Critical rendering path optimization */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        background-image: 
+          radial-gradient(circle at 20px 20px, rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+          radial-gradient(circle at 40px 40px, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+        color: #1e293b;
+      }
+      
+      /* Prevent layout shift */
+      .md-app-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: transparent;
+        color: #1e293b;
+        box-shadow: none;
+        border-bottom: none;
+        transition: all 0.3s ease-in-out;
+      }
+      /* Home: use solid white navbar */
+      body.home .md-app-bar {
+        background-color: #ffffff !important;
+        color: #1e293b;
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      body.home .md-app-bar a,
+      body.home .md-app-bar .md-button,
+      body.home .md-app-bar .material-icons,
+      body.home .md-app-bar h1 {
+        color: #1e293b !important;
+      }
+      body.home .md-app-bar .md-button--active {
+        color: #1e40af !important;
+      }
+      
+      /* 滚动时导航栏显现的样式 */
+      .md-app-bar.scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 0.5px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .md-app-bar a,
+      .md-app-bar .md-button,
+      .md-app-bar .material-icons,
+      .md-app-bar h1 {
+        color: #1e293b;
+      }
+      .md-app-bar .md-button--active {
+        color: #1e40af;
+        background-color: transparent;
+        font-weight: 600;
+      }
+      
+      .md-main-content {
+        margin-top: 0;
+        padding-top: var(--md-spacing-lg);
+        padding-bottom: var(--md-spacing-lg);
+        padding-left: clamp(16px, 2.5vw, 32px);
+        padding-right: clamp(16px, 2.5vw, 32px);
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        background-color: transparent;
+      }
+      /* Home page: remove top padding so hero can flush to top under fixed header */
+      body.home .md-main-content {
+        padding-top: 0;
+      }
+      /* Add top spacing below fixed header on all non-Home pages */
+      body.non-home .md-main-content {
+        padding-top: 40px;
+      }
+      
+      /* Syntax highlighting styles */
+      .highlight { background: #ffffff; }
+      .highlight .c { color: #999988; font-style: italic }
+      .highlight .err { color: #a61717; background-color: #e3d2d2 }
+      .highlight .k { font-weight: bold }
+      .highlight .o { font-weight: bold }
+      .highlight .cm { color: #999988; font-style: italic }
+      .highlight .cp { color: #999999; font-weight: bold }
+      .highlight .c1 { color: #999988; font-style: italic }
+      .highlight .cs { color: #999999; font-weight: bold; font-style: italic }
+      .highlight .gd { color: #000000; background-color: #ffdddd }
+      .highlight .gd .x { color: #000000; background-color: #ffaaaa }
+      .highlight .ge { font-style: italic }
+      .highlight .gr { color: #aa0000 }
+      .highlight .gh { color: #999999 }
+      .highlight .gi { color: #000000; background-color: #ddffdd }
+      .highlight .gi .x { color: #000000; background-color: #aaffaa }
+      .highlight .go { color: #888888 }
+      .highlight .gp { color: #555555 }
+      .highlight .gs { font-weight: bold }
+      .highlight .gu { color: #aaaaaa }
+      .highlight .gt { color: #aa0000 }
+      .highlight .kc { font-weight: bold }
+      .highlight .kd { font-weight: bold }
+      .highlight .kp { font-weight: bold }
+      .highlight .kr { font-weight: bold }
+      .highlight .kt { color: #445588; font-weight: bold }
+      .highlight .m { color: #009999 }
+      .highlight .s { color: #d14 }
+      .highlight .na { color: #008080 }
+      .highlight .nb { color: #0086B3 }
+      .highlight .nc { color: #445588; font-weight: bold }
+      .highlight .no { color: #008080 }
+      .highlight .ni { color: #800080 }
+      .highlight .ne { color: #990000; font-weight: bold }
+      .highlight .nf { color: #990000; font-weight: bold }
+      .highlight .nn { color: #555555 }
+      .highlight .nt { color: #000080 }
+      .highlight .nv { color: #008080 }
+      .highlight .ow { font-weight: bold }
+      .highlight .w { color: #bbbbbb }
+      .highlight .mf { color: #009999 }
+      .highlight .mh { color: #009999 }
+      .highlight .mi { color: #009999 }
+      .highlight .mo { color: #009999 }
+      .highlight .sb { color: #d14 }
+      .highlight .sc { color: #d14 }
+      .highlight .sd { color: #d14 }
+      .highlight .s2 { color: #d14 }
+      .highlight .se { color: #d14 }
+      .highlight .sh { color: #d14 }
+      .highlight .si { color: #d14 }
+      .highlight .sx { color: #d14 }
+      .highlight .sr { color: #009926 }
+      .highlight .s1 { color: #d14 }
+      .highlight .ss { color: #990073 }
+      .highlight .bp { color: #999999 }
+      .highlight .vc { color: #008080 }
+      .highlight .vg { color: #008080 }
+      .highlight .vi { color: #008080 }
+      .highlight .il { color: #009999 }
+    </style>
+    <!-- Global logo sizing -->
+    <style>
+      /* Standardize all brand logos heights site-wide */
+      img[src*="/static/img/logo/"] {
+        max-height: 60px !important;
+        height: auto !important;
+        width: auto !important;
+        max-width: 100% !important;
+        vertical-align: middle;
+      }
+      @media (max-width: 480px) {
+        img[src*="/static/img/logo/"] { max-height: 48px !important; }
+      }
+      /* Keep header/drawer site logo at fixed height */
+      img.md-app-bar__logo,
+      img.md-navigation-drawer__logo {
+        max-height: none !important;
+        height: 43px !important;
+        width: auto !important;
+      }
+    </style>
+    <!-- Override: remove underline on link focus globally -->
+    <style>
+      a:focus,
+      a:focus-visible,
+      a:focus:hover,
+      a:active:focus,
+      a:visited:focus,
+      .md-app-bar a:focus,
+      .md-app-bar a:focus-visible,
+      .md-app-bar a:focus:hover,
+      .md-navigation-drawer__item:focus,
+      .md-navigation-drawer__item:focus-visible,
+      .md-navigation-drawer__item:focus:hover,
+      .navbar a:focus,
+      .navbar a:focus-visible,
+      .navbar a:focus:hover,
+      .md-button:focus,
+      .md-button:focus-visible,
+      .md-button:focus:hover {
+        text-decoration: none !important;
+      }
+    </style>
+    
+    
+  </head>
+
+  <body class="non-home">
+    <!-- Clean App Bar -->
+    <header class="md-app-bar">
+      <div class="md-app-bar__container">
+        <!-- Mobile menu button -->
+        <button class="md-button md-button--text" id="menuButton" aria-label="Open menu" style="color: #64748b;">
+          <span class="material-icons">menu</span>
+        </button>
+        
+        <!-- Logo and Title -->
+        <div class="md-app-bar__brand" style="display: flex; align-items: center; flex: 1;">
+          <a href="/" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+            <img class="md-app-bar__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+            <div class="md-app-bar__title">
+              <div class="md-app-bar__title-main" style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+              <div class="md-app-bar__title-sub" style="font-size: 1.125rem; color: #1e3a8a; line-height: 1.25; font-weight: 550;">Genomics and AI in Healthcare</div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Desktop navigation -->
+        <nav class="md-app-bar__actions" id="desktopNav" style="gap: 4px;">
+          
+            <a href="/" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Home
+            </a>
+          
+            <a href="/news" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              News
+            </a>
+          
+            <a href="/research" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Research
+            </a>
+          
+            <a href="/publications" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Publications
+            </a>
+          
+            <a href="/software" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Software
+            </a>
+          
+            <a href="/members" class="md-button md-button--text md-button--active" style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Members
+            </a>
+          
+            <a href="/join" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Join
+            </a>
+          
+            <a href="/contact" class="md-button md-button--text " style="color: #64748b; font-weight: 500; padding: 10px 12px; border-radius: 4px; transition: background-color 0.15s ease; font-size: 1.125rem; font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
+              Contact
+            </a>
+          
+        </nav>
+      </div>
+    </header>
+
+    <!-- JC STEM Style Navigation Drawer -->
+    <aside class="md-navigation-drawer" id="navigationDrawer">
+      <div class="md-navigation-drawer__header">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; flex: 1;">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+              <img class="md-navigation-drawer__logo" src="/static/img/logo/logo.png" alt="JC STEM Lab" style="height: 43px; margin-right: 14px;">
+              <div>
+                <div style="font-size: 0.8125rem; font-weight: 600; color: #64748b; line-height: 1.25;">Hong Kong JC STEM Lab</div>
+                <div style="font-size: 1.125rem; color: #1e3a8a; line-height: 1.25; font-weight: 550;">Genomics and AI in Healthcare</div>
+              </div>
+            </a>
+          </div>
+          <button class="md-button md-button--text" id="closeDrawerButton" aria-label="Close menu" style="color: #64748b; padding: 8px;">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="md-navigation-drawer__content">
+        
+          <a href="/" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Home
+          </a>
+        
+          <a href="/news" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            News
+          </a>
+        
+          <a href="/research" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Research
+          </a>
+        
+          <a href="/publications" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Publications
+          </a>
+        
+          <a href="/software" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Software
+          </a>
+        
+          <a href="/members" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Members
+          </a>
+        
+          <a href="/join" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Join
+          </a>
+        
+          <a href="/contact" class="md-navigation-drawer__item" tabindex="0" style="background-color: transparent !important; color: #1a1c1e !important; border: none !important; box-shadow: none !important;">
+            Contact
+          </a>
+        
+      </div>
+    </aside>
+
+    <!-- Backdrop -->
+    <div class="md-backdrop" id="backdrop"></div>
+
+    <!-- Main Content -->
+    <main class="md-main-content">
+    
+    <!-- 导航栏滚动效果脚本 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 支持两种导航栏：Material Design 和 Bootstrap
+        const mdNavbar = document.querySelector('.md-app-bar');
+        const bsNavbar = document.querySelector('.navbar');
+        const navbar = mdNavbar || bsNavbar;
+        
+        if (!navbar) return;
+        
+        let lastScrollTop = 0;
+        
+        function handleScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          // 当滚动超过50px时，添加scrolled类
+          if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          
+          lastScrollTop = scrollTop;
+        }
+        
+        // 使用节流函数优化性能
+        let ticking = false;
+        function requestTick() {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              handleScroll();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+        
+        // 监听滚动事件
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // 页面加载时检查滚动位置
+        handleScroll();
+      });
+    </script>
+
+
+
+
+<style>
+/* Members — OpenAI-inspired minimal aesthetic */
+.members-container {
+  width: 100%;
+  max-width: 1040px;
+  padding: 0px 16px;
+  margin: 0 auto;
+}
+
+.member-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.member-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-color: #d1d5db;
+}
+
+.member-photo {
+  flex-shrink: 0;
+  width: 104px;
+  height: 104px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  background-color: #f8fafc;
+}
+
+.member-info { flex: 1; min-width: 0; }
+
+.member-name {
+  font-size: 21px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 6px 0;
+}
+
+.member-position {
+  font-size: 15px;
+  color: #2563eb;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.member-contact {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.member-contact a {
+  color: #1a73e8;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.member-contact a:hover { text-decoration: underline; }
+.member-contact a:visited { color: #1a73e8; }
+
+/* Optional middle-dot separator for contact links on wide screens */
+.member-contact a + a::before {
+  content: '·';
+  margin: 0 8px;
+  color: #9ca3af;
+}
+
+/* Email protection styles */
+.email-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.email-display:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.email-parts {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.email-user, .email-domain {
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.email-at {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.email-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.email-copy-btn:hover {
+  background-color: #d1d5db;
+  opacity: 1;
+}
+
+.email-copy-btn .material-icons {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.email-copy-btn:hover .material-icons {
+  color: #374151;
+}
+
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.member-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 12px;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.member-link:hover {
+  background-color: #eef2f7;
+  border-color: #d1d5db;
+  color: #1558d6;
+}
+
+.member-link:visited { color: #1a73e8; }
+
+.member-link .material-icons { font-size: 16px; margin-right: 6px; }
+
+.member-description {
+  color: #374151;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.member-description p {
+  margin: 0 0 2px 0;
+  font-weight: 400;
+}
+
+/* Ensure links in member descriptions are blue */
+.member-description a { color: #1a73e8; text-decoration: none; }
+.member-description a:hover { text-decoration: underline; }
+.member-description a:visited { color: #1a73e8; }
+
+/* 奖学金高亮样式 */
+.fellowship-highlight {
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+.member-description > p:first-child { margin-top: 0; }
+
+.member-description ul {
+  margin: 2px 0 6px 18px;
+  padding-left: 18px;
+}
+
+.member-description li {
+  margin: 0;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 650;
+  color: #0f172a;
+  margin: 36px 0 24px 0;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.position-group { margin-bottom: 36px; }
+
+.position-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 26px 0 14px 0;
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .members-container { padding: 16px 12px; }
+  .member-item { flex-direction: column; text-align: center; padding: 16px; align-items: center; }
+  .member-photo { width: 88px; height: 88px; margin: 0 auto; }
+  .member-links { justify-content: center; }
+  .section-title { font-size: 24px; }
+  /* Hide middle-dot and stack contact items on narrow screens */
+  .member-contact { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+  .member-contact a + a::before { content: ''; margin: 0; }
+}
+
+@media (max-width: 480px) {
+  .members-container { padding: 12px 8px; }
+  .member-item { padding: 14px; }
+  .member-photo { width: 76px; height: 76px; }
+  .member-name { font-size: 18px; }
+  .member-position { font-size: 13.5px; }
+}
+</style>
+
+<div class="md-main-content">
+  <div class="members-container">
+    
+    
+
+
+
+
+    
+    
+        <div class="position-group">
+            <h2 class="position-title">Principal Investigator</h2>
+            
+                
+                    <div id="Weixiong Zhang, Ph.D." class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Zhangweixiong.jpg" 
+                              
+                             alt="Weixiong Zhang, Ph.D.">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Weixiong Zhang, Ph.D.</h3>
+                            
+                            
+                            
+                            
+                            
+                                <div class="member-contact">
+                                    
+                                        <span class="email-text">weixiong dot zhang at polyu dot edu dot hk</span>
+                                    
+                                    
+                                </div>
+                            
+                            
+                            
+                                <div class="member-links">
+                                    
+                                    
+                                    
+                                    
+                                        <a href="http://scholar.google.com/citations?user=Minb5QMAAAAJ" class="member-link" target="_blank">
+                                            <span class="material-icons">school</span>
+                                            Scholar
+                                        </a>
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                            
+                            
+                            <div class="member-description">
+                                <p>Background:</p>
+<ul>
+  <li>BS in Computer Engineering, Tsinghua University</li>
+  <li>PhD in Computer Science, UCLA</li>
+</ul>
+
+<p>Position:</p>
+<ul>
+  <li>Hong Kong Global STEM Professor</li>
+  <li>Chair Professor of Systems Biology and Artificial Intelligence</li>
+  <li>Associate Director, <a href="https://www.polyu.edu.hk/pair/">PolyU Academy of Interdisciplinary Research</a></li>
+</ul>
+
+<p>Affiliation:</p>
+<ul>
+  <li><a href="https://www.polyu.edu.hk/hti/">Dept of Health Technology &amp; Informatics</a></li>
+  <li><a href="https://www.polyu.edu.hk/dsai/">Dept of Data Science &amp; Artificial Intelligence</a></li>
+  <li><a href="https://www.polyu.edu.hk/comp/">Dept of Computing</a></li>
+</ul>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    
+
+    
+    
+        <div class="position-group">
+            <h2 class="position-title">Principal Research Fellows</h2>
+            
+                
+                    <div id="Shulan Qiu, Ph.D." class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Qiushulan.jpg" 
+                              
+                             alt="Shulan Qiu, Ph.D.">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Shulan Qiu, Ph.D.</h3>
+                            
+                            
+                            
+                            
+                            
+                                <div class="member-contact">
+                                    
+                                        <span class="email-text">shulan dot qiu at polyu dot edu dot hk</span>
+                                    
+                                    
+                                </div>
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>As Lab Manager, Dr. Qiu received her Bachelor and Ph.D degrees in Beijing Normal University of Cell Biology. She worked as Associate Professor  in Beijing Anzhen Hospital Affiliated to Capital Medical University/Beijing Institute of Heart, Lung, and Blood Vessel Diseases (2016), then worked as Instructor in Sam and Ann Barshop Institute for Longevity and Aging Studies, University of Texas Health Science Center at San Antonio, US (2022). She has been as PI of  Youth Project and General Project of National Natural Science Foundation of China (NSFC), and as co-I in many other projects. She published  31 reviewed papers including 13 of h-index.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    
+
+    
+    
+        <div class="position-group">
+            <h2 class="position-title">Research Assistant Professors</h2>
+            
+                
+                    <div id="Junyi Chen, Ph.D." class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/ChenJunyi.jpg" 
+                              
+                             alt="Junyi Chen, Ph.D.">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Junyi Chen, Ph.D.</h3>
+                            
+                            
+                            
+                            
+                            
+                                <div class="member-contact">
+                                    
+                                        <span class="email-text">jerry-junyi dot chen at polyu dot edu dot hk</span>
+                                    
+                                    
+                                </div>
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Dr. CHEN  finished his Ph.D. in Computer Science at the City University of Hong Kong. His research focuses on the application of artificial intelligence in bioinformatics, including single-cell RNA-seq analysis, and sequence analysis</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    
+
+    
+    
+        <div class="position-group">
+            <h2 class="position-title">Postdoctoral Scholars</h2>
+            
+                
+                    <div id="Chunyu Pan, Ph.D." class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/PanChunyu.jpg" 
+                              
+                             alt="Chunyu Pan, Ph.D.">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Chunyu Pan, Ph.D.</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Dr. Pan earned his Ph.D. in Computer Science from Northeastern University. His research specializes in complex network theory and its applications in biological networks, with a particular focus on brain network alterations in various psychiatric disorders.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Xin Diao, Ph.D." class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/DiaoXin.jpg" 
+                              
+                             alt="Xin Diao, Ph.D.">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Xin Diao, Ph.D.</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Dr. Diao received his Ph.D. in Chemistry from Hong Kong Baptist University, where he developed expertise in spatial multi-omics. At Prof. Zhang’s lab, he now leverages this expertise to investigate the biology of depression through spatial proteomics.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Yue Tu, Ph.D." class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/TuYue.jpg" 
+                              
+                             alt="Yue Tu, Ph.D.">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Yue Tu, Ph.D.</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Dr. Tu received his Bachelor’s, Master’s, and Ph.D. in Computer Application Technology from Northeastern University, under the supervision of Prof. QIAO Jianzhong and Prof. LIN Shukuan. His primary research interests include medical image analysis, computer-aided diagnosis, Magnetic Resonance Imaging, and neuroscience.
+In 2024, Dr. Tu joined Prof. Zhang’s Lab as a Postdoctoral Fellow, where he is currently engaged in research focusing on the analysis of MRI images related to depression, disease diagnosis, and the neurological mechanisms underlying diseases. His work aims to advance our understanding and treatment approaches for mental health disorders through innovative imaging technologies and analytical methodologies.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    
+
+    
+    
+        <div class="position-group">
+            <h2 class="position-title">Ph.D. Students</h2>
+            
+                
+                    <div id="Fu QingHui" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/FuQinghui.jpg" 
+                              
+                             alt="Fu QingHui">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Fu QingHui</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Fu Qinghui earned her bachelor’s degree in Pharmacy from Shenzhen University and a master’s degree in Medical Microbiology from The University of Manchester. Currently, in Zhang’s lab, she is working on utilizing behavioral models and molecular methods to understand the neural and immunological mechanisms underlying depression.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Han Nan" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/HanNan.jpg" 
+                              
+                             alt="Han Nan">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Han Nan</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Nan Han completed her Bachelor’s degree in Bioinformatics at Harbin Medical University, where she researched enhancer and miRNA/lncRNA regulation with Prof. Juan Xu. She then earned her Master’s degree in Bioinformatics from the Beijing Institute of Genomics, Chinese Academy of Sciences / China National Center for Bioinformation, conducting research on alternative splicing and their role in development with Prof. Zhaoqi Liu. Currently, in Prof. Zhang’s lab, she focuses on epigenetic signals and their role in depression.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Jiang Jiahao" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/JiangJiahao.jpg" 
+                              
+                             alt="Jiang Jiahao">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Jiang Jiahao</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Jiahao earned his Bachelor’s and Master’s degrees in Clinical Medicine from Tongji University in China. During his studies, he developed a strong interest in cancer biology, particularly in the role of non-coding RNAs within tumor-derived exosomes. Under the guidance of Professor Zhang, Jiahao leverage advanced techniques to uncover potential biomarkers and therapeutic targets for cancer diagnosis and treatment.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Li Kang" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/LiKang.jpg" 
+                              
+                             alt="Li Kang">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Li Kang</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Kang received his bachelor’s degree in computer science and technology in Northeastern University in China and master’s degree in Software Engineering in JiangNan University. He researches noncoding RNA and explainable AI in genomic model.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Li Yixin" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Liyixin.jpg" 
+                              
+                             alt="Li Yixin">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Li Yixin</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Li Yixin obtained her bachelor’s degree from Hubei University of Medicine and her master’s degree in psychiatry and mental health from the First Clinical School of Wuhan University. She worked in Professor Zhang’s bench group, focusing on research involving depression mouse models and related molecular mechanisms.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Ma Ke" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/MaKe.jpg" 
+                              
+                             alt="Ma Ke">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Ma Ke</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Ke received his Bachelor’s and Master’s degrees in Mechanical Engineering from Nanjing University of Science and Technology and South China University of Technology, respectively. Then, he worked as an engineer in Zhongshan Ophthalmic Center, focusing on intelligent diagnosis of ophthalmic diseases based on EEG signals, clinical data and images. In Prof. ZHANG’s lab, he is currently working on single-cell and spatial transcriptome-based disease mechanism studies.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Negesso, Abebe Edao" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/AbebeEdao.jpg" 
+                              
+                             alt="Negesso, Abebe Edao">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Negesso, Abebe Edao</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Abebe Edao earned a Bachelor of science degree in Medical Laboratory Technology and a Master’s degree in Clinical Chemistry from Addis Ababa University, Ethiopia.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Sun Canghao" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Suncanghao.jpg" 
+                              
+                             alt="Sun Canghao">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Sun Canghao</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>He earned his bachelor’s degree in Medical Laboratory Technology from Dalian Medical University. Currently, he is pursuing an MPhil under the supervision of Professor Zhang, focusing on molecular biology and computational biology.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Tan Yejun" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Tanyejun.jpg" 
+                              
+                             alt="Tan Yejun">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Tan Yejun</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Yejun received his Bachelor’s degree in Mathematical Biology (Genomics specialization) in University of Minnesota, Twin Cities (UMN). He is also an awardee of <span class="fellowship-highlight">HKPFS</span> and <span class="fellowship-highlight">PPPFS</span>. Under the guidance of Professor Zhang, Yejun is currently conducting research on epidemiology and non-coding RNA at the JC-STEM laboratory.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Wang Weixu" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/WangWeixu.png" 
+                              
+                             alt="Wang Weixu">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Wang Weixu</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Weixu earned his Bachelor’s and Master’s degrees in Computer Science and Technology from Heilongjiang University of Science and Technology and Northeastern University, respectively.</p>
+
+<p>In Prof. Zhang’s lab, Weixu explores intriguing biological questions through AI and computational approaches, with a particular focus on non-coding genes. He leverages machine learning algorithms and bioinformatics methods to decode complex biological systems. Additionally, he maintains the lab’s high-performance computing infrastructure.</p>
+
+<p>Outside of the lab, Weixu enjoys tinkering with mechanical devices, swimming, hiking, and photography.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Wang Yuchuan" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/WangYuchuan.jpg" 
+                              
+                             alt="Wang Yuchuan">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Wang Yuchuan</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Yuchuan received his Bachelor’s degree in Information Management and Information Systems from China University in Geosciences (Beijing). He then earned his Master’s degree in Computer Science from Washington University in St. Louis, where he was advised by Prof. William YEOH and co-advised by Prof. Chein-Ju HO.</p>
+
+<p>In JC-STEM Lab, Yuchuan is currently working on medical image analysis using both deep learning and neuroimaging techniques, under the supervision of Prof. ZHANG.</p>
+
+<p>In his spare time, Yuchuan enjoys playing basketball and hiking.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Zeng Xianlin" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/ZengXianlin.jpg" 
+                              
+                             alt="Zeng Xianlin">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Zeng Xianlin</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Xianlin received his Bachelor’s degree in Biology at City University of Hong Kong and Master’s in Bioinformatics at Johns Hopkins University. In Prof. Zhang’s lab, Xianlin will maintain the animal model of depression and explore disease epigenomics in the process of depression intergenerational inheritance leveraging bioinformatics tools.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Zhang Fei" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/ZhangFei.png" 
+                              
+                             alt="Zhang Fei">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Zhang Fei</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Zhang Fei earned a bachelor’s degree from the School of Mathematics and Statistics, Central South University, and a master’s degree from Weill Medical College of Cornell University. In Zhang’s lab, she researches linkage disequilibrium, haplotype blocks, and SNP causality to develop novel GWAS models and uncover psychiatric disorder mechanisms.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Zhang Jie" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/ZhangJie.jpg" 
+                              
+                             alt="Zhang Jie">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Zhang Jie</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Jie ZHANG received her  Bachelor’s degree in clinical medicine and master’s degree in clinical oncology from WuHan University, where she focused on the colorectal cancer basic research supervised by prof. Qibin SONG. In ZHANG lab, she will pay attention on the biogenesis and function of circular RNA.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Zhao Qihang" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Qihangzhao.jpg" 
+                              
+                             alt="Zhao Qihang">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Zhao Qihang</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Qihang holds a Bachelor’s degree in Computer Engineering from the University of Illinois Urbana-Champaign and a Master’s degree in Computer Science from Washington University in St. Louis. In the STEM Lab, Qihang focuses on genomic foundation models and deep learning approaches to tackle specific genomic challenges.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Zhu Yan" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Zhuyan.jpg" 
+                              
+                             alt="Zhu Yan">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Zhu Yan</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>ZHU Yan earned her Bachelor’s degree in Science from Jining University and her Master’s degree in Science from Dalian Maritime University. Currently, she is enrolled in a joint dual-degree program organized by The Hong Kong Polytechnic University and Harbin Institute of Technology. Her research paper focuses on the prediction of protein-ligand interactions using deep learning. In Professor Zhang’s lab, ZHU Yan will apply deep learning techniques to investigate the interactions between proteins and compounds of environmental pollutants, and delve into the underlying molecular mechanisms.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    
+
+    
+    
+        <div class="position-group">
+            <h2 class="position-title">MPhil Students</h2>
+            
+                
+                    <div id="Qin Haoning" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/QinHaoning.jpg" 
+                              
+                             alt="Qin Haoning">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Qin Haoning</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Haoning received her Bachelor of Science in Biochemistry from the University of Hong Kong (HKU). Her undergraduate studies laid the foundation for her interest in molecular biology and genetics. In Prof. Zhang’s lab, Haoning employs a variety of molecular biology techniques to unravel the complex roles of non-coding RNAs in disease progression and brain function.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    
+
+    
+    
+        <div class="position-group">
+            <h2 class="position-title">Research Assistants</h2>
+            
+                
+                    <div id="Deng Jing" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/Dengjing.jpg" 
+                              
+                             alt="Deng Jing">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Deng Jing</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>She received her bachelor’s degree from Southwest University of Science and Technology and her master’s degree from Yanbian University. During her master’s studies, she spent two years as an exchange student at the Institute of Cardiopulmonary Research, Capital Medical University. Her major is Biochemistry and Molecular Biology. She is currently working as a research assistant in Professor Zhang’s group, focusing on molecular experiments and animal studies.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Peng Yuling" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/PengYuling.jpg" 
+                              
+                             alt="Peng Yuling">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Peng Yuling</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Yuling PENG obtained her bachelor’s degree from Southwest Medical University and her academic master’s degree from Guangzhou Medical University. During her master’s studies, she focused on basic research. Currently, she works as a research assistant in Professor Zhang’s lab, where she primarily conducts molecular experiments and animal studies.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div id="Zhu Yanan" class="member-item">
+                        <img class="member-photo" 
+                             src="/static/img/members/ZhuYanan.jpg" 
+                              
+                             alt="Zhu Yanan">
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Zhu Yanan</h3>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="member-description">
+                                <p>Yanan graduated with a master’s degree from Zhengzhou University, focusing on research in chronic pain and circRNA. As a Research Assistant  in Prof. Zhang’s lab, she is primarily responsible for administrative tasks. When needed, she also assists with animal and molecular experiments.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    
+
+
+    
+    <!-- Alumni Section -->
+    <div class="position-group">
+      <h2 class="position-title">
+        <span class="material-icons" style="vertical-align: middle; margin-right: 8px; font-size: 24px;">school</span>
+        Alumni
+      </h2>
+      
+
+
+
+
+
+
+
+<div id="Zhang Chi" class="member-item">
+    <img class="member-photo" 
+         src="/static/img/members/ZhangChi.jpg" 
+         
+         alt="Zhang Chi">
+    <div class="member-info">
+        <h3 class="member-name">Zhang Chi</h3>
+        
+        
+        <div class="member-contact">
+            
+            
+            
+        </div>
+        
+        <div class="member-links">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+
+        <div class="member-description">
+            <p>Chi received his Master’s degree (2023) of Electronic Information Engineering at the University of Electronic Science and Technology of China, and Bachelor’s degree (2020) of Communication Engineering from the North China Institute of Aerospace Engineering.</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div id="Wang Zhenqian" class="member-item">
+    <img class="member-photo" 
+         src="/static/img/members/WangZhenqian.png" 
+         
+         alt="Wang Zhenqian">
+    <div class="member-info">
+        <h3 class="member-name">Wang Zhenqian</h3>
+        
+        
+        <div class="member-contact">
+            
+            
+            
+        </div>
+        
+        <div class="member-links">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+
+        <div class="member-description">
+            <p>Zhenqian holds a Bachelor’s degree in Statistics from Nanjing Agricultural University and a Master’s degree in Epidemiology and Health Statistics from Sun Yat-sen University. He is currently focused on developing network-based GWAS methods to identify the allelic networks of disorders and utilizing these genetic biomarkers to subtype diseases.</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div id="Yin Huang, Ph.D." class="member-item">
+    <img class="member-photo" 
+         src="/static/img/members/HuangYin.jpg" 
+         
+         alt="Yin Huang, Ph.D.">
+    <div class="member-info">
+        <h3 class="member-name">Yin Huang, Ph.D.</h3>
+        
+        
+        <div class="member-contact">
+            
+            
+            
+        </div>
+        
+        <div class="member-links">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+
+        <div class="member-description">
+            <p>Dr. Huang finished his Ph.D. in Computational Biology at the University of Chinese Academy of Sciences, followed by postdoctoral research experience at Columbia University and the Guangzhou National Lab. His research has focused on developing computational methods and analyzing large-scale genomic and single-cell data.</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Visitors Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+<script>
+// No interactive email logic needed when using plain obfuscated text
+</script>
+
+    </main>
+
+    <!-- Footer with simple top border separator -->
+    <style>
+      footer {
+        border-top: 1px solid #e2e8f0;
+        margin: 48px 0 24px;
+        padding-top: 24px;
+        color: #1e293b;
+        background-color: #f8f9fa;
+        background-image: none;
+      }
+      
+      footer > div {
+        text-align: center;
+      }
+      
+      footer p {
+        margin: 0;
+        color: #4a5568;
+        font-size: 0.875rem; /* 小于页面正文的1rem，确保不超过 */
+        font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        line-height: 1.6;
+        padding: 0 16px;
+      }
+      
+      /* 响应式设计 - 平板和手机 */
+      @media (max-width: 768px) {
+        footer {
+          margin: 32px 0 20px;
+          padding-top: 20px;
+        }
+        
+        footer p {
+          font-size: 0.875rem; /* 保持小于正文的1rem */
+          padding: 0 12px;
+        }
+      }
+      
+      /* 响应式设计 - 小手机 */
+      @media (max-width: 480px) {
+        footer {
+          margin: 24px 0 16px;
+          padding-top: 16px;
+        }
+        
+        footer p {
+          font-size: 0.8125rem; /* 13px，小于正文的1rem */
+          padding: 0 8px;
+          line-height: 1.5;
+        }
+      }
+      
+      /* 响应式设计 - 超小屏幕 */
+      @media (max-width: 360px) {
+        footer {
+          margin: 20px 0 12px;
+          padding-top: 12px;
+        }
+        
+        footer p {
+          font-size: 0.75rem; /* 12px，小于正文的1rem */
+          padding: 0 6px;
+          line-height: 1.4;
+        }
+      }
+    </style>
+    
+    <footer>
+      <!-- Bottom Section -->
+      <div>
+        <p>
+          © 2025 Hong Kong JC STEM Lab of Genomics and AI in Healthcare. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Additional page-specific JavaScript -->
+    <script>
+      // Initialize after page load
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add responsive wrapper for all tables
+        const tables = document.querySelectorAll('table');
+        tables.forEach(function(table) {
+          if (!table.parentElement.classList.contains('table-responsive')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-responsive';
+            wrapper.style.overflowX = 'auto';
+            wrapper.style.margin = '16px 0';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          }
+        });
+        
+        // Add page load animation
+        const mainContent = document.querySelector('.md-main-content');
+        if (mainContent) {
+          mainContent.classList.add('md-fade-in');
+        }
+      });
+    </script>
+  </body>
+</html>
+
