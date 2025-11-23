@@ -19,7 +19,7 @@ const Tabs = memo(function Tabs({
 }) {
   const [activeTab, setActiveTab] = useState(defaultTab || tabs[0]?.id || '')
 
-  const handleTabChange = (tabId: string) => {
+  const handleTabChange = (tabId) => {
     const tab = tabs.find(t => t.id === tabId)
     if (tab && !tab.disabled) {
       setActiveTab(tabId)

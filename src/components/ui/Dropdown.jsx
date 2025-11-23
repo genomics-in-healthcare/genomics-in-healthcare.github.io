@@ -42,7 +42,7 @@ const Dropdown = memo(function Dropdown({
 
   const selectedOption = options.find(opt => opt.value === value)
 
-  const handleSelect = (optionValue: string | number) => {
+  const handleSelect = (optionValue) => {
     if (options.find(opt => opt.value === optionValue)?.disabled) return
     onChange(optionValue)
     setIsOpen(false)
