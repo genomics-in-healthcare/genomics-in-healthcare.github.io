@@ -35,7 +35,7 @@ const Modal = memo(function Modal({
   }, [isOpen])
 
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleEscape = (e) => {
       if (e.key === 'Escape' && isOpen) {
         onClose()
       }
