@@ -11,6 +11,8 @@ paginate: 10
 
 # 允许直接访问.htm文件
 # 注意：index.html 在 exclude 列表中，Jekyll 会使用 index.md 作为首页
+# index.html 是 React 应用的入口点，不应被 Jekyll 处理
+# Jekyll 会从 index.md（使用 home 布局）生成首页的 index.html
 include: 
   - "*.htm"
   - "*.html"

@@ -3,6 +3,7 @@ name: Deploy Jekyll to GitHub Pages
 on:
   workflow_dispatch:
   # 如果使用 "Deploy from a branch" 方式，可以注释掉自动触发
+  # 注意：如果注释掉 push，也必须注释掉 paths（paths 需要 push 触发器才能工作）
   # push:
   #   branches:
   #     - main
