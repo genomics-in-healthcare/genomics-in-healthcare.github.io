@@ -1,80 +1,41 @@
-# GitHub Pages 部署指南
+# Jekyll 部署指南
 
-## 自动部署（推荐）
+## GitHub Pages（推荐）
 
-项目已配置 GitHub Actions 工作流，当代码推送到 `main` 分支时会自动构建并部署到 GitHub Pages。
+仓库包含完整的 Jekyll 配置（`_config.yml`、`Gemfile` 等）。只需将内容推送到 `main`（或 Pages 设置中选择的分支），GitHub Pages 就会自动构建并发布站点。
 
-### 工作流说明
+1. 打开仓库 **Settings → Pages**
+2. 在 **Source** 中选择 `main` 分支与 `/ (root)` 目录，或切换为 **GitHub Actions**（官方 Jekyll 工作流）
+3. 保存后等待 “pages build and deployment” 工作流完成
 
-1. **自动部署工作流** (`.github/workflows/deploy.yml`)
-   - 在推送到 `main` 分支时触发
-   - 自动安装依赖
-   - 转换成员数据
-   - 构建项目
-   - 部署到 GitHub Pages
+> 如果构建失败，进入 **Actions** 查看日志，通常是 `_config.yml` 语法或 Gem 依赖问题。
 
-2. **构建检查工作流** (`.github/workflows/build-check.yml`)
-   - 在 Pull Request 时触发
-   - 检查构建是否成功
-   - 不进行实际部署
-
-### 启用 GitHub Pages
-
-1. 进入仓库的 Settings
-2. 找到 Pages 设置
-3. 在 Source 部分选择 "GitHub Actions"
-4. 保存设置
-
-## 手动部署
-
-如果需要手动部署，可以使用以下命令：
+## 本地构建与验证
 
 ```bash
-# 安装依赖
-npm install
-
-# 转换成员数据
-npm run convert-members
-
-# 构建项目
-npm run build
-
-# 部署到 GitHub Pages
-npm run deploy
+bundle install
+bundle exec jekyll build        # 只构建
+bundle exec jekyll serve --livereload   # 本地预览
 ```
 
-## 构建过程
+构建后的静态文件位于 `_site/`。你可以将该目录内容部署到任意静态托管服务。
 
-构建过程包括以下步骤：
+## 手动部署到 gh-pages
 
-1. **转换成员数据** (`npm run convert-members`)
-   - 读取 `_members/*.md` 文件
-   - 转换为 JSON 格式
-   - 保存到 `src/data/members.json`
+若想手动管理部署历史，可在本地构建后推送 `_site`：
 
-2. **构建 React 应用** (`npm run build`)
-   - 使用 Vite 构建
-   - 输出到 `dist` 目录
-   - 包含所有静态资源
+```bash
+bundle exec jekyll build
+git subtree push --prefix _site origin gh-pages
+```
 
-3. **部署** (`npm run deploy`)
-   - 使用 `gh-pages` 将 `dist` 目录部署到 `gh-pages` 分支
+或使用 `gh-pages` 等部署工具将 `_site` 上传至专用分支。
 
-## 注意事项
+## 常见问题
 
-- 确保 `base` 路径在 `vite.config.js` 中正确配置
-- 静态资源路径会自动处理
-- 成员数据会在构建时自动转换
-- GitHub Actions 需要仓库启用 Pages 功能
-
-## 故障排查
-
-如果部署失败：
-
-1. 检查 GitHub Actions 日志
-2. 确保 `base` 路径配置正确
-3. 检查成员数据转换是否成功
-4. 验证静态资源路径是否正确
+- **生成的链接出错**：确认 `_config.yml` 中的 `url` 与 `baseurl` 设置正确。
+- **缺少依赖**：运行 `bundle install` 并检查 `Gemfile` 是否只使用 GitHub Pages 支持的插件。
+- **需要 React 版本**：切换到 `react` 分支即可找到完整的 React/Vite 实现。
 
 
 

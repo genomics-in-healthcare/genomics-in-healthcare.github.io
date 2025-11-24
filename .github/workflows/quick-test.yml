@@ -2,14 +2,14 @@ name: 快速测试
 
 on:
   push:
-    branches: [ main ]
+    branches: [ react ]
     paths:
       - '**.md'
       - '**_layouts/**'
       - '**_includes/**'
       - '**static/**'
   pull_request:
-    branches: [ main ]
+    branches: [ react ]
     paths:
       - '**.md'
       - '**_layouts/**'

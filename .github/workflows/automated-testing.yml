@@ -2,12 +2,9 @@ name: 自动化测试
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ react ]
   pull_request:
-    branches: [ main ]
-  schedule:
-    # 每天凌晨2点运行完整测试
-    - cron: '0 2 * * *'
+    branches: [ react ]
   workflow_dispatch:
     inputs:
       test_type:
