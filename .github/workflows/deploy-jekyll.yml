@@ -2,27 +2,28 @@ name: Deploy Jekyll to GitHub Pages
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-      - jekyll
-    paths:
-      - '_config.yml'
-      - 'Gemfile'
-      - '_layouts/**'
-      - '_includes/**'
-      - '_posts/**'
-      - '_members/**'
-      - '*.md'
-      - '*.html'
-      - 'static/**'
-      - 'publications/**'
-      - 'research/**'
-      - 'members/**'
-      - 'news/**'
-      - 'contact/**'
-      - 'courses/**'
-      - 'join/**'
+  # 如果使用 "Deploy from a branch" 方式，可以注释掉自动触发
+  # push:
+  #   branches:
+  #     - main
+  #     - jekyll
+  #   paths:
+  #     - '_config.yml'
+  #     - 'Gemfile'
+  #     - '_layouts/**'
+  #     - '_includes/**'
+  #     - '_posts/**'
+  #     - '_members/**'
+  #     - '*.md'
+  #     - '*.html'
+  #     - 'static/**'
+  #     - 'publications/**'
+  #     - 'research/**'
+  #     - 'members/**'
+  #     - 'news/**'
+  #     - 'contact/**'
+  #     - 'courses/**'
+  #     - 'join/**'
 
 permissions:
   contents: read
@@ -51,6 +52,8 @@ jobs:
 
       - name: Build Jekyll site
         run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -10,6 +10,7 @@ future: true
 paginate: 10
 
 # 允许直接访问.htm文件
+# 注意：index.html 在 exclude 列表中，Jekyll 会使用 index.md 作为首页
 include: 
   - "*.htm"
   - "*.html"
@@ -31,6 +32,7 @@ exclude:
         - vendor/gems/
         - vendor/ruby/
         - react-index.html.bak
+        - index.html
         - src/
         - dist/
         - vite.config.js
