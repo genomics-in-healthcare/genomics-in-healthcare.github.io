@@ -27,8 +27,7 @@
     "test:unit:ui": "vitest --ui",
     "test:unit:coverage": "vitest --coverage",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "start:jekyll": "wsl -e bash -c \"cd /mnt/d/documents/genomics-in-healthcare.github.io && bundle exec jekyll serve --force_polling --host 0.0.0.0 --port 4000\""
+    "build-storybook": "storybook build"
   },
   "keywords": [
     "react",
