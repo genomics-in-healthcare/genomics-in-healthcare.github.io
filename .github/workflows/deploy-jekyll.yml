@@ -2,13 +2,9 @@ name: Deploy Jekyll to GitHub Pages
 
 on:
   workflow_dispatch:
-    inputs:
-      confirm:
-        description: '确认切换到Jekyll版本 (输入 "yes" 确认)'
-        required: true
-        default: 'no'
   push:
     branches:
+      - main
       - jekyll
     paths:
       - '_config.yml'
@@ -19,6 +15,14 @@ on:
       - '_members/**'
       - '*.md'
       - '*.html'
+      - 'static/**'
+      - 'publications/**'
+      - 'research/**'
+      - 'members/**'
+      - 'news/**'
+      - 'contact/**'
+      - 'courses/**'
+      - 'join/**'
 
 permissions:
   contents: read
@@ -66,6 +70,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 
 

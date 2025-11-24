@@ -30,3 +30,11 @@ yarn-error.log*
 
 # React
 *.log
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/

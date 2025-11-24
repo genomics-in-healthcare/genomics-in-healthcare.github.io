@@ -2,6 +2,7 @@ name: "Genomics and Artificial Intelligence in Healthcare Lab"
 description: "This is the official web page for the Genomics and Artificial Intelligence in Healthcare Lab at Hong Kong PolyU."
 
 url: "https://genomics-in-healthcare.github.io/"
+baseurl: ""  # 对于 username.github.io 类型的仓库，baseurl 应为空
 
 # Allow future posts to be included
 future: true
@@ -29,6 +30,15 @@ exclude:
         - vendor/cache/
         - vendor/gems/
         - vendor/ruby/
+        - react-index.html.bak
+        - src/
+        - dist/
+        - vite.config.js
+        - vitest.config.js
+        - playwright.config.js
+        - playwright.config.production.js
+        - package.json
+        - package-lock.json
 
 collections:
         affiliates:
