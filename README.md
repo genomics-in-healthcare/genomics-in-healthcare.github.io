@@ -25,7 +25,7 @@ npm run preview
 ```
 
 5. Deploy to GitHub Pages:
-Copy all output from `dist` directory to the `root` directory, as the build outputs to `dist` but GitHub Pages only serves files from the root directory.
+Please copy all output from `dist` directory to the `root` directory before deployment, as the build outputs to `dist` but GitHub Pages only serves files from `root` directory.
 ```bash
 npm run deploy
 ```
