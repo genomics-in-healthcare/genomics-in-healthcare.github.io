@@ -45,20 +45,24 @@ function Header() {
       <header className={`md-app-bar ${isHome ? 'home' : ''} ${scrolled ? 'scrolled' : ''}`}>
         <div className="md-app-bar__container">
           <button
-            className="md-button md-button--text"
+            className="md-button md-button--text md-menu-button"
             id="menuButton"
             aria-label="Open menu"
             onClick={toggleDrawer}
             style={{ color: '#64748b' }}
           >
-            <span className="material-icons">menu</span>
+            <span className="md-menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </button>
 
           <div className="md-app-bar__brand" style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
             <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
               <img
                 className="md-app-bar__logo"
-                src={`${siteConfig.baseurl}/img/logo/logo.png`}
+                src={siteConfig.static('img/logo/logo.png')}
                 alt="JC STEM Lab"
                 style={{ height: '43px', marginRight: '14px' }}
               />
@@ -107,7 +111,7 @@ function Header() {
               >
                 <img
                   className="md-navigation-drawer__logo"
-                  src={`${siteConfig.baseurl}/img/logo/logo.png`}
+                  src={siteConfig.static('img/logo/logo.png')}
                   alt="JC STEM Lab"
                   style={{ height: '43px', marginRight: '14px' }}
                 />
@@ -122,13 +126,16 @@ function Header() {
               </Link>
             </div>
             <button
-              className="md-button md-button--text"
+              className="md-button md-button--text md-close-button"
               id="closeDrawerButton"
               aria-label="Close menu"
               onClick={closeDrawer}
               style={{ color: '#64748b', padding: '8px' }}
             >
-              <span className="material-icons">close</span>
+              <span className="md-close-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
             </button>
           </div>
         </div>

@@ -2,13 +2,14 @@ import './Join.css'
 
 function Join() {
   return (
-    <div className="md-main-content">
-      <div className="join-container">
+    <div className="join-container">
         <p className="intro-text">
           We welcome applicants with backgrounds in Computer Science and Engineering, Biology, Computational Biology, Genomics, Biomedical Engineering, Medicine and related disciplines to join the Hong Kong Jockey Club STEM Laboratory of Genomics and AI in Healthcare.
         </p>
 
-        <h2 className="section-header">Opportunities</h2>
+        <h2 className="section-header">
+          <strong>Opportunities</strong>
+        </h2>
 
         <div className="card-grid">
           <div className="card">
@@ -42,7 +43,9 @@ function Join() {
           </div>
         </div>
 
-        <h2 className="section-header">About the Laboratory</h2>
+        <h2 className="section-header">
+          <strong>About the Laboratory</strong>
+        </h2>
 
         <div className="card-grid">
           <div className="card">
@@ -56,13 +59,14 @@ function Join() {
           </div>
         </div>
 
-        <h2 className="section-header">Application</h2>
+        <h2 className="section-header">
+          <strong>Application</strong>
+        </h2>
 
         <div className="contact-box">
           Prospective applicants may send inquiry to: <strong>genomics@polyu.edu.hk</strong>
         </div>
       </div>
-    </div>
   )
 }
 

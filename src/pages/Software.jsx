@@ -3,13 +3,14 @@ import './Software.css'
 
 function Software() {
   return (
-    <div className="md-main-content">
-      <div className="software-container">
+    <div className="software-container">
         <p className="intro-text">
           The software tools here were developed in the Zhang lab over many years by grant support from NSF, NIH, The Alzheimer's Association and Monsanto Corporation.
         </p>
 
-        <h2 className="section-header">Computational Biology</h2>
+        <h2 className="section-header">
+          <strong>Computational Biology</strong>
+        </h2>
 
         <div className="software-item">
           <div className="software-name">AmpSeq-SSR</div>
@@ -107,7 +108,9 @@ function Software() {
           </div>
         </div>
 
-        <h2 className="section-header">Optimization and Search</h2>
+        <h2 className="section-header">
+          <strong>Optimization and Search</strong>
+        </h2>
 
         <div className="software-item">
           <div className="software-name">Cut-and-solve for the ATSP</div>
@@ -131,7 +134,6 @@ function Software() {
             {' '}(<a href="http://www.cs.wustl.edu/~zhang/projects/backboneGuidedSearch/bgwalksat/index.html" target="_blank" rel="noopener noreferrer">software</a>)
           </div>
         </div>
-      </div>
     </div>
   )
 }

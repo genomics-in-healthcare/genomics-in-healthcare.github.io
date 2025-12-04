@@ -3,12 +3,12 @@
   width: 100%;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 18px 16px 0 16px;
 }
 
 .contact-content {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
   color: #222;
 }

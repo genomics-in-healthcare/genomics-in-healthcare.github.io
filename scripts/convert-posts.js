@@ -58,8 +58,8 @@ function convertPostsToJson() {
   const outputFile = path.join(rootDir, 'src', 'data', 'posts.json')
   
   if (!fs.existsSync(postsDir)) {
-    console.error('_posts directory not found!')
-    process.exit(1)
+    console.log('⚠️  _posts directory not found, skipping conversion. Using existing JSON file if available.')
+    return
   }
   
   const postFiles = fs.readdirSync(postsDir).filter(file => file.endsWith('.md'))

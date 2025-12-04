@@ -1,5 +1,87 @@
 /* Home page specific styles */
 
+/* Hero section base styles */
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  overflow: visible;
+}
+
+/* Scoped Material Design-like hover for Latest News cards only */
+.latest-news .md-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow, transform, background-color;
+}
+
+.latest-news .md-card:hover,
+.latest-news .md-card:focus-within {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+              0 6px 10px 0 rgba(0, 0, 0, 0.14),
+              0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+  background-color: #e5e7eb;
+}
+
+.latest-news .md-card:active {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+              0 4px 5px 0 rgba(0, 0, 0, 0.14),
+              0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(0);
+}
+
+.latest-news .md-card .material-icons {
+  transition: none;
+}
+
+/* Scoped hover for Our Research Focus cards (no gray background) */
+.research-focus .md-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow, transform;
+}
+
+.research-focus .md-card:hover,
+.research-focus .md-card:focus-within {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+              0 6px 10px 0 rgba(0, 0, 0, 0.14),
+              0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+  background-color: #e5e7eb;
+}
+
+.research-focus .md-card:active {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+              0 4px 5px 0 rgba(0, 0, 0, 0.14),
+              0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(0);
+}
+
+.research-focus .md-card .material-icons {
+  transition: none;
+}
+
+/* Prevent dark border on hover/focus for cards on the homepage */
+.md-card--clickable:hover,
+.md-card--clickable:focus,
+.md-card--clickable:active {
+  border-color: #e2e8f0 !important;
+  outline: none;
+}
+
 /* Wide screen font sizes */
 .lab-description-section h2,
 .lab-description-section h2 span,

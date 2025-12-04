@@ -13,7 +13,7 @@
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -49,8 +49,44 @@
   color: #64748b;
 }
 
+.member-card__contact a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+.member-card__contact a:hover {
+  text-decoration: underline;
+}
+
 .member-card__email {
   font-weight: 500;
+}
+
+.member-card__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.member-card__button {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.member-card__button:hover {
+  background-color: #eef2f7;
+  border-color: #d1d5db;
+  color: #1558d6;
+  text-decoration: none;
 }
 
 .member-card__links {
@@ -63,22 +99,26 @@
 .member-card__link {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  font-size: 0.875rem;
-  color: #1e40af;
+  padding: 6px 10px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  color: #1a73e8;
   text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background-color 0.15s ease;
+  font-size: 0.75rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .member-card__link:hover {
-  background-color: rgba(30, 64, 175, 0.1);
+  background-color: #eef2f7;
+  border-color: #d1d5db;
+  color: #1558d6;
   text-decoration: none;
 }
 
 .member-card__link .material-icons {
   font-size: 16px;
+  margin-right: 6px;
 }
 
 .member-card__description {
@@ -95,6 +135,19 @@
   margin-bottom: 0;
 }
 
+.member-card__description a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.member-card__description a:hover {
+  text-decoration: underline;
+}
+
+.member-card__description a:visited {
+  color: #1a73e8;
+}
+
 @media (max-width: 768px) {
   .member-card {
     flex-direction: column;
@@ -106,9 +159,21 @@
     width: 150px;
     height: 150px;
   }
+
+  .member-card__contact {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .member-card__email {
+    width: 100%;
+  }
+
+  .member-card__buttons {
+    justify-content: center;
+  }
+
+  .member-card__links {
+    justify-content: center;
+  }
 }
-
-
-
-
-

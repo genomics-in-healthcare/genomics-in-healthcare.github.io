@@ -27,7 +27,17 @@ const getStaticPath = (path) => {
   cleanPath = cleanPath.startsWith('static/') ? cleanPath.slice(7) : cleanPath
   
   const baseUrl = getBaseUrl()
-  return baseUrl ? `${baseUrl}/${cleanPath}` : `/${cleanPath}`
+  // Ensure cleanPath starts with / for proper URL construction
+  const normalizedPath = cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`
+  
+  // If baseUrl is '/' or empty, just return the normalized path
+  if (!baseUrl || baseUrl === '/') {
+    return normalizedPath
+  }
+  
+  // Otherwise, combine baseUrl and path, avoiding double slashes
+  const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl
+  return `${cleanBaseUrl}${normalizedPath}`
 }
 
 export const siteConfig = {

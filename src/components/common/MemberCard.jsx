@@ -26,16 +26,18 @@ const MemberCard = memo(function MemberCard({ member }) {
   }
 
   const socialLinks = [
-    { key: 'orcid', icon: 'fingerprint', label: 'ORCID', url: `http://orcid.org/${member.orcid}` },
-    { key: 'linkedIn', icon: 'work', label: 'LinkedIn', url: `http://www.linkedin.com/in/${member.linkedIn}` },
-    { key: 'UCSF', icon: 'account_circle', label: 'UCSF Profile', url: `http://profiles.ucsf.edu/${member.UCSF}` },
-    { key: 'scholar', icon: 'school', label: 'Scholar', url: `http://scholar.google.com/citations?user=${member.scholar}` },
-    { key: 'twitTer', icon: 'chat', label: 'Twitter', url: `http://twitter.com/${member.twitTer}` },
-    { key: 'bsky', icon: 'chat_bubble', label: 'Bluesky', url: `https://bsky.app/profile/${member.bsky}` },
-    { key: 'github', icon: 'code', label: 'GitHub', url: `http://github.com/${member.github}` },
+    { key: 'orcid', icon: 'fingerprint', label: 'ORCID', url: `http://orcid.org/${member.orcid}`, isButton: false },
+    { key: 'linkedIn', icon: 'work', label: 'LinkedIn', url: `http://www.linkedin.com/in/${member.linkedIn}`, isButton: false },
+    { key: 'UCSF', icon: 'account_circle', label: 'UCSF Profile', url: `http://profiles.ucsf.edu/${member.UCSF}`, isButton: false },
+    { key: 'scholar', icon: 'school', label: 'Scholar', url: `http://scholar.google.com/citations?user=${member.scholar}`, isButton: true },
+    { key: 'twitTer', icon: 'chat', label: 'Twitter', url: `http://twitter.com/${member.twitTer}`, isButton: false },
+    { key: 'bsky', icon: 'chat_bubble', label: 'Bluesky', url: `https://bsky.app/profile/${member.bsky}`, isButton: false },
+    { key: 'github', icon: 'code', label: 'GitHub', url: `http://github.com/${member.github}`, isButton: false },
   ]
 
   const activeSocialLinks = socialLinks.filter(link => member[link.key])
+  const buttonLinks = activeSocialLinks.filter(link => link.isButton)
+  const iconLinks = activeSocialLinks.filter(link => !link.isButton)
 
   return (
     <Card className="member-card" id={member.name}>
@@ -69,9 +71,25 @@ const MemberCard = memo(function MemberCard({ member }) {
           </div>
         )}
 
-        {activeSocialLinks.length > 0 && (
+        {buttonLinks.length > 0 && (
+          <div className="member-card__buttons">
+            {buttonLinks.map((link) => (
+              <Link
+                key={link.key}
+                href={link.url}
+                external
+                variant="button"
+                className="member-card__button"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {iconLinks.length > 0 && (
           <div className="member-card__links">
-            {activeSocialLinks.map((link) => (
+            {iconLinks.map((link) => (
               <Link
                 key={link.key}
                 href={link.url}

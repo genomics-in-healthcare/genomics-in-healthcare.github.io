@@ -1,16 +1,21 @@
 .news-item {
-  margin-bottom: 24px;
-  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 4px;
+  padding: 6px 12px;
 }
 
 .news-item__date {
+  flex-shrink: 0;
+  min-width: 70px;
   font-size: 0.875rem;
   color: #64748b;
-  margin-bottom: 12px;
   font-weight: 500;
 }
 
 .news-item__content {
+  flex: 1;
   color: #334155;
   line-height: 1.6;
 }

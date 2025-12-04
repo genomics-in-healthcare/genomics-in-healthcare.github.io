@@ -4,6 +4,9 @@
   "type": "module",
   "description": "Genomics and AI in Healthcare Lab website - React version with testing",
   "main": "index.js",
+  "exports": {
+    "./ui": "./src/components/ui/index.js"
+  },
   "scripts": {
     "dev": "vite",
     "build": "npm run convert-members && npm run convert-posts && vite build",

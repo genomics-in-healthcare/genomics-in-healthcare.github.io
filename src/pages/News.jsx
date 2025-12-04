@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { NewsItem } from '../components/common'
-import { Container } from '../components/ui'
 import { postsData } from '../data/posts'
 import './News.css'
 
@@ -30,13 +29,11 @@ function News() {
 
   return (
     <div className="md-main-content">
-      <Container size="medium">
-        <div className="news-container">
-          {newsPosts.map((post, index) => (
-            <NewsItem key={index} post={post} formatDate={formatDate} />
-          ))}
-        </div>
-      </Container>
+      <div className="news-container">
+        {newsPosts.map((post, index) => (
+          <NewsItem key={index} post={post} formatDate={formatDate} />
+        ))}
+      </div>
     </div>
   )
 }

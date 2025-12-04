@@ -16,7 +16,7 @@ function Research() {
             </div>
             <div className="research-description" style={{ textAlign: 'center' }}>
               <img
-                src={`${siteConfig.baseurl}/img/logo/rgc.png`}
+                src={siteConfig.static('img/logo/rgc.png')}
                 alt="RGC"
                 style={{ maxWidth: '200px', height: 'auto', margin: '6px', display: 'inline-block' }}
               />
@@ -25,7 +25,7 @@ function Research() {
               <strong>Objectives:</strong> Develop innovative AI and genomic technologies for objective diagnosis and personalized treatment of major psychiatric disorders, including major depressive disorder, schizophrenia and bipolar disorder.
             </div>
             <img
-              src={`${siteConfig.baseurl}/img/projects/fig1.png`}
+              src={siteConfig.static('img/projects/fig1.png')}
               alt="Project 1 image"
               style={{ maxWidth: '100%', height: 'auto' }}
             />
@@ -43,7 +43,7 @@ function Research() {
             </div>
             <div className="research-description" style={{ textAlign: 'center' }}>
               <img
-                src={`${siteConfig.baseurl}/img/logo/rgc.png`}
+                src={siteConfig.static('img/logo/rgc.png')}
                 alt="RGC"
                 style={{ maxWidth: '200px', height: 'auto', margin: '6px', display: 'inline-block' }}
               />
@@ -56,7 +56,7 @@ function Research() {
               </ol>
             </div>
             <img
-              src={`${siteConfig.baseurl}/img/projects/fig2.png`}
+              src={siteConfig.static('img/projects/fig2.png')}
               alt="Project 2 image"
               style={{ maxWidth: '100%', height: 'auto' }}
             />
@@ -74,12 +74,12 @@ function Research() {
             </div>
             <div className="research-description logo-row" style={{ textAlign: 'center' }}>
               <img
-                src={`${siteConfig.baseurl}/img/logo/nsfc.png`}
+                src={siteConfig.static('img/logo/nsfc.png')}
                 alt="NSFC"
                 style={{ maxWidth: '180px', height: 'auto', margin: '6px', display: 'inline-block' }}
               />
               <img
-                src={`${siteConfig.baseurl}/img/logo/rgc.png`}
+                src={siteConfig.static('img/logo/rgc.png')}
                 alt="RGC"
                 style={{ maxWidth: '200px', height: 'auto', margin: '6px', display: 'inline-block' }}
               />
@@ -106,7 +106,7 @@ function Research() {
             </div>
             <div className="research-description" style={{ textAlign: 'center' }}>
               <img
-                src={`${siteConfig.baseurl}/img/logo/hmrf.png`}
+                src={siteConfig.static('img/logo/hmrf.png')}
                 alt="HMRF"
                 style={{ maxWidth: '260px', height: 'auto', margin: '6px', display: 'inline-block' }}
               />
@@ -116,12 +116,12 @@ function Research() {
             </div>
             <div className="research-description">
               <img
-                src={`${siteConfig.baseurl}/img/projects/fig3.png`}
+                src={siteConfig.static('img/projects/fig3.png')}
                 alt="Project 4 image A"
                 style={{ maxWidth: '100%', height: 'auto', marginRight: '6px' }}
               />
               <img
-                src={`${siteConfig.baseurl}/img/projects/fig4.png`}
+                src={siteConfig.static('img/projects/fig4.png')}
                 alt="Project 4 image B"
                 style={{ maxWidth: '100%', height: 'auto' }}
               />
@@ -140,7 +140,7 @@ function Research() {
             </div>
             <div className="research-description" style={{ textAlign: 'center' }}>
               <img
-                src={`${siteConfig.baseurl}/img/logo/rgc.png`}
+                src={siteConfig.static('img/logo/rgc.png')}
                 alt="RGC"
                 style={{ maxWidth: '200px', height: 'auto', margin: '6px', display: 'inline-block' }}
               />
@@ -149,7 +149,7 @@ function Research() {
               <strong>Objectives:</strong> Develop an innovative technology for profiling DNA, RNA and proteins in the same single cell at the same time; apply the new technology to cancer research.
             </div>
             <img
-              src={`${siteConfig.baseurl}/img/projects/fig5.png`}
+              src={siteConfig.static('img/projects/fig5.png')}
               alt="Project 5 image"
               style={{ maxWidth: '100%', height: 'auto' }}
             />

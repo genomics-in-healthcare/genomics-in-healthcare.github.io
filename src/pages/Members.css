@@ -2,7 +2,7 @@
 .members-container {
   width: 100%;
   max-width: 1040px;
-  padding: 0px 16px;
+  padding: 18px 16px 0 16px;
   margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .member-name {
-  font-size: 21px;
+  font-size: 15px;
   font-weight: 600;
   color: #111827;
   margin: 0 0 6px 0;
@@ -57,7 +57,7 @@
 
 .member-contact {
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 15px;
   color: #6b7280;
 }
 
@@ -128,7 +128,7 @@
 .member-description {
   color: #374151;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .member-description p {
@@ -194,7 +194,7 @@
 }
 
 .position-title {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   color: #111827;
   margin: 26px 0 14px 0;

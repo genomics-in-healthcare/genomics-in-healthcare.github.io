@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 18px 16px 0 16px;
 }
 
 .software-item {
@@ -11,7 +11,7 @@
   padding: 6px 12px;
   margin-bottom: 4px;
   border-bottom: none !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   display: flex;
   align-items: flex-start;
   font-family: Arial, Helvetica, sans-serif;
@@ -34,7 +34,7 @@
   min-width: 200px;
   max-width: 200px;
   margin-right: 10px;
-  font-size: 14px;
+  font-size: 15px;
   color: #444;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
@@ -44,7 +44,7 @@
 .software-description {
   flex: 1;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px !important;
+  font-size: 15px !important;
   color: #222;
   letter-spacing: normal;
   text-align: left;
@@ -55,7 +55,7 @@
 }
 
 .section-header {
-  font-size: 17px !important;
+  font-size: 15px !important;
   margin-top: 16px;
   margin-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -66,7 +66,7 @@
 
 .intro-text {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px !important;
+  font-size: 15px !important;
   line-height: 1.2;
   margin-bottom: 10px;
   padding-left: 10px;

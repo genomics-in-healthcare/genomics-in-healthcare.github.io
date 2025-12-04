@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Link, Card } from '../ui'
+import { Link } from '../ui'
 import { siteConfig } from '../../data/navigation'
 import './NewsItem.css'
 
@@ -16,7 +16,7 @@ const NewsItem = memo(function NewsItem({ post, formatDate }) {
   }
 
   return (
-    <Card className="news-item" elevated>
+    <div className="news-item">
       <div className="news-item__date">{formatDate(post.date)}</div>
       <div className="news-item__content">
         <ReactMarkdown>{post.content}</ReactMarkdown>
@@ -50,7 +50,7 @@ const NewsItem = memo(function NewsItem({ post, formatDate }) {
           </div>
         )}
       </div>
-    </Card>
+    </div>
   )
 })
 

@@ -14,9 +14,17 @@ const Image = memo(function Image({
   ...props
 }) {
   // 处理图片路径
-  const imageSrc = src.startsWith('http') 
-    ? src 
-    : `${siteConfig.baseurl}${src.startsWith('/') ? src : `/${src}`}`
+  let imageSrc = src
+  if (!src.startsWith('http')) {
+    // 确保路径以 / 开头
+    const normalizedSrc = src.startsWith('/') ? src : `/${src}`
+    // 如果 baseurl 是 /，避免双斜杠
+    if (siteConfig.baseurl === '/') {
+      imageSrc = normalizedSrc
+    } else {
+      imageSrc = `${siteConfig.baseurl}${normalizedSrc}`
+    }
+  }
 
   const classes = ['ui-image', className].filter(Boolean).join(' ')
 

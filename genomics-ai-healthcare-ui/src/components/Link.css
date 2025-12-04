@@ -1,0 +1,52 @@
+.ui-link {
+  color: #1e40af;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.ui-link:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+.ui-link--button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.ui-link--button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+}
+
+.ui-link--tag {
+  color: #1e40af;
+  font-size: 0.875rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ui-link--tag:hover {
+  background-color: rgba(30, 64, 175, 0.1);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
