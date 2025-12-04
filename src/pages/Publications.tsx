@@ -1,48 +1,63 @@
-import { useEffect, useRef, FC } from 'react'
-import { siteConfig } from '../data/navigation'
+import { FC } from 'react'
+import PublicationItem from '../components/PublicationItem'
+import { publicationsData } from '../data/publications'
 import './Publications.css'
 
 const Publications: FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    // Load publications content from the HTML file
-    // In a production app, you might want to convert this to a more structured format
-    // For now, we'll fetch and display the HTML content
-    const loadPublications = async () => {
-      try {
-        const response = await fetch(`${siteConfig.baseurl}/publications/index.htm`)
-        if (response.ok) {
-          const html = await response.text()
-          // Extract content between <div class="pub-list"> tags
-          const parser = new DOMParser()
-          const doc = parser.parseFromString(html, 'text/html')
-          const pubList = doc.querySelector('.pub-list')
-          if (pubList && containerRef.current) {
-            containerRef.current.innerHTML = pubList.innerHTML
-          }
-        }
-      } catch (error) {
-        console.error('Error loading publications:', error)
-        // Fallback: show a message
-        if (containerRef.current) {
-          containerRef.current.innerHTML = '<p>Publications content is being loaded...</p>'
-        }
-      }
-    }
-
-    loadPublications()
-  }, [])
-
   return (
     <div className="md-main-content">
       <div className="publications-container">
-        <div className="pub-list" ref={containerRef}>
-          <p>Loading publications...</p>
+        <div className="pub-list">
+          {/* Book Section */}
+          {publicationsData.book.length > 0 && (
+            <div className="pub-section">
+              <font face="Arial">
+                <strong>Book</strong>
+                <blockquote>
+                  <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {publicationsData.book.map((book, index) => (
+                      <PublicationItem key={`book-${index}`} html={book.html} />
+                    ))}
+                  </ul>
+                </blockquote>
+                <hr />
+              </font>
+            </div>
+          )}
+
+          {/* Publications by Year */}
+          {Object.keys(publicationsData.byYear)
+            .sort((a, b) => parseInt(b) - parseInt(a))
+            .map((year) => {
+              const yearData = publicationsData.byYear[year];
+              if (yearData.items.length === 0) return null;
+
+              return (
+                <div key={year} className="pub-year-section">
+                  <p>
+                    <font face="Arial">
+                      <b>
+                        {year}
+                        <a name={year}></a>
+                      </b>
+                    </font>
+                  </p>
+                  <ul>
+                    {yearData.items.map((item, index) => (
+                      <PublicationItem
+                        key={`${year}-${index}`}
+                        html={item.html}
+                      />
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Publications
+export default Publications;
+

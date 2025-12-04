@@ -10,6 +10,14 @@
   margin-top: -16px !important;
 }
 
+.pub-section {
+  margin-bottom: 24px;
+}
+
+.pub-year-section {
+  margin-bottom: 16px;
+}
+
 .pub-list blockquote {
   margin-left: 10px;
   margin-bottom: 6px;
@@ -160,11 +168,6 @@
 .pub-list br {
   display: none;
 }
-
-
-
-
-
 
 
 

@@ -4,9 +4,9 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
-// Get basename from Vite's environment
-// In development, use empty string. In production, use the base path
-const basename = import.meta.env.DEV ? '' : (import.meta.env.BASE_URL || '/genomics-in-healthcare.github.io')
+// Get basename for React Router
+// For GitHub Pages root repository, base should be '/'
+const basename = '/'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

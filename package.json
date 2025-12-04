@@ -9,7 +9,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run convert-members && npm run convert-posts && vite build",
+    "build": "npm run extract-publications && npm run convert-members && npm run convert-posts && vite build && npm run copy-404",
+    "extract-publications": "node scripts/extract-publications.mjs",
+    "copy-404": "powershell -Command \"Copy-Item -Path './404.html' -Destination './dist/404.html'\"",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "convert-members": "node scripts/convert-members.js",
