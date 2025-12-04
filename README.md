@@ -1,6 +1,6 @@
-# JC STEM Lab of Genomics and AI in Healthcare - React Version
+# JC STEM Lab of Genomics and AI in Healthcare
 
-This is the React version of the Genomics and AI in Healthcare Lab website.
+This is the React version of the Official Website of Genomics and AI in Healthcare Lab
 
 ## Setup
 
@@ -25,25 +25,10 @@ npm run preview
 ```
 
 5. Deploy to GitHub Pages:
+Copy all output from `dist` directory to the `root` directory, as the build outputs to `dist` but GitHub Pages only serves files from the root directory.
 ```bash
 npm run deploy
 ```
-
-## Project Structure
-
-```
-src/
-├── components/     # Reusable React components (Header, Footer, Layout)
-├── pages/         # Page components (Home, News, Research, etc.)
-├── data/          # Data files (navigation, config)
-├── App.jsx        # Main app component with routing
-├── main.jsx       # Entry point
-└── index.css      # Global styles
-```
-
-## Development
-
-The development server runs on `http://localhost:5173` by default (Vite default port).
 
 ## Testing
 
@@ -52,14 +37,3 @@ Run tests with:
 npm test              # Playwright E2E tests
 npm run test:unit     # Vitest unit tests
 ```
-
-## Deployment
-
-The build output goes to the `dist` directory. For GitHub Pages, make sure to update the `base` path in `vite.config.js` if your repository name changes.
-
-## Branch Information
-
-- **main branch**: Contains the full project (Jekyll + React)
-- **react branch**: Contains only React code (this branch)
-
-See [BRANCH_WORKFLOW.md](BRANCH_WORKFLOW.md) for information on working with multiple branches.
