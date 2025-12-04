@@ -1,0 +1,1418 @@
+/* Material Design CSS for Genomics in Healthcare Lab */
+
+/* JC STEM Color Palette - Matching Target Website */
+:root {
+  /* Primary Colors - JC STEM Blue */
+  --md-primary: #1e3a8a; /* JC STEM primary blue */
+  --md-primary-dark: #1e40af;
+  --md-primary-light: #3b82f6;
+  --md-primary-50: #eff6ff;
+  --md-primary-100: #dbeafe;
+  --md-primary-200: #bfdbfe;
+  --md-primary-300: #93c5fd;
+  --md-primary-400: #60a5fa;
+  --md-primary-500: #3b82f6;
+  --md-primary-600: #2563eb;
+  --md-primary-700: #1d4ed8;
+  --md-primary-800: #1e40af;
+  --md-primary-900: #1e3a8a;
+
+  /* Secondary Colors - JC STEM Green */
+  --md-secondary: #059669;
+  --md-secondary-dark: #047857;
+  --md-secondary-light: #10b981;
+
+  /* Accent Color - JC STEM Orange */
+  --md-accent: #f59e0b;
+  --md-on-accent: #ffffff;
+
+  /* Surface Colors */
+  --md-surface: #ffffff;
+  --md-surface-variant: #f8fafc;
+  --md-background: #f8f9fa;
+
+  /* Text Colors */
+  --md-on-primary: #ffffff;
+  --md-on-secondary: #ffffff;
+  --md-on-surface: #1a1c1e;
+  --md-on-surface-variant: #5f6b7a;
+  --md-on-background: #1a1c1e;
+
+  /* Error Colors */
+  --md-error: #f44336;
+  --md-on-error: #ffffff;
+
+  /* Success Colors */
+  --md-success: #4caf50;
+  --md-on-success: #ffffff;
+
+  /* Warning Colors */
+  --md-warning: #ff9800;
+  --md-on-warning: #ffffff;
+
+  /* Flat Design - No Shadows */
+  --md-elevation-1: none;
+  --md-elevation-2: none;
+  --md-elevation-3: none;
+  --md-elevation-4: none;
+  --md-elevation-5: none;
+
+  /* Typography - JC STEM Font Stack */
+  --md-font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --md-font-size-h1: 2.125rem;
+  --md-font-size-h2: 1.5rem;
+  --md-font-size-h3: 1.25rem;
+  --md-font-size-h4: 1.125rem;
+  --md-font-size-h5: 1rem;
+  --md-font-size-h6: 0.875rem;
+  --md-font-size-body1: 1rem;
+  --md-font-size-body2: 0.875rem;
+  --md-font-size-caption: 0.75rem;
+
+  /* Spacing */
+  --md-spacing-xs: 4px;
+  --md-spacing-sm: 8px;
+  --md-spacing-md: 16px;
+  --md-spacing-lg: 24px;
+  --md-spacing-xl: 32px;
+  --md-spacing-xxl: 48px;
+
+  /* Flat Design Border Radius - Reduced */
+  --md-border-radius-sm: 2px;
+  --md-border-radius-md: 4px;
+  --md-border-radius-lg: 6px;
+  --md-border-radius-xl: 8px;
+
+  /* Transitions */
+  --md-transition-fast: 0.15s ease-in-out;
+  --md-transition-normal: 0.3s ease-in-out;
+  --md-transition-slow: 0.5s ease-in-out;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--md-font-family);
+  font-size: var(--md-font-size-body1);
+  line-height: 1.5;
+  color: var(--md-on-surface);
+  background-color: #f8f9fa;
+  background-image: 
+    radial-gradient(circle at 20px 20px, rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 40px 40px, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 var(--md-spacing-md) 0;
+  color: var(--md-on-surface);
+}
+
+h1 { font-size: var(--md-font-size-h1); }
+h2 { font-size: var(--md-font-size-h2); }
+h3 { font-size: var(--md-font-size-h3); }
+h4 { font-size: var(--md-font-size-h4); }
+h5 { font-size: var(--md-font-size-h5); }
+h6 { font-size: var(--md-font-size-h6); }
+
+p {
+  margin: 0 0 var(--md-spacing-md) 0;
+  color: var(--md-on-surface);
+}
+
+a {
+  color: var(--md-secondary);
+  text-decoration: none;
+  transition: color var(--md-transition-fast);
+}
+
+a:hover,
+a:focus,
+a:focus-visible,
+a:active {
+  color: var(--md-secondary-dark);
+  text-decoration: none;
+  outline: none;
+}
+
+/* Flat Design App Bar */
+.md-app-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--md-surface);
+  color: var(--md-on-surface);
+  box-shadow: none;
+  border-bottom: 0.5px solid #e2e8f0;
+  transition: box-shadow var(--md-transition-fast);
+}
+
+.md-app-bar--elevated {
+  box-shadow: none;
+}
+
+.md-app-bar__container {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 var(--md-spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.md-app-bar__title {
+  font-size: var(--md-font-size-h6);
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.md-app-bar__logo {
+  height: 40px;
+  width: auto;
+  margin-right: var(--md-spacing-md);
+}
+
+.md-app-bar__logo--secondary {
+  height: 32px;
+  margin-left: var(--md-spacing-sm);
+}
+
+.md-app-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-sm);
+}
+
+/* JC STEM Style Navigation Drawer - Matching Site Design */
+.md-navigation-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--md-surface);
+  transform: translateY(-100%);
+  transition: transform var(--md-transition-normal);
+  z-index: 1001;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.md-navigation-drawer--open {
+  transform: translateY(0);
+}
+
+.md-navigation-drawer--opening {
+  transform: translateY(-10px);
+}
+
+.md-navigation-drawer--closing {
+  transform: translateY(-10px);
+}
+
+.md-navigation-drawer__header {
+  padding: var(--md-spacing-lg);
+  background-color: var(--md-surface);
+  color: var(--md-on-surface);
+  border-bottom: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.md-navigation-drawer__title {
+  font-size: var(--md-font-size-h5);
+  font-weight: 600;
+  margin: 0;
+  color: var(--md-on-surface);
+  line-height: 1.3;
+}
+
+.md-navigation-drawer__content {
+  padding: var(--md-spacing-md) 0;
+  background-color: var(--md-surface);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.md-navigation-drawer__item {
+  display: flex;
+  align-items: center;
+  padding: var(--md-spacing-md) var(--md-spacing-lg);
+  color: var(--md-on-surface);
+  text-decoration: none;
+  transition: all var(--md-transition-fast);
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+  font-weight: 500;
+  font-size: var(--md-font-size-body1);
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.md-navigation-drawer__item:hover {
+  background-color: transparent;
+  color: var(--md-on-surface);
+  transform: none;
+}
+
+.md-navigation-drawer__item--active {
+  background-color: transparent;
+  color: var(--md-on-surface);
+  font-weight: 500;
+  border-left: none;
+  /* 移除活跃状态的视觉差异 */
+}
+
+.md-navigation-drawer__item-icon {
+  margin-right: var(--md-spacing-lg);
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--md-on-surface-variant);
+  transition: color var(--md-transition-fast);
+}
+
+.md-navigation-drawer__item:hover .md-navigation-drawer__item-icon {
+  color: var(--md-on-surface-variant);
+}
+
+.md-navigation-drawer__item--active .md-navigation-drawer__item-icon {
+  color: var(--md-on-surface-variant);
+  /* 移除活跃状态图标的视觉差异 */
+}
+
+/* 强制覆盖所有可能的活跃状态样式 */
+.md-navigation-drawer__item.active,
+.md-navigation-drawer__item--active,
+.md-navigation-drawer .active,
+.md-navigation-drawer .nav-item.active .md-navigation-drawer__item {
+  background-color: transparent !important;
+  color: #1e40af !important;
+  font-weight: 600 !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* 覆盖Bootstrap的活跃状态样式 */
+.md-navigation-drawer .nav-item.active .md-navigation-drawer__item,
+.md-navigation-drawer .nav-item.active .md-menu-item,
+.md-navigation-drawer .navbar-nav .nav-item.active .md-menu-item {
+  background-color: transparent !important;
+  color: #1e40af !important;
+  background: transparent !important;
+  font-weight: 600 !important;
+}
+
+/* 确保侧边栏中没有任何活跃状态的视觉差异 */
+
+.md-navigation-drawer .active,
+.md-navigation-drawer .nav-item.active,
+.md-navigation-drawer .nav-item.active * {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #1e40af !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+}
+
+/* Enhanced focus states for accessibility */
+.md-navigation-drawer__item:focus {
+  outline: 2px solid var(--md-primary);
+  outline-offset: 2px;
+  background-color: rgba(30, 64, 175, 0.1);
+}
+
+.md-navigation-drawer__item:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.md-navigation-drawer__item:focus-visible {
+  outline: 2px solid var(--md-primary);
+  outline-offset: 2px;
+  background-color: rgba(30, 64, 175, 0.1);
+}
+
+/* Navigation item text */
+.md-navigation-drawer__item span:not(.md-navigation-drawer__item-icon) {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Notion-style slide animation */
+.md-navigation-drawer__item {
+  animation: slideInTop 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+.md-navigation-drawer__item:nth-child(1) { animation-delay: 0.05s; }
+.md-navigation-drawer__item:nth-child(2) { animation-delay: 0.1s; }
+.md-navigation-drawer__item:nth-child(3) { animation-delay: 0.15s; }
+.md-navigation-drawer__item:nth-child(4) { animation-delay: 0.2s; }
+.md-navigation-drawer__item:nth-child(5) { animation-delay: 0.25s; }
+.md-navigation-drawer__item:nth-child(6) { animation-delay: 0.3s; }
+.md-navigation-drawer__item:nth-child(7) { animation-delay: 0.35s; }
+.md-navigation-drawer__item:nth-child(8) { animation-delay: 0.4s; }
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Notion-style close button */
+#closeDrawerButton {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--md-transition-fast);
+}
+
+#closeDrawerButton:hover {
+  background-color: transparent;
+}
+
+#closeDrawerButton .material-icons {
+  font-size: 28px; /* 增大字号从24px到28px */
+}
+
+/* Flat Design FAB (Floating Action Button) */
+.md-fab {
+  position: fixed;
+  bottom: var(--md-spacing-lg);
+  right: var(--md-spacing-lg);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--md-primary);
+  color: var(--md-on-primary);
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: box-shadow var(--md-transition-fast);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.md-fab:hover {
+  background-color: var(--md-primary-dark);
+  box-shadow: none;
+}
+
+.md-fab:active {
+  box-shadow: none;
+}
+
+/* Material Design Cards - Base Styles - Flattened */
+.md-card {
+  background-color: var(--md-surface);
+  border-radius: var(--md-border-radius-sm);
+  box-shadow: none;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: border-color var(--md-transition-fast);
+}
+
+/* Black Border Card Design - Flattened */
+.md-card--black-border {
+  background-color: var(--md-surface);
+  border: 1px solid #000000;
+  border-radius: var(--md-border-radius-sm);
+  box-shadow: none;
+  overflow: hidden;
+  transition: border-color var(--md-transition-fast);
+  position: relative;
+}
+
+.md-card--black-border:hover {
+  border-color: #374151;
+}
+
+
+/* Clickable Cards - Flattened */
+.md-card--clickable {
+  cursor: pointer;
+  transition: border-color var(--md-transition-fast);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+}
+
+.md-card--clickable:hover {
+  border-color: var(--md-primary);
+  text-decoration: none;
+  color: inherit;
+}
+
+.md-card--clickable:active {
+  border-color: var(--md-primary-dark);
+}
+
+.md-card--clickable:focus {
+  outline: 2px solid var(--md-primary);
+  outline-offset: 2px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.md-card--clickable:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Clickable Black Border Cards - Flattened */
+.md-card--clickable.md-card--black-border {
+  cursor: pointer;
+  transition: border-color var(--md-transition-fast);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+}
+
+.md-card--clickable.md-card--black-border:hover {
+  border-color: #374151;
+  text-decoration: none;
+  color: inherit;
+}
+
+.md-card--clickable.md-card--black-border:active {
+  border-color: #1f2937;
+}
+
+.md-card--clickable.md-card--black-border:focus {
+  outline: 3px solid var(--md-primary);
+  outline-offset: 2px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.md-card--clickable.md-card--black-border:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Accessibility improvements for clickable cards */
+.md-card--clickable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure all content inside clickable cards is accessible */
+.md-card--clickable * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Static Cards - Flattened */
+.md-card--static {
+  cursor: default;
+  transition: none;
+}
+
+.md-card--static:hover {
+  border-color: #e2e8f0; /* Keep original border */
+}
+
+.md-card__header {
+  padding: var(--md-spacing-lg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.md-card__title {
+  font-size: var(--md-font-size-h6);
+  font-weight: 500;
+  margin: 0 0 var(--md-spacing-xs) 0;
+  color: var(--md-on-surface);
+}
+
+.md-card__subtitle {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface-variant);
+  margin: 0;
+}
+
+.md-card__content {
+  padding: var(--md-spacing-lg);
+}
+
+.md-card__actions {
+  padding: var(--md-spacing-md) var(--md-spacing-lg);
+  display: flex;
+  gap: var(--md-spacing-sm);
+  justify-content: flex-end;
+}
+
+/* Material Design Buttons */
+.md-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border: none;
+  border-radius: var(--md-border-radius-sm);
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: var(--md-font-size-body2);
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--md-transition-fast);
+  text-decoration: none;
+  min-height: 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 修复汉堡按钮位置偏移问题 */
+#menuButton {
+  position: absolute !important;
+  right: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  overflow: hidden !important;
+  transition: background-color var(--md-transition-fast) !important;
+}
+
+#menuButton:hover {
+  transform: translateY(-50%) !important;
+  background-color: var(--md-primary-50) !important;
+}
+
+#menuButton:active {
+  transform: translateY(-50%) !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+  #menuButton {
+    right: 15px !important;
+  }
+}
+
+.md-button--primary {
+  background-color: var(--md-primary);
+  color: var(--md-on-primary);
+  box-shadow: none;
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.md-button--primary:hover {
+  background-color: var(--md-primary-dark);
+  box-shadow: none;
+}
+
+.md-button--secondary {
+  background-color: transparent;
+  color: var(--md-secondary);
+  border: 2px solid var(--md-secondary);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.md-button--secondary:hover {
+  background-color: var(--md-secondary);
+  color: var(--md-on-secondary);
+  box-shadow: none;
+}
+
+.md-button--text {
+  background-color: transparent;
+  color: var(--md-primary);
+  padding: var(--md-spacing-sm);
+  position: relative;
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.md-button--text:hover {
+  background-color: #f7fafc;
+  color: #4a5568;
+}
+
+/* Material Design Chips */
+.md-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--md-spacing-xs) var(--md-spacing-sm);
+  background-color: var(--md-surface-variant);
+  color: var(--md-on-surface);
+  border-radius: 16px;
+  font-size: var(--md-font-size-body2);
+  font-weight: 400;
+  margin: var(--md-spacing-xs);
+  transition: all var(--md-transition-fast);
+}
+
+.md-chip:hover {
+  background-color: var(--md-primary-100);
+  color: var(--md-secondary);
+}
+
+.md-chip--selected {
+  background-color: var(--md-primary);
+  color: var(--md-on-primary);
+}
+
+/* Material Design Lists */
+.md-list {
+  background-color: var(--md-surface);
+  border-radius: var(--md-border-radius-md);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.md-list-item {
+  display: flex;
+  align-items: center;
+  padding: var(--md-spacing-md) var(--md-spacing-lg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  transition: background-color var(--md-transition-fast);
+  cursor: pointer;
+}
+
+.md-list-item:last-child {
+  border-bottom: none;
+}
+
+.md-list-item:hover {
+  background-color: var(--md-primary-50);
+}
+
+.md-list-item__icon {
+  margin-right: var(--md-spacing-md);
+  color: var(--md-on-surface-variant);
+}
+
+.md-list-item__content {
+  flex: 1;
+}
+
+.md-list-item__title {
+  font-size: var(--md-font-size-body1);
+  font-weight: 400;
+  margin: 0;
+  color: var(--md-on-surface);
+}
+
+.md-list-item__subtitle {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface-variant);
+  margin: var(--md-spacing-xs) 0 0 0;
+}
+
+/* Material Design Ripple Effect */
+.md-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: md-ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes md-ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* JC STEM Style Backdrop - Matching Site Design */
+.md-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--md-transition-normal);
+}
+
+.md-backdrop--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Main Content Area */
+.md-main-content {
+  margin-top: 64px;
+  padding-top: var(--md-spacing-lg);
+  padding-bottom: var(--md-spacing-lg);
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 2.5vw, 32px);
+  padding-right: clamp(16px, 2.5vw, 32px);
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+/* Grid System */
+.md-grid {
+  display: grid;
+  gap: var(--md-spacing-lg);
+}
+
+.md-grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.md-grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.md-grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .md-app-bar__container {
+    padding: 0 var(--md-spacing-sm);
+  }
+  
+  .md-app-bar__title {
+    font-size: var(--md-font-size-body1);
+  }
+  
+  .md-main-content {
+    padding: var(--md-spacing-lg) var(--md-spacing-md);
+  }
+  
+  .md-grid--2-cols,
+  .md-grid--3-cols,
+  .md-grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+  
+  .md-fab {
+    bottom: var(--md-spacing-md);
+    right: var(--md-spacing-md);
+  }
+  
+  /* Navigation drawer responsive adjustments - full screen */
+  .md-navigation-drawer {
+    width: 100vw;
+  }
+  
+  .md-navigation-drawer__header {
+    padding: var(--md-spacing-lg) var(--md-spacing-md);
+  }
+  
+  .md-navigation-drawer__item {
+    padding: var(--md-spacing-md);
+    font-size: 18px; /* 增大字号从14px到18px */
+  }
+  
+  .md-navigation-drawer__item:hover {
+    transform: translateY(3px);
+  }
+  
+  /* Hero section responsive */
+  .hero-section h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-section p {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Stats grid responsive */
+  .hero-section .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+  
+  /* Flat card effects on mobile */
+  .md-card--clickable:hover {
+    border-color: var(--md-primary);
+  }
+  
+  /* Black border cards on mobile */
+  .md-card--black-border:hover {
+    border-color: #374151;
+  }
+  
+  .md-card--clickable.md-card--black-border:hover {
+    border-color: #374151;
+  }
+}
+
+@media (max-width: 480px) {
+  .md-app-bar__container {
+    min-height: 56px;
+  }
+  
+  .md-main-content {
+    margin-top: 56px;
+    padding: var(--md-spacing-lg) var(--md-spacing-md);
+  }
+  
+  .md-card__header,
+  .md-card__content {
+    padding: var(--md-spacing-md);
+  }
+  
+  /* Navigation drawer for very small screens - full screen */
+  .md-navigation-drawer {
+    width: 100vw;
+  }
+  
+  .md-navigation-drawer__header {
+    padding: var(--md-spacing-md);
+  }
+  
+  .md-navigation-drawer__title {
+    font-size: var(--md-font-size-body1);
+  }
+  
+  .md-navigation-drawer__item {
+    padding: var(--md-spacing-sm) var(--md-spacing-md);
+    font-size: 16px; /* 增大字号从12px到16px */
+  }
+  
+  .md-navigation-drawer__item-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: var(--md-spacing-sm);
+  }
+}
+
+/* Utility Classes */
+.md-text-center { text-align: center; }
+.md-text-left { text-align: left; }
+.md-text-right { text-align: right; }
+
+.md-mt-sm { margin-top: var(--md-spacing-sm); }
+.md-mt-md { margin-top: var(--md-spacing-md); }
+.md-mt-lg { margin-top: var(--md-spacing-lg); }
+
+.md-mb-sm { margin-bottom: var(--md-spacing-sm); }
+.md-mb-md { margin-bottom: var(--md-spacing-md); }
+.md-mb-lg { margin-bottom: var(--md-spacing-lg); }
+
+.md-p-sm { padding: var(--md-spacing-sm); }
+.md-p-md { padding: var(--md-spacing-md); }
+.md-p-lg { padding: var(--md-spacing-lg); }
+
+.md-hidden { display: none; }
+.md-visible { display: block; }
+
+/* Animation Classes */
+.md-fade-in {
+  animation: md-fade-in 0.5s ease-in-out;
+}
+
+@keyframes md-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.md-slide-up {
+  animation: md-slide-up 0.3s ease-out;
+}
+
+@keyframes md-slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Material Design Member Cards - Flattened */
+.md-member-card {
+  background-color: var(--md-surface);
+  border-radius: var(--md-border-radius-sm);
+  box-shadow: none;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: border-color var(--md-transition-fast);
+  margin-bottom: var(--md-spacing-md);
+  cursor: default;
+}
+
+.md-member-card:hover {
+  border-color: #cbd5e1;
+}
+
+.md-member-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--md-surface-variant);
+}
+
+.md-member-card__content {
+  padding: var(--md-spacing-md);
+}
+
+.md-member-card__name {
+  font-size: var(--md-font-size-h6);
+  font-weight: 500;
+  margin: 0 0 var(--md-spacing-xs) 0;
+  color: var(--md-on-surface);
+}
+
+.md-member-card__title {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface-variant);
+  margin: 0 0 var(--md-spacing-sm) 0;
+}
+
+.md-member-card__description {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Publication List - Static (non-clickable) */
+.md-publication-item {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--md-spacing-md);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  transition: none;
+  cursor: default;
+}
+
+.md-publication-item:last-child {
+  border-bottom: none;
+}
+
+.md-publication-item:hover {
+  background-color: transparent; /* No hover effect for static items */
+}
+
+.md-publication-item__icon {
+  margin-right: var(--md-spacing-md);
+  color: var(--md-secondary);
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.md-publication-item__content {
+  flex: 1;
+}
+
+.md-publication-item__title {
+  font-size: var(--md-font-size-body1);
+  font-weight: 500;
+  margin: 0 0 var(--md-spacing-xs) 0;
+  color: var(--md-on-surface);
+}
+
+.md-publication-item__authors {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface-variant);
+  margin: 0 0 var(--md-spacing-xs) 0;
+}
+
+.md-publication-item__journal {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-primary);
+  margin: 0 0 var(--md-spacing-xs) 0;
+}
+
+.md-publication-item__date {
+  font-size: var(--md-font-size-caption);
+  color: var(--md-on-surface-variant);
+  margin: 0;
+}
+
+/* Material Design News Cards - Flattened */
+.md-news-card {
+  background-color: var(--md-surface);
+  border-radius: var(--md-border-radius-sm);
+  box-shadow: none;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: border-color var(--md-transition-fast);
+  margin-bottom: var(--md-spacing-md);
+  cursor: default;
+}
+
+.md-news-card:hover {
+  border-color: #cbd5e1;
+}
+
+/* News items with clickable links inside */
+.news-item {
+  cursor: default;
+  transition: none;
+}
+
+.news-item:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.md-news-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--md-surface-variant);
+}
+
+.md-news-card__content {
+  padding: var(--md-spacing-md);
+}
+
+.md-news-card__title {
+  font-size: var(--md-font-size-h6);
+  font-weight: 500;
+  margin: 0 0 var(--md-spacing-xs) 0;
+  color: var(--md-on-surface);
+}
+
+.md-news-card__excerpt {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface-variant);
+  line-height: 1.4;
+  margin: 0 0 var(--md-spacing-sm) 0;
+}
+
+.md-news-card__date {
+  font-size: var(--md-font-size-caption);
+  color: var(--md-on-surface-variant);
+  margin: 0;
+}
+
+/* Material Design Research Areas - Flattened */
+.md-research-area {
+  background-color: var(--md-surface);
+  border-radius: var(--md-border-radius-sm);
+  box-shadow: none;
+  border: 1px solid #e2e8f0;
+  padding: var(--md-spacing-lg);
+  margin-bottom: var(--md-spacing-md);
+  transition: border-color var(--md-transition-fast);
+  cursor: default;
+}
+
+.md-research-area:hover {
+  border-color: #cbd5e1;
+}
+
+.md-research-area__title {
+  font-size: var(--md-font-size-h6);
+  font-weight: 500;
+  margin: 0 0 var(--md-spacing-sm) 0;
+  color: var(--md-on-surface);
+  display: flex;
+  align-items: center;
+}
+
+.md-research-area__icon {
+  margin-right: var(--md-spacing-sm);
+  color: var(--md-secondary);
+}
+
+.md-research-area__description {
+  font-size: var(--md-font-size-body1);
+  color: var(--md-on-surface);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Material Design Contact Form - Flattened */
+.md-contact-form {
+  background-color: var(--md-surface);
+  border-radius: var(--md-border-radius-sm);
+  box-shadow: none;
+  border: 1px solid #e2e8f0;
+  padding: var(--md-spacing-lg);
+}
+
+.md-form-field {
+  margin-bottom: var(--md-spacing-md);
+}
+
+.md-form-field__label {
+  display: block;
+  font-size: var(--md-font-size-body2);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  margin-bottom: var(--md-spacing-xs);
+}
+
+.md-form-field__input {
+  width: 100%;
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: var(--md-border-radius-sm);
+  font-size: var(--md-font-size-body1);
+  font-family: var(--md-font-family);
+  transition: border-color var(--md-transition-fast);
+}
+
+.md-form-field__input:focus {
+  outline: none;
+  border-color: var(--md-primary);
+  border-width: 2px;
+}
+
+.md-form-field__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Loading States */
+.md-loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--md-primary-200);
+  border-radius: 50%;
+  border-top-color: var(--md-primary);
+  animation: md-spin 1s ease-in-out infinite;
+}
+
+@keyframes md-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error States */
+.md-error {
+  color: var(--md-error);
+  font-size: var(--md-font-size-body2);
+  margin-top: var(--md-spacing-xs);
+}
+
+.md-success {
+  color: var(--md-success);
+  font-size: var(--md-font-size-body2);
+  margin-top: var(--md-spacing-xs);
+}
+
+/* Flat Design Components */
+.flat-content-container {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.flat-section {
+  background-color: transparent;
+  padding: var(--md-spacing-lg) 0;
+  margin: 0 0 var(--md-spacing-xl) 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.flat-section-title {
+  font-size: var(--md-font-size-h2);
+  font-weight: 600;
+  margin: 0 0 var(--md-spacing-lg) 0;
+  color: var(--md-on-surface);
+  padding: 0;
+  border-bottom: 2px solid var(--md-primary);
+  padding-bottom: var(--md-spacing-sm);
+  display: flex;
+  align-items: center;
+}
+
+.flat-post-header {
+  margin-bottom: var(--md-spacing-xl);
+  padding-bottom: var(--md-spacing-lg);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.flat-post-title {
+  font-size: var(--md-font-size-h1);
+  font-weight: 600;
+  margin: 0 0 var(--md-spacing-sm) 0;
+  color: var(--md-on-surface);
+  line-height: 1.2;
+}
+
+.flat-post-meta {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface-variant);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.flat-post-content {
+  font-size: var(--md-font-size-h1);
+  line-height: 1.6;
+  color: var(--md-on-surface);
+}
+
+.flat-post-content h1,
+.flat-post-content h2,
+.flat-post-content h3,
+.flat-post-content h4,
+.flat-post-content h5,
+.flat-post-content h6 {
+  margin-top: var(--md-spacing-xl);
+  margin-bottom: var(--md-spacing-md);
+  color: var(--md-on-surface);
+}
+
+.flat-post-content p {
+  margin-bottom: var(--md-spacing-md);
+  color: var(--md-on-surface);
+}
+
+.flat-post-content ul,
+.flat-post-content ol {
+  margin-bottom: var(--md-spacing-md);
+  padding-left: var(--md-spacing-lg);
+}
+
+.flat-post-content li {
+  margin-bottom: var(--md-spacing-xs);
+  color: var(--md-on-surface);
+}
+
+.flat-post-content a {
+  color: var(--md-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color var(--md-transition-fast);
+}
+
+.flat-post-content a:hover {
+  border-bottom-color: var(--md-primary);
+}
+
+/* Flat Design Lists */
+.flat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flat-list-item {
+  padding: var(--md-spacing-md) 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color var(--md-transition-fast);
+}
+
+.flat-list-item:last-child {
+  border-bottom: none;
+}
+
+.flat-list-item:hover {
+  background-color: #f8fafc;
+  margin: 0 calc(-1 * var(--md-spacing-md));
+  padding-left: var(--md-spacing-md);
+  padding-right: var(--md-spacing-md);
+  border-radius: var(--md-border-radius-sm);
+}
+
+.flat-list-item a {
+  color: var(--md-on-surface);
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+.flat-list-item a:hover {
+  color: var(--md-primary);
+}
+
+.flat-list-meta {
+  font-size: var(--md-font-size-body2);
+  color: var(--md-on-surface-variant);
+  margin-top: var(--md-spacing-xs);
+}
+
+/* Flat Tag Page Styles */
+.flat-tag-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flat-tag-title {
+  font-size: var(--md-font-size-h1);
+  font-weight: 600;
+  margin: 0 0 var(--md-spacing-xl) 0;
+  color: var(--md-on-surface);
+  text-align: center;
+  padding-bottom: var(--md-spacing-md);
+  border-bottom: 2px solid var(--md-primary);
+}
+
+/* Print Styles */
+@media print {
+  .md-app-bar,
+  .md-navigation-drawer,
+  .md-fab,
+  .md-backdrop {
+    display: none !important;
+  }
+  
+  .md-main-content {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .md-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .flat-content-container,
+  .flat-section {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+

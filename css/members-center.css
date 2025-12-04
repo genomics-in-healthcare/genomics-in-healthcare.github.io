@@ -1,0 +1,37 @@
+/* members 页面居中样式 */
+.members-center {
+  display: block; /* 改为block布局，防止flex布局导致内容挤压 */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* 修复成员卡片布局 */
+.members-center .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.members-center .col-sm-9,
+.members-center .col-sm-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+  .members-center .col-sm-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .members-center .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
