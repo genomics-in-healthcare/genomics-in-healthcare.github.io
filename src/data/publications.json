@@ -936,8 +936,8 @@
           "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, AAAI-2026, 2025."
         },
         {
-          "html": "<font face=\"Arial\"><strong>Y. Zhu</strong>, S. Wang, Y. Han, Y. Lu, A. Xiong, <strong>S. Qiu</strong>, L. N. Jin, and <strong>W. Zhang</strong>, A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant-Human Protein Interactions, <u><i>Environmental Science &amp; Technology</i></u>, 2025, accepted.</font>",
-          "text": "Y. Zhu, S. Wang, Y. Han, Y. Lu, A. Xiong, S. Qiu, L. N. Jin, and W. Zhang, A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant-Human Protein Interactions, Environmental Science &amp; Technology, 2025, accepted."
+          "html": "<font face=\"Arial\"><strong>Y. Zhu</strong>, S. Wang, Y. Han, Y. Lu, A. Xiong, <strong>S. Qiu</strong>, L. N. Jin, and <strong>W. Zhang</strong>, <a href=\"https://pubs.acs.org/doi/10.1021/acs.est.5c12915\">A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant–Human Protein Interactions</a>, <u><i>Environmental Science &amp; Technology</i></u>, 2025, DOI: 10.1021/acs.est.5c12915.</font>",
+          "text": "Y. Zhu, S. Wang, Y. Han, Y. Lu, A. Xiong, S. Qiu, L. N. Jin, and W. Zhang, A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant–Human Protein Interactions, Environmental Science &amp; Technology, 2025, DOI: 10.1021/acs.est.5c12915."
         },
         {
           "html": "<font face=\"Arial\"><strong>C. Pan</strong>, X. Zhang, H. Zheng, Z. Su, <strong>C. Zhang</strong>, <strong>W. Zhang</strong>, <a href=\"https://ieeexplore.ieee.org/document/11150536\">Adaptive Control of Dynamic Networks</a>, <u><i>IEEE Transactions on Network Science and Engineering</i></u>, 14(8), 2025.</font>",
@@ -958,5 +958,5 @@
       ]
     }
   },
-  "lastUpdated": "2025-12-04T07:43:50.567Z"
+  "lastUpdated": "2025-12-15T15:10:09.402Z"
 }

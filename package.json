@@ -8,8 +8,8 @@
     "./ui": "./src/components/ui/index.js"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "npm run extract-publications && npm run convert-members && npm run convert-posts && vite build && npm run copy-404",
+    "dev": "node scripts/use-dev-index.js && vite",
+    "build": "npm run extract-publications && npm run convert-members && npm run convert-posts && vite build && npm run copy-404 && node scripts/sync-dist.js",
     "extract-publications": "node scripts/extract-publications.mjs",
     "copy-404": "powershell -Command \"Copy-Item -Path './404.html' -Destination './dist/404.html'\"",
     "preview": "vite preview",
