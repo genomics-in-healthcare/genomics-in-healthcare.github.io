@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Fraser Lab News</title>
+  <link href="http://localhost:4000"/>
+  <link type="application/atom+xml" rel="self" href="http://localhost:4000/news.xml"/>
+  <updated>2025-11-24T11:20:02+08:00</updated>
+  <id>http://localhost:4000</id>
+  <author>
+    <name>Weixiong Zhang</name>
+    <!-- <email>you@example.com</email> -->
+  </author>
+
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-11-10-news/"/>
+    <title></title>
+    <published>2025-11-10T00:00:00+08:00</published>
+    <updated>2025-11-10T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-11-10-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Weixiong has a paper accepted to AAAI-2026, titled “MUG: Meta-path-aware Universal Heterogeneous Graph Pre-Training”&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-11-01-news/"/>
+    <title></title>
+    <published>2025-11-01T00:00:00+08:00</published>
+    <updated>2025-11-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-11-01-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Welcome Diao Xin to the lab as Postdoc&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-10-29-news/"/>
+    <title></title>
+    <published>2025-10-29T00:00:00+08:00</published>
+    <updated>2025-10-29T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-10-29-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Yan Zhu’s work on a language model for PM2.5 and human health has been accepted to Environmental Science &amp;amp; Technology (a top journal in environmental science)&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-10-21-news/"/>
+    <title></title>
+    <published>2025-10-21T00:00:00+08:00</published>
+    <updated>2025-10-21T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-10-21-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Weixiong Zhang will give a talk on Noncanonical circular RNAs as cancer diagnostic biomarkers at the &lt;a href=&quot;https://apacprecisiononcology.com&quot;&gt;1st Asia Pacific Precision Oncology Conference&lt;/a&gt; on 01/11/25&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-10-12-news/"/>
+    <title></title>
+    <published>2025-10-12T00:00:00+08:00</published>
+    <updated>2025-10-12T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-10-12-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Weixiong Zhang will give a keynote talk at &lt;a href=&quot;https://ngdc.cncb.ac.cn/conference/bdf2025&quot;&gt;The 10th Big Data Forum for Life and Health Sciences&lt;/a&gt; on 15/10/25&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-08-30-news/"/>
+    <title></title>
+    <published>2025-08-30T00:00:00+08:00</published>
+    <updated>2025-08-30T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-08-30-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Chunyu’s paper, Adaptive control of dynamic networks, has been accepted to IEEE Trans on Network Science and Engineering&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-05-14-news/"/>
+    <title></title>
+    <published>2025-05-14T00:00:00+08:00</published>
+    <updated>2025-05-14T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-05-14-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.polyu.edu.hk/publications/excelximpact/en/issue/202516/cover-story/cracking-the-code-of-complex-diseases&quot;&gt;Cracking the Code of Complex Diseases&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/join</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2025-2-01-join/"/>
+    <title></title>
+    <published>2025-02-01T00:00:00+08:00</published>
+    <updated>2025-02-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2025-2-01-join/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Tan Yejun, an RA in the lab, received both &lt;span class=&quot;fellowship-highlight&quot;&gt;Hong Kong PhD Fellowship (HKPFS)&lt;/span&gt; and &lt;span class=&quot;fellowship-highlight&quot;&gt;PolyU Presidential PhD Fellowship (PPPFS)&lt;/span&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-11-24-news/"/>
+    <title></title>
+    <published>2024-11-24T00:00:00+08:00</published>
+    <updated>2024-11-24T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-11-24-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Weixiong has a paper accepted to ACM Transactions on Intelligent Systems and Technology. The title is ‘Heterogeneous Graph Neural Networks using Self-supervised Reciprocally Contrastive Learning’&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/join</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-11-01-join/"/>
+    <title></title>
+    <published>2024-11-01T00:00:00+08:00</published>
+    <updated>2024-11-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-11-01-join/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Welcome Huang Yin to the Lab as Research Fellow and Pan Chunyu as Postdoc!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/join</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-10-01-join/"/>
+    <title></title>
+    <published>2024-10-01T00:00:00+08:00</published>
+    <updated>2024-10-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-10-01-join/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Welcome Chen Junyi to the Lab as RAP!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/promote</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-09-01-promote/"/>
+    <title></title>
+    <published>2024-09-01T00:00:00+08:00</published>
+    <updated>2024-09-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-09-01-promote/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Shulan has been promoted to Principal Research Fellow, the highest rank in the research track. Congratulations, Shulan!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-09-01-news/"/>
+    <title></title>
+    <published>2024-09-01T00:00:00+08:00</published>
+    <updated>2024-09-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-09-01-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;We built our first foundation model on genomics, called dnaGrinder. A preprint of the manuscript on dnaGrinder is available at arXiv&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/join</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-09-01-join/"/>
+    <title></title>
+    <published>2024-09-01T00:00:00+08:00</published>
+    <updated>2024-09-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-09-01-join/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Welcome Edao Abebe, Li Yixin, Han Nan, Wang Zhenqian, Wang Yuchuan and Zhang Jie to the Lab as PhD students!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-08-01-news/"/>
+    <title></title>
+    <published>2024-08-01T00:00:00+08:00</published>
+    <updated>2024-08-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-08-01-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Weixiong has been appointed to the position of Associate Director of PolyU Academy of Interdisciplinary Research (PAIR)&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-05-01-news/"/>
+    <title></title>
+    <published>2024-05-01T00:00:00+08:00</published>
+    <updated>2024-05-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-05-01-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Welcome Zhang Chi to the Lab as PhD student!&lt;br /&gt;Edao Abebe received &lt;span class=&quot;fellowship-highlight&quot;&gt;Hong Kong PhD Fellowship (HKPFS)&lt;/span&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-04-02-news/"/>
+    <title></title>
+    <published>2024-04-02T00:00:00+08:00</published>
+    <updated>2024-04-02T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-04-02-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Weixiong has a paper accepted to IJCAI-24. The title of the paper: Generalized taxonomy-guided graph neural networks&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/pub</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-04-01-pub/"/>
+    <title></title>
+    <published>2024-04-01T00:00:00+08:00</published>
+    <updated>2024-04-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-04-01-pub/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Weixiong published a paper with IEEE Transactions on Neural Networks and Learning Systems. The title of the paper: Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-04-01-news/"/>
+    <title></title>
+    <published>2024-04-01T00:00:00+08:00</published>
+    <updated>2024-04-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-04-01-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Welcome Tu Yue to the Lab as Postdoc!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:4000/posts/news</id>
+    <link type="text/html" rel="alternate" href="http://localhost:4000/posts/2024-01-01-news/"/>
+    <title></title>
+    <published>2024-01-01T00:00:00+08:00</published>
+    <updated>2024-01-01T00:00:00+08:00</updated>
+    <author>
+      <name></name>
+      <uri>/posts/2024-01-01-news/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Welcome Fu Qinghui and Ma Ke to the Lab as PhD students!&lt;/p&gt;
+</content>
+  </entry>
+  
+ 
+</feed>

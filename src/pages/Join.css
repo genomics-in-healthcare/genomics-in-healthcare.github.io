@@ -1,0 +1,101 @@
+/* Join page styles */
+.join-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 18px 16px 0 16px;
+}
+
+.section-header {
+  font-size: 15px !important;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.intro-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px !important;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 10px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #111827;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.card-body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #222;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: left;
+}
+
+.contact-box {
+  background-color: #f8fafc;
+  padding: 12px;
+  border-left: 4px solid #1e40af;
+  border-radius: 4px;
+  margin: 8px 10px 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (min-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+
+
+
+
+
+
+

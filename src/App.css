@@ -1,0 +1,12 @@
+/* Material Design and Custom CSS will be loaded via link tags in index.html */
+/* Additional global styles */
+
+/* Additional global styles */
+.flat-content-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 2.5vw, 32px);
+  box-sizing: border-box;
+}
+

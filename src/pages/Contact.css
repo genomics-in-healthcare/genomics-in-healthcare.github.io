@@ -1,0 +1,36 @@
+/* Contact page styles */
+.contact-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 18px 16px 0 16px;
+}
+
+.contact-content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.contact-content p {
+  margin: 0;
+}
+
+.contact-content a {
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.contact-content a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+

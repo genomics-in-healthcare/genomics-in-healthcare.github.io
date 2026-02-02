@@ -1,0 +1,353 @@
+/* App Bar Styles */
+.md-app-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  color: #1e293b;
+  box-shadow: none;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Home: use solid white navbar */
+body.home .md-app-bar,
+.md-app-bar.home {
+  background-color: #ffffff !important;
+  color: #1e293b;
+  border-bottom: 0.5px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+body.home .md-app-bar a,
+body.home .md-app-bar .md-button,
+body.home .md-app-bar .material-icons,
+body.home .md-app-bar h1,
+.md-app-bar.home a,
+.md-app-bar.home .md-button,
+.md-app-bar.home .material-icons,
+.md-app-bar.home h1 {
+  color: #1e293b !important;
+}
+
+body.home .md-app-bar .md-button--active,
+.md-app-bar.home .md-button--active {
+  color: #1e40af !important;
+}
+
+/* Scrolled navbar styles */
+.md-app-bar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 0.5px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.md-app-bar a,
+.md-app-bar .md-button,
+.md-app-bar .material-icons,
+.md-app-bar h1 {
+  color: #1e293b;
+}
+
+.md-app-bar .md-button--active {
+  color: #1e40af;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.md-app-bar__container {
+  display: flex;
+  align-items: center;
+  min-height: 64px; /* 保持导航栏在所有屏幕宽度下有一致的高度，避免在大屏时变矮 */
+  padding: 8px 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 桌面端样式 - 匹配Jekyll版本 */
+@media (min-width: 992px) {
+  .md-app-bar__container {
+    padding: 0 24px;
+  }
+  
+  .md-app-bar__actions {
+    gap: 4px !important;
+  }
+
+  .md-app-bar__actions .md-button {
+    padding: 8px 12px !important;
+  }
+
+  /* Material Design button active state */
+  .md-button--active {
+    color: #1e40af !important;
+    background-color: transparent !important;
+    font-weight: 600 !important;
+  }
+}
+
+.md-app-bar__brand {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.md-app-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 响应式：切换汉堡按钮与桌面导航的显示 - 完全匹配Jekyll版本 */
+@media (min-width: 992px) {
+  /* 宽屏：隐藏汉堡按钮，显示桌面导航 */
+  #menuButton {
+    display: none !important;
+  }
+  #desktopNav {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* 窄屏：显示汉堡按钮，隐藏桌面导航 */
+  #menuButton {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  #desktopNav {
+    display: none !important;
+  }
+}
+
+/* -------- 窄屏下将 App Bar 的 logo 靠左，汉堡按钮靠右（Material Design 风格） -------- */
+@media (max-width: 991.98px) {
+  .md-app-bar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 左右分布 */
+    position: relative;
+    padding: 0 20px; /* 左右边距 */
+    min-height: 64px;
+  }
+  
+  /* 汉堡菜单按钮定位 */
+  #menuButton {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    flex-shrink: 0; /* 防止按钮被压缩 */
+    min-width: 44px; /* 确保按钮有足够宽度 */
+  }
+  
+  /* Logo 和标题容器靠左 */
+  .md-app-bar__brand {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    margin: 0;
+    min-width: 0; /* 允许内容收缩 */
+    padding-right: 60px; /* 为汉堡按钮预留空间 */
+    overflow: hidden; /* 防止内容溢出 */
+  }
+  
+  /* Logo 样式调整 - 保持与标题的比例 */
+  .md-app-bar__logo {
+    display: block;
+    height: 36px !important; /* 从 43px 缩小到 36px (约 84%) */
+    width: auto;
+    margin: 0 12px 0 0 !important; /* 从 14px 缩小到 12px，保持比例 */
+    flex-shrink: 0; /* 防止 logo 被压缩 */
+  }
+  
+  /* Logo 链接容器 */
+  .md-app-bar__brand > a {
+    display: flex !important;
+    align-items: center;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  /* 标题文字容器 */
+  .md-app-bar__title {
+    text-align: left;
+    min-width: 0;
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  /* 标题文字允许换行和截断，但两个都显示 */
+  .md-app-bar__title-main,
+  .md-app-bar__title-sub {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+}
+
+.md-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.md-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.md-button--text {
+  background: transparent;
+}
+
+/* Navigation Drawer */
+.md-navigation-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 改为整页宽度，模拟 Jekyll 移动端整页导航 */
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* 从上侧向下滑入 */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1100;
+  overflow-y: auto;
+}
+
+.md-navigation-drawer.open {
+  transform: translateY(0);
+}
+
+.md-navigation-drawer__header {
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.md-navigation-drawer__content {
+  padding: 8px 0;
+}
+
+.md-navigation-drawer__item {
+  display: block;
+  padding: 12px 24px;
+  color: #1a1c1e;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.md-navigation-drawer__item:hover,
+.md-navigation-drawer__item:focus {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  color: #1a1c1e !important;
+}
+
+.md-navigation-drawer__item.active {
+  background-color: transparent !important;
+  color: #1a1c1e !important;
+  font-weight: 500 !important;
+}
+
+/* Backdrop */
+.md-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1050;
+}
+
+.md-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 自定义汉堡菜单图标，避免依赖外部字体 */
+.md-menu-button {
+  padding: 8px;
+}
+
+.md-menu-icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 22px;
+  height: 18px;
+}
+
+.md-menu-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #64748b;
+}
+
+/* 自定义 X 关闭图标 */
+.md-close-button {
+  padding: 8px;
+}
+
+.md-close-icon {
+  position: relative;
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+}
+
+.md-close-icon span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #64748b;
+}
+
+.md-close-icon span:first-child {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.md-close-icon span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+

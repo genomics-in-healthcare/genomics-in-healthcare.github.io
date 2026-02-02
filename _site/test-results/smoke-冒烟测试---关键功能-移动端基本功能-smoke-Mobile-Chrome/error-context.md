@@ -1,0 +1,68 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - button "Open menu" [ref=e4] [cursor=pointer]:
+        - generic [ref=e5]: menu
+      - link "JC STEM Lab Hong Kong JC STEM Lab Genomics and AI in Healthcare" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "JC STEM Lab" [ref=e8]
+        - generic [ref=e9]:
+          - generic [ref=e10]: Hong Kong JC STEM Lab
+          - generic [ref=e11]: Genomics and AI in Healthcare
+  - complementary [ref=e12]:
+    - generic [ref=e14]:
+      - link "JC STEM Lab Hong Kong JC STEM Lab Genomics and AI in Healthcare" [ref=e16] [cursor=pointer]:
+        - /url: /
+        - img "JC STEM Lab" [ref=e17]
+        - generic [ref=e18]:
+          - generic [ref=e19]: Hong Kong JC STEM Lab
+          - generic [ref=e20]: Genomics and AI in Healthcare
+      - button "Close menu" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: close
+    - generic [ref=e23]:
+      - link "Home" [ref=e24] [cursor=pointer]:
+        - /url: /
+      - link "News" [ref=e25] [cursor=pointer]:
+        - /url: /news
+      - link "Research" [ref=e26] [cursor=pointer]:
+        - /url: /research
+      - link "Publications" [ref=e27] [cursor=pointer]:
+        - /url: /publications
+      - link "Software" [ref=e28] [cursor=pointer]:
+        - /url: /software
+      - link "Members" [ref=e29] [cursor=pointer]:
+        - /url: /members
+      - link "Join" [ref=e30] [cursor=pointer]:
+        - /url: /join
+      - link "Contact" [ref=e31] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e32]:
+    - heading "Our mission is to advance AI and genomic technologies to enable personalized diagnosis and treatment for complex diseases, especially cancer and neuropsychiatric disorders like depression and schizophrenia. We focus on developing and combining AI with biological techniques, including reliable, explainable machine learning and single-cell spatial transcriptomics. Our research is highly interdisciplinary, spanning AI, data science, molecular biology, genetics, genomics, and neuroscience" [level=1] [ref=e35]
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - heading "Our Laboratory combines a computational biology lab (the Dry Lab) and a molecular biology lab (the Wet Lab)" [level=2] [ref=e39]:
+          - generic [ref=e40]:
+            - text: Our Laboratory combines
+            - text: a computational biology lab (the Dry Lab) and a molecular biology lab (the Wet Lab)
+        - paragraph [ref=e42]: The Dry Lab features a high-performance computing setup, including GPU and CPU clusters, large disk arrays, and filer servers
+      - generic [ref=e43]:
+        - img "Data Center - CPU and GPU clusters" [ref=e44]
+        - img "Office Workspace - Computational Biology Lab" [ref=e45]
+      - paragraph [ref=e47]: The Wet Lab is equipped for molecular biology research and animal study, including high-throughput sequencers
+      - generic [ref=e48]:
+        - img "Wet Lab - Molecular Biology Research Facility 1" [ref=e49]
+        - img "Wet Lab - Molecular Biology Research Facility 2" [ref=e50]
+        - img "Wet Lab - Molecular Biology Research Facility 3" [ref=e51]
+    - generic [ref=e53]:
+      - heading "Research Supported By" [level=2] [ref=e54]
+      - generic [ref=e55]:
+        - img "Hong Kong SAR" [ref=e56]
+        - img "RGC" [ref=e57]
+        - img "NSFC" [ref=e58]
+        - img "Hong Kong Jockey Club Charities Trust" [ref=e59]
+  - contentinfo [ref=e60]:
+    - paragraph [ref=e62]: © 2025 Hong Kong JC STEM Lab of Genomics and AI in Healthcare. All rights reserved.
+```

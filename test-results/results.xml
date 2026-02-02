@@ -1,0 +1,976 @@
+<testsuites id="" name="" tests="25" failures="21" skipped="0" errors="0" time="168.373688">
+<testsuite name="smoke.spec.js" timestamp="2025-10-28T01:32:26.982Z" hostname="chromium" tests="5" failures="4" skipped="0" time="113.205" errors="0">
+<testcase name="冒烟测试 - 关键功能 › 网站基本功能正常 @smoke" classname="smoke.spec.js" time="16.138">
+<failure message="smoke.spec.js:5:3 网站基本功能正常 @smoke" type="FAILURE">
+<![CDATA[  [chromium] › smoke.spec.js:5:3 › 冒烟测试 - 关键功能 › 网站基本功能正常 @smoke ───────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        9 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+       6 |     // 访问首页
+       7 |     await page.goto('/');
+    >  8 |     await expect(page).toHaveTitle(/Genomics and Artificial Intelligence/);
+         |                        ^
+       9 |     
+      10 |     // 检查主要元素存在
+      11 |     await expect(page.locator('h1')).toBeVisible();
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:8:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-chromium\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 移动端基本功能 @smoke" classname="smoke.spec.js" time="18.743">
+<failure message="smoke.spec.js:24:3 移动端基本功能 @smoke" type="FAILURE">
+<![CDATA[  [chromium] › smoke.spec.js:24:3 › 冒烟测试 - 关键功能 › 移动端基本功能 @smoke ───────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('nav')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('nav')
+        9 × locator resolved to <nav id="desktopNav" class="md-app-bar__actions">…</nav>
+          - unexpected value "hidden"
+
+
+      28 |     // 检查移动端布局
+      29 |     await expect(page.locator('h1')).toBeVisible();
+    > 30 |     await expect(page.locator('nav')).toBeVisible();
+         |                                       ^
+      31 |     
+      32 |     // 检查成员页面在移动端
+      33 |     await page.goto('/members/');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:30:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-chromium\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 关键页面加载 @smoke" classname="smoke.spec.js" time="20.903">
+<failure message="smoke.spec.js:37:3 关键页面加载 @smoke" type="FAILURE">
+<![CDATA[  [chromium] › smoke.spec.js:37:3 › 冒烟测试 - 关键功能 › 关键页面加载 @smoke ────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/i
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        9 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+      47 |     for (const pageInfo of criticalPages) {
+      48 |       await page.goto(pageInfo.url);
+    > 49 |       await expect(page).toHaveTitle(new RegExp(pageInfo.title, 'i'));
+         |                          ^
+      50 |       
+      51 |       // 检查页面内容加载
+      52 |       await page.waitForLoadState('networkidle');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:49:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-chromium\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 图片和资源加载 @smoke" classname="smoke.spec.js" time="33.268">
+<failure message="smoke.spec.js:56:3 图片和资源加载 @smoke" type="FAILURE">
+<![CDATA[  [chromium] › smoke.spec.js:56:3 › 冒烟测试 - 关键功能 › 图片和资源加载 @smoke ───────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://genomics-in-healthcare.github.io/members/", waiting until "load"
+
+
+      70 |     
+      71 |     // 检查成员页面图片
+    > 72 |     await page.goto('/members/');
+         |                ^
+      73 |     await page.waitForLoadState('networkidle');
+      74 |     
+      75 |     const memberPhotos = page.locator('.member-photo');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:72:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-chromium\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 导航功能 @smoke" classname="smoke.spec.js" time="24.153">
+</testcase>
+</testsuite>
+<testsuite name="smoke.spec.js" timestamp="2025-10-28T01:32:26.982Z" hostname="firefox" tests="5" failures="4" skipped="0" time="128.01" errors="0">
+<testcase name="冒烟测试 - 关键功能 › 网站基本功能正常 @smoke" classname="smoke.spec.js" time="16.942">
+<failure message="smoke.spec.js:5:3 网站基本功能正常 @smoke" type="FAILURE">
+<![CDATA[  [firefox] › smoke.spec.js:5:3 › 冒烟测试 - 关键功能 › 网站基本功能正常 @smoke ────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        8 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+       6 |     // 访问首页
+       7 |     await page.goto('/');
+    >  8 |     await expect(page).toHaveTitle(/Genomics and Artificial Intelligence/);
+         |                        ^
+       9 |     
+      10 |     // 检查主要元素存在
+      11 |     await expect(page.locator('h1')).toBeVisible();
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:8:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-firefox\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 移动端基本功能 @smoke" classname="smoke.spec.js" time="23.201">
+<failure message="smoke.spec.js:24:3 移动端基本功能 @smoke" type="FAILURE">
+<![CDATA[  [firefox] › smoke.spec.js:24:3 › 冒烟测试 - 关键功能 › 移动端基本功能 @smoke ────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('nav')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('nav')
+        8 × locator resolved to <nav id="desktopNav" class="md-app-bar__actions">…</nav>
+          - unexpected value "hidden"
+
+
+      28 |     // 检查移动端布局
+      29 |     await expect(page.locator('h1')).toBeVisible();
+    > 30 |     await expect(page.locator('nav')).toBeVisible();
+         |                                       ^
+      31 |     
+      32 |     // 检查成员页面在移动端
+      33 |     await page.goto('/members/');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:30:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-firefox\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 关键页面加载 @smoke" classname="smoke.spec.js" time="30.62">
+<failure message="smoke.spec.js:37:3 关键页面加载 @smoke" type="FAILURE">
+<![CDATA[  [firefox] › smoke.spec.js:37:3 › 冒烟测试 - 关键功能 › 关键页面加载 @smoke ─────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/i
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        7 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+      47 |     for (const pageInfo of criticalPages) {
+      48 |       await page.goto(pageInfo.url);
+    > 49 |       await expect(page).toHaveTitle(new RegExp(pageInfo.title, 'i'));
+         |                          ^
+      50 |       
+      51 |       // 检查页面内容加载
+      52 |       await page.waitForLoadState('networkidle');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:49:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-firefox\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 图片和资源加载 @smoke" classname="smoke.spec.js" time="30.587">
+<failure message="smoke.spec.js:56:3 图片和资源加载 @smoke" type="FAILURE">
+<![CDATA[  [firefox] › smoke.spec.js:56:3 › 冒烟测试 - 关键功能 › 图片和资源加载 @smoke ────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://genomics-in-healthcare.github.io/members/", waiting until "load"
+
+
+      70 |     
+      71 |     // 检查成员页面图片
+    > 72 |     await page.goto('/members/');
+         |                ^
+      73 |     await page.waitForLoadState('networkidle');
+      74 |     
+      75 |     const memberPhotos = page.locator('.member-photo');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:72:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-firefox\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 导航功能 @smoke" classname="smoke.spec.js" time="26.66">
+</testcase>
+</testsuite>
+<testsuite name="smoke.spec.js" timestamp="2025-10-28T01:32:26.982Z" hostname="webkit" tests="5" failures="4" skipped="0" time="112.99" errors="0">
+<testcase name="冒烟测试 - 关键功能 › 网站基本功能正常 @smoke" classname="smoke.spec.js" time="20.163">
+<failure message="smoke.spec.js:5:3 网站基本功能正常 @smoke" type="FAILURE">
+<![CDATA[  [webkit] › smoke.spec.js:5:3 › 冒烟测试 - 关键功能 › 网站基本功能正常 @smoke ─────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        8 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+       6 |     // 访问首页
+       7 |     await page.goto('/');
+    >  8 |     await expect(page).toHaveTitle(/Genomics and Artificial Intelligence/);
+         |                        ^
+       9 |     
+      10 |     // 检查主要元素存在
+      11 |     await expect(page.locator('h1')).toBeVisible();
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:8:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-webkit\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 移动端基本功能 @smoke" classname="smoke.spec.js" time="13.98">
+<failure message="smoke.spec.js:24:3 移动端基本功能 @smoke" type="FAILURE">
+<![CDATA[  [webkit] › smoke.spec.js:24:3 › 冒烟测试 - 关键功能 › 移动端基本功能 @smoke ─────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('nav')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('nav')
+        8 × locator resolved to <nav id="desktopNav" class="md-app-bar__actions">…</nav>
+          - unexpected value "hidden"
+
+
+      28 |     // 检查移动端布局
+      29 |     await expect(page.locator('h1')).toBeVisible();
+    > 30 |     await expect(page.locator('nav')).toBeVisible();
+         |                                       ^
+      31 |     
+      32 |     // 检查成员页面在移动端
+      33 |     await page.goto('/members/');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:30:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-webkit\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 关键页面加载 @smoke" classname="smoke.spec.js" time="15.473">
+<failure message="smoke.spec.js:37:3 关键页面加载 @smoke" type="FAILURE">
+<![CDATA[  [webkit] › smoke.spec.js:37:3 › 冒烟测试 - 关键功能 › 关键页面加载 @smoke ──────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/i
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        8 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+      47 |     for (const pageInfo of criticalPages) {
+      48 |       await page.goto(pageInfo.url);
+    > 49 |       await expect(page).toHaveTitle(new RegExp(pageInfo.title, 'i'));
+         |                          ^
+      50 |       
+      51 |       // 检查页面内容加载
+      52 |       await page.waitForLoadState('networkidle');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:49:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-webkit\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 图片和资源加载 @smoke" classname="smoke.spec.js" time="35.227">
+<failure message="smoke.spec.js:56:3 图片和资源加载 @smoke" type="FAILURE">
+<![CDATA[  [webkit] › smoke.spec.js:56:3 › 冒烟测试 - 关键功能 › 图片和资源加载 @smoke ─────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://genomics-in-healthcare.github.io/members/", waiting until "load"
+
+
+      70 |     
+      71 |     // 检查成员页面图片
+    > 72 |     await page.goto('/members/');
+         |                ^
+      73 |     await page.waitForLoadState('networkidle');
+      74 |     
+      75 |     const memberPhotos = page.locator('.member-photo');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:72:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-webkit\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 导航功能 @smoke" classname="smoke.spec.js" time="28.147">
+</testcase>
+</testsuite>
+<testsuite name="smoke.spec.js" timestamp="2025-10-28T01:32:26.982Z" hostname="Mobile Chrome" tests="5" failures="5" skipped="0" time="100.451" errors="0">
+<testcase name="冒烟测试 - 关键功能 › 网站基本功能正常 @smoke" classname="smoke.spec.js" time="15.246">
+<failure message="smoke.spec.js:5:3 网站基本功能正常 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › smoke.spec.js:5:3 › 冒烟测试 - 关键功能 › 网站基本功能正常 @smoke ──────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        9 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+       6 |     // 访问首页
+       7 |     await page.goto('/');
+    >  8 |     await expect(page).toHaveTitle(/Genomics and Artificial Intelligence/);
+         |                        ^
+       9 |     
+      10 |     // 检查主要元素存在
+      11 |     await expect(page.locator('h1')).toBeVisible();
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:8:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Chrome\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 移动端基本功能 @smoke" classname="smoke.spec.js" time="14.943">
+<failure message="smoke.spec.js:24:3 移动端基本功能 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › smoke.spec.js:24:3 › 冒烟测试 - 关键功能 › 移动端基本功能 @smoke ──────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('nav')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('nav')
+        9 × locator resolved to <nav id="desktopNav" class="md-app-bar__actions">…</nav>
+          - unexpected value "hidden"
+
+
+      28 |     // 检查移动端布局
+      29 |     await expect(page.locator('h1')).toBeVisible();
+    > 30 |     await expect(page.locator('nav')).toBeVisible();
+         |                                       ^
+      31 |     
+      32 |     // 检查成员页面在移动端
+      33 |     await page.goto('/members/');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:30:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Chrome\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 关键页面加载 @smoke" classname="smoke.spec.js" time="15.575">
+<failure message="smoke.spec.js:37:3 关键页面加载 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › smoke.spec.js:37:3 › 冒烟测试 - 关键功能 › 关键页面加载 @smoke ───────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/i
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        9 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+      47 |     for (const pageInfo of criticalPages) {
+      48 |       await page.goto(pageInfo.url);
+    > 49 |       await expect(page).toHaveTitle(new RegExp(pageInfo.title, 'i'));
+         |                          ^
+      50 |       
+      51 |       // 检查页面内容加载
+      52 |       await page.waitForLoadState('networkidle');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:49:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Chrome\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 图片和资源加载 @smoke" classname="smoke.spec.js" time="32.546">
+<failure message="smoke.spec.js:56:3 图片和资源加载 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › smoke.spec.js:56:3 › 冒烟测试 - 关键功能 › 图片和资源加载 @smoke ──────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://genomics-in-healthcare.github.io/members/", waiting until "load"
+
+
+      70 |     
+      71 |     // 检查成员页面图片
+    > 72 |     await page.goto('/members/');
+         |                ^
+      73 |     await page.waitForLoadState('networkidle');
+      74 |     
+      75 |     const memberPhotos = page.locator('.member-photo');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:72:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-Mobile-Chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-图片和资源加载-smoke-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-Mobile-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-Mobile-Chrome\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-图片和资源加载-smoke-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 导航功能 @smoke" classname="smoke.spec.js" time="22.141">
+<failure message="smoke.spec.js:84:3 导航功能 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › smoke.spec.js:84:3 › 冒烟测试 - 关键功能 › 导航功能 @smoke ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('nav a').first()
+        - locator resolved to <a href="/" class="md-button md-button--text md-button--active">↵              Home↵            </a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is not visible
+         - retrying click action
+           - waiting 500ms
+
+
+      94 |       
+      95 |       if (href && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+    > 96 |         await link.click();
+         |                    ^
+      97 |         await page.waitForLoadState('networkidle');
+      98 |         
+      99 |         // 检查页面加载成功
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:96:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Chrome\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="smoke.spec.js" timestamp="2025-10-28T01:32:26.982Z" hostname="Mobile Safari" tests="5" failures="4" skipped="0" time="81.66" errors="0">
+<testcase name="冒烟测试 - 关键功能 › 网站基本功能正常 @smoke" classname="smoke.spec.js" time="14.599">
+<failure message="smoke.spec.js:5:3 网站基本功能正常 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Safari] › smoke.spec.js:5:3 › 冒烟测试 - 关键功能 › 网站基本功能正常 @smoke ──────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        8 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+       6 |     // 访问首页
+       7 |     await page.goto('/');
+    >  8 |     await expect(page).toHaveTitle(/Genomics and Artificial Intelligence/);
+         |                        ^
+       9 |     
+      10 |     // 检查主要元素存在
+      11 |     await expect(page.locator('h1')).toBeVisible();
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:8:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Safari\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Safari\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-网站基本功能正常-smoke-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 移动端基本功能 @smoke" classname="smoke.spec.js" time="13.94">
+<failure message="smoke.spec.js:24:3 移动端基本功能 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Safari] › smoke.spec.js:24:3 › 冒烟测试 - 关键功能 › 移动端基本功能 @smoke ──────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('nav')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('nav')
+        9 × locator resolved to <nav id="desktopNav" class="md-app-bar__actions">…</nav>
+          - unexpected value "hidden"
+
+
+      28 |     // 检查移动端布局
+      29 |     await expect(page.locator('h1')).toBeVisible();
+    > 30 |     await expect(page.locator('nav')).toBeVisible();
+         |                                       ^
+      31 |     
+      32 |     // 检查成员页面在移动端
+      33 |     await page.goto('/members/');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:30:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Safari\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Safari\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-移动端基本功能-smoke-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 关键页面加载 @smoke" classname="smoke.spec.js" time="14.127">
+<failure message="smoke.spec.js:37:3 关键页面加载 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Safari] › smoke.spec.js:37:3 › 冒烟测试 - 关键功能 › 关键页面加载 @smoke ───────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Genomics and Artificial Intelligence/i
+    Received string:  "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        8 × unexpected value "Hong Kong JC STEM Lab of Genomics and AI in Healthcare"
+
+
+      47 |     for (const pageInfo of criticalPages) {
+      48 |       await page.goto(pageInfo.url);
+    > 49 |       await expect(page).toHaveTitle(new RegExp(pageInfo.title, 'i'));
+         |                          ^
+      50 |       
+      51 |       // 检查页面内容加载
+      52 |       await page.waitForLoadState('networkidle');
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:49:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Safari\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Safari\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-关键页面加载-smoke-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 图片和资源加载 @smoke" classname="smoke.spec.js" time="19.899">
+</testcase>
+<testcase name="冒烟测试 - 关键功能 › 导航功能 @smoke" classname="smoke.spec.js" time="19.095">
+<failure message="smoke.spec.js:84:3 导航功能 @smoke" type="FAILURE">
+<![CDATA[  [Mobile Safari] › smoke.spec.js:84:3 › 冒烟测试 - 关键功能 › 导航功能 @smoke ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('nav a').first()
+        - locator resolved to <a href="/" class="md-button md-button--text md-button--active">↵              Home↵            </a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        13 × waiting for element to be visible, enabled and stable
+           - element is not visible
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      94 |       
+      95 |       if (href && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+    > 96 |         await link.click();
+         |                    ^
+      97 |         await page.waitForLoadState('networkidle');
+      98 |         
+      99 |         // 检查页面加载成功
+        at D:\Documents\genomics-in-healthcare.github.io\tests\smoke.spec.js:96:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Safari\test-failed-1.png]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Safari\video.webm]]
+
+[[ATTACHMENT|smoke-冒烟测试---关键功能-导航功能-smoke-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
