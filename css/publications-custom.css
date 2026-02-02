@@ -1,0 +1,513 @@
+/* 用于publications页面的自定义样式 */
+/* 注意：h3标签和p>b标签的年份标题样式已统一，确保视觉一致性 */
+
+/* 基础样式设置 */
+.publication-list {
+  padding-left: 0;
+  margin-top: 15px; /* 减小顶部边距 */
+}
+
+/* 所有publication条目的通用样式 */
+.publication-item {
+  margin-bottom: 10px; /* 调整行间距 */
+  padding: 16px 20px; /* 增加内边距 */
+  border-radius: 3px; /* 稍微减小圆角 */
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  box-shadow: none;
+  line-height: 1.6; /* 增加行高 */
+  font-family: Arial, Helvetica, sans-serif; /* 指定字体 */
+  font-size: var(--md-font-size-body1); /* 与全站正文一致 */
+  letter-spacing: 0.01em; /* 轻微增加字符间距 */
+}
+
+/* 双数行样式（白色背景） */
+.publication-item:nth-of-type(2n),
+.publication-item-even,
+.publication-item[style*="background-color"] {
+  background-color: #ffffff !important;
+  border: 1px solid #e8e8e8;
+}
+
+/* 单数行样式（灰色背景） */
+.publication-item:nth-of-type(2n+1) {
+  background-color: #f7f7f7;
+  border: 1px solid #f0f0f0;
+}
+
+/* 鼠标悬停效果 */
+.publication-item:hover {
+  box-shadow: none;
+}
+
+/* 年份标题样式 */
+h3 {
+  margin-top: 80px; /* 增大与上一年内容的距离 */
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none; /* 去掉下边线，避免视觉空隙 */
+  font-weight: 600;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+}
+
+/* 年份组下方增加间距 */
+.year-group {
+  margin-bottom: 18px;
+}
+
+/* 针对pub-list的样式修改 */
+.pub-list {
+  margin-top: -16px !important; /* 进一步上移列表，贴住年份 */
+  padding-left: 0; /* 与页面左侧对齐 */
+}
+
+/* 年份在部分页面为 <p><b>YYYY</b></p> 形式：统一控制间距 */
+.pub-list p > b {
+  display: inline-block;
+  margin-top: 80px; /* 与h3标题保持一致的上边距 */
+  margin-bottom: 0; /* 减小与下方列表的距离 */
+  font-size: 19px; /* 与h3标题保持一致的字体大小 */
+  font-weight: 600; /* 与h3标题保持一致的字体粗细 */
+  color: #222; /* 与h3标题保持一致的颜色 */
+}
+.pub-list p + ul,
+.pub-list p + font + ul,
+.pub-list p + br + ul,
+.pub-list p + font + blockquote + font + font + ul,
+.pub-list p + font + blockquote + font + ul {
+  margin-top: 0; /* 减小年份与列表的距离，使列表紧贴年份 */
+}
+
+/* 确保h3标题下的内容与p>b标题下的内容间距一致 */
+h3 + ul,
+h3 + p + ul,
+h3 + br + ul,
+h3 + font + ul,
+h3 + blockquote + ul,
+h3 + font + blockquote + font + ul {
+  margin-top: 0; /* 减小年份与列表的距离，使列表紧贴年份 */
+}
+
+.pub-list li {
+  margin-bottom: 10px; /* 调整间距 */
+  padding: 12px 20px; /* 略微减小上下内边距 */
+  line-height: 1.6; /* 增加行高 */
+  font-family: Arial, Helvetica, sans-serif; /* 指定字体 */
+  font-size: var(--md-font-size-body1); /* 与全站正文一致 */
+}
+
+/* 增加列表最后一项与下一个年份之间的间距 */
+.pub-list ul {
+  margin-bottom: 40px; /* 增加列表底部边距，与下一个年份拉开距离 */
+}
+
+/* 确保列表项之间有足够的间距 */
+.pub-list li:last-child {
+  margin-bottom: 20px; /* 增加最后一个列表项的底部边距 */
+}
+
+/* 第一条目与年份更紧凑 */
+.pub-list li:first-child,
+.pub-list li:first-of-type,
+.pub-list > li:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* 如果首条以段落开头，移除段落自身的上边距 */
+.pub-list li > p:first-child,
+.pub-list li > p:first-of-type,
+.pub-list > li:first-of-type > p:first-of-type {
+  margin-top: 0;
+}
+
+/* 调整灰白交替背景 - 奇数行灰色，偶数行白色 */
+.pub-list li:nth-child(even) {
+  background-color: #ffffff;
+}
+.pub-list li:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+/* 调整blockquote间距 */
+.pub-list blockquote {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+/* 调整列表间距 */
+.pub-list ul {
+  padding-left: 25px;
+  margin-bottom: 12px;
+}
+
+/* 紧凑年份导航链接 */
+.pub-list p a {
+  margin-right: 4px;
+  white-space: nowrap;
+  color: #1a73e8;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pub-list p a:hover {
+  text-decoration: none;
+}
+
+.pub-list p a:focus,
+.pub-list p a:focus-visible,
+.pub-list p a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+/* 文本样式优化 */
+.pub-list font {
+  font-size: var(--md-font-size-body1);
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 紧凑PDF链接 */
+.pub-list a[href$=".pdf"] {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #1a73e8;
+}
+
+/* 减少论文标题和作者之间的间距 */
+.pub-list li b {
+  margin-left: 2px;
+  margin-right: 2px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* 优化分隔线 */
+.pub-list hr {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-top: 1px solid #eaeaea;
+}
+
+/* 学术期刊名称样式 */
+.pub-list u i {
+  font-size: 95%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 页面标题样式 */
+.page-header {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+/* 段落 */
+.pub-list p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--md-font-size-body1);
+}
+
+/* 容器边距 */
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* 减少空白间距 */
+.pub-list br,
+.pub-list blockquote:empty,
+.pub-list font:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  line-height: 0;
+}
+
+/* 处理blockquote元素 */
+.pub-list blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* 全局链接换行处理（所有屏幕尺寸）- 基础保护 */
+.pub-list a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word; /* 基础换行，移动端会使用更激进的策略 */
+  max-width: 100%;
+  display: inline;
+  white-space: normal;
+}
+
+/* 处理长URL链接 */
+.pub-list a[href^="http"],
+.pub-list a[href^="https"],
+.pub-list a[href*="://"] {
+  word-break: break-all !important; /* URL必须在任意位置可以断开 */
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+}
+
+/* 覆盖内联样式，确保链接文本换行 */
+.pub-list a,
+.pub-list font a,
+.pub-list li a,
+.pub-list p a,
+.pub-list blockquote a {
+  white-space: normal !important; /* 强制允许换行，覆盖可能的nowrap */
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* 移动设备响应式修复 - 防止横向溢出 */
+@media (max-width: 991px) {
+  /* 全局防止横向滚动 - 专门针对publications页面 */
+  html.group-publications,
+  html[class*="publication"],
+  body.group-publications,
+  body[class*="publication"] {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+  }
+  
+  /* 确保容器不会溢出 */
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: clamp(16px, 2.5vw, 20px) !important;
+    padding-right: clamp(16px, 2.5vw, 20px) !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* 确保Bootstrap的row和col类不会溢出 */
+  .container-fluid .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .container-fluid .row > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 确保pub-list不会溢出 */
+  .pub-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* 确保所有文本元素都能正确换行 */
+  .pub-list * {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 确保链接和文本不会导致横向滚动 - 强化处理 */
+  .pub-list a {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-all !important; /* 允许在任意字符处断行，对URL很重要 */
+    max-width: 100% !important;
+    display: inline !important; /* 确保链接可以正常换行 */
+    white-space: normal !important; /* 允许换行 */
+    box-sizing: border-box !important;
+    hyphens: auto !important; /* 自动断字 */
+  }
+  
+  /* 特别处理包含URL的链接 */
+  .pub-list a[href^="http"],
+  .pub-list a[href^="https"],
+  .pub-list a[href^="www"],
+  .pub-list a[href*="://"] {
+    word-break: break-all !important; /* URL必须能在任意位置断开 */
+    overflow-wrap: anywhere !important; /* 更激进的换行策略 */
+    display: inline !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+  
+  /* 确保链接内的文本也能正确换行 */
+  .pub-list a * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-all !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+  
+  /* 确保列表项不会溢出 */
+  .pub-list li {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-all !important; /* 允许在任意位置断开，对包含长链接很重要 */
+    box-sizing: border-box !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    white-space: normal !important; /* 确保列表项内的内容可以换行 */
+  }
+  
+  /* 确保列表不会溢出 */
+  .pub-list ul {
+    max-width: 100% !important;
+    padding-left: 18px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 确保段落和字体标签不会溢出 */
+  .pub-list p,
+  .pub-list font {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 确保blockquote不会溢出 */
+  .pub-list blockquote {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    padding-left: 10px !important;
+  }
+  
+  /* 确保主内容区域不会溢出 */
+  .flat-content-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 确保md-main-content不会溢出 */
+  .md-main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* 超小屏幕额外优化 */
+@media (max-width: 480px) {
+  .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  
+  .pub-list li {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-size: 14px !important;
+  }
+  
+  .pub-list ul {
+    padding-left: 16px !important;
+  }
+  
+  .pub-list blockquote {
+    padding-left: 8px !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* 确保页面级别不会出现横向滚动 */
+@media (max-width: 991px) {
+  /* 为publications页面添加body级别的溢出控制 */
+  body.group-publications,
+  body[class*="publication"] {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  
+  /* 确保所有表格元素不会溢出 */
+  .pub-list table {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 确保图片元素不会溢出 */
+  .pub-list img {
+    max-width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 确保所有内联元素能够正确换行 */
+  .pub-list strong,
+  .pub-list b,
+  .pub-list em,
+  .pub-list i {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-all !important; /* 允许在任意位置断开 */
+    white-space: normal !important;
+    max-width: 100% !important;
+    display: inline !important;
+  }
+  
+  /* 确保所有包含链接的容器都不会溢出 */
+  .pub-list li a,
+  .pub-list p a,
+  .pub-list font a,
+  .pub-list blockquote a {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-all !important;
+    display: inline !important;
+    white-space: normal !important;
+  }
+  
+  /* 确保包含链接的父容器也不会溢出 */
+  .pub-list li:has(a),
+  .pub-list p:has(a),
+  .pub-list font:has(a),
+  .pub-list blockquote:has(a) {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-all !important;
+  }
+  
+  /* 确保u和i标签内的链接也能正确处理 */
+  .pub-list u a,
+  .pub-list i a,
+  .pub-list em a {
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
+    display: inline !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+}
