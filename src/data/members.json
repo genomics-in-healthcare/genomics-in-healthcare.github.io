@@ -24,6 +24,18 @@
     "description": "She received her bachelor's degree from Southwest University of Science and Technology and her master's degree from Yanbian University. During her master's studies, she spent two years as an exchange student at the Institute of Cardiopulmonary Research, Capital Medical University. Her major is Biochemistry and Molecular Biology. She is currently working as a research assistant in Professor Zhang's group, focusing on molecular experiments and animal studies."
   },
   {
+    "name": "Zhang Yiran",
+    "startdate": [
+      "2026-01-01"
+    ],
+    "enddate": [
+      ""
+    ],
+    "image": "/img/members/placeholder.jpg",
+    "position": "Research Assistant",
+    "description": "Zhang Yiran is a Research Assistant in Professor Zhang's lab. More information coming soon."
+  },
+  {
     "name": "Junyi Chen, Ph.D.",
     "startdate": [
       "2024-10-07"
@@ -42,7 +54,7 @@
       "2024-09-01"
     ],
     "enddate": [
-      ""
+      "2026-01-01"
     ],
     "image": "/img/members/Liyixin.jpg",
     "position": "Ph.D. Student",
@@ -95,7 +107,7 @@
     ],
     "image": "/img/members/TuYue.jpg",
     "position": "Postdoctoral Scholar",
-    "description": "\"Dr. Tu received his Bachelor’s, Master’s, and Ph.D. in Computer Application Technology from Northeastern University, under the supervision of Prof. QIAO Jianzhong and Prof. LIN Shukuan. His primary research interests include medical image analysis, computer-aided diagnosis, Magnetic Resonance Imaging, and neuroscience."
+    "description": "Dr. Tu received his Bachelor's, Master's, and Ph.D. in Computer Application Technology from Northeastern University, under the supervision of Prof. QIAO Jianzhong and Prof. LIN Shukuan. His primary research interests include medical image analysis, computer-aided diagnosis, Magnetic Resonance Imaging, and neuroscience."
   },
   {
     "name": "Xin Diao, Ph.D.",
@@ -241,7 +253,7 @@
     ],
     "image": "/img/members/Tanyejun.jpg",
     "position": "Ph.D. Student",
-    "description": "Yejun received his Bachelor's degree in Mathematical Biology (Genomics specialization) in University of Minnesota, Twin Cities (UMN). He is also an awardee of <span class=\\\"fellowship-highlight\\\">HKPFS</span> and <span class=\\\"fellowship-highlight\\\">PPPFS</span>. Under the guidance of Professor Zhang, Yejun is currently conducting research on epidemiology and non-coding RNA at the JC-STEM laboratory."
+    "description": "Yejun received his Bachelor's degree in Mathematical Biology (Genomics specialization) in University of Minnesota, Twin Cities (UMN). He is also an awardee of HKPFS and PPPFS. Under the guidance of Professor Zhang, Yejun is currently conducting research on epidemiology and non-coding RNA at the JC-STEM laboratory."
   },
   {
     "name": "Wang Weixu",
@@ -253,7 +265,7 @@
     ],
     "image": "/img/members/WangWeixu.png",
     "position": "Ph.D. Student",
-    "description": "\"Weixu earned his Bachelor's and Master's degrees in Computer Science and Technology from Heilongjiang University of Science and Technology and Northeastern University, respectively."
+    "description": "Weixu earned his Bachelor's and Master's degrees in Computer Science and Technology from Heilongjiang University of Science and Technology and Northeastern University, respectively."
   },
   {
     "name": "Wang Yuchuan",
@@ -265,7 +277,7 @@
     ],
     "image": "/img/members/WangYuchuan.jpg",
     "position": "Ph.D. Student",
-    "description": "\"Yuchuan received his Bachelor's degree in Information Management and Information Systems from China University in Geosciences (Beijing). He then earned his Master's degree in Computer Science from Washington University in St. Louis, where he was advised by Prof. William YEOH and co-advised by Prof. Chein-Ju HO."
+    "description": "Yuchuan received his Bachelor's degree in Information Management and Information Systems from China University in Geosciences (Beijing). He then earned his Master's degree in Computer Science from Washington University in St. Louis, where he was advised by Prof. William YEOH and co-advised by Prof. Chein-Ju HO."
   },
   {
     "name": "Wang Zhenqian",
@@ -333,7 +345,7 @@
       "2023-09-01"
     ],
     "enddate": [
-      ""
+      "2026-01-01"
     ],
     "image": "/img/members/Zhuyan.jpg",
     "position": "Ph.D. Student",

@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Use import.meta.url for ES module compatibility
-const __filename = new URL(import.meta.url).pathname;
+// Use fileURLToPath for proper cross-platform path handling
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
 const devIndex = path.join(root, 'index.dev.html');

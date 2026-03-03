@@ -1,28 +1,57 @@
-import { useState, useEffect, FC } from 'react'
+import { FC, useMemo } from 'react'
 import { NewsItem } from '../components/common'
-import { postsData } from '../data/posts'
 import './News.css'
+import postsData from '../data/posts.json'
 
 interface NewsPost {
   group: string
   published?: boolean
   date: string
+  filename?: string
+  title?: string
+  link_title?: string
+  layout?: string
+  content?: string
+  author?: string
+  tags?: string[]
   [key: string]: any
 }
 
-const News: FC = () => {
-  const [newsPosts, setNewsPosts] = useState<NewsPost[]>([])
+// HARDCODED NEWS ITEM - Built on 2026-02-02 22:45:00
+const HARDCODED_NEW_NEWS: NewsPost = {
+  filename: "2026-01-26-news.md",
+  date: "2026-01-26",
+  title: "Two new manuscripts posted on bioRxiv",
+  link_title: "Two new manuscripts posted on bioRxiv",
+  published: true,
+  layout: "post",
+  group: "news",
+  content: "Collaboration with Dr. Zhang and Dr. Qiu, we have completed two manuscripts, which have been posted on the bioRxiv preprint platform and are currently under review:\n\n(1) Tu Y, Hao K, Wang F, Qiu S, Zhang W. (2026). Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk. bioRxiv preprint. doi:10.64898/2026.01.26.701909.\n\n(2) Tu Y., Fu Q., Li Y., Sun C., Zhu Y., Deng J., Qin H., Zeng X., Wang Y., Qiu S., Zhang W. (2026). Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice. bioRxiv preprint. doi:10.64898/2026.01.26.701905.",
+  author: "",
+  tags: []
+}
 
-  useEffect(() => {
+const News: FC = () => {
+  const newsPosts = useMemo(() => {
+    // Use hardcoded news item and posts data
+    let allPosts: NewsPost[] = [HARDCODED_NEW_NEWS, ...(postsData as NewsPost[])]
+    
+    // Remove duplicates by filename
+    const seen = new Set<string>()
+    allPosts = allPosts.filter(p => {
+      if (seen.has(p.filename || '')) return false
+      seen.add(p.filename || '')
+      return true
+    })
+    
     // Filter news posts and sort by date
-    const news = postsData
+    return allPosts
       .filter((post: NewsPost) => post.group === 'news' && post.published !== false)
       .sort((a: NewsPost, b: NewsPost) => {
         if (a.date < b.date) return 1
         if (a.date > b.date) return -1
         return 0
       })
-    setNewsPosts(news)
   }, [])
 
   const formatDate = (dateString: string): string => {
