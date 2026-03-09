@@ -56,6 +56,22 @@
   height: auto;
   display: block !important;
   margin: 8px auto !important;
+  /* 让白色背景融入页面背景 */
+  mix-blend-mode: multiply;
+  /* 添加轻微圆角让图片更柔和 */
+  border-radius: 8px;
+  /* 添加极轻的阴影增加深度 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  /* 轻微的透明度让图片更融合 */
+  opacity: 0.98;
+}
+
+/* Logo图片不应用混合模式，保持原样 */
+.research-content .logo-row img {
+  mix-blend-mode: normal !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
 }
 
 .research-content .logo-row {
