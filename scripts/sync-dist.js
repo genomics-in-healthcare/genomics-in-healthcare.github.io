@@ -52,4 +52,34 @@ if (fs.existsSync(distAssets)) {
   console.log('⚠️  No assets folder found in dist/');
 }
 
+// 4. Sync img folder (for static images like member photos)
+const distImg = path.join(distDir, 'img');
+const rootImg = path.join(rootDir, 'img');
+
+function copyFolder(src, dest) {
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+  
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    
+    if (entry.isDirectory()) {
+      copyFolder(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
+if (fs.existsSync(distImg)) {
+  copyFolder(distImg, rootImg);
+  console.log('✓ Synced img folder');
+} else {
+  console.log('⚠️  No img folder found in dist/');
+}
+
 console.log('✅ Sync complete. Root files are now up to date.');
