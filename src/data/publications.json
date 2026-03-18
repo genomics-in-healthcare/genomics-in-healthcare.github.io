@@ -932,8 +932,8 @@
       "year": "2025",
       "items": [
         {
-          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and <strong>W. Zhang</strong>, <b>MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</b>, AAAI-2026, 2025.</font>",
-          "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, AAAI-2026, 2025."
+          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.1609/aaai.v40i30.39718\">MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</a>, <u><i>Proc. AAAI-2026</i></u>, 2025, DOI: 10.1609/aaai.v40i30.39718.</font>",
+          "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, Proc. AAAI-2026, 2025, DOI: 10.1609/aaai.v40i30.39718."
         },
         {
           "html": "<font face=\"Arial\"><strong>Y. Zhu</strong>, S. Wang, Y. Han, Y. Lu, A. Xiong, <strong>S. Qiu</strong>, L. N. Jin, and <strong>W. Zhang</strong>, <a href=\"https://pubs.acs.org/doi/10.1021/acs.est.5c12915\">A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant–Human Protein Interactions</a>, <u><i>Environmental Science &amp; Technology</i></u>, 2025, DOI: 10.1021/acs.est.5c12915.</font>",
@@ -952,8 +952,8 @@
           "text": "H. Guo, Y. Xiao, S. Dong, J. Yang, P. Zhao, T. Zhao, A. Cai, L. Tang, J. Liu, H. Wang, R. Hua, R. Liu, Y. Wei, D. Sun, Z. Liu, M. Xia, Y. He, Y. Wu, T. Si, F. Womer, F. Xu, Y. Tang, J. Wang, W. Zhang, X. Zhang & F. Wang, Bridging animal models and humans: neuroimaging as intermediate phenotypes linking genetic or stress factors to anhedonia, BMC medicine, 23(1):38, 2025."
         },
         {
-          "html": "<font face=\"Arial\"><strong>Q. Zhao</strong>, <strong>C. Zhang</strong>, <strong>W. Zhang</strong>, <a href=\"https://arxiv.org/pdf/2409.15697.pdf\">dnaGrinder: a lightweight and high-capacity genomic foundation model</a>, arXiv, 2024, https://arxiv.org/abs/2409.15697.</font>",
-          "text": "Q. Zhao, C. Zhang, W. Zhang, dnaGrinder: a lightweight and high-capacity genomic foundation model, arXiv, 2024, https://arxiv.org/abs/2409.15697."
+          "html": "<font face=\"Arial\"><strong>Q. Zhao</strong>, <strong>C. Zhang</strong>, <strong>W. Zhang</strong>, <a href=\"https://arxiv.org/abs/2409.15697\">dnaGrinder: a lightweight and high-capacity genomic foundation model</a>, <u><i>arXiv</i></u>, 2024, arXiv:2409.15697.</font>",
+          "text": "Q. Zhao, C. Zhang, W. Zhang, dnaGrinder: a lightweight and high-capacity genomic foundation model, arXiv, 2024, arXiv:2409.15697."
         }
       ]
     },
@@ -961,19 +961,19 @@
       "year": "2026",
       "items": [
         {
+          "html": "<font face=\"Arial\"><strong>K. Li</strong>, W. Wang, J. Jiang, J. Deng, J. Zhang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.1101/2026.03.04.709677v1\">Circular RNA identification using a genomic language model and a small number of authenticated examples</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.03.04.709677.</font>",
+          "text": "K. Li, W. Wang, J. Jiang, J. Deng, J. Zhang, S. Qiu, and W. Zhang, Circular RNA identification using a genomic language model and a small number of authenticated examples, bioRxiv, 2026, DOI: 10.64898/2026.03.04.709677."
+        },
+        {
           "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, K. Hao, F. Wang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701909\">Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701909.</font>",
           "text": "Y. Tu, K. Hao, F. Wang, S. Qiu, and W. Zhang, Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701909."
         },
         {
           "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701905\">Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701905.</font>",
           "text": "Y. Tu, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, S. Qiu, and W. Zhang, Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701905."
-        },
-        {
-          "html": "<font face=\"Arial\"><strong>K. Li</strong>, W. Wang, J. Jiang, J. Deng, J. Zhang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.1101/2026.03.04.709677v1\">Circular RNA identification using a genomic language model and a small number of authenticated examples</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.03.04.709677.</font>",
-          "text": "K. Li, W. Wang, J. Jiang, J. Deng, J. Zhang, S. Qiu, and W. Zhang, Circular RNA identification using a genomic language model and a small number of authenticated examples, bioRxiv, 2026, DOI: 10.64898/2026.03.04.709677."
         }
       ]
     }
   },
-  "lastUpdated": "2026-03-18T01:59:48.866Z"
+  "lastUpdated": "2026-03-18T02:11:14.519Z"
 }
