@@ -26,7 +26,7 @@ const HARDCODED_NEW_NEWS: NewsPost = {
   published: true,
   layout: "post",
   group: "news",
-  content: "Under the supervision of Professor Zhang and Dr. Qiu, our team has completed two manuscripts that have been posted as preprints on bioRxiv and are currently under review:\n\n(1) Tu Y, Hao K, Wang F, Qiu S, Zhang W. (2026). Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk. bioRxiv preprint. doi:10.64898/2026.01.26.701909.\n\n(2) Tu Y., Fu Q., Li Y., Sun C., Zhu Y., Deng J., Qin H., Zeng X., Wang Y., Qiu S., Zhang W. (2026). Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice. bioRxiv preprint. doi:10.64898/2026.01.26.701905.",
+  content: "Two new bioRxiv preprints from our team report advances in depression research, including circuit-specific resting-state fMRI signatures for first-episode MDD and multimodal behavior scoring across chronic stress models:\n\n(1) Tu Y, Hao K, Wang F, Qiu S, Zhang W. (2026). Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk. bioRxiv preprint. doi:10.64898/2026.01.26.701909.\n\n(2) Tu Y., Fu Q., Li Y., Sun C., Zhu Y., Deng J., Qin H., Zeng X., Wang Y., Qiu S., Zhang W. (2026). Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice. bioRxiv preprint. doi:10.64898/2026.01.26.701905.",
   author: "",
   tags: []
 }

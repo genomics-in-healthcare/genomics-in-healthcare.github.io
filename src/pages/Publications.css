@@ -141,6 +141,11 @@
   letter-spacing: normal;
 }
 
+.pub-list li strong {
+  font-weight: 700 !important;
+  letter-spacing: normal;
+}
+
 .pub-list li p {
   margin: 0 !important;
   padding: 0 !important;
