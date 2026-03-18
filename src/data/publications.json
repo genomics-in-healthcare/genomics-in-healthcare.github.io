@@ -932,8 +932,8 @@
       "year": "2025",
       "items": [
         {
-          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.1609/aaai.v40i30.39718\">MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</a>, <u><i>Proc. AAAI-2026</i></u>, 2025, DOI: 10.1609/aaai.v40i30.39718.</font>",
-          "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, Proc. AAAI-2026, 2025, DOI: 10.1609/aaai.v40i30.39718."
+          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.1609/aaai.v40i30.39718\">MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</a>, <u><i>Proc. AAAI-26</i></u>, 2025, DOI: 10.1609/aaai.v40i30.39718.</font>",
+          "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, Proc. AAAI-26, 2025, DOI: 10.1609/aaai.v40i30.39718."
         },
         {
           "html": "<font face=\"Arial\"><strong>Y. Zhu</strong>, S. Wang, Y. Han, Y. Lu, A. Xiong, <strong>S. Qiu</strong>, L. N. Jin, and <strong>W. Zhang</strong>, <a href=\"https://pubs.acs.org/doi/10.1021/acs.est.5c12915\">A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant–Human Protein Interactions</a>, <u><i>Environmental Science &amp; Technology</i></u>, 2025, DOI: 10.1021/acs.est.5c12915.</font>",
@@ -975,5 +975,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-03-18T02:11:14.519Z"
+  "lastUpdated": "2026-03-18T02:43:28.360Z"
 }
