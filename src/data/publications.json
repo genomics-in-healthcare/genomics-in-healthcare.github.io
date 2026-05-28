@@ -971,9 +971,33 @@
         {
           "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701905\">Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701905.</font>",
           "text": "Y. Tu, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, S. Qiu, and W. Zhang, Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701905."
+        },
+        {
+          "html": "<font face=\"Arial\">C. Liang, Y. Huang, D. He, P. Li, Y. Li, D. Jin and <strong>W. Zhang</strong>, <em>Unified Multi-Domain Graph Pre-training for Homogeneous and Heterogeneous Graphs via Domain-Specific Expert Encoding</em>, <u><i>Proc. 32nd ACM SIGKDD Intern. Conf. on Knowledge Discovery and Data Mining (KDD-26)</i></u>, 2026.</font>",
+          "text": "C. Liang, Y. Huang, D. He, P. Li, Y. Li, D. Jin and W. Zhang, Unified Multi-Domain Graph Pre-training for Homogeneous and Heterogeneous Graphs via Domain-Specific Expert Encoding, Proc. 32nd ACM SIGKDD Intern. Conf. on Knowledge Discovery and Data Mining (KDD-26), 2026."
+        },
+        {
+          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, S. Liu, J. Cui and <strong>W. Zhang</strong>, <em>LEDA: Latent Semantic Distribution Alignment for Multi-domain Graph Pre-training</em>, <u><i>Proc. 35th Intern. World Wide Web Conf. (WWW-26)</i></u>, 2026. (CCF-A full paper)</font>",
+          "text": "L. Shan, J. Zhao, D. He, S. Liu, J. Cui and W. Zhang, LEDA: Latent Semantic Distribution Alignment for Multi-domain Graph Pre-training, Proc. 35th Intern. World Wide Web Conf. (WWW-26), 2026. (CCF-A full paper)"
+        },
+        {
+          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng and <strong>W. Zhang</strong>, <em>MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</em>, <u><i>Proc. 40th AAAI Conf. on Artificial Intelligence (AAAI-26)</i></u>, 2026.</font>",
+          "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, Proc. 40th AAAI Conf. on Artificial Intelligence (AAAI-26), 2026."
+        },
+        {
+          "html": "<font face=\"Arial\">Z. Wang, D. He, Z. Yu, K. Khysru and <strong>W. Zhang</strong>, <em>DNFormer: Differential Attention for Graph Transformers</em>, <u><i>Proc. 35th Intern. Joint Conf. on AI (IJCAI-26)</i></u>, 2026.</font>",
+          "text": "Z. Wang, D. He, Z. Yu, K. Khysru and W. Zhang, DNFormer: Differential Attention for Graph Transformers, Proc. 35th Intern. Joint Conf. on AI (IJCAI-26), 2026."
+        },
+        {
+          "html": "<font face=\"Arial\">P. Li, Y. Huang, D. He, D. Jin and <strong>W. Zhang</strong>, <em>CHoE: Cross-Domain Heterogeneous Graph Prompt Learning via Structure-Conditioned Experts</em>, <u><i>Proc. 35th Intern. Joint Conf. on AI (IJCAI-26)</i></u>, 2026.</font>",
+          "text": "P. Li, Y. Huang, D. He, D. Jin and W. Zhang, CHoE: Cross-Domain Heterogeneous Graph Prompt Learning via Structure-Conditioned Experts, Proc. 35th Intern. Joint Conf. on AI (IJCAI-26), 2026."
+        },
+        {
+          "html": "<font face=\"Arial\">K. Ma, W. Wang, K. Li, F. Zhang, S. Qiu and <strong>W. Zhang</strong>, <em>Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery</em>, <u><i>Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26)</i></u>, 2026. (Accepted for Oral Presentation)</font>",
+          "text": "K. Ma, W. Wang, K. Li, F. Zhang, S. Qiu and W. Zhang, Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery, Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26), 2026. (Accepted for Oral Presentation)"
         }
       ]
     }
   },
-  "lastUpdated": "2026-03-18T02:43:28.360Z"
+  "lastUpdated": "2026-05-28T07:02:54.240Z"
 }
