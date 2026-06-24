@@ -1,13 +1,25 @@
 [
   {
-    "filename": "2026-05-28-news.md",
-    "date": "2026-05-28",
-    "title": "Six papers accepted to top international conferences (2026)",
-    "link_title": "Six papers accepted to top international conferences (2026)",
+    "filename": "2026-06-24-news.md",
+    "date": "2026-06-24",
+    "title": "The 4th Conference on Medical Genomics and Bioinformatics",
+    "link_title": "The 4th Conference on Medical Genomics and Bioinformatics",
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Six papers from our group have been accepted by international conferences in 2026, including AAAI, IJCAI, KDD, WWW, and ICIBM.\n\n- [AAAI 2026] Shan L., Zhao J., He D., Huang Y., Feng Z., Zhang W. MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training.\n- [IJCAI 2026] Wang Z., He D., Yu Z., Khysru K., Zhang W. DNFormer: Differential Attention for Graph Transformers.\n- [IJCAI 2026] Li P., Huang Y., He D., Jin D., Zhang W. CHoE: Cross-Domain Heterogeneous Graph Prompt Learning via Structure-Conditioned Experts.\n- [KDD 2026] Liang C., Huang Y., He D., Li P., Li Y., Jin D., Zhang W. Unified Multi-Domain Graph Pre-training for Homogeneous and Heterogeneous Graphs via Domain-Specific Expert Encoding.\n- [WWW 2026] Shan L., Zhao J., He D., Liu S., Cui J., Zhang W. LEDA: Latent Semantic Distribution Alignment for Multi-domain Graph Pre-training. (CCF-A, oral presentation)\n- [WWW 2026] Zhao J., Wang Y., Li Y., He D., Jin D., Feng Z., Zhang W. Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs. (CCF-A, oral presentation)\n- [ICIBM 2026] Ma K., Wang W., Li K., Zhang F., Qiu S., Zhang W. Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery. (Accepted for Oral Presentation and considered for publication in Briefings in Bioinformatics)\n",
+    "content": "Weixiong will give a talk on Circular RNA Identification Using a Genomic Language Model with a Small Number of Authenticated Examples at [The 4th Conference on Medical Genomics and Bioinformatics](https://activitym.hbhvip.com/#/pages/v1/detail/personal_page?id=597&meeting_id=864644911&lang=zh) on 06/26/26",
+    "author": "",
+    "tags": []
+  },
+  {
+    "filename": "2026-05-28-news.md",
+    "date": "2026-05-28",
+    "title": "Seven papers accepted to top international conferences (2026)",
+    "link_title": "Seven papers accepted to top international conferences (2026)",
+    "published": true,
+    "layout": "post",
+    "group": "news",
+    "content": "Seven papers from our group have been accepted by international conferences in 2026, including ICIBM, AAAI, IJCAI, KDD, and WWW.\n\n- [ICIBM 2026] Ma K., Wang W., Li K., Zhang F., Qiu S., Zhang W. Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery. (Accepted for Oral Presentation and considered for publication in Briefings in Bioinformatics)\n- [AAAI 2026] Shan L., Zhao J., He D., Huang Y., Feng Z., Zhang W. MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training.\n- [IJCAI 2026] Wang Z., He D., Yu Z., Khysru K., Zhang W. DNFormer: Differential Attention for Graph Transformers.\n- [IJCAI 2026] Li P., Huang Y., He D., Jin D., Zhang W. CHoE: Cross-Domain Heterogeneous Graph Prompt Learning via Structure-Conditioned Experts.\n- [KDD 2026] Liang C., Huang Y., He D., Li P., Li Y., Jin D., Zhang W. Unified Multi-Domain Graph Pre-training for Homogeneous and Heterogeneous Graphs via Domain-Specific Expert Encoding.\n- [WWW 2026] Shan L., Zhao J., He D., Liu S., Cui J., Zhang W. LEDA: Latent Semantic Distribution Alignment for Multi-domain Graph Pre-training. (CCF-A, oral presentation)\n- [WWW 2026] Zhao J., Wang Y., Li Y., He D., Jin D., Feng Z., Zhang W. Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs. (CCF-A, oral presentation)\n",
     "author": "",
     "tags": []
   },

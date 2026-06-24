@@ -829,10 +829,6 @@
       "year": "2022",
       "items": [
         {
-          "html": "<font face=\"Arial\">D. Jin, R. Wang, M. Ge, H. He, X. Li, W. Lin and <strong>W. Zhang</strong>, <a href=\"https://www.ijcai.org/proceedings/2022/0293.pdf\">RAW-GNN: Random Walk Aggregation based graph neural network</a>, <u><i>Proc 31-st Intern. Joint Conf. on AI</i></u> (IJCAI-22).</font>",
-          "text": "D. Jin, R. Wang, M. Ge, H. He, X. Li, W. Lin and W. Zhang, RAW-GNN: Random Walk Aggregation based graph neural network, Proc 31-st Intern. Joint Conf. on AI (IJCAI-22)."
-        },
-        {
           "html": "<font face=\"Arial\">D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and <strong>W. Zhang</strong>, <a href=\"https://ieeexplore.ieee.org/iel7/5962385/6104215/09724614.pdf\">Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning</a>, <u><i>IEEE Transactions on Neural Networks and Learning Systems</i></u>, published online March 2022.</font>",
           "text": "D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and W. Zhang, Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning, IEEE Transactions on Neural Networks and Learning Systems, published online March 2022."
         },
@@ -859,16 +855,16 @@
         {
           "html": "<font face=\"Arial\">Dustin, E., E. Suarez-Pozos, C. Stotesberry, <strong>S. Qiu</strong>, J. P. Palavicini, X. Han and J. L. Dupree, <a href=\"https://pubmed.ncbi.nlm.nih.gov/37239102/\">Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion</a>, <u><i>Biomedicines</i></u>, 11(5), 2023.</font>",
           "text": "Dustin, E., E. Suarez-Pozos, C. Stotesberry, S. Qiu, J. P. Palavicini, X. Han and J. L. Dupree, Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion, Biomedicines, 11(5), 2023."
+        },
+        {
+          "html": "<font face=\"Arial\">D. Jin, R. Wang, M. Ge, H. He, X. Li, W. Lin and <strong>W. Zhang</strong>, <a href=\"https://www.ijcai.org/proceedings/2022/0293.pdf\">RAW-GNN: Random Walk Aggregation based graph neural network</a>, <u><i>Proc 31-st Intern. Joint Conf. on AI</i></u> (IJCAI-22).</font>",
+          "text": "D. Jin, R. Wang, M. Ge, H. He, X. Li, W. Lin and W. Zhang, RAW-GNN: Random Walk Aggregation based graph neural network, Proc 31-st Intern. Joint Conf. on AI (IJCAI-22)."
         }
       ]
     },
     "2023": {
       "year": "2023",
       "items": [
-        {
-          "html": "<font face=\"Arial\">D. He, J. Zhao, R. Guo, Z. Feng, D. Jin, Y. Huang, Z. Wang and <strong>W. Zhang</strong>, <a href=\"https://openreview.net/forum?id=YIcb3pR8ld\">Contrastive learning meets homophily: Two birds with one stone</a>, <u><i>Conference on Machine Learning</i></u> (ICML-2023).</font>",
-          "text": "D. He, J. Zhao, R. Guo, Z. Feng, D. Jin, Y. Huang, Z. Wang and W. Zhang, Contrastive learning meets homophily: Two birds with one stone, Conference on Machine Learning (ICML-2023)."
-        },
         {
           "html": "<font face=\"Arial\">X. Wei, <strong>C. Pan</strong>, X. Zhang*, <strong>W. Zhang</strong>*, <a href=\"https://biologydirect.biomedcentral.com/articles/10.1186/s13062-023-00410-9\">Total network controllability analysis discovers explainable drugs for Covid-19 treatment</a>, <u><i>Biology Direct</i></u>, 18(1):55, 2023.</font>",
           "text": "X. Wei, C. Pan, X. Zhang*, W. Zhang*, Total network controllability analysis discovers explainable drugs for Covid-19 treatment, Biology Direct, 18(1):55, 2023."
@@ -900,6 +896,10 @@
         {
           "html": "<font face=\"Arial\">Dustin, E., E. Suarez-Pozos, C. Stotesberry, <strong>S. Qiu</strong>, J. P. Palavicini, X. Han and J. L. Dupree, <a href=\"https://pubmed.ncbi.nlm.nih.gov/37239102/\">Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion</a>, <u><i>Biomedicines</i></u>, 11(5), 2023.</font>",
           "text": "Dustin, E., E. Suarez-Pozos, C. Stotesberry, S. Qiu, J. P. Palavicini, X. Han and J. L. Dupree, Compromised Myelin and Axonal Molecular Organization Following Adult-Onset Sulfatide Depletion, Biomedicines, 11(5), 2023."
+        },
+        {
+          "html": "<font face=\"Arial\">D. He, J. Zhao, R. Guo, Z. Feng, D. Jin, Y. Huang, Z. Wang and <strong>W. Zhang</strong>, <a href=\"https://openreview.net/forum?id=YIcb3pR8ld\">Contrastive learning meets homophily: Two birds with one stone</a>, <u><i>Conference on Machine Learning</i></u> (ICML-2023).</font>",
+          "text": "D. He, J. Zhao, R. Guo, Z. Feng, D. Jin, Y. Huang, Z. Wang and W. Zhang, Contrastive learning meets homophily: Two birds with one stone, Conference on Machine Learning (ICML-2023)."
         }
       ]
     },
@@ -911,30 +911,26 @@
           "text": "D. He, C. Liang, C. Huo, Z. Feng, D. Jin, L. Yang, and W. Zhang, Analyzing heterogeneous networks with missing attributes by unsupervised contrastive learning, IEEE Transactions on Neural Networks and Learning Systems, 35(4):4438-50, 2024."
         },
         {
-          "html": "<font face=\"Arial\">D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, <strong>W. Zhang</strong>, <a href=\"https://openreview.net/forum?id=R8SolCx62K&referrer=%5Bthe%20profile%20of%20Zhen%20Wang%5D(%2Fprofile%3Fid%3D~Zhen_Wang11)\">Exploitation of a latent mechanism in graph contrastive learning: Representation scattering</a>, <u><i>Proc 38-th Conference on Neural Information Processing Systems</i></u> (NeurIPS 2024).</font>",
-          "text": "D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, W. Zhang, Exploitation of a latent mechanism in graph contrastive learning: Representation scattering, Proc 38-th Conference on Neural Information Processing Systems (NeurIPS 2024)."
-        },
-        {
-          "html": "<font face=\"Arial\">Y. Zhou, D. Jin, J. Wei, D. He, Z. Yu, and <strong>W. Zhang</strong>, <a href=\"https://www.ijcai.org/proceedings/2024/289\">Generalized taxonomy-guided graph neural networks</a>, <u><i>Proc 33-rd Intern. Joint Conf. on AI</i></u> (IJCAI-24).</font>",
-          "text": "Y. Zhou, D. Jin, J. Wei, D. He, Z. Yu, and W. Zhang, Generalized taxonomy-guided graph neural networks, Proc 33-rd Intern. Joint Conf. on AI (IJCAI-24)."
-        },
-        {
           "html": "<font face=\"Arial\">Y. L. W. Hung, C. Xie, J. Wang, X. Diao, R. Li, X. Wang, <strong>S. Qiu</strong>, J. Fang, Z. Cai, Expansion strategy-driven micron-level resolution mass spectrometry imaging of lipids in mouse brain tissue, <u><i>CCS Chemistry</i></u>, 6(11):2662-2670, 2024.</font>",
           "text": "Y. L. W. Hung, C. Xie, J. Wang, X. Diao, R. Li, X. Wang, S. Qiu, J. Fang, Z. Cai, Expansion strategy-driven micron-level resolution mass spectrometry imaging of lipids in mouse brain tissue, CCS Chemistry, 6(11):2662-2670, 2024."
         },
         {
           "html": "<font face=\"Arial\">X. Wang, B. Wang, F. Ji, J. Yan, J. Fang, D. Zhang, J. Xu, J. Ji, X. Hao, H. Luan, Y. Hong, <strong>S. Qiu</strong>, M. Li, Z. Yang, W. Liu, X. Cai, Z. Cai, Discovery of plasma biomarkers for Parkinson's disease diagnoses based on metabolomics and lipidomics, <u><i>Chinese Chemical Letters</i></u>, 35(11):109653, 2024.</font>",
           "text": "X. Wang, B. Wang, F. Ji, J. Yan, J. Fang, D. Zhang, J. Xu, J. Ji, X. Hao, H. Luan, Y. Hong, S. Qiu, M. Li, Z. Yang, W. Liu, X. Cai, Z. Cai, Discovery of plasma biomarkers for Parkinson's disease diagnoses based on metabolomics and lipidomics, Chinese Chemical Letters, 35(11):109653, 2024."
+        },
+        {
+          "html": "<font face=\"Arial\">D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, <strong>W. Zhang</strong>, <a href=\"https://openreview.net/forum?id=R8SolCx62K&referrer=%5Bthe%20profile%20of%20Zhen%20Wang%5D(%2Fprofile%3Fid%3D~Zhen_Wang11)\">Exploitation of a latent mechanism in graph contrastive learning: Representation scattering</a>, <u><i>Proc 38-th Conference on Neural Information Processing Systems</i></u> (NeurIPS 2024).</font>",
+          "text": "D. He, L. Shan, J. Zhao, H. Zhang, Z. Wang, W. Zhang, Exploitation of a latent mechanism in graph contrastive learning: Representation scattering, Proc 38-th Conference on Neural Information Processing Systems (NeurIPS 2024)."
+        },
+        {
+          "html": "<font face=\"Arial\">Y. Zhou, D. Jin, J. Wei, D. He, Z. Yu, and <strong>W. Zhang</strong>, <a href=\"https://www.ijcai.org/proceedings/2024/289\">Generalized taxonomy-guided graph neural networks</a>, <u><i>Proc 33-rd Intern. Joint Conf. on AI</i></u> (IJCAI-24).</font>",
+          "text": "Y. Zhou, D. Jin, J. Wei, D. He, Z. Yu, and W. Zhang, Generalized taxonomy-guided graph neural networks, Proc 33-rd Intern. Joint Conf. on AI (IJCAI-24)."
         }
       ]
     },
     "2025": {
       "year": "2025",
       "items": [
-        {
-          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.1609/aaai.v40i30.39718\">MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</a>, <u><i>Proc. AAAI-26</i></u>, 2025, DOI: 10.1609/aaai.v40i30.39718.</font>",
-          "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, Proc. AAAI-26, 2025, DOI: 10.1609/aaai.v40i30.39718."
-        },
         {
           "html": "<font face=\"Arial\"><strong>Y. Zhu</strong>, S. Wang, Y. Han, Y. Lu, A. Xiong, <strong>S. Qiu</strong>, L. N. Jin, and <strong>W. Zhang</strong>, <a href=\"https://pubs.acs.org/doi/10.1021/acs.est.5c12915\">A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant–Human Protein Interactions</a>, <u><i>Environmental Science &amp; Technology</i></u>, 2025, DOI: 10.1021/acs.est.5c12915.</font>",
           "text": "Y. Zhu, S. Wang, Y. Han, Y. Lu, A. Xiong, S. Qiu, L. N. Jin, and W. Zhang, A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant–Human Protein Interactions, Environmental Science &amp; Technology, 2025, DOI: 10.1021/acs.est.5c12915."
@@ -952,6 +948,10 @@
           "text": "H. Guo, Y. Xiao, S. Dong, J. Yang, P. Zhao, T. Zhao, A. Cai, L. Tang, J. Liu, H. Wang, R. Hua, R. Liu, Y. Wei, D. Sun, Z. Liu, M. Xia, Y. He, Y. Wu, T. Si, F. Womer, F. Xu, Y. Tang, J. Wang, W. Zhang, X. Zhang & F. Wang, Bridging animal models and humans: neuroimaging as intermediate phenotypes linking genetic or stress factors to anhedonia, BMC medicine, 23(1):38, 2025."
         },
         {
+          "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.1609/aaai.v40i30.39718\">MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</a>, <u><i>Proc. AAAI-26</i></u>, 2025, DOI: 10.1609/aaai.v40i30.39718.</font>",
+          "text": "L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng, and W. Zhang, MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training, Proc. AAAI-26, 2025, DOI: 10.1609/aaai.v40i30.39718."
+        },
+        {
           "html": "<font face=\"Arial\"><strong>Q. Zhao</strong>, <strong>C. Zhang</strong>, <strong>W. Zhang</strong>, <a href=\"https://arxiv.org/abs/2409.15697\">dnaGrinder: a lightweight and high-capacity genomic foundation model</a>, <u><i>arXiv</i></u>, 2024, arXiv:2409.15697.</font>",
           "text": "Q. Zhao, C. Zhang, W. Zhang, dnaGrinder: a lightweight and high-capacity genomic foundation model, arXiv, 2024, arXiv:2409.15697."
         }
@@ -961,16 +961,8 @@
       "year": "2026",
       "items": [
         {
-          "html": "<font face=\"Arial\"><strong>K. Li</strong>, W. Wang, J. Jiang, J. Deng, J. Zhang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.1101/2026.03.04.709677v1\">Circular RNA identification using a genomic language model and a small number of authenticated examples</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.03.04.709677.</font>",
-          "text": "K. Li, W. Wang, J. Jiang, J. Deng, J. Zhang, S. Qiu, and W. Zhang, Circular RNA identification using a genomic language model and a small number of authenticated examples, bioRxiv, 2026, DOI: 10.64898/2026.03.04.709677."
-        },
-        {
-          "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, K. Hao, F. Wang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701909\">Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701909.</font>",
-          "text": "Y. Tu, K. Hao, F. Wang, S. Qiu, and W. Zhang, Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701909."
-        },
-        {
-          "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701905\">Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701905.</font>",
-          "text": "Y. Tu, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, S. Qiu, and W. Zhang, Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701905."
+          "html": "<font face=\"Arial\"><strong>K. Ma</strong>, <strong>W. Wang</strong>, <strong>K. Li</strong>, <strong>F. Zhang</strong>, <strong>S. Qiu</strong> and <strong>W. Zhang</strong>, <em>Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery</em>, <u><i>Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26)</i></u>, 2026. (Accepted for Oral Presentation)</font>",
+          "text": "K. Ma, W. Wang, K. Li, F. Zhang, S. Qiu and W. Zhang, Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery, Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26), 2026. (Accepted for Oral Presentation)"
         },
         {
           "html": "<font face=\"Arial\">L. Shan, J. Zhao, D. He, Y. Huang, Z. Feng and <strong>W. Zhang</strong>, <a href=\"https://ojs.aaai.org/index.php/AAAI/article/view/39718\">MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training</a>, <u><i>Proc. 40th AAAI Conf. on Artificial Intelligence (AAAI-26)</i></u>, 2026.</font>",
@@ -997,11 +989,19 @@
           "text": "J. Zhao, Y. Wang, Y. Li, D. He, D.Jin, Z. Feng and W. Zhang, Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs, Proc. 35th Intern. World Wide Web Conf. (WWW-26), 2026. (CCF-A, oral presentation)"
         },
         {
-          "html": "<font face=\"Arial\"><strong>K. Ma</strong>, W. Wang, K. Li, F. Zhang, <strong>S. Qiu</strong> and <strong>W. Zhang</strong>, <em>Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery</em>, <u><i>Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26)</i></u>, 2026. (Accepted for Oral Presentation)</font>",
-          "text": "K. Ma, W. Wang, K. Li, F. Zhang, S. Qiu and W. Zhang, Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery, Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26), 2026. (Accepted for Oral Presentation)"
+          "html": "<font face=\"Arial\"><strong>K. Li</strong>, <strong>W. Wang</strong>, <strong>J. Jiang</strong>, <strong>J. Deng</strong>, <strong>J. Zhang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.1101/2026.03.04.709677v1\">Circular RNA identification using a genomic language model and a small number of authenticated examples</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.03.04.709677.</font>",
+          "text": "K. Li, W. Wang, J. Jiang, J. Deng, J. Zhang, S. Qiu, and W. Zhang, Circular RNA identification using a genomic language model and a small number of authenticated examples, bioRxiv, 2026, DOI: 10.64898/2026.03.04.709677."
+        },
+        {
+          "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, K. Hao, F. Wang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701909\">Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701909.</font>",
+          "text": "Y. Tu, K. Hao, F. Wang, S. Qiu, and W. Zhang, Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701909."
+        },
+        {
+          "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, <strong>Q. Fu</strong>, <strong>Y. Li</strong>, <strong>C. Sun</strong>, <strong>Y. Zhu</strong>, <strong>J. Deng</strong>, <strong>H. Qin</strong>, <strong>X. Zeng</strong>, <strong>Y. Wang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701905\">Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701905.</font>",
+          "text": "Y. Tu, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, S. Qiu, and W. Zhang, Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701905."
         }
       ]
     }
   },
-  "lastUpdated": "2026-06-23T09:37:52.412Z"
+  "lastUpdated": "2026-06-24T10:12:54.439Z"
 }
