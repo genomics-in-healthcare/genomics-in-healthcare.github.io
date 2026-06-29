@@ -989,7 +989,7 @@
           "text": "J. Zhao, Y. Wang, Y. Li, D. He, D.Jin, Z. Feng and W. Zhang, Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs, Proc. 35th Intern. World Wide Web Conf. (WWW-26), 2026. (CCF-A, oral presentation)"
         },
         {
-          "html": "<font face=\"Arial\"><strong>K. Li</strong>, <strong>W. Wang</strong>, <strong>J. Jiang</strong>, <strong>J. Deng</strong>, <strong>J. Zhang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.1101/2026.03.04.709677v1\">Circular RNA identification using a genomic language model and a small number of authenticated examples</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.03.04.709677.</font>",
+          "html": "<font face=\"Arial\"><strong>K. Li</strong>, <strong>W. Wang</strong>, <strong>J. Jiang</strong>, <strong>J. Deng</strong>, <strong>J. Zhang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.64898/2026.03.04.709677v1\">Circular RNA identification using a genomic language model and a small number of authenticated examples</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.03.04.709677.</font>",
           "text": "K. Li, W. Wang, J. Jiang, J. Deng, J. Zhang, S. Qiu, and W. Zhang, Circular RNA identification using a genomic language model and a small number of authenticated examples, bioRxiv, 2026, DOI: 10.64898/2026.03.04.709677."
         },
         {
@@ -1003,5 +1003,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-06-25T09:18:09.727Z"
+  "lastUpdated": "2026-06-29T07:20:27.889Z"
 }
