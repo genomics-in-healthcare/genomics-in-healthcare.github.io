@@ -961,6 +961,10 @@
       "year": "2026",
       "items": [
         {
+          "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, <strong>Q. Fu</strong>, <strong>C. Sun</strong>, <strong>J. Deng</strong>, <strong>H. Qin</strong>, <strong>X. Zeng</strong>, <strong>Y. Wang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.mdpi.com/2673-4087/7/4/81\">Multimodal Behavior Scoring Quantifies Depression-like Severity Across Chronic Stress Models and Identifies Stress-Resilient Mice</a>, <u><i>NeuroSci</i></u>, 2026, DOI: 10.3390/neurosci7040081.</font>",
+          "text": "Y. Tu, Q. Fu, C. Sun, J. Deng, H. Qin, X. Zeng, Y. Wang, S. Qiu, and W. Zhang, Multimodal Behavior Scoring Quantifies Depression-like Severity Across Chronic Stress Models and Identifies Stress-Resilient Mice, NeuroSci, 2026, DOI: 10.3390/neurosci7040081."
+        },
+        {
           "html": "<font face=\"Arial\"><strong>K. Ma</strong>, <strong>W. Wang</strong>, <strong>K. Li</strong>, <strong>F. Zhang</strong>, <strong>S. Qiu</strong> and <strong>W. Zhang</strong>, <em>Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery</em>, <u><i>Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26)</i></u>, 2026. (Accepted for Oral Presentation)</font>",
           "text": "K. Ma, W. Wang, K. Li, F. Zhang, S. Qiu and W. Zhang, Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery, Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26), 2026. (Accepted for Oral Presentation)"
         },
@@ -989,19 +993,19 @@
           "text": "J. Zhao, Y. Wang, Y. Li, D. He, D.Jin, Z. Feng and W. Zhang, Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs, Proc. 35th Intern. World Wide Web Conf. (WWW-26), 2026. (CCF-A, oral presentation)"
         },
         {
+          "html": "<font face=\"Arial\"><strong>K. Li</strong>, <strong>W. Wang</strong>, <strong>A. E. Negesso</strong>, <strong>J. Deng</strong>, <strong>H. Qin</strong>, <strong>J. Jiang</strong>, <strong>K. Ma</strong>, <strong>J. Zhang</strong>, P. Wei, D. Li, F. Kong, C. Cho, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.64898/2026.07.23.740256v1\">Noncanonical Circular RNAs and Potential Functions</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.07.23.740256.</font>",
+          "text": "K. Li, W. Wang, A. E. Negesso, J. Deng, H. Qin, J. Jiang, K. Ma, J. Zhang, P. Wei, D. Li, F. Kong, C. Cho, S. Qiu, and W. Zhang, Noncanonical Circular RNAs and Potential Functions, bioRxiv, 2026, DOI: 10.64898/2026.07.23.740256."
+        },
+        {
           "html": "<font face=\"Arial\"><strong>K. Li</strong>, <strong>W. Wang</strong>, <strong>J. Jiang</strong>, <strong>J. Deng</strong>, <strong>J. Zhang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.64898/2026.03.04.709677v1\">Circular RNA identification using a genomic language model and a small number of authenticated examples</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.03.04.709677.</font>",
           "text": "K. Li, W. Wang, J. Jiang, J. Deng, J. Zhang, S. Qiu, and W. Zhang, Circular RNA identification using a genomic language model and a small number of authenticated examples, bioRxiv, 2026, DOI: 10.64898/2026.03.04.709677."
         },
         {
           "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, K. Hao, F. Wang, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701909\">Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701909.</font>",
           "text": "Y. Tu, K. Hao, F. Wang, S. Qiu, and W. Zhang, Circuit-specific resting-state fMRI signatures for stratifying first-episode major depressive disorder and predicting recurrence risk, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701909."
-        },
-        {
-          "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, <strong>Q. Fu</strong>, <strong>Y. Li</strong>, <strong>C. Sun</strong>, <strong>Y. Zhu</strong>, <strong>J. Deng</strong>, <strong>H. Qin</strong>, <strong>X. Zeng</strong>, <strong>Y. Wang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://doi.org/10.64898/2026.01.26.701905\">Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.01.26.701905.</font>",
-          "text": "Y. Tu, Q. Fu, Y. Li, C. Sun, Y. Zhu, J. Deng, H. Qin, X. Zeng, Y. Wang, S. Qiu, and W. Zhang, Multimodal behavior scoring quantifies depression-like severity across chronic stress models and identifies stress-resilient mice, bioRxiv, 2026, DOI: 10.64898/2026.01.26.701905."
         }
       ]
     }
   },
-  "lastUpdated": "2026-06-29T07:20:27.889Z"
+  "lastUpdated": "2026-07-26T07:00:34.442Z"
 }
