@@ -957,11 +957,15 @@
       "year": "2026",
       "items": [
         {
+          "html": "<font face=\"Arial\">S. Wang, X. Li, Y. Han, <strong>S. Qiu</strong>, <strong>Y. Zhu</strong>, J. Yu, C. Li, X. Liu, <strong>W. Zhang</strong>, G. Qu, L. Wang, K. F. Ho, F. J. Kelly, C. K. C. Wong, Y. Rudich, R. Zimmermann, and L. N. Jin, <a href=\"https://pubs.acs.org/doi/10.1021/acs.est.6c05482\">Attribution of PM2.5-Induced Transcriptomic Perturbation to Toxic Components</a>, <u><i>Environmental Science & Technology</i></u>, 2026, DOI: 10.1021/acs.est.6c05482.</font>",
+          "text": "S. Wang, X. Li, Y. Han, S. Qiu, Y. Zhu, J. Yu, C. Li, X. Liu, W. Zhang, G. Qu, L. Wang, K. F. Ho, F. J. Kelly, C. K. C. Wong, Y. Rudich, R. Zimmermann, and L. N. Jin, Attribution of PM2.5-Induced Transcriptomic Perturbation to Toxic Components, Environmental Science & Technology, 2026, DOI: 10.1021/acs.est.6c05482."
+        },
+        {
           "html": "<font face=\"Arial\"><strong>Y. Tu</strong>, <strong>Q. Fu</strong>, <strong>C. Sun</strong>, <strong>J. Deng</strong>, <strong>H. Qin</strong>, <strong>X. Zeng</strong>, <strong>Y. Wang</strong>, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.mdpi.com/2673-4087/7/4/81\">Multimodal Behavior Scoring Quantifies Depression-like Severity Across Chronic Stress Models and Identifies Stress-Resilient Mice</a>, <u><i>NeuroSci</i></u>, 2026, DOI: 10.3390/neurosci7040081.</font>",
           "text": "Y. Tu, Q. Fu, C. Sun, J. Deng, H. Qin, X. Zeng, Y. Wang, S. Qiu, and W. Zhang, Multimodal Behavior Scoring Quantifies Depression-like Severity Across Chronic Stress Models and Identifies Stress-Resilient Mice, NeuroSci, 2026, DOI: 10.3390/neurosci7040081."
         },
         {
-          "html": "<font face=\"Arial\"><strong>K. Ma</strong>, <strong>W. Wang</strong>, <strong>K. Li</strong>, <strong>F. Zhang</strong>, <strong>S. Qiu</strong> and <strong>W. Zhang</strong>, <em>Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery</em>, <u><i>Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26)</i></u>, 2026. (Accepted for Oral Presentation)</font>",
+          "html": "<font face=\"Arial\"><strong>K. Ma</strong>, <strong>W. Wang</strong>, <strong>K. Li</strong>, <strong>F. Zhang</strong>, <strong>S. Qiu</strong> and <strong>W. Zhang</strong>, Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery, <u><i>Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26)</i></u>, 2026. (Accepted for Oral Presentation)</font>",
           "text": "K. Ma, W. Wang, K. Li, F. Zhang, S. Qiu and W. Zhang, Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery, Proc. Intern. Conf. on Intelligent Biology and Medicine (ICIBM-26), 2026. (Accepted for Oral Presentation)"
         },
         {
@@ -1003,5 +1007,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-07-30T03:25:03.820Z"
+  "lastUpdated": "2026-08-02T07:47:33.861Z"
 }
