@@ -17,7 +17,7 @@ export const positionsOrder = [
   'Research Assistant Professor',
   'Postdoctoral Scholar',
   'Ph.D. Student',
-  'MPhil Student',
+  // 'MPhil Student',
   'Research Assistant',
 ];
 

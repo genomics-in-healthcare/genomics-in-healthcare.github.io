@@ -40,10 +40,13 @@ const Members: FC = () => {
       {/* Alumni Section */}
       {alumniMembers.length > 0 && (
         <div className="position-group">
-          <h2 className="position-title">
+          {/* <h2 className="position-title">
             <span className="material-icons position-title__icon">
               school
             </span>
+            Alumni
+          </h2> */}
+          <h2 className="position-title">
             Alumni
           </h2>
           {alumniMembers.map((member) => (
