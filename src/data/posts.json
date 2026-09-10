@@ -1,21 +1,45 @@
 [
+    {
+    "filename": "2026-09-01-join.md",
+    "date": "2026-09-01",
+    "title": "Welcome new PhD students",
+    "link_title": "Welcome new PhD students",
+    "published": true,
+    "layout": "post",
+    "group": "news",
+    "content": "Welcome GENG Zixu, SUN Qianzhe, and ZHENG Keyang to the Lab as PhD students!",
+    "author": "",
+    "tags": []
+  },
+  {
+    "filename": "2026-08-24-news.md",
+    "date": "2026-08-24",
+    "title": "ZHU Yan passed her PhD thesis defense",
+    "link_title": "ZHU Yan passed her PhD thesis defense",
+    "published": true,
+    "layout": "post",
+    "group": "news",
+    "content": "Congratulations to ZHU Yan on successfully passing her PhD thesis defense!",
+    "author": "",
+    "tags": []
+  },
   {
   "filename": "2026-08-14-news.md",
   "date": "2026-08-14",
-  "title": "Yan Zhu receives HTI Research Postgraduate Outstanding Publication Award 2026",
-  "link_title": "Yan Zhu receives HTI Research Postgraduate Outstanding Publication Award 2026",
+  "title": "ZHU Yan receives HTI Research Postgraduate Outstanding Publication Award 2026",
+  "link_title": "ZHU Yan receives HTI Research Postgraduate Outstanding Publication Award 2026",
   "published": true,
   "layout": "post",
   "group": "news",
-  "content": "Congratulations to Yan Zhu on receiving the **HTI Research Postgraduate Outstanding Publication Award 2026** - Second Prize for the publication *A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant-Human Protein Interactions*.",
+  "content": "Congratulations to ZHU Yan on receiving the **HTI Research Postgraduate Outstanding Publication Award 2026** - Second Prize for the publication *A Transformer-Based Deep Learning Approach to Predicting Air Organic Pollutant-Human Protein Interactions*.",
   "author": "",
   "tags": []
   },
   {
     "filename": "2026-08-02-news.md",
     "date": "2026-08-02",
-    "title": "Yan Zhu's new Environmental Science & Technology paper",
-    "link_title": "Yan Zhu's new Environmental Science & Technology paper",
+    "title": "ZHU Yan's new Environmental Science & Technology paper",
+    "link_title": "ZHU Yan's new Environmental Science & Technology paper",
     "published": true,
     "layout": "post",
     "group": "news",
@@ -26,8 +50,8 @@
   {
     "filename": "2026-07-24-news.md",
     "date": "2026-07-24",
-    "title": "Kang Li's new bioRxiv Noncanonical Circular RNAs and Potential Functions",
-    "link_title": "Kang Li's new bioRxiv Noncanonical Circular RNAs and Potential Functions",
+    "title": "LI Kang's new bioRxiv Noncanonical Circular RNAs and Potential Functions",
+    "link_title": "LI Kang's new bioRxiv Noncanonical Circular RNAs and Potential Functions",
     "published": true,
     "layout": "post",
     "group": "news",
@@ -38,12 +62,12 @@
   {
     "filename": "2026-07-16-news.md",
     "date": "2026-07-16",
-    "title": "Yue Tu's multimodal behavior scoring paper published",
-    "link_title": "Yue Tu's multimodal behavior scoring paper published",
+    "title": "TU Yue's multimodal behavior scoring paper published",
+    "link_title": "TU Yue's multimodal behavior scoring paper published",
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Yue Tu's work *Multimodal Behavior Scoring Quantifies Depression-like Severity Across Chronic Stress Models and Identifies Stress-Resilient Mice* has been published on NeuroSci.",
+    "content": "TU Yue's work *Multimodal Behavior Scoring Quantifies Depression-like Severity Across Chronic Stress Models and Identifies Stress-Resilient Mice* has been published on NeuroSci.",
     "author": "",
     "tags": []
   },
@@ -68,6 +92,18 @@
     "layout": "post",
     "group": "news",
     "content": "Seven papers from our group have been accepted by international conferences in 2026, including ICIBM, AAAI, IJCAI, KDD, and WWW.\n\n- [ICIBM 2026] Ma K., Wang W., Li K., Zhang F., Qiu S., Zhang W. Comprehensive Benchmarking of Long-read Fusion-detection Methods Leads to Improved Fusion Discovery. (Accepted for Oral Presentation and considered for publication in Briefings in Bioinformatics)\n- [AAAI 2026] Shan L., Zhao J., He D., Huang Y., Feng Z., Zhang W. MUG: Meta-Path-Aware Universal Heterogeneous Graph Pre-Training.\n- [IJCAI 2026] Wang Z., He D., Yu Z., Khysru K., Zhang W. DNFormer: Differential Attention for Graph Transformers.\n- [IJCAI 2026] Li P., Huang Y., He D., Jin D., Zhang W. CHoE: Cross-Domain Heterogeneous Graph Prompt Learning via Structure-Conditioned Experts.\n- [KDD 2026] Liang C., Huang Y., He D., Li P., Li Y., Jin D., Zhang W. Unified Multi-Domain Graph Pre-training for Homogeneous and Heterogeneous Graphs via Domain-Specific Expert Encoding.\n- [WWW 2026] Shan L., Zhao J., He D., Liu S., Cui J., Zhang W. LEDA: Latent Semantic Distribution Alignment for Multi-domain Graph Pre-training. (CCF-A, oral presentation)\n- [WWW 2026] Zhao J., Wang Y., Li Y., He D., Jin D., Feng Z., Zhang W. Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs. (CCF-A, oral presentation)\n",
+    "author": "",
+    "tags": []
+  },
+  {
+    "filename": "2026-04-28-news.md",
+    "date": "2026-04-28",
+    "title": "QIN Haoning passed her MPhil thesis defense",
+    "link_title": "QIN Haoning passed her MPhil thesis defense",
+    "published": true,
+    "layout": "post",
+    "group": "news",
+    "content": "Congratulations to QIN Haoning on successfully passing her MPhil thesis defense!",
     "author": "",
     "tags": []
   },
@@ -110,24 +146,24 @@
   {
     "filename": "2025-11-01-news.md",
     "date": "2025-11-01",
-    "title": "Welcome Diao Xin to the lab as Postdoc",
-    "link_title": "Welcome Diao Xin to the lab as Postdoc",
+    "title": "Welcome DIAO Xin to the lab as Postdoc",
+    "link_title": "Welcome DIAO Xin to the lab as Postdoc",
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Welcome Diao Xin to the lab as Postdoc",
+    "content": "Welcome DIAO Xin to the lab as Postdoc",
     "author": "",
     "tags": []
   },
   {
     "filename": "2025-10-29-news.md",
     "date": "2025-10-29",
-    "title": "Yan Zhu's PM2.5 and human health LM accepted to Environmental Science & Technology",
-    "link_title": "Yan Zhu's PM2.5 and human health LM accepted to Environmental Science & Technology",
+    "title": "ZHU Yan's PM2.5 and human health LM accepted to Environmental Science & Technology",
+    "link_title": "ZHU Yan's PM2.5 and human health LM accepted to Environmental Science & Technology",
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Yan Zhu's work on a language model for PM2.5 and human health has been accepted to Environmental Science & Technology (a top journal in environmental science)",
+    "content": "ZHU Yan's work on a language model for PM2.5 and human health has been accepted to Environmental Science & Technology (a top journal in environmental science)",
     "author": "",
     "tags": []
   },
@@ -139,7 +175,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Weixiong Zhang will give a talk on Noncanonical circular RNAs as cancer diagnostic biomarkers at the [1st Asia Pacific Precision Oncology Conference](https://apacprecisiononcology.com) on 01/11/25",
+    "content": "Weixiong will give a talk on Noncanonical circular RNAs as cancer diagnostic biomarkers at the [1st Asia Pacific Precision Oncology Conference](https://apacprecisiononcology.com) on 01/11/25",
     "author": "",
     "tags": []
   },
@@ -151,7 +187,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Weixiong Zhang will give a keynote talk at [The 10th Big Data Forum for Life and Health Sciences](https://ngdc.cncb.ac.cn/conference/bdf2025) on 15/10/25",
+    "content": "Weixiong will give a keynote talk at [The 10th Big Data Forum for Life and Health Sciences](https://ngdc.cncb.ac.cn/conference/bdf2025) on 15/10/25",
     "author": "",
     "tags": []
   },
@@ -187,7 +223,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Tan Yejun, an RA in the lab, received both **Hong Kong PhD Fellowship (HKPFS)** and **PolyU Presidential PhD Fellowship (PPPFS)**",
+    "content": "TAN Yejun, an RA in the lab, received both **Hong Kong PhD Fellowship (HKPFS)** and **PolyU Presidential PhD Fellowship (PPPFS)**",
     "author": "",
     "tags": []
   },
@@ -211,7 +247,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Welcome Huang Yin to the Lab as Research Fellow and Pan Chunyu as Postdoc!",
+    "content": "Welcome HUANG Yin to the Lab as Research Fellow and PAN Chunyu as Postdoc!",
     "author": "",
     "tags": []
   },
@@ -223,7 +259,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Welcome Chen Junyi to the Lab as RAP!",
+    "content": "Welcome CHEN Junyi to the Lab as RAP!",
     "author": "",
     "tags": []
   },
@@ -235,7 +271,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Welcome Edao Abebe, Li Yixin, Han Nan, Wang Zhenqian, Wang Yuchuan and Zhang Jie to the Lab as PhD students!",
+    "content": "Welcome Abebe Edao, LI Yixin, HAN Nan, WANG Zhenqian, WANG Yuchuan and ZHANG Jie to the Lab as PhD students!",
     "author": "",
     "tags": []
   },
@@ -283,7 +319,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Welcome Zhang Chi to the Lab as PhD student!\n\nEdao Abebe received **Hong Kong PhD Fellowship (HKPFS)**",
+    "content": "Welcome ZHANG Chi to the Lab as PhD student!\n\nEdao Abebe received **Hong Kong PhD Fellowship (HKPFS)**",
     "author": "",
     "tags": []
   },
@@ -307,7 +343,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Welcome Tu Yue to the Lab as Postdoc!",
+    "content": "Welcome TU Yue to the Lab as Postdoc!",
     "author": "",
     "tags": []
   },
@@ -331,7 +367,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Welcome Fu Qinghui and Ma Ke to the Lab as PhD students!",
+    "content": "Welcome FU Qinghui and MA Ke to the Lab as PhD students!",
     "author": "",
     "tags": []
   },
@@ -343,7 +379,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Wang Zhenqian, a new coming student, received **PolyU Presidential PhD Fellowship**",
+    "content": "WANG Zhenqian, a new coming student, received **PolyU Presidential PhD Fellowship**",
     "author": "",
     "tags": []
   },
@@ -355,7 +391,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Wang Xin, a new coming postdoc, received PolyU Distinguished Postdoctoral Fellowship",
+    "content": "WANG Xin, a new coming postdoc, received PolyU Distinguished Postdoctoral Fellowship",
     "author": "",
     "tags": []
   },
@@ -367,7 +403,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Ma Ke, a new coming student, received **PolyU Presidential PhD Fellowship**",
+    "content": "MA Ke, a new coming student, received **PolyU Presidential PhD Fellowship**",
     "author": "",
     "tags": []
   },
@@ -463,7 +499,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "Dr. Qiu Shulan joined the lab as Research Fellow",
+    "content": "Dr. QIU Shulan joined the lab as Research Fellow",
     "author": "",
     "tags": []
   },
@@ -475,7 +511,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "This is a joint work with Professors Jin Di and He Dongxiao's groups at Tianjin University. The title of the paper: Constructive learning meets homophily: Two birds with one stone",
+    "content": "This is a joint work with Professors JIN Di and HE Dongxiao's groups at Tianjin University. The title of the paper: Constructive learning meets homophily: Two birds with one stone",
     "author": "",
     "tags": []
   },
@@ -487,7 +523,7 @@
     "published": true,
     "layout": "post",
     "group": "news",
-    "content": "This is a joint work with Professors Jin Di and He Dongxiao's groups at Tianjin University. The title of the paper: A survey of community detection approaches: From statistical modeling to deep learning",
+    "content": "This is a joint work with Professors JIN Di and HE Dongxiao's groups at Tianjin University. The title of the paper: A survey of community detection approaches: From statistical modeling to deep learning",
     "author": "",
     "tags": []
   },
