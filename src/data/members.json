@@ -1,5 +1,17 @@
 [
   {
+  "name": "Qianzhe SUN",
+  "startdate": [
+    "2026-09-01"
+  ],
+  "enddate": [
+    ""
+  ],
+  "image": "/img/members/SunQianzhe.jpg",
+  "position": "Ph.D. Student",
+  "description": "Qianzhe SUN received his bachelor's degree in Financial Mathematics from Xi'an Jiaotong-Liverpool University and his master's degree in Biostatistics Data Science from Yale University. His previous research focused on statistical genomics and clinical trials, particularly on deep learning applications in spatial transcriptomics. Currently, in Prof. ZHANG's lab, he is working on developing and applying statistical and machine learning/AI methods to genome-wide association studies (GWAS) and longitudinal studies in healthcare."
+},
+  {
   "name": "Zixu GENG",
   "startdate": [
     "2026-09-01"
