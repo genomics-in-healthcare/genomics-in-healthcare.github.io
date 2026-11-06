@@ -17,9 +17,9 @@ export interface NearTermEntry {
   url: string
 }
 
-/** Snapshot as of 2026-11-06 Asia/Shanghai. Deadlines change — verify official URLs before submitting. */
+/** Snapshot as of 2026-11-06 Hong Kong. Deadlines change — verify official URLs before submitting. */
 export const SNAPSHOT_NOTE =
-  'Deadline snapshot as of 2026-11-06 (Asia/Shanghai). Times use the conference timezone (often AoE). Confirm on the official page before submitting.'
+  'Deadline snapshot as of 2026-11-06 (Hong Kong). Times use the conference timezone (often AoE). Confirm on the official page before submitting.'
 
 export const bioinformaticsConferences: ConferenceEntry[] = [
   {
