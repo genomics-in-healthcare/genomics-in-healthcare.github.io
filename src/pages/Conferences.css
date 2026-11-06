@@ -1,0 +1,123 @@
+/* Conferences page styles — aligned with Software / Join */
+.conferences-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 18px 16px 24px 16px;
+}
+
+.section-header {
+  font-size: 15px !important;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.intro-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px !important;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #222;
+}
+
+.snapshot-note {
+  color: #4b5563;
+  font-size: 14px !important;
+}
+
+.conference-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 10px;
+  margin-bottom: 8px;
+}
+
+.conference-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.conference-table th,
+.conference-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.conference-table thead th {
+  background: #f8fafc;
+  color: #111827;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.conference-table tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+.conference-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.conference-name {
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.conference-deadline {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.conference-status {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-open {
+  color: #047857;
+  background: #ecfdf5;
+}
+
+.status-closed {
+  color: #b45309;
+  background: #fffbeb;
+}
+
+.status-tba {
+  color: #4b5563;
+  background: #f3f4f6;
+}
+
+.conferences-container a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.conferences-container a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .conference-table th:nth-child(2),
+  .conference-table td:nth-child(2) {
+    display: none;
+  }
+}
