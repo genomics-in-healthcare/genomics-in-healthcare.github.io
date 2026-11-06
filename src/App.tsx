@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import News from './pages/News'
 import Research from './pages/Research'
 import Publications from './pages/Publications'
+import Conferences from './pages/Conferences'
 import Software from './pages/Software'
 import Members from './pages/Members'
 import Join from './pages/Join'
@@ -18,6 +19,7 @@ const App: FC = () => {
         <Route path="/news" element={<News />} />
         <Route path="/research" element={<Research />} />
         <Route path="/publications" element={<Publications />} />
+        <Route path="/conferences" element={<Conferences />} />
         <Route path="/software" element={<Software />} />
         <Route path="/members" element={<Members />} />
         <Route path="/join" element={<Join />} />

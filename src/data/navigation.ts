@@ -9,6 +9,7 @@ export const navigation: NavItem[] = [
   { name: 'News', link: '/news', group: 'news' },
   { name: 'Research', link: '/research', group: 'research' },
   { name: 'Publications', link: '/publications', group: 'publications' },
+  { name: 'Conferences', link: '/conferences', group: 'conferences' },
   { name: 'Software', link: '/software', group: 'software' },
   { name: 'Members', link: '/members', group: 'members' },
   { name: 'Join', link: '/join', group: 'join' },
