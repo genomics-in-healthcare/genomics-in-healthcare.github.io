@@ -1,4 +1,28 @@
 [
+  {
+    "filename": "2026-11-06-tkde-paper.md",
+    "date": "2026-11-06",
+    "title": "Weixiong ZHANG's new TKDE paper",
+    "link_title": "Weixiong ZHANG's new TKDE paper",
+    "published": true,
+    "layout": "post",
+    "group": "news",
+    "content": "Weixiong's new paper, *Towards Deeper and Scalable Graph Foundation Models: Hierarchical Expert-Adaptive Layer-wise Assignment*, has been accepted as a regular paper in an upcoming issue of IEEE Transactions on Knowledge and Data Engineering (TKDE).",
+    "author": "",
+    "tags": []
+  },
+  {
+    "filename": "2026-11-06-arxiv-manuscript.md",
+    "date": "2026-11-06",
+    "title": "Fei ZHANG's new arXiv manuscript",
+    "link_title": "Fei ZHANG's new arXiv manuscript",
+    "published": true,
+    "layout": "post",
+    "group": "news",
+    "content": "A new manuscript by Fei ZHANG has been posted on arXiv:\n\nZhang F, Zhang W. (2025). [*Refined HLA Linkage Disequilibrium Architectures of World Populations by a Novel Allelic Correlation Measure*](https://arxiv.org/abs/2512.05573). arXiv preprint. doi:10.48550/arXiv.2512.05573.",
+    "author": "",
+    "tags": []
+  },
     {
     "filename": "2026-09-01-join.md",
     "date": "2026-09-01",

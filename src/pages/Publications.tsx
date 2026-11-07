@@ -3,13 +3,16 @@ import PublicationItem from '../components/PublicationItem'
 import { publicationsData } from '../data/publications'
 import './Publications.css'
 
+const SHOW_BOOKS = false
+const MIN_PUBLICATION_YEAR = 2022
+
 const Publications: FC = () => {
   return (
     <div className="md-main-content">
       <div className="publications-container">
         <div className="pub-list">
           {/* Book Section */}
-          {publicationsData.book.length > 0 && (
+          {SHOW_BOOKS && publicationsData.book.length > 0 && (
             <div className="pub-section">
               <font face="Arial">
                 <strong>Book</strong>
@@ -26,7 +29,10 @@ const Publications: FC = () => {
           )}
 
           {/* Publications by Year */}
+          {/* {Object.keys(publicationsData.byYear)
+            .sort((a, b) => parseInt(b) - parseInt(a)) */}
           {Object.keys(publicationsData.byYear)
+            .filter((year) => parseInt(year) >= MIN_PUBLICATION_YEAR)
             .sort((a, b) => parseInt(b) - parseInt(a))
             .map((year) => {
               const yearData = publicationsData.byYear[year];

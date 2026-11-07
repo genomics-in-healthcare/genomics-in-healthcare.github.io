@@ -957,6 +957,10 @@
       "year": "2026",
       "items": [
         {
+          "html": "<font face=\"Arial\">D. He, J. Cui, J. Zhao, Y. Wang, Y. Huang, D. Jin, and <strong>W. Zhang</strong>, Towards Deeper and Scalable Graph Foundation Models: Hierarchical Expert-Adaptive Layer-wise Assignment, <u><i>IEEE Transactions on Knowledge and Data Engineering</i></u>, 2026. (Accepted as a Regular Paper)</font>",
+          "text": "D. He, J. Cui, J. Zhao, Y. Wang, Y. Huang, D. Jin, and W. Zhang, Towards Deeper and Scalable Graph Foundation Models: Hierarchical Expert-Adaptive Layer-wise Assignment, IEEE Transactions on Knowledge and Data Engineering, 2026. (Accepted as a Regular Paper)"
+        },
+        {
           "html": "<font face=\"Arial\">S. Wang, X. Li, Y. Han, <strong>S. Qiu</strong>, <strong>Y. Zhu</strong>, J. Yu, C. Li, X. Liu, <strong>W. Zhang</strong>, G. Qu, L. Wang, K. F. Ho, F. J. Kelly, C. K. C. Wong, Y. Rudich, R. Zimmermann, and L. N. Jin, <a href=\"https://pubs.acs.org/doi/10.1021/acs.est.6c05482\">Attribution of PM2.5-Induced Transcriptomic Perturbation to Toxic Components</a>, <u><i>Environmental Science & Technology</i></u>, 2026, DOI: 10.1021/acs.est.6c05482.</font>",
           "text": "S. Wang, X. Li, Y. Han, S. Qiu, Y. Zhu, J. Yu, C. Li, X. Liu, W. Zhang, G. Qu, L. Wang, K. F. Ho, F. J. Kelly, C. K. C. Wong, Y. Rudich, R. Zimmermann, and L. N. Jin, Attribution of PM2.5-Induced Transcriptomic Perturbation to Toxic Components, Environmental Science & Technology, 2026, DOI: 10.1021/acs.est.6c05482."
         },
@@ -993,6 +997,10 @@
           "text": "J. Zhao, Y. Wang, Y. Li, D. He, D.Jin, Z. Feng and W. Zhang, Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs, Proc. 35th Intern. World Wide Web Conf. (WWW-26), 2026. (CCF-A, oral presentation)"
         },
         {
+          "html": "<font face=\"Arial\"><strong>F. Zhang</strong> and <strong>W. Zhang</strong>, <a href=\"https://arxiv.org/abs/2512.05573\">Refined HLA Linkage Disequilibrium Architectures of World Populations by a Novel Allelic Correlation Measure</a>, <u><i>arXiv</i></u>, 2025, arXiv:2512.05573.</font>",
+          "text": "F. Zhang and W. Zhang, Refined HLA Linkage Disequilibrium Architectures of World Populations by a Novel Allelic Correlation Measure, arXiv, 2025, arXiv:2512.05573."
+        },
+        {
           "html": "<font face=\"Arial\"><strong>K. Li</strong>, <strong>W. Wang</strong>, <strong>A. E. Negesso</strong>, <strong>J. Deng</strong>, <strong>H. Qin</strong>, <strong>J. Jiang</strong>, <strong>K. Ma</strong>, <strong>J. Zhang</strong>, P. Wei, D. Li, F. Kong, C. Cho, <strong>S. Qiu</strong>, and <strong>W. Zhang</strong>, <a href=\"https://www.biorxiv.org/content/10.64898/2026.07.23.740256v1\">Noncanonical Circular RNAs and Potential Functions</a>, <u><i>bioRxiv</i></u>, 2026, DOI: 10.64898/2026.07.23.740256.</font>",
           "text": "K. Li, W. Wang, A. E. Negesso, J. Deng, H. Qin, J. Jiang, K. Ma, J. Zhang, P. Wei, D. Li, F. Kong, C. Cho, S. Qiu, and W. Zhang, Noncanonical Circular RNAs and Potential Functions, bioRxiv, 2026, DOI: 10.64898/2026.07.23.740256."
         },
@@ -1007,5 +1015,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-09-11T05:26:01.769Z"
+  "lastUpdated": "2026-11-07T08:23:03.839Z"
 }
